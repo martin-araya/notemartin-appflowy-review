@@ -1,0 +1,1119 @@
+{
+  "schema_version": 1,
+  "id": "F16.1.2",
+  "feature_id": "F16",
+  "sub_index": 1,
+  "titulo": "Mobile: lib/mobile (application + presentation) — presentation",
+  "fuentes": [
+    "appflowy"
+  ],
+  "archivos": [
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/mobile/presentation/base/animated_gesture.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/mobile/presentation/base/app_bar/app_bar.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/mobile/presentation/base/app_bar/app_bar_actions.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/mobile/presentation/base/flowy_search_text_field.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/mobile/presentation/base/mobile_view_page.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/mobile/presentation/base/option_color_list.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/mobile/presentation/base/type_option_menu_item.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/mobile/presentation/base/view_page/app_bar_buttons.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/mobile/presentation/base/view_page/more_bottom_sheet.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/mobile/presentation/bottom_sheet/bottom_sheet.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/mobile/presentation/bottom_sheet/bottom_sheet_action_widget.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/mobile/presentation/bottom_sheet/bottom_sheet_add_new_page.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/mobile/presentation/bottom_sheet/bottom_sheet_block_action_widget.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/mobile/presentation/bottom_sheet/bottom_sheet_buttons.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/mobile/presentation/bottom_sheet/bottom_sheet_drag_handler.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/mobile/presentation/bottom_sheet/bottom_sheet_edit_link_widget.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/mobile/presentation/bottom_sheet/bottom_sheet_header.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/mobile/presentation/bottom_sheet/bottom_sheet_media_upload.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/mobile/presentation/bottom_sheet/bottom_sheet_rename_widget.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/mobile/presentation/bottom_sheet/bottom_sheet_view_item.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/mobile/presentation/bottom_sheet/bottom_sheet_view_item_body.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/mobile/presentation/bottom_sheet/bottom_sheet_view_page.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/mobile/presentation/bottom_sheet/default_mobile_action_pane.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/mobile/presentation/bottom_sheet/show_mobile_bottom_sheet.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/mobile/presentation/bottom_sheet/show_transition_bottom_sheet.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/mobile/presentation/chat/mobile_chat_screen.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/mobile/presentation/database/board/board.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/mobile/presentation/database/board/mobile_board_page.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/mobile/presentation/database/board/mobile_board_screen.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/mobile/presentation/database/board/widgets/group_card_header.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/mobile/presentation/database/board/widgets/mobile_board_trailing.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/mobile/presentation/database/board/widgets/mobile_hidden_groups_column.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/mobile/presentation/database/board/widgets/widgets.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/mobile/presentation/database/card/card.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/mobile/presentation/database/card/card_detail/mobile_card_detail_screen.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/mobile/presentation/database/card/card_detail/widgets/mobile_create_field_button.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/mobile/presentation/database/card/card_detail/widgets/mobile_row_property_list.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/mobile/presentation/database/card/card_detail/widgets/option_text_field.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/mobile/presentation/database/card/card_detail/widgets/row_page_button.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/mobile/presentation/database/card/card_detail/widgets/widgets.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/mobile/presentation/database/card/mobile_card_content.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/mobile/presentation/database/date_picker/mobile_date_picker_screen.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/mobile/presentation/database/field/mobile_create_field_screen.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/mobile/presentation/database/field/mobile_edit_field_screen.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/mobile/presentation/database/field/mobile_field_bottom_sheets.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/mobile/presentation/database/field/mobile_field_picker_list.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/mobile/presentation/database/field/mobile_full_field_editor.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/mobile/presentation/database/field/mobile_quick_field_editor.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/mobile/presentation/database/mobile_calendar_events_empty.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/mobile/presentation/database/mobile_calendar_events_screen.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/mobile/presentation/database/mobile_calendar_screen.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/mobile/presentation/database/mobile_grid_screen.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/mobile/presentation/database/view/database_field_list.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/mobile/presentation/database/view/database_filter_bottom_sheet.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/mobile/presentation/database/view/database_filter_bottom_sheet_cubit.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/mobile/presentation/database/view/database_filter_condition_list.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/mobile/presentation/database/view/database_sort_bottom_sheet.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/mobile/presentation/database/view/database_sort_bottom_sheet_cubit.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/mobile/presentation/database/view/database_view_layout.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/mobile/presentation/database/view/database_view_list.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/mobile/presentation/database/view/database_view_quick_actions.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/mobile/presentation/database/view/edit_database_view_screen.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/mobile/presentation/editor/mobile_editor_screen.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/mobile/presentation/favorite/mobile_favorite_folder.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/mobile/presentation/favorite/mobile_favorite_page.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/mobile/presentation/home/favorite_folder/favorite_space.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/mobile/presentation/home/favorite_folder/mobile_home_favorite_folder.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/mobile/presentation/home/favorite_folder/mobile_home_favorite_folder_header.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/mobile/presentation/home/home.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/mobile/presentation/home/home_space/home_space.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/mobile/presentation/home/mobile_folders.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/mobile/presentation/home/mobile_home_page.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/mobile/presentation/home/mobile_home_page_header.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/mobile/presentation/home/mobile_home_setting_page.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/mobile/presentation/home/mobile_home_trash_page.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/mobile/presentation/home/recent_folder/mobile_home_recent_views.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/mobile/presentation/home/recent_folder/mobile_recent_view.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/mobile/presentation/home/recent_folder/recent_space.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/mobile/presentation/home/section_folder/mobile_home_section_folder.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/mobile/presentation/home/section_folder/mobile_home_section_folder_header.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/mobile/presentation/home/setting/settings_popup_menu.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/mobile/presentation/home/shared/empty_placeholder.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/mobile/presentation/home/shared/mobile_page_card.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/mobile/presentation/home/space/constants.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/mobile/presentation/home/space/manage_space_widget.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/mobile/presentation/home/space/mobile_space.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/mobile/presentation/home/space/mobile_space_header.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/mobile/presentation/home/space/mobile_space_menu.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/mobile/presentation/home/space/space_menu_bottom_sheet.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/mobile/presentation/home/space/space_permission_bottom_sheet.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/mobile/presentation/home/space/widgets.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/mobile/presentation/home/tab/_round_underline_tab_indicator.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/mobile/presentation/home/tab/_tab_bar.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/mobile/presentation/home/tab/ai_bubble_button.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/mobile/presentation/home/tab/mobile_space_tab.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/mobile/presentation/home/tab/space_order_bloc.dart",
+      "capa": "bloc",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/mobile/presentation/home/workspaces/create_workspace_menu.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/mobile/presentation/home/workspaces/workspace_menu_bottom_sheet.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/mobile/presentation/home/workspaces/workspace_more_options.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/mobile/presentation/inline_actions/mobile_inline_actions_handler.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/mobile/presentation/inline_actions/mobile_inline_actions_menu.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/mobile/presentation/inline_actions/mobile_inline_actions_menu_group.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/mobile/presentation/mobile_bottom_navigation_bar.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/mobile/presentation/notifications/mobile_notifications_multiple_select_page.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/mobile/presentation/notifications/mobile_notifications_page.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/mobile/presentation/notifications/mobile_notifications_screen.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/mobile/presentation/notifications/widgets/color.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/mobile/presentation/notifications/widgets/empty.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/mobile/presentation/notifications/widgets/header.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/mobile/presentation/notifications/widgets/mobile_notification_tab_bar.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/mobile/presentation/notifications/widgets/multi_select_notification_item.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/mobile/presentation/notifications/widgets/notification_item.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/mobile/presentation/notifications/widgets/settings_popup_menu.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/mobile/presentation/notifications/widgets/shared.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/mobile/presentation/notifications/widgets/slide_actions.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/mobile/presentation/notifications/widgets/tab.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/mobile/presentation/notifications/widgets/tab_bar.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/mobile/presentation/notifications/widgets/widgets.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/mobile/presentation/page_item/mobile_slide_action_button.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/mobile/presentation/page_item/mobile_view_item.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/mobile/presentation/page_item/mobile_view_item_add_button.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/mobile/presentation/presentation.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/mobile/presentation/root_placeholder_page.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/mobile/presentation/search/mobile_search_ask_ai_entrance.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/mobile/presentation/search/mobile_search_cell.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/mobile/presentation/search/mobile_search_icon.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/mobile/presentation/search/mobile_search_page.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/mobile/presentation/search/mobile_search_reference_bottom_sheet.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/mobile/presentation/search/mobile_search_result.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/mobile/presentation/search/mobile_search_summary_cell.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/mobile/presentation/search/mobile_search_textfield.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/mobile/presentation/search/mobile_view_ancestors.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/mobile/presentation/search/view_ancestor_cache.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/mobile/presentation/selection_menu/mobile_selection_menu.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/mobile/presentation/selection_menu/mobile_selection_menu_item.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/mobile/presentation/selection_menu/mobile_selection_menu_item_widget.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/mobile/presentation/selection_menu/mobile_selection_menu_widget.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/mobile/presentation/selection_menu/slash_keyboard_service_interceptor.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/mobile/presentation/setting/about/about.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/mobile/presentation/setting/about/about_setting_group.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/mobile/presentation/setting/ai/ai_settings_group.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/mobile/presentation/setting/appearance/appearance_setting_group.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/mobile/presentation/setting/appearance/rtl_setting.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/mobile/presentation/setting/appearance/text_scale_setting.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/mobile/presentation/setting/appearance/theme_setting.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/mobile/presentation/setting/cloud/appflowy_cloud_page.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/mobile/presentation/setting/cloud/cloud_setting_group.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/mobile/presentation/setting/font/font_picker_screen.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/mobile/presentation/setting/font/font_setting.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/mobile/presentation/setting/language/language_picker_screen.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/mobile/presentation/setting/language_setting_group.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/mobile/presentation/setting/launch_settings_page.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/mobile/presentation/setting/notifications_setting_group.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/mobile/presentation/setting/personal_info/edit_username_bottom_sheet.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/mobile/presentation/setting/personal_info/personal_info.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/mobile/presentation/setting/personal_info/personal_info_setting_group.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/mobile/presentation/setting/self_host/self_host_bottom_sheet.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/mobile/presentation/setting/self_host_setting_group.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/mobile/presentation/setting/setting.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/mobile/presentation/setting/support_setting_group.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/mobile/presentation/setting/user_session_setting_group.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/mobile/presentation/setting/widgets/mobile_setting_group_widget.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/mobile/presentation/setting/widgets/mobile_setting_item_widget.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/mobile/presentation/setting/widgets/mobile_setting_trailing.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/mobile/presentation/setting/widgets/widgets.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/mobile/presentation/setting/workspace/add_members_screen.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/mobile/presentation/setting/workspace/invite_member_by_link.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/mobile/presentation/setting/workspace/invite_members_screen.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/mobile/presentation/setting/workspace/member_list.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/mobile/presentation/setting/workspace/workspace_setting_group.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/mobile/presentation/widgets/flowy_mobile_option_decorate_box.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/mobile/presentation/widgets/flowy_mobile_quick_action_button.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/mobile/presentation/widgets/flowy_mobile_search_text_field.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/mobile/presentation/widgets/flowy_mobile_state_container.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/mobile/presentation/widgets/flowy_option_tile.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/mobile/presentation/widgets/navigation_bar_button.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/mobile/presentation/widgets/show_flowy_mobile_confirm_dialog.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/mobile/presentation/widgets/widgets.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    }
+  ],
+  "archivos_total": 178,
+  "catalogos": [
+    "blocs.json",
+    "deps.json",
+    "events.json",
+    "misc.json",
+    "notifications.json",
+    "protobuf.json"
+  ],
+  "catalogos_razon": {
+    "events.json": "Eventos FFI / dispatch de esta feature",
+    "blocs.json": "BLoCs / Cubits presentes en los archivos de esta unidad",
+    "protobuf.json": "Entidades protobuf input/output de los eventos",
+    "notifications.json": "Notificaciones Rust→Dart emitidas o escuchadas",
+    "deps.json": "Dependencias del workspace rust y pubspec",
+    "misc.json": "Rutas, atajos, flags, error codes, i18n"
+  },
+  "dependencias": [
+    {
+      "id": "F16.0",
+      "tipo": "indice",
+      "nota": "Documento indice F16.0 debe existir antes de esta sub-unidad."
+    }
+  ],
+  "plantilla": "feature",
+  "documento": "OUT/09-features/F16-mobile/1.2-mobile-lib-mobile-application-presentation-presentation.md",
+  "metricas": {
+    "archivos": 178,
+    "por_capa": {
+      "ui": 177,
+      "bloc": 1
+    },
+    "por_fuente": {
+      "appflowy": 178
+    }
+  },
+  "prioridad": 2,
+  "concurrencia": "paralela",
+  "generado_en": "2026-10-19T21:45:28Z"
+}

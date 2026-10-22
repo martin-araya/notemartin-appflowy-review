@@ -1,0 +1,73 @@
+{
+  "schema_version": 1,
+  "id": "F01.6.0",
+  "feature_id": "F01",
+  "sub_index": 0,
+  "titulo": "Indice Interaccion (cross-cutting)",
+  "fuentes": [
+    "appflowy"
+  ],
+  "archivos": [],
+  "archivos_total": 0,
+  "catalogos": [
+    "blocs.json",
+    "deps.json",
+    "events.json",
+    "misc.json",
+    "notifications.json",
+    "protobuf.json"
+  ],
+  "catalogos_razon": {
+    "events.json": "Eventos FFI / dispatch del feature completo",
+    "blocs.json": "BLoCs / Cubits presentes en los archivos de esta unidad",
+    "protobuf.json": "Entidades protobuf input/output",
+    "notifications.json": "Notificaciones Rust->Dart",
+    "deps.json": "Dependencias del workspace",
+    "misc.json": "Rutas, atajos, flags, i18n keys"
+  },
+  "dependencias": [
+    {
+      "id": "F01.6.1",
+      "relacion": "sub-unidad"
+    },
+    {
+      "id": "F01.6.2",
+      "relacion": "sub-unidad"
+    },
+    {
+      "id": "F01.6.3",
+      "relacion": "sub-unidad"
+    },
+    {
+      "id": "F01.6.4",
+      "relacion": "sub-unidad"
+    },
+    {
+      "id": "F01.6.5",
+      "relacion": "sub-unidad"
+    },
+    {
+      "id": "F01.6.6",
+      "relacion": "sub-unidad"
+    }
+  ],
+  "plantilla": "feature",
+  "documento": "OUT/09-features/F01-documentos-y-editor/6.0-indice-interaccion.md",
+  "metricas": {
+    "archivos": 0,
+    "por_capa": {},
+    "por_fuente": {},
+    "es_indice": true,
+    "sub_unidades": [
+      "F01.6.1",
+      "F01.6.2",
+      "F01.6.3",
+      "F01.6.4",
+      "F01.6.5",
+      "F01.6.6"
+    ]
+  },
+  "prioridad": 1,
+  "concurrencia": "meta",
+  "generado_en": "2026-10-20T14:07:11Z"
+}

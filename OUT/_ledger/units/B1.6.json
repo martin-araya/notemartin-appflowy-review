@@ -1,0 +1,18 @@
+{
+  "id": "B1.6",
+  "titulo": "Motor colaborativo CRDT",
+  "feature_id": "B1.6",
+  "documento": "OUT/07-motor-colaborativo-crdt/01-modelo-collab.md",
+  "archivos": [
+    "OUT/07-motor-colaborativo-crdt/00-indice.md",
+    "OUT/07-motor-colaborativo-crdt/01-modelo-collab.md",
+    "OUT/07-motor-colaborativo-crdt/02-folder.md",
+    "OUT/07-motor-colaborativo-crdt/03-documento.md",
+    "OUT/07-motor-colaborativo-crdt/04-database.md",
+    "OUT/07-motor-colaborativo-crdt/05-user-awareness.md",
+    "OUT/07-motor-colaborativo-crdt/06-collab-plugins.md",
+    "OUT/07-motor-colaborativo-crdt/07-snapshots-conflict-resolution.md"
+  ],
+  "evidence_min_pct": 30,
+  "gate_100": false
+}

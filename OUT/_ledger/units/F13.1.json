@@ -1,0 +1,345 @@
+{
+  "schema_version": 1,
+  "id": "F13.1",
+  "feature_id": "F13",
+  "sub_index": 1,
+  "titulo": "Ajustes: logica de aplicacion + cuenta, billing, plan, nube y workspace",
+  "fuentes": [
+    "appflowy"
+  ],
+  "archivos": [
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/workspace/application/settings/ai/local_ai_bloc.dart",
+      "capa": "bloc",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/workspace/application/settings/ai/local_ai_on_boarding_bloc.dart",
+      "capa": "bloc",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/workspace/application/settings/ai/local_llm_listener.dart",
+      "capa": "bloc",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/workspace/application/settings/ai/ollama_setting_bloc.dart",
+      "capa": "bloc",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/workspace/application/settings/ai/settings_ai_bloc.dart",
+      "capa": "bloc",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/workspace/application/settings/appearance/appearance_cubit.dart",
+      "capa": "bloc",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/workspace/application/settings/appearance/base_appearance.dart",
+      "capa": "bloc",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/workspace/application/settings/appearance/desktop_appearance.dart",
+      "capa": "bloc",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/workspace/application/settings/appearance/mobile_appearance.dart",
+      "capa": "bloc",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/workspace/application/settings/appflowy_cloud_setting_bloc.dart",
+      "capa": "bloc",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/workspace/application/settings/appflowy_cloud_urls_bloc.dart",
+      "capa": "bloc",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/workspace/application/settings/application_data_storage.dart",
+      "capa": "bloc",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/workspace/application/settings/billing/settings_billing_bloc.dart",
+      "capa": "bloc",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/workspace/application/settings/cloud_setting_bloc.dart",
+      "capa": "bloc",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/workspace/application/settings/cloud_setting_listener.dart",
+      "capa": "bloc",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/workspace/application/settings/create_file_settings_cubit.dart",
+      "capa": "bloc",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/workspace/application/settings/date_time/date_format_ext.dart",
+      "capa": "bloc",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/workspace/application/settings/date_time/time_format_ext.dart",
+      "capa": "bloc",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/workspace/application/settings/file_storage/file_storage_listener.dart",
+      "capa": "bloc",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/workspace/application/settings/notifications/notification_settings_cubit.dart",
+      "capa": "bloc",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/workspace/application/settings/plan/settings_plan_bloc.dart",
+      "capa": "bloc",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/workspace/application/settings/plan/workspace_subscription_ext.dart",
+      "capa": "bloc",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/workspace/application/settings/plan/workspace_usage_ext.dart",
+      "capa": "bloc",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/workspace/application/settings/prelude.dart",
+      "capa": "bloc",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/workspace/application/settings/setting_file_importer_bloc.dart",
+      "capa": "bloc",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/workspace/application/settings/settings_dialog_bloc.dart",
+      "capa": "bloc",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/workspace/application/settings/settings_file_exporter_cubit.dart",
+      "capa": "bloc",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/workspace/application/settings/share/export_service.dart",
+      "capa": "bloc",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/workspace/application/settings/share/import_service.dart",
+      "capa": "bloc",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/workspace/application/settings/shortcuts/settings_shortcuts_cubit.dart",
+      "capa": "bloc",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/workspace/application/settings/shortcuts/settings_shortcuts_service.dart",
+      "capa": "bloc",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/workspace/application/settings/shortcuts/shortcuts_model.dart",
+      "capa": "bloc",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/workspace/application/settings/workspace/workspace_settings_bloc.dart",
+      "capa": "bloc",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/workspace/presentation/settings/pages/about/app_version.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/workspace/presentation/settings/pages/account/account.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/workspace/presentation/settings/pages/account/account_deletion.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/workspace/presentation/settings/pages/account/account_sign_in_out.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/workspace/presentation/settings/pages/account/account_user_profile.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/workspace/presentation/settings/pages/account/email/email_section.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/workspace/presentation/settings/pages/account/password/change_password.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/workspace/presentation/settings/pages/account/password/error_extensions.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/workspace/presentation/settings/pages/account/password/password_suffix_icon.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/workspace/presentation/settings/pages/account/password/setup_password.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/workspace/presentation/settings/pages/fix_data_widget.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/workspace/presentation/settings/pages/settings_account_view.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/workspace/presentation/settings/pages/settings_billing_view.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/workspace/presentation/settings/pages/settings_plan_comparison_dialog.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/workspace/presentation/settings/pages/settings_plan_view.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/workspace/presentation/settings/pages/settings_workspace_view.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    }
+  ],
+  "archivos_total": 49,
+  "catalogos": [
+    "blocs.json",
+    "deps.json",
+    "events.json",
+    "misc.json",
+    "notifications.json",
+    "protobuf.json"
+  ],
+  "catalogos_razon": {
+    "events.json": "Eventos FFI / dispatch de esta feature",
+    "blocs.json": "BLoCs / Cubits presentes en los archivos de esta unidad",
+    "protobuf.json": "Entidades protobuf input/output de los eventos",
+    "notifications.json": "Notificaciones Rust→Dart emitidas o escuchadas",
+    "deps.json": "Dependencias del workspace rust y pubspec",
+    "misc.json": "Rutas, atajos, flags, error codes, i18n"
+  },
+  "dependencias": [
+    {
+      "id": "F13.0",
+      "tipo": "indice",
+      "nota": "Documento indice F13.0 debe existir antes de esta sub-unidad."
+    }
+  ],
+  "plantilla": "feature",
+  "documento": "OUT/09-features/F13-ajustes-apariencia-temas-fuentes/1-ajustes-logica-de-aplicacion-cuenta-billing-plan-nube-y-workspace.md",
+  "metricas": {
+    "archivos": 49,
+    "por_capa": {
+      "bloc": 33,
+      "ui": 16
+    },
+    "por_fuente": {
+      "appflowy": 49
+    }
+  },
+  "prioridad": 2,
+  "concurrencia": "paralela",
+  "generado_en": "2026-10-20T20:16:05Z"
+}

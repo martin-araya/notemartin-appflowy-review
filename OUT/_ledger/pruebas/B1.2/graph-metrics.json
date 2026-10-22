@@ -1,0 +1,167 @@
+{
+  "total_crates": 31,
+  "total_internal_edges": 150,
+  "total_external_deps": 368,
+  "top_fan_in": [
+    {
+      "crate": "lib-infra",
+      "in_degree": 19
+    },
+    {
+      "crate": "flowy-error",
+      "in_degree": 16
+    },
+    {
+      "crate": "lib-dispatch",
+      "in_degree": 12
+    },
+    {
+      "crate": "flowy-derive",
+      "in_degree": 11
+    },
+    {
+      "crate": "flowy-sqlite",
+      "in_degree": 10
+    },
+    {
+      "crate": "flowy-notification",
+      "in_degree": 8
+    },
+    {
+      "crate": "collab-integrate",
+      "in_degree": 6
+    },
+    {
+      "crate": "flowy-folder-pub",
+      "in_degree": 6
+    },
+    {
+      "crate": "flowy-storage-pub",
+      "in_degree": 6
+    },
+    {
+      "crate": "flowy-user-pub",
+      "in_degree": 6
+    },
+    {
+      "crate": "flowy-ai-pub",
+      "in_degree": 5
+    },
+    {
+      "crate": "flowy-server-pub",
+      "in_degree": 5
+    },
+    {
+      "crate": "flowy-user",
+      "in_degree": 4
+    },
+    {
+      "crate": "flowy-database-pub",
+      "in_degree": 4
+    },
+    {
+      "crate": "flowy-search-pub",
+      "in_degree": 4
+    }
+  ],
+  "top_fan_out": [
+    {
+      "crate": "flowy-database2",
+      "external_count": 25
+    },
+    {
+      "crate": "flowy-user",
+      "external_count": 23
+    },
+    {
+      "crate": "flowy-ai",
+      "external_count": 21
+    },
+    {
+      "crate": "flowy-core",
+      "external_count": 21
+    },
+    {
+      "crate": "flowy-error",
+      "external_count": 21
+    },
+    {
+      "crate": "flowy-folder",
+      "external_count": 18
+    },
+    {
+      "crate": "flowy-server",
+      "external_count": 18
+    },
+    {
+      "crate": "event-integration-test",
+      "external_count": 17
+    },
+    {
+      "crate": "flowy-document",
+      "external_count": 16
+    },
+    {
+      "crate": "flowy-search",
+      "external_count": 16
+    },
+    {
+      "crate": "flowy-codegen",
+      "external_count": 15
+    },
+    {
+      "crate": "lib-infra",
+      "external_count": 15
+    },
+    {
+      "crate": "collab-integrate",
+      "external_count": 13
+    },
+    {
+      "crate": "flowy-user-pub",
+      "external_count": 12
+    },
+    {
+      "crate": "flowy-sqlite-vec",
+      "external_count": 11
+    }
+  ],
+  "cycles_count": 0,
+  "cycles": [],
+  "connected_components": 1,
+  "components": [
+    [
+      "collab-integrate",
+      "dart-ffi",
+      "event-integration-test",
+      "flowy-ai",
+      "flowy-ai-pub",
+      "flowy-ast",
+      "flowy-codegen",
+      "flowy-core",
+      "flowy-database-pub",
+      "flowy-database2",
+      "flowy-date",
+      "flowy-derive",
+      "flowy-document",
+      "flowy-document-pub",
+      "flowy-error",
+      "flowy-folder",
+      "flowy-folder-pub",
+      "flowy-notification",
+      "flowy-search",
+      "flowy-search-pub",
+      "flowy-server",
+      "flowy-server-pub",
+      "flowy-sqlite",
+      "flowy-sqlite-vec",
+      "flowy-storage",
+      "flowy-storage-pub",
+      "flowy-user",
+      "flowy-user-pub",
+      "lib-dispatch",
+      "lib-infra",
+      "lib-log"
+    ]
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "id": "B5.3",
+  "titulo": "Cambio de workspace",
+  "feature_id": "B5.3",
+  "documento": "OUT/15-secuencias-globales/03-cambio-de-workspace.md",
+  "plantilla": "feature",
+  "archivos": [
+    "appflowy/frontend/appflowy_flutter/lib/workspace/application/workspace/workspace_bloc.dart",
+    "appflowy/frontend/appflowy_flutter/lib/workspace/application/workspace/workspace_event.dart",
+    "appflowy/frontend/appflowy_flutter/lib/workspace/application/user/user_workspace_bloc.dart",
+    "appflowy/frontend/appflowy_flutter/lib/workspace/application/app/app_bloc.dart",
+    "appflowy/frontend/rust-lib/flowy-folder/src/manager.rs",
+    "appflowy/frontend/rust-lib/flowy-folder/src/event_handler.rs",
+    "appflowy/frontend/rust-lib/flowy-folder/src/event_map.rs",
+    "appflowy/frontend/rust-lib/flowy-folder/src/notification.rs",
+    "appflowy/frontend/rust-lib/dart-ffi/src/lib.rs",
+    "appflowy/frontend/appflowy_flutter/lib/packages/appflowy_backend/lib/rust_stream.dart",
+    "appflowy/frontend/rust-lib/lib-dispatch/src/dispatcher.rs",
+    "appflowy/frontend/rust-lib/lib-dispatch/src/module.rs",
+    "appflowy/frontend/rust-lib/flowy-core/src/lib.rs"
+  ],
+  "archivos_total": 13,
+  "fuentes": [
+    "appflowy"
+  ],
+  "evidence_min_pct": 95,
+  "gate_100": false,
+  "transversal": true,
+  "secuencia": true,
+  "nota": "Secuencia global extremo a extremo: transversal, no ancla archivos a cobertura.csv. Sus archivos ya pertenecen a features F* y están verificados al 100 % desde el cierre de B3; B5 los re-presenta como recorrido con sequenceDiagram."
+}

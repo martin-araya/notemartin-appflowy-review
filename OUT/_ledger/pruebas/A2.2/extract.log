@@ -1,0 +1,10 @@
+  total_entities:    439
+  total_structs:     389
+  total_enums:       50
+  files_scanned:     745
+  crates:            10
+  unique_event_inputs:  141
+    resolved: 141, missing: 0
+  unique_event_outputs: 84
+    resolved: 84, missing: 0
+  escrito:           /Users/martin/Desktop/projects/Skills/notemartin-appflowy-review/OUT/_ledger/extract/protobuf.json

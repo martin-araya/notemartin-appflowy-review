@@ -1,0 +1,31 @@
+{
+  "id": "B5.6",
+  "titulo": "Abrir database y aplicar filtro+orden+grupo",
+  "feature_id": "B5.6",
+  "documento": "OUT/15-secuencias-globales/06-database-filtro-orden-grupo.md",
+  "plantilla": "feature",
+  "archivos": [
+    "appflowy/frontend/appflowy_flutter/lib/plugins/database/application/database_controller.dart",
+    "appflowy/frontend/appflowy_flutter/lib/plugins/database/application/grid/grid_bloc.dart",
+    "appflowy/frontend/appflowy_flutter/lib/plugins/database/application/filter/filter_editor_bloc.dart",
+    "appflowy/frontend/rust-lib/flowy-database2/src/manager.rs",
+    "appflowy/frontend/rust-lib/flowy-database2/src/services/database/database_editor.rs",
+    "appflowy/frontend/rust-lib/flowy-database2/src/services/filter/controller.rs",
+    "appflowy/frontend/rust-lib/flowy-database2/src/services/sort/controller.rs",
+    "appflowy/frontend/rust-lib/flowy-database2/src/services/group/controller.rs",
+    "appflowy/frontend/rust-lib/flowy-database2/src/services/database_view/view_filter.rs",
+    "appflowy/frontend/rust-lib/flowy-database2/src/services/database_view/view_sort.rs",
+    "appflowy/frontend/rust-lib/flowy-database2/src/services/database_view/view_group.rs",
+    "appflowy/frontend/rust-lib/flowy-database2/src/event_handler.rs",
+    "appflowy/frontend/rust-lib/flowy-database2/src/event_map.rs"
+  ],
+  "archivos_total": 13,
+  "fuentes": [
+    "appflowy"
+  ],
+  "evidence_min_pct": 95,
+  "gate_100": false,
+  "transversal": true,
+  "secuencia": true,
+  "nota": "Secuencia global extremo a extremo: transversal, no ancla archivos a cobertura.csv. Sus archivos ya pertenecen a features F* y están verificados al 100 % desde el cierre de B3; B5 los re-presenta como recorrido con sequenceDiagram."
+}

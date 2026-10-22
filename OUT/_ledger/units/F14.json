@@ -1,0 +1,82 @@
+{
+  "schema_version": 1,
+  "id": "F14",
+  "feature_id": "F14",
+  "sub_index": null,
+  "titulo": "Internacionalizacion",
+  "fuentes": [
+    "appflowy"
+  ],
+  "archivos": [
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/plugins/document/presentation/editor_plugins/i18n/editor_i18n.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/shared/easy_localiation_service.dart",
+      "capa": "service",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/startup/tasks/localization.dart",
+      "capa": "service",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/project.inlang.json",
+      "capa": "config",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/project.inlang/project_id",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/project.inlang/settings.json",
+      "capa": "config",
+      "estado": "pendiente"
+    }
+  ],
+  "archivos_total": 6,
+  "catalogos": [
+    "blocs.json",
+    "deps.json",
+    "events.json",
+    "misc.json",
+    "notifications.json",
+    "protobuf.json"
+  ],
+  "catalogos_razon": {
+    "events.json": "Eventos FFI / dispatch de esta feature",
+    "blocs.json": "BLoCs / Cubits presentes en los archivos de esta unidad",
+    "protobuf.json": "Entidades protobuf input/output de los eventos",
+    "notifications.json": "Notificaciones Rust→Dart emitidas o escuchadas",
+    "deps.json": "Dependencias del workspace rust y pubspec",
+    "misc.json": "Rutas, atajos, flags, error codes, i18n"
+  },
+  "dependencias": [],
+  "plantilla": "feature",
+  "documento": "OUT/09-features/F14-internacionalizacion/F14-internacionalizacion.md",
+  "metricas": {
+    "archivos": 6,
+    "por_capa": {
+      "ui": 2,
+      "service": 2,
+      "config": 2
+    },
+    "por_fuente": {
+      "appflowy": 6
+    }
+  },
+  "prioridad": 1,
+  "concurrencia": "paralela",
+  "generado_en": "2026-10-20T18:14:27Z"
+}

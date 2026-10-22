@@ -1,0 +1,125 @@
+# Pruebas — Fase A1.1 (`fetch_sources.sh`)
+
+**Fecha:** 2026-10-18
+**Entorno:** macOS Darwin, bash 5.x, python3 stdlib, git 2.x, red disponible.
+**Resultado:** ✅ OK
+
+## 1. Comprobaciones sintácticas (pre-ejecución)
+
+```bash
+$ bash -n SKILL/scripts/fetch_sources.sh && echo "syntax OK"
+syntax OK
+
+$ bash -n OUT/_ledger/validate-A1.1.sh && echo "syntax OK"
+syntax OK
+```
+
+## 2. `--help` del script
+
+```bash
+$ SKILL/scripts/fetch_sources.sh --help | head -10
+fetch_sources.sh — Adquiere SRC/{appflowy,collab,editor} en los rev correctos
+
+USO
+  fetch_sources.sh [opciones]
+
+OPCIONES
+  --appflowy-url URL   Override URL de AppFlowy (default: AppFlowy-IO/AppFlowy)
+  --appflowy-ref REF   Commit/branch/tag a fijar para AppFlowy (default: HEAD shallow)
+  --collab-url URL     Override URL de AppFlowy-Collab
+  --editor-url URL     Override URL de appflowy-editor
+```
+
+## 3. `--dry-run` (sin clonar)
+
+```bash
+$ SKILL/scripts/fetch_sources.sh --dry-run
+[1/5] AppFlowy → /Users/martin/Desktop/projects/Skills/notemartin-appflowy-review/SRC/appflowy
+DRYRUN appflowy url=https://github.com/AppFlowy-IO/AppFlowy ref=<default>
+[2/5] Extrayendo rev de AppFlowy-Collab desde Cargo.toml
+DRYRUN: no se ha clonado AppFlowy; extracción omitida
+PLAN:
+  appflowy_url=https://github.com/AppFlowy-IO/AppFlowy
+  collab_url=https://github.com/AppFlowy-IO/AppFlowy-Collab
+  editor_url=https://github.com/AppFlowy-IO/appflowy-editor
+  src_root=/Users/martin/Desktop/projects/Skills/notemartin-appflowy-review/SRC
+  out_root=/Users/martin/Desktop/projects/Skills/notemartin-appflowy-review/OUT
+```
+
+Exit 0, no clona, no escribe.
+
+## 4. Ejecución real
+
+```bash
+$ SKILL/scripts/fetch_sources.sh
+[1/5] AppFlowy → .../SRC/appflowy
+  appflowy HEAD = 5cf3a365dec0d59f64bad1ee4bb1050471a39b93
+[2/5] Extrayendo rev de AppFlowy-Collab desde Cargo.toml
+  collab rev (de Cargo.toml) = 4dfccef
+[3/5] Extrayendo ref de appflowy-editor desde pubspec.yaml
+  editor ref (de pubspec.yaml) = 470c4e7
+[4/5] Resolviendo commits remotos
+  collab commit = 4dfccefb9e4fd35240107b93fb4b5966295b452e
+  editor commit = 470c4e77c71b63f693ce0923a927afcd667d6f3b
+[5/5] Clonando collab y editor en sus commits resueltos
+  collab ya está en 4dfccefb9e4fd35240107b93fb4b5966295b452e — no-op
+  editor ya está en 470c4e77c71b63f693ce0923a927afcd667d6f3b — no-op
+  escrito /Users/martin/Desktop/projects/Skills/notemartin-appflowy-review/OUT/_ledger/sources.json (3 entradas)
+OK: A1.1 (sources.json escrito, 3 fuentes)
+```
+
+## 5. Resoluciones conseguidas
+
+| Fuente | URL | `commit_short` | `commit` (40) | `requested_ref` | Sujeto del commit | Tamaño |
+|---|---|---|---|---|---|---|
+| appflowy | https://github.com/AppFlowy-IO/AppFlowy | `5cf3a36` | `5cf3a365dec0d59f64bad1ee4bb1050471a39b93` | `default-branch` (shallow) | `chore: revert en-US i18n change (#8838)` | 71 MB |
+| collab | https://github.com/AppFlowy-IO/AppFlowy-Collab | `4dfccef` | `4dfccefb9e4fd35240107b93fb4b5966295b452e` | `4dfccef` (Cargo.toml `[patch.crates-io]`) | `fix: row observe not working for clear cell (#386)` | 51 MB |
+| editor | https://github.com/AppFlowy-IO/appflowy-editor | `470c4e7` | `470c4e77c71b63f693ce0923a927afcd667d6f3b` | `470c4e7` (pubspec.yaml `dependency_overrides.appflowy_editor.git.ref`) | `feat: support block wrapper (#1101)` | 45 MB |
+
+## 6. Validador del gate (ROADMAP A1.1)
+
+```bash
+$ OUT/_ledger/validate-A1.1.sh
+OK: A1.1 (3 entradas, commit_short=HEAD, SRC/<name> con .git, [patch.crates-io] y dependency_overrides derivables)
+$ echo $?
+0
+```
+
+Los 4 checks implementados por el validador:
+
+| # | Check | Resultado |
+|---|---|---|
+| 1 | `sources.json` es JSON válido con `schema_version=1`, 3 entradas (`appflowy`, `collab`, `editor`) y `commit` ≥ 7 chars en cada una | ✅ |
+| 2 | `git -C SRC/collab rev-parse --short HEAD` = `sources[collab].commit_short` (prueba literal del ROADMAP) | ✅ `4dfccef` = `4dfccef` |
+| 3 | Cada `SRC/<name>/.git` existe y su `HEAD` coincide con `sources.json[name].commit` | ✅ |
+| 4 | `[patch.crates-io]` en `SRC/appflowy/frontend/rust-lib/Cargo.toml` re-derivable; `dependency_overrides.appflowy_editor.git.ref` en `pubspec.yaml` re-derivable | ✅ |
+
+## 7. Test de regresión (validator detecta entradas malas)
+
+```bash
+# Inyectar commit de 3 chars en sources.json
+$ python3 -c '...'
+AssertionError: appflowy.commit corto (3): abc
+$ OUT/_ledger/validate-A1.1.sh
+FAIL: sources.json inválido o incompleto
+$ echo $?
+1
+# Restaurar
+$ cp /tmp/sources-ok.json OUT/_ledger/sources.json
+$ OUT/_ledger/validate-A1.1.sh
+OK: A1.1 (3 entradas, commit_short=HEAD, SRC/<name> con .git, [patch.crates-io] y dependency_overrides derivables)
+$ echo $?
+0
+```
+
+## 8. Diferencias detectadas vs el plan original
+
+Durante la implementación se detectaron 3 problemas reales que el plan no anticipaba y se resolvieron en sitio (sin reabrir la fase):
+
+1. **El parser regex inicial de `pubspec.yaml` capturaba el bloque equivocado**: el `appflowy_editor:` aparece dos veces (una vacía y otra con `ref`); la primera versión de la regex captaba bloques de hermanos posteriores y devolvía el `ref` de `sheet:` en lugar del de `appflowy_editor:`. Reescrito a parser línea-a-línea.
+2. **`git ls-remote` no muestra los SHAs cortos** fijados por AppFlowy (no están en ninguna rama/tag): ni `4dfccef` (collab) ni `470c4e7` (editor) aparecen. La estrategia de `ls-remote` del plan fallaba; se sustituyó por un clon temporal en `/tmp` que sí puede resolver el SHA por estar en el historial completo.
+3. **El parser TOML de `[patch.crates-io]` ignoraba el bloque real de collab**: AppFlowy actualmente no parchea los crates `collab*` desde `[patch.crates-io]`; el bloque con `git = ...` y `rev = ...` está **después** de `[patch.crates-io]` como continuación de tabla (no como sección nueva). La regex extendida hasta el final del archivo o el siguiente `[section]` lo capturó correctamente. Anotado en `OUT/22-preguntas-abiertas.md`.
+
+## 9. Estado
+
+**A1.1 cerrada.** Siguiente fase: **A1.2** — `inventory.py` (recorrer `SRC/*` y emitir `inventario.json` + `assets.json`).

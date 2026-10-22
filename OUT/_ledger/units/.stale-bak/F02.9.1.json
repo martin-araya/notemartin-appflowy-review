@@ -1,0 +1,212 @@
+{
+  "schema_version": 1,
+  "id": "F02.9.1",
+  "feature_id": "F02",
+  "sub_index": 1,
+  "titulo": "Grid filters y calculations widgets (filter_editor_bloc, simple_text_filter_bloc, choicechips, calculations widgets, common)",
+  "fuentes": [
+    "appflowy"
+  ],
+  "archivos": [
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/plugins/database/grid/application/calculations/calculations_bloc.dart",
+      "capa": "bloc",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/plugins/database/grid/application/calculations/field_type_calc_ext.dart",
+      "capa": "bloc",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/plugins/database/grid/application/filter/filter_editor_bloc.dart",
+      "capa": "bloc",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/plugins/database/grid/application/filter/select_option_loader.dart",
+      "capa": "bloc",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/plugins/database/grid/application/simple_text_filter_bloc.dart",
+      "capa": "bloc",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/plugins/database/grid/presentation/widgets/calculations/calculate_cell.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/plugins/database/grid/presentation/widgets/calculations/calculation_selector.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/plugins/database/grid/presentation/widgets/calculations/calculation_type_item.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/plugins/database/grid/presentation/widgets/calculations/calculations_row.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/plugins/database/grid/presentation/widgets/calculations/remove_calculation_button.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/plugins/database/grid/presentation/widgets/common/type_option_separator.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/plugins/database/grid/presentation/widgets/filter/choicechip/checkbox.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/plugins/database/grid/presentation/widgets/filter/choicechip/checklist.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/plugins/database/grid/presentation/widgets/filter/choicechip/choicechip.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/plugins/database/grid/presentation/widgets/filter/choicechip/date.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/plugins/database/grid/presentation/widgets/filter/choicechip/number.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/plugins/database/grid/presentation/widgets/filter/choicechip/select_option/condition_list.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/plugins/database/grid/presentation/widgets/filter/choicechip/select_option/option_list.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/plugins/database/grid/presentation/widgets/filter/choicechip/select_option/select_option.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/plugins/database/grid/presentation/widgets/filter/choicechip/text.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/plugins/database/grid/presentation/widgets/filter/choicechip/time.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/plugins/database/grid/presentation/widgets/filter/choicechip/url.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/plugins/database/grid/presentation/widgets/filter/condition_button.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/plugins/database/grid/presentation/widgets/filter/create_filter_list.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/plugins/database/grid/presentation/widgets/filter/disclosure_button.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/plugins/database/grid/presentation/widgets/filter/filter_menu.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/plugins/database/grid/presentation/widgets/filter/filter_menu_item.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    }
+  ],
+  "archivos_total": 27,
+  "catalogos": [
+    "blocs.json",
+    "deps.json",
+    "events.json",
+    "misc.json",
+    "notifications.json",
+    "protobuf.json"
+  ],
+  "catalogos_razon": {
+    "events.json": "Eventos FFI / dispatch de esta feature",
+    "blocs.json": "BLoCs / Cubits presentes en los archivos de esta unidad",
+    "protobuf.json": "Entidades protobuf input/output de los eventos",
+    "notifications.json": "Notificaciones Rust->Dart emitidas o escuchadas",
+    "deps.json": "Dependencias del workspace rust y pubspec",
+    "misc.json": "Rutas, atajos, flags, error codes, i18n"
+  },
+  "dependencias": [
+    {
+      "id": "F02.0",
+      "relacion": "indice"
+    }
+  ],
+  "plantilla": "feature",
+  "documento": "OUT/09-features/F02-bases-de-datos/9.1-grid-filtros-y-filter-choicechips.md",
+  "metricas": {
+    "archivos": 27,
+    "por_capa": {
+      "bloc": 5,
+      "ui": 22
+    },
+    "por_fuente": {
+      "appflowy": 27
+    }
+  },
+  "prioridad": 3,
+  "concurrencia": "paralela",
+  "generado_en": "2026-10-20T00:05:29Z"
+}

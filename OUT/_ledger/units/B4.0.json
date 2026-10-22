@@ -1,0 +1,13 @@
+{
+  "id": "B4.0",
+  "titulo": "Motor de exportación, importación y publicación",
+  "feature_id": "B4.0",
+  "documento": "OUT/10-motor-export-import/00-indice-motor-export-import.md",
+  "plantilla": "export",
+  "archivos": [],
+  "archivos_total": 0,
+  "fuentes": [],
+  "evidence_min_pct": 30,
+  "gate_100": true,
+  "nota": "Unidad transversal: sus archivos ya pertenecen a features F* y están verificados en cobertura.csv. El bloque B4 no modifica el ledger; documenta el motor re-trazando esos mismos ficheros."
+}

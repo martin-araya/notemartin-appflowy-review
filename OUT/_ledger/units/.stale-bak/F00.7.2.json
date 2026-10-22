@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "id": "F00.7.2",
+  "feature_id": "F00",
+  "sub_index": 7,
+  "titulo": "App glue (lib/{core,startup,util,shared,workspace}, tests, integration_test, plugins varios) — .githooks",
+  "fuentes": [
+    "appflowy"
+  ],
+  "archivos": [
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/.githooks/commit-msg",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/.githooks/pre-commit",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/.githooks/pre-push",
+      "capa": "ui",
+      "estado": "pendiente"
+    }
+  ],
+  "archivos_total": 3,
+  "catalogos": [
+    "blocs.json",
+    "deps.json",
+    "events.json",
+    "misc.json",
+    "notifications.json",
+    "protobuf.json"
+  ],
+  "catalogos_razon": {
+    "events.json": "Eventos FFI / dispatch de esta feature",
+    "blocs.json": "BLoCs / Cubits presentes en los archivos de esta unidad",
+    "protobuf.json": "Entidades protobuf input/output de los eventos",
+    "notifications.json": "Notificaciones Rust→Dart emitidas o escuchadas",
+    "deps.json": "Dependencias del workspace rust y pubspec",
+    "misc.json": "Rutas, atajos, flags, error codes, i18n"
+  },
+  "dependencias": [
+    {
+      "id": "F00.0",
+      "tipo": "indice",
+      "nota": "Documento indice F00.0 debe existir antes de esta sub-unidad."
+    }
+  ],
+  "plantilla": "feature",
+  "documento": "OUT/09-features/F00-infraestructura-compartida-ffi-dispatch-errores-build-paquetes-nativo-tests/7.2-app-glue-lib-core-startup-util-shared-workspace-tests-integration-test-plugins-v.md",
+  "metricas": {
+    "archivos": 3,
+    "por_capa": {
+      "ui": 3
+    },
+    "por_fuente": {
+      "appflowy": 3
+    }
+  },
+  "prioridad": 2,
+  "concurrencia": "paralela",
+  "generado_en": "2026-10-19T21:45:28Z"
+}

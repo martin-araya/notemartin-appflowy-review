@@ -1,0 +1,128 @@
+# Pruebas — Fase A1.3 (`init_ledger.py` + `cobertura.csv`)
+
+**Fecha:** 2026-10-18
+**Entorno:** macOS Darwin, Python 3 stdlib, `OUT/_ledger/inventario.json` (A1.2 ✅).
+**Resultado:** ✅ OK
+
+## 1. Comprobaciones sintácticas
+
+```bash
+$ python3 -m py_compile SKILL/scripts/init_ledger.py && echo "syntax OK"
+syntax OK
+
+$ bash -n OUT/_ledger/validate-A1.3.sh && echo "syntax OK"
+syntax OK
+```
+
+## 2. `--help` del script
+
+```
+usage: init_ledger.py [-h] [--inventario INVENTARIO] [--out OUT]
+
+Inicializa _ledger/cobertura.csv desde inventario.json con todas las filas en
+sin_asignar.
+
+optional arguments:
+  -h, --help            show this help message and exit
+  --inventario INVENTARIO
+                        Path al inventario (default:
+                        /Users/martin/.../OUT/_ledger/inventario.json)
+  --out OUT             Path al CSV de salida (default:
+                        /Users/martin/.../OUT/_ledger/cobertura.csv)
+```
+
+## 3. Ejecución real
+
+```bash
+$ time SKILL/scripts/init_ledger.py
+  rows:  4603
+    appflowy   3557 rows
+    collab     313 rows
+    editor     733 rows
+  by_capa: {'bloc': 325, 'build': 43, 'codegen': 35, 'collab': 280, 'config': 306,
+            'dispatch': 27, 'ffi': 10, 'i18n': 23, 'persistence': 16,
+            'rust-handler': 508, 'rust-manager': 12, 'server': 32, 'service': 162,
+            'test': 537, 'ui': 2287}
+  escrito: /Users/martin/.../OUT/_ledger/cobertura.csv
+SKILL/scripts/init_ledger.py 2>&1  0.03s user 0.01s system 89% cpu 0.049 total
+```
+
+Tiempo: **0.05 s** (script trivial; solo lee JSON y escribe CSV).
+
+## 4. Cabecera y filas
+
+```bash
+$ head -4 OUT/_ledger/cobertura.csv
+fuente,ruta,capa,feature_ids,documento,estado,verificado_por
+appflowy,appflowy/.dockerignore,ui,,,sin_asignar,
+appflowy,appflowy/.githooks/commit-msg,ui,,,sin_asignar,
+appflowy,appflowy/.githooks/pre-commit,ui,,,sin_asignar,
+```
+
+Cabecera exacta: `fuente,ruta,capa,feature_ids,documento,estado,verificado_por` (7 columnas).
+Filas: 4.604 (1 cabecera + 4.603 datos).
+
+## 5. Distribución
+
+| Métrica | Valor |
+|---|---|
+| Total filas | 4.603 |
+| Por fuente | appflowy 3.557 / collab 313 / editor 733 |
+| Por estado | `sin_asignar`: 4.603 (100%) |
+| `feature_ids` vacío | 4.603 / 4.603 |
+| `documento` vacío | 4.603 / 4.603 |
+| `verificado_por` vacío | 4.603 / 4.603 |
+| Tamaño del CSV | 513 KB |
+
+## 6. Validador del gate (ROADMAP A1.3)
+
+```bash
+$ OUT/_ledger/validate-A1.3.sh
+OK: A1.3 (CSV con cabecera correcta, 4603 filas = inventario, todas sin_asignar, cols mutables vacías, 3 fuentes)
+$ echo $?
+0
+```
+
+Los 3 checks del validador:
+
+| # | Check | Resultado |
+|---|---|---|
+| 1 | Cabecera exacta = `fuente,ruta,capa,feature_ids,documento,estado,verificado_por` | ✅ |
+| 2 | Cardinalidad: `wc -l - 1` == `len(inventario.files)` | ✅ 4.603 == 4.603 |
+| 3 | (a) Todas las filas con `estado='sin_asignar'`, (b) `feature_ids, documento, verificado_por` vacíos, (c) `(fuente, ruta)` únicos, (d) 3 fuentes presentes | ✅ |
+
+## 7. Test de regresión
+
+```bash
+# Inyectar estado != sin_asignar
+$ python3 -c '...'
+AssertionError: 1 filas con estado != sin_asignar (ej: ['appflowy/.dockerignore'])
+$ OUT/_ledger/validate-A1.3.sh
+FAIL: alguna fila no cumple estado=sin_asignar o hay duplicados
+$ echo $?
+1
+# Restaurar
+$ cp /tmp/cob-ok.csv OUT/_ledger/cobertura.csv
+$ OUT/_ledger/validate-A1.3.sh
+OK: A1.3 (…)
+$ echo $?
+0
+```
+
+## 8. Diferencia detectada vs el plan original
+
+Durante la implementación se detectó un error de clave en la primera ejecución:
+el inventario usa `ruta_rel` y no `ruta` (la columna del CSV se llama `ruta` por
+decisión de D4, pero el JSON usa `ruta_rel`). Corregido en sitio: el sort y el
+mapeo de columnas usan `r["ruta_rel"]` y lo escriben en la columna CSV `ruta`.
+Sin impacto sobre el contrato externo del CSV (que es lo que el ROADMAP exige).
+
+## 9. Estado
+
+**A1.3 cerrada. Bloque A1 (Adquisición e inventario) completo.**
+
+- ✅ A1.1: clones en `SRC/{appflowy,collab,editor}` + `sources.json`
+- ✅ A1.2: `inventario.json` (4.603 archivos) + `assets.json` (1.186 binarios)
+- ✅ A1.3: `cobertura.csv` (4.603 filas en `sin_asignar`)
+
+Siguiente paso en el ROADMAP: **B0.1** — Ejecutar A1.1–A2.7 sobre las fuentes reales (los extractores A2.x producirán `OUT/_ledger/extract/{events,protobuf,notifications,blocs,deps,misc}.json`).

@@ -1,0 +1,700 @@
+{
+  "schema_version": 1,
+  "id": "F19.3",
+  "feature_id": "F19",
+  "sub_index": 3,
+  "titulo": "Ejemplos del editor (example/*)",
+  "fuentes": [
+    "editor"
+  ],
+  "archivos": [
+    {
+      "fuente": "editor",
+      "ruta": "editor/example/.firebaserc",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/example/.gitignore",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/example/.metadata",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/example/README.md",
+      "capa": "config",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/example/analysis_options.yaml",
+      "capa": "config",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/example/android/.gitignore",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/example/android/app/build.gradle",
+      "capa": "build",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/example/android/app/src/debug/AndroidManifest.xml",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/example/android/app/src/main/AndroidManifest.xml",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/example/android/app/src/main/kotlin/com/example/example/MainActivity.kt",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/example/android/app/src/main/res/drawable-v21/launch_background.xml",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/example/android/app/src/main/res/drawable/launch_background.xml",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/example/android/app/src/main/res/values-night/styles.xml",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/example/android/app/src/main/res/values/styles.xml",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/example/android/app/src/profile/AndroidManifest.xml",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/example/android/build.gradle",
+      "capa": "build",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/example/android/gradle.properties",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/example/android/gradle/wrapper/gradle-wrapper.properties",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/example/android/settings.gradle",
+      "capa": "build",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/example/assets/arabic_example.json",
+      "capa": "config",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/example/assets/example.html",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/example/assets/example.json",
+      "capa": "config",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/example/assets/mobile_example.json",
+      "capa": "config",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/example/devtools_options.yaml",
+      "capa": "config",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/example/firebase.json",
+      "capa": "config",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/example/ios/.gitignore",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/example/ios/Flutter/AppFrameworkInfo.plist",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/example/ios/Flutter/Debug.xcconfig",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/example/ios/Flutter/Release.xcconfig",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/example/ios/Podfile",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/example/ios/Runner.xcodeproj/project.pbxproj",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/example/ios/Runner.xcodeproj/project.xcworkspace/contents.xcworkspacedata",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/example/ios/Runner.xcodeproj/project.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/example/ios/Runner.xcodeproj/project.xcworkspace/xcshareddata/WorkspaceSettings.xcsettings",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/example/ios/Runner.xcodeproj/xcshareddata/xcschemes/Runner.xcscheme",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/example/ios/Runner.xcworkspace/contents.xcworkspacedata",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/example/ios/Runner.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/example/ios/Runner.xcworkspace/xcshareddata/WorkspaceSettings.xcsettings",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/example/ios/Runner/AppDelegate.swift",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/example/ios/Runner/Assets.xcassets/AppIcon.appiconset/Contents.json",
+      "capa": "config",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/example/ios/Runner/Assets.xcassets/LaunchImage.imageset/Contents.json",
+      "capa": "config",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/example/ios/Runner/Assets.xcassets/LaunchImage.imageset/README.md",
+      "capa": "config",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/example/ios/Runner/Base.lproj/LaunchScreen.storyboard",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/example/ios/Runner/Base.lproj/Main.storyboard",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/example/ios/Runner/Info.plist",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/example/ios/Runner/Runner-Bridging-Header.h",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/example/lib/home_page.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/example/lib/main.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/example/lib/pages/animated_markdown_page.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/example/lib/pages/auto_complete_editor.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/example/lib/pages/auto_expand_editor.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/example/lib/pages/collab_editor.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/example/lib/pages/collab_selection_editor.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/example/lib/pages/customize_theme_for_editor.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/example/lib/pages/desktop_editor.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/example/lib/pages/drag_to_reorder_editor.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/example/lib/pages/editor.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/example/lib/pages/editor_list.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/example/lib/pages/fixed_toolbar_editor.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/example/lib/pages/focus_example_for_editor.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/example/lib/pages/markdown/markdown_code_block_parser.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/example/lib/pages/markdown_editor.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/example/lib/pages/mobile_editor.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/example/linux/.gitignore",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/example/linux/CMakeLists.txt",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/example/linux/flutter/CMakeLists.txt",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/example/linux/main.cc",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/example/linux/my_application.cc",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/example/linux/my_application.h",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/example/macos/.gitignore",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/example/macos/Flutter/Flutter-Debug.xcconfig",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/example/macos/Flutter/Flutter-Release.xcconfig",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/example/macos/Podfile",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/example/macos/Runner.xcodeproj/project.pbxproj",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/example/macos/Runner.xcodeproj/project.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/example/macos/Runner.xcodeproj/xcshareddata/xcschemes/Runner.xcscheme",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/example/macos/Runner.xcworkspace/contents.xcworkspacedata",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/example/macos/Runner.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/example/macos/Runner/AppDelegate.swift",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/example/macos/Runner/Assets.xcassets/AppIcon.appiconset/Contents.json",
+      "capa": "config",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/example/macos/Runner/Base.lproj/MainMenu.xib",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/example/macos/Runner/Configs/AppInfo.xcconfig",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/example/macos/Runner/Configs/Debug.xcconfig",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/example/macos/Runner/Configs/Release.xcconfig",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/example/macos/Runner/Configs/Warnings.xcconfig",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/example/macos/Runner/DebugProfile.entitlements",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/example/macos/Runner/Info.plist",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/example/macos/Runner/MainFlutterWindow.swift",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/example/macos/Runner/Release.entitlements",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/example/pubspec.yaml",
+      "capa": "config",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/example/test/markdown_code_block_parser_test.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/example/test/widget_test.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/example/web/index.html",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/example/web/manifest.json",
+      "capa": "config",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/example/windows/.gitignore",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/example/windows/CMakeLists.txt",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/example/windows/flutter/CMakeLists.txt",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/example/windows/runner/CMakeLists.txt",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/example/windows/runner/Runner.rc",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/example/windows/runner/flutter_window.cpp",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/example/windows/runner/flutter_window.h",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/example/windows/runner/main.cpp",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/example/windows/runner/resource.h",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/example/windows/runner/runner.exe.manifest",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/example/windows/runner/utils.cpp",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/example/windows/runner/utils.h",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/example/windows/runner/win32_window.cpp",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/example/windows/runner/win32_window.h",
+      "capa": "ui",
+      "estado": "pendiente"
+    }
+  ],
+  "archivos_total": 108,
+  "catalogos": [
+    "blocs.json",
+    "deps.json",
+    "events.json",
+    "misc.json",
+    "notifications.json",
+    "protobuf.json"
+  ],
+  "catalogos_razon": {
+    "events.json": "Eventos FFI / dispatch de esta feature",
+    "blocs.json": "BLoCs / Cubits presentes en los archivos de esta unidad",
+    "protobuf.json": "Entidades protobuf input/output de los eventos",
+    "notifications.json": "Notificaciones Rust→Dart emitidas o escuchadas",
+    "deps.json": "Dependencias del workspace rust y pubspec",
+    "misc.json": "Rutas, atajos, flags, error codes, i18n"
+  },
+  "dependencias": [
+    {
+      "id": "F19.0",
+      "tipo": "indice",
+      "nota": "Documento indice F19.0 debe existir antes de esta sub-unidad."
+    }
+  ],
+  "plantilla": "feature",
+  "documento": "OUT/09-features/F19-editor-tests-ejemplos-l10n-configuracion/3-ejemplos-del-editor-example.md",
+  "metricas": {
+    "archivos": 108,
+    "por_capa": {
+      "ui": 92,
+      "config": 13,
+      "build": 3
+    },
+    "por_fuente": {
+      "editor": 108
+    }
+  },
+  "prioridad": 2,
+  "concurrencia": "paralela",
+  "generado_en": "2026-10-20T22:05:46Z"
+}

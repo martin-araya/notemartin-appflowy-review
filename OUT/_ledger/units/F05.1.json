@@ -1,0 +1,488 @@
+{
+  "schema_version": 1,
+  "id": "F05.1",
+  "feature_id": "F05",
+  "sub_index": 1,
+  "titulo": "Usuario: appflowy_flutter/lib/user (Dart)",
+  "fuentes": [
+    "appflowy"
+  ],
+  "archivos": [
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/user/application/anon_user_bloc.dart",
+      "capa": "bloc",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/user/application/auth/af_cloud_auth_service.dart",
+      "capa": "bloc",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/user/application/auth/af_cloud_mock_auth_service.dart",
+      "capa": "bloc",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/user/application/auth/auth_error.dart",
+      "capa": "bloc",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/user/application/auth/auth_service.dart",
+      "capa": "bloc",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/user/application/auth/backend_auth_service.dart",
+      "capa": "bloc",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/user/application/auth/device_id.dart",
+      "capa": "bloc",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/user/application/notification_filter/notification_filter_bloc.dart",
+      "capa": "bloc",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/user/application/password/password_bloc.dart",
+      "capa": "bloc",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/user/application/password/password_http_service.dart",
+      "capa": "bloc",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/user/application/prelude.dart",
+      "capa": "bloc",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/user/application/reminder/reminder_bloc.dart",
+      "capa": "bloc",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/user/application/reminder/reminder_extension.dart",
+      "capa": "bloc",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/user/application/reminder/reminder_listener.dart",
+      "capa": "bloc",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/user/application/reminder/reminder_service.dart",
+      "capa": "bloc",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/user/application/sign_in_bloc.dart",
+      "capa": "bloc",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/user/application/sign_up_bloc.dart",
+      "capa": "bloc",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/user/application/splash_bloc.dart",
+      "capa": "bloc",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/user/application/user_auth_listener.dart",
+      "capa": "bloc",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/user/application/user_listener.dart",
+      "capa": "bloc",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/user/application/user_service.dart",
+      "capa": "bloc",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/user/application/user_settings_service.dart",
+      "capa": "bloc",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/user/application/workspace_error_bloc.dart",
+      "capa": "bloc",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/user/domain/auth_state.dart",
+      "capa": "bloc",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/user/presentation/anon_user.dart",
+      "capa": "bloc",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/user/presentation/helpers/handle_open_workspace_error.dart",
+      "capa": "bloc",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/user/presentation/helpers/helpers.dart",
+      "capa": "bloc",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/user/presentation/presentation.dart",
+      "capa": "bloc",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/user/presentation/router.dart",
+      "capa": "bloc",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/user/presentation/screens/screens.dart",
+      "capa": "bloc",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/user/presentation/screens/sign_in_screen/desktop_sign_in_screen.dart",
+      "capa": "bloc",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/user/presentation/screens/sign_in_screen/mobile_loading_screen.dart",
+      "capa": "bloc",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/user/presentation/screens/sign_in_screen/mobile_sign_in_screen.dart",
+      "capa": "bloc",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/user/presentation/screens/sign_in_screen/sign_in_screen.dart",
+      "capa": "bloc",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/user/presentation/screens/sign_in_screen/widgets/anonymous_sign_in_button.dart",
+      "capa": "bloc",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/user/presentation/screens/sign_in_screen/widgets/anonymous_sign_in_button/anonymous_sign_in_button.dart",
+      "capa": "bloc",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/user/presentation/screens/sign_in_screen/widgets/continue_with/back_to_login_in_button.dart",
+      "capa": "bloc",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/user/presentation/screens/sign_in_screen/widgets/continue_with/continue_with_button.dart",
+      "capa": "bloc",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/user/presentation/screens/sign_in_screen/widgets/continue_with/continue_with_email.dart",
+      "capa": "bloc",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/user/presentation/screens/sign_in_screen/widgets/continue_with/continue_with_email_and_password.dart",
+      "capa": "bloc",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/user/presentation/screens/sign_in_screen/widgets/continue_with/continue_with_magic_link_or_passcode_page.dart",
+      "capa": "bloc",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/user/presentation/screens/sign_in_screen/widgets/continue_with/continue_with_password.dart",
+      "capa": "bloc",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/user/presentation/screens/sign_in_screen/widgets/continue_with/continue_with_password_page.dart",
+      "capa": "bloc",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/user/presentation/screens/sign_in_screen/widgets/continue_with/forgot_password_page.dart",
+      "capa": "bloc",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/user/presentation/screens/sign_in_screen/widgets/continue_with/reset_password.dart",
+      "capa": "bloc",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/user/presentation/screens/sign_in_screen/widgets/continue_with/reset_password_page.dart",
+      "capa": "bloc",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/user/presentation/screens/sign_in_screen/widgets/continue_with/set_new_password.dart",
+      "capa": "bloc",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/user/presentation/screens/sign_in_screen/widgets/continue_with/title_logo.dart",
+      "capa": "bloc",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/user/presentation/screens/sign_in_screen/widgets/continue_with/verifying_button.dart",
+      "capa": "bloc",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/user/presentation/screens/sign_in_screen/widgets/logo/logo.dart",
+      "capa": "bloc",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/user/presentation/screens/sign_in_screen/widgets/magic_link_sign_in_buttons.dart",
+      "capa": "bloc",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/user/presentation/screens/sign_in_screen/widgets/sign_in_agreement.dart",
+      "capa": "bloc",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/user/presentation/screens/sign_in_screen/widgets/sign_in_anonymous_button.dart",
+      "capa": "bloc",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/user/presentation/screens/sign_in_screen/widgets/sign_in_or_logout_button.dart",
+      "capa": "bloc",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/user/presentation/screens/sign_in_screen/widgets/switch_sign_in_sign_up_button.dart",
+      "capa": "bloc",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/user/presentation/screens/sign_in_screen/widgets/third_party_sign_in_button/third_party_sign_in_button.dart",
+      "capa": "bloc",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/user/presentation/screens/sign_in_screen/widgets/third_party_sign_in_button/third_party_sign_in_buttons.dart",
+      "capa": "bloc",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/user/presentation/screens/sign_in_screen/widgets/widgets.dart",
+      "capa": "bloc",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/user/presentation/screens/skip_log_in_screen.dart",
+      "capa": "bloc",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/user/presentation/screens/splash_screen.dart",
+      "capa": "bloc",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/user/presentation/screens/workspace_error_screen.dart",
+      "capa": "bloc",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/user/presentation/screens/workspace_start_screen/desktop_workspace_start_screen.dart",
+      "capa": "bloc",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/user/presentation/screens/workspace_start_screen/mobile_workspace_start_screen.dart",
+      "capa": "bloc",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/user/presentation/screens/workspace_start_screen/workspace_start_screen.dart",
+      "capa": "bloc",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/user/presentation/widgets/auth_form_container.dart",
+      "capa": "bloc",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/user/presentation/widgets/flowy_logo_title.dart",
+      "capa": "bloc",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/user/presentation/widgets/folder_widget.dart",
+      "capa": "bloc",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/user/presentation/widgets/widgets.dart",
+      "capa": "bloc",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/workspace/application/appearance_defaults.dart",
+      "capa": "bloc",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/workspace/application/subscription_success_listenable/subscription_success_listenable.dart",
+      "capa": "bloc",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/workspace/application/user/prelude.dart",
+      "capa": "bloc",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/workspace/application/user/settings_user_bloc.dart",
+      "capa": "bloc",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/workspace/application/user/user_workspace_bloc.dart",
+      "capa": "bloc",
+      "estado": "verificado"
+    }
+  ],
+  "archivos_total": 73,
+  "catalogos": [
+    "blocs.json",
+    "deps.json",
+    "events.json",
+    "misc.json",
+    "notifications.json",
+    "protobuf.json"
+  ],
+  "catalogos_razon": {
+    "events.json": "Eventos FFI / dispatch de esta feature",
+    "blocs.json": "BLoCs / Cubits presentes en los archivos de esta unidad",
+    "protobuf.json": "Entidades protobuf input/output de los eventos",
+    "notifications.json": "Notificaciones Rust→Dart emitidas o escuchadas",
+    "deps.json": "Dependencias del workspace rust y pubspec",
+    "misc.json": "Rutas, atajos, flags, error codes, i18n"
+  },
+  "dependencias": [
+    {
+      "id": "F05.0",
+      "tipo": "indice",
+      "nota": "Documento indice F05.0 debe existir antes de esta sub-unidad."
+    }
+  ],
+  "plantilla": "feature",
+  "documento": "OUT/09-features/F05-usuario-auth-sesion/1-usuario-appflowy-flutter-lib-user-dart.md",
+  "metricas": {
+    "archivos": 73,
+    "por_capa": {
+      "bloc": 73
+    },
+    "por_fuente": {
+      "appflowy": 73
+    }
+  },
+  "prioridad": 2,
+  "concurrencia": "paralela",
+  "generado_en": "2026-10-20T14:07:42Z"
+}

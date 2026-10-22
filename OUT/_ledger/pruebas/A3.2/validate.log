@@ -1,0 +1,12 @@
+[2026-10-20T16:17:05Z]   OK  check 1: script ejecutable
+[2026-10-20T16:17:05Z]   OK  check 2: --help imprime uso y sale 0
+[2026-10-20T16:17:05Z]   OK  check 3: inventario.json presente
+[2026-10-20T16:17:05Z]   OK  check 4: valid.md exit 0 con 0 errores
+[2026-10-20T16:17:05Z]   OK  check 5: fake_path.md exit 1 con E_PATH_NOT_IN_INVENTORY en ref :1:
+[2026-10-20T16:17:06Z]   OK  check 6: out_of_range.md exit 1 con E_LINE_OUT_OF_RANGE en ref :1:
+[2026-10-20T16:17:06Z]   OK  check 7: mixed.md exit 1, 3 errores en refs :2: :3: :4: (no :1: ni :5:)
+[2026-10-20T16:17:06Z]   OK  check 8: --json produce JSON parseable con errors==0
+[2026-10-20T16:17:06Z]   OK  check 9: modo directorio: 4 archivos, 10 refs (5 OK / 5 FAIL)
+[2026-10-20T16:17:06Z] ---
+[2026-10-20T16:17:06Z] resultado: 9/9 checks OK (0 fallidos)
+[2026-10-20T16:17:06Z] OK: A3.2 (validate_evidence.py funciona: extrae refs, valida fuente/ruta/línea/rango, reporta con código)

@@ -1,0 +1,140 @@
+{
+  "schema_version": 1,
+  "id": "F02.1",
+  "feature_id": "F02",
+  "sub_index": 1,
+  "titulo": "Campos y tipos (services/field, application/field)",
+  "fuentes": [
+    "appflowy"
+  ],
+  "archivos": [
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/flowy-database2/src/services/field/file_0.rs",
+      "capa": "rust-handler",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/flowy-database2/src/services/field/file_1.rs",
+      "capa": "rust-handler",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/flowy-database2/src/services/field/file_10.rs",
+      "capa": "rust-handler",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/flowy-database2/src/services/field/file_11.rs",
+      "capa": "rust-handler",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/flowy-database2/src/services/field/file_12.rs",
+      "capa": "rust-handler",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/flowy-database2/src/services/field/file_13.rs",
+      "capa": "rust-handler",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/flowy-database2/src/services/field/file_14.rs",
+      "capa": "rust-handler",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/flowy-database2/src/services/field/file_2.rs",
+      "capa": "rust-handler",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/flowy-database2/src/services/field/file_3.rs",
+      "capa": "rust-handler",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/flowy-database2/src/services/field/file_4.rs",
+      "capa": "rust-handler",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/flowy-database2/src/services/field/file_5.rs",
+      "capa": "rust-handler",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/flowy-database2/src/services/field/file_6.rs",
+      "capa": "rust-handler",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/flowy-database2/src/services/field/file_7.rs",
+      "capa": "rust-handler",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/flowy-database2/src/services/field/file_8.rs",
+      "capa": "rust-handler",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/flowy-database2/src/services/field/file_9.rs",
+      "capa": "rust-handler",
+      "estado": "pendiente"
+    }
+  ],
+  "archivos_total": 15,
+  "catalogos": [
+    "blocs.json",
+    "deps.json",
+    "events.json",
+    "misc.json",
+    "notifications.json",
+    "protobuf.json"
+  ],
+  "catalogos_razon": {
+    "events.json": "Eventos FFI / dispatch de esta feature",
+    "blocs.json": "BLoCs / Cubits presentes en los archivos de esta unidad",
+    "protobuf.json": "Entidades protobuf input/output de los eventos",
+    "notifications.json": "Notificaciones Rust→Dart emitidas o escuchadas",
+    "deps.json": "Dependencias del workspace rust y pubspec",
+    "misc.json": "Rutas, atajos, flags, error codes, i18n"
+  },
+  "dependencias": [
+    {
+      "id": "F02.0",
+      "tipo": "indice",
+      "nota": "Documento indice F02.0 debe existir antes de esta sub-unidad."
+    }
+  ],
+  "plantilla": "feature",
+  "documento": "OUT/09-features/F02-bases-de-datos/1-campos-y-tipos-services-field-application-field.md",
+  "metricas": {
+    "archivos": 15,
+    "por_capa": {
+      "rust-handler": 15
+    },
+    "por_fuente": {
+      "appflowy": 15
+    }
+  },
+  "prioridad": 2,
+  "concurrencia": "paralela",
+  "generado_en": "2026-10-21T21:49:43Z"
+}

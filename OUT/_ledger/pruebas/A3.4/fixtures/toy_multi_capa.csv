@@ -1,0 +1,7 @@
+fuente,ruta,capa,feature_ids,documento,estado,verificado_por
+appflowy,appflowy/a/ui1.rs,ui,,,verificado,rev1
+appflowy,appflowy/a/ui2.rs,ui,,,sin_asignar,
+appflowy,appflowy/a/rs1.rs,rust-handler,,,verificado,rev1
+appflowy,appflowy/a/rs2.rs,rust-handler,,,verificado,rev1
+appflowy,appflowy/a/rs3.rs,rust-handler,,,pendiente,
+appflowy,appflowy/a/svc1.rs,service,,,sin_asignar,

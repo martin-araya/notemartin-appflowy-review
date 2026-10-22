@@ -1,0 +1,713 @@
+{
+  "schema_version": 1,
+  "id": "F00.3",
+  "feature_id": "F00",
+  "sub_index": 3,
+  "titulo": "Build, codegen, integration tests Rust",
+  "fuentes": [
+    "appflowy"
+  ],
+  "archivos": [
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/build-tool/flowy-ast/Cargo.toml",
+      "capa": "config",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/build-tool/flowy-ast/src/ast.rs",
+      "capa": "codegen",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/build-tool/flowy-ast/src/ctxt.rs",
+      "capa": "codegen",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/build-tool/flowy-ast/src/event_attrs.rs",
+      "capa": "codegen",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/build-tool/flowy-ast/src/lib.rs",
+      "capa": "codegen",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/build-tool/flowy-ast/src/node_attrs.rs",
+      "capa": "codegen",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/build-tool/flowy-ast/src/pb_attrs.rs",
+      "capa": "codegen",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/build-tool/flowy-ast/src/symbol.rs",
+      "capa": "codegen",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/build-tool/flowy-ast/src/ty_ext.rs",
+      "capa": "codegen",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/build-tool/flowy-codegen/Cargo.toml",
+      "capa": "config",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/build-tool/flowy-codegen/src/ast.rs",
+      "capa": "codegen",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/build-tool/flowy-codegen/src/dart_event/dart_event.rs",
+      "capa": "codegen",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/build-tool/flowy-codegen/src/dart_event/event_template.rs",
+      "capa": "codegen",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/build-tool/flowy-codegen/src/dart_event/event_template.tera",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/build-tool/flowy-codegen/src/dart_event/mod.rs",
+      "capa": "codegen",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/build-tool/flowy-codegen/src/flowy_toml.rs",
+      "capa": "codegen",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/build-tool/flowy-codegen/src/lib.rs",
+      "capa": "codegen",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/build-tool/flowy-codegen/src/protobuf_file/ast.rs",
+      "capa": "codegen",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/build-tool/flowy-codegen/src/protobuf_file/mod.rs",
+      "capa": "codegen",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/build-tool/flowy-codegen/src/protobuf_file/proto_gen.rs",
+      "capa": "codegen",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/build-tool/flowy-codegen/src/protobuf_file/proto_info.rs",
+      "capa": "codegen",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/build-tool/flowy-codegen/src/protobuf_file/template/derive_meta/derive_meta.rs",
+      "capa": "codegen",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/build-tool/flowy-codegen/src/protobuf_file/template/derive_meta/derive_meta.tera",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/build-tool/flowy-codegen/src/protobuf_file/template/derive_meta/mod.rs",
+      "capa": "codegen",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/build-tool/flowy-codegen/src/protobuf_file/template/mod.rs",
+      "capa": "codegen",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/build-tool/flowy-codegen/src/protobuf_file/template/proto_file/enum.tera",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/build-tool/flowy-codegen/src/protobuf_file/template/proto_file/enum_template.rs",
+      "capa": "codegen",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/build-tool/flowy-codegen/src/protobuf_file/template/proto_file/mod.rs",
+      "capa": "codegen",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/build-tool/flowy-codegen/src/protobuf_file/template/proto_file/struct.tera",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/build-tool/flowy-codegen/src/protobuf_file/template/proto_file/struct_template.rs",
+      "capa": "codegen",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/build-tool/flowy-codegen/src/ts_event/event_template.rs",
+      "capa": "codegen",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/build-tool/flowy-codegen/src/ts_event/event_template.tera",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/build-tool/flowy-codegen/src/ts_event/mod.rs",
+      "capa": "codegen",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/build-tool/flowy-codegen/src/util.rs",
+      "capa": "codegen",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/build-tool/flowy-derive/.gitignore",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/build-tool/flowy-derive/Cargo.toml",
+      "capa": "config",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/build-tool/flowy-derive/src/dart_event/mod.rs",
+      "capa": "codegen",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/build-tool/flowy-derive/src/lib.rs",
+      "capa": "codegen",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/build-tool/flowy-derive/src/node/mod.rs",
+      "capa": "codegen",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/build-tool/flowy-derive/src/proto_buf/deserialize.rs",
+      "capa": "codegen",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/build-tool/flowy-derive/src/proto_buf/enum_serde.rs",
+      "capa": "codegen",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/build-tool/flowy-derive/src/proto_buf/mod.rs",
+      "capa": "codegen",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/build-tool/flowy-derive/src/proto_buf/serialize.rs",
+      "capa": "codegen",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/build-tool/flowy-derive/src/proto_buf/util.rs",
+      "capa": "codegen",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/event-integration-test/Cargo.toml",
+      "capa": "config",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/event-integration-test/src/chat_event.rs",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/event-integration-test/src/database_event.rs",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/event-integration-test/src/document/document_event.rs",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/event-integration-test/src/document/mod.rs",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/event-integration-test/src/document/utils.rs",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/event-integration-test/src/document_event.rs",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/event-integration-test/src/event_builder.rs",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/event-integration-test/src/folder_event.rs",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/event-integration-test/src/lib.rs",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/event-integration-test/src/user_event.rs",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/event-integration-test/tests/asset/database_template_1.afdb",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/event-integration-test/tests/asset/japan_trip.md",
+      "capa": "config",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/event-integration-test/tests/asset/project.csv",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/event-integration-test/tests/chat/chat_message_test.rs",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/event-integration-test/tests/chat/local_chat_test.rs",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/event-integration-test/tests/chat/mod.rs",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/event-integration-test/tests/database/af_cloud/mod.rs",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/event-integration-test/tests/database/af_cloud/summarize_row_test.rs",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/event-integration-test/tests/database/af_cloud/translate_row_test.rs",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/event-integration-test/tests/database/af_cloud/util.rs",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/event-integration-test/tests/database/local_test/calculate_test.rs",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/event-integration-test/tests/database/local_test/event_test.rs",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/event-integration-test/tests/database/local_test/group_test.rs",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/event-integration-test/tests/database/local_test/mod.rs",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/event-integration-test/tests/database/mod.rs",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/event-integration-test/tests/document/af_cloud_test/edit_test.rs",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/event-integration-test/tests/document/af_cloud_test/file_upload_test.rs",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/event-integration-test/tests/document/af_cloud_test/mod.rs",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/event-integration-test/tests/document/local_test/edit_test.rs",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/event-integration-test/tests/document/local_test/mod.rs",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/event-integration-test/tests/document/local_test/snapshot_test.rs",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/event-integration-test/tests/document/mod.rs",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/event-integration-test/tests/folder/local_test/folder_test.rs",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/event-integration-test/tests/folder/local_test/import_test.rs",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/event-integration-test/tests/folder/local_test/mod.rs",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/event-integration-test/tests/folder/local_test/publish_database_test.rs",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/event-integration-test/tests/folder/local_test/publish_document_test.rs",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/event-integration-test/tests/folder/local_test/script.rs",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/event-integration-test/tests/folder/local_test/subscription_test.rs",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/event-integration-test/tests/folder/local_test/test.rs",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/event-integration-test/tests/folder/mod.rs",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/event-integration-test/tests/main.rs",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/event-integration-test/tests/search/document_title_content_search.rs",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/event-integration-test/tests/search/mod.rs",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/event-integration-test/tests/sql_test/chat_message_ordering_test.rs",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/event-integration-test/tests/sql_test/chat_message_test.rs",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/event-integration-test/tests/sql_test/mod.rs",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/event-integration-test/tests/user/af_cloud_test/auth_test.rs",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/event-integration-test/tests/user/af_cloud_test/import_af_data_folder_test.rs",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/event-integration-test/tests/user/af_cloud_test/member_test.rs",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/event-integration-test/tests/user/af_cloud_test/mod.rs",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/event-integration-test/tests/user/af_cloud_test/util.rs",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/event-integration-test/tests/user/af_cloud_test/workspace_test.rs",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/event-integration-test/tests/user/local_test/auth_test.rs",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/event-integration-test/tests/user/local_test/helper.rs",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/event-integration-test/tests/user/local_test/import_af_data_local_test.rs",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/event-integration-test/tests/user/local_test/mod.rs",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/event-integration-test/tests/user/local_test/user_awareness_test.rs",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/event-integration-test/tests/user/local_test/user_profile_test.rs",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/event-integration-test/tests/user/migration_test/document_test.rs",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/event-integration-test/tests/user/migration_test/history_user_db/README.md",
+      "capa": "config",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/event-integration-test/tests/user/migration_test/mod.rs",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/event-integration-test/tests/user/migration_test/version_test.rs",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/event-integration-test/tests/user/mod.rs",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/event-integration-test/tests/util.rs",
+      "capa": "test",
+      "estado": "pendiente"
+    }
+  ],
+  "archivos_total": 110,
+  "catalogos": [
+    "blocs.json",
+    "deps.json",
+    "events.json",
+    "misc.json",
+    "notifications.json",
+    "protobuf.json"
+  ],
+  "catalogos_razon": {
+    "events.json": "Eventos FFI / dispatch de esta feature",
+    "blocs.json": "BLoCs / Cubits presentes en los archivos de esta unidad",
+    "protobuf.json": "Entidades protobuf input/output de los eventos",
+    "notifications.json": "Notificaciones Rust→Dart emitidas o escuchadas",
+    "deps.json": "Dependencias del workspace rust y pubspec",
+    "misc.json": "Rutas, atajos, flags, error codes, i18n"
+  },
+  "dependencias": [
+    {
+      "id": "F00.0",
+      "tipo": "indice",
+      "nota": "Documento indice F00.0 debe existir antes de esta sub-unidad."
+    }
+  ],
+  "plantilla": "feature",
+  "documento": "OUT/09-features/F00-infraestructura-compartida-ffi-dispatch-errores-build-nativo/3-build-codegen-integration-tests-rust.md",
+  "metricas": {
+    "archivos": 110,
+    "por_capa": {
+      "config": 6,
+      "codegen": 35,
+      "ui": 8,
+      "test": 61
+    },
+    "por_fuente": {
+      "appflowy": 110
+    }
+  },
+  "prioridad": 2,
+  "concurrencia": "paralela",
+  "generado_en": "2026-10-20T22:05:46Z"
+}

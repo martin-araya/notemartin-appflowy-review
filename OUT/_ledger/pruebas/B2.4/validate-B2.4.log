@@ -1,0 +1,16 @@
+─── validate_template (catalogue) ───
+--- summary: files=1 ok=1 errors=0 warns=0 ---
+OK: template
+─── validate_evidence ───
+--- summary: refs=253 ok=253 errors=0 ---
+OK: evidence
+─── validate_mermaid ───
+OK=5 FAIL=0
+OK: mermaid
+─── count_rows_70 (prueba literal del ROADMAP) ───
+  §4 índice global        : 70 filas (esperado 70) OK
+  §5.* suma               : 70 filas (esperado 70) OK
+  §6 sin uso en Dart      : 49 filas (esperado 49) OK
+OK: count_rows_70
+
+OK: B2.4 (template + evidence + mermaid + count_rows, 4/4 checks)

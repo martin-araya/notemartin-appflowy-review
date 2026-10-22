@@ -1,0 +1,103 @@
+{
+  "_comentario": "Migraciones de ruta explícitas que C1 aplica a las referencias de OUT/. Cada entrada mapea una ruta citada (sin prefijo de fuente, tal y como aparece en los .md) a la ruta real en el inventario. `de` puede llevar prefijo de fuente opcional; se normaliza a ruta_rel sin prefijo. Rutas que no aparecen aquí se resuelven por basename+ancla (fix_line_offsets.py) o se declaran `[NO DETERMINADO]`.",
+  "version": "1.0",
+  "fecha": "2026-10-21",
+  "migraciones": [
+    {
+      "de": "workspace/application/app/app_bloc.dart",
+      "para": "appflowy/frontend/appflowy_flutter/lib/features/workspace/logic/workspace_bloc.dart",
+      "motivo": "Ruta migrada al esquema por-feature; el fichero citado no existe en el snapshot 5cf3a36."
+    },
+    {
+      "de": "lib/workspace/application/app/app_bloc.dart",
+      "para": "appflowy/frontend/appflowy_flutter/lib/features/workspace/logic/workspace_bloc.dart",
+      "motivo": "Igual que la anterior, con el prefijo `lib/` que arrastraban las citas."
+    },
+    {
+      "de": "workspace/application/workspace/workspace_bloc.dart",
+      "para": "appflowy/frontend/appflowy_flutter/lib/features/workspace/logic/workspace_bloc.dart",
+      "motivo": "El Bloc vive hoy bajo features/workspace/logic (arquitectura Dart dual, AGENTS.md §5.7)."
+    },
+    {
+      "de": "flowy-database2/src/database_editor.rs",
+      "para": "appflowy/frontend/rust-lib/flowy-database2/src/services/database/database_editor.rs",
+      "motivo": "El módulo se movió a `services/database/`."
+    },
+    {
+      "de": "collab-database/src/views/database_view.rs",
+      "para": "collab/collab-database/src/views/view.rs",
+      "motivo": "`DatabaseView` está definido en `views/view.rs`; no existe `views/database_view.rs`."
+    },
+    {
+      "de": "collab-database/src/views/view.rs",
+      "para": "collab/collab-database/src/views/view.rs",
+      "motivo": "Cita sin prefijo de fuente que sí resuelve al inventario."
+    },
+    {
+      "de": "collab-plugins/src/cloud_storage/sync_state.rs",
+      "para": "appflowy/frontend/rust-lib/flowy-document/src/notification.rs",
+      "motivo": "`sync_state.rs` no existe en collab-plugins; la notificación real `DidUpdateDocumentSyncState` está en flowy-document."
+    },
+    {
+      "de": "flowy-search/src/services/local_search_handler.rs",
+      "para": "appflowy/frontend/rust-lib/flowy-search/src/services/manager.rs",
+      "motivo": "`local_search_handler.rs` no existe en este snapshot; el servicio de búsqueda local es `services/manager.rs`."
+    },
+    {
+      "de": "collab/collab/src/lib.rs",
+      "para": "collab/collab/src/entity.rs",
+      "motivo": "`EncodedCollab` y su `encode`/`decode` están en `src/entity.rs`, no en el `lib.rs` de 41 líneas."
+    },
+    {
+      "de": "flowy-storage/src/file_cache.rs",
+      "para": "appflowy/frontend/rust-lib/flowy-storage/src/file_cache.rs",
+      "motivo": "Cita sin prefijo de fuente que sí resuelve al inventario."
+    },
+    {
+      "de": "search_menu_bloc.dart",
+      "para": "appflowy/frontend/appflowy_flutter/lib/workspace/application/command_palette/command_palette_bloc.dart",
+      "motivo": "`search_menu_bloc.dart` no existe; el BLoC del menú de búsqueda es `command_palette_bloc.dart`."
+    },
+    {
+      "de": "image_upload.dart",
+      "para": "appflowy/frontend/appflowy_flutter/lib/plugins/document/presentation/editor_plugins/image/image_util.dart",
+      "motivo": "`image_upload.dart` no existe; la lógica de subida del plugin de imagen está en `image_util.dart`."
+    },
+    {
+      "de": "database_editor.dart",
+      "para": "appflowy/frontend/rust-lib/flowy-database2/src/services/database/database_editor.rs",
+      "motivo": "No hay `database_editor.dart` en Dart; el `DatabaseEditor` citado es el de Rust."
+    },
+    {
+      "de": "document_event.rs",
+      "para": "appflowy/frontend/rust-lib/event-integration-test/src/document_event.rs",
+      "motivo": "Dos candidatos; el aggregator es `src/document_event.rs`, no `src/document/document_event.rs`."
+    },
+    {
+      "de": "plugins/document/presentation/editor_plugins/image/image_upload.dart",
+      "para": "appflowy/frontend/appflowy_flutter/lib/plugins/document/presentation/editor_plugins/image/image_util.dart",
+      "motivo": "Ruta completa del plugin de imagen sin `image_upload.dart`."
+    },
+    {
+      "de": "folder/notification.rs",
+      "para": "appflowy/frontend/rust-lib/flowy-folder/src/notification.rs",
+      "motivo": "Cita parcial: solo el nombre del crate y el fichero."
+    },
+    {
+      "de": "app_bloc.dart",
+      "para": null,
+      "motivo": "`AppBloc` no existe en el snapshot 5cf3a36: no hay `app_bloc.dart` en `SRC/` (rg sobre todo el árbol). El documento B5.3 lo cita 3 veces. Retirada la cita y marcada `[NO DETERMINADO]`."
+    },
+    {
+      "de": "notification.rs",
+      "para": "appflowy/frontend/rust-lib/flowy-storage/src/notification.rs",
+      "motivo": "Único caso donde `StorageNotification` tiene 2 variantes (`FileStorageLimitExceeded`, `SingleFileLimitExceeded`) y NO existe `FileUploadProgress`: la cita de B5.7 describe una notificación inexistente."
+    },
+    {
+      "de": "event_handler.rs",
+      "para": "appflowy/frontend/rust-lib/flowy-database2/src/event_handler.rs",
+      "linea": 31,
+      "motivo": "Solo se aplica cuando las anclas del documento (`GetDatabaseData`, `DatabaseEditor`) no discriminan: el handler real es `get_database_data_handler`, declarado en la línea 31; el nombre del evento (`GetDatabaseData`, `event_map.rs:142`) no aparece en el fichero de handlers. El resto de `event_handler.rs` se resuelve antes por `basename+ancla`."
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "documento": "OUT/09-features/F08-busqueda-e-indexacion/F08-busqueda-e-indexacion.md",
+  "filas_ledger_cubiertas": [
+    {"fuente": "appflowy", "ruta": "appflowy/frontend/rust-lib/flowy-core/src/full_indexed_data_provider.rs", "capa": "rust-handler", "estado": "verificado"},
+    {"fuente": "appflowy", "ruta": "appflowy/frontend/rust-lib/flowy-core/src/indexed_data_consumer.rs", "capa": "rust-handler", "estado": "verificado"},
+    {"fuente": "appflowy", "ruta": "appflowy/frontend/rust-lib/flowy-core/src/indexing_data_runner.rs", "capa": "rust-handler", "estado": "verificado"},
+    {"fuente": "appflowy", "ruta": "appflowy/frontend/rust-lib/flowy-search/Cargo.toml", "capa": "config", "estado": "verificado"},
+    {"fuente": "appflowy", "ruta": "appflowy/frontend/rust-lib/flowy-search/Flowy.toml", "capa": "config", "estado": "verificado"},
+    {"fuente": "appflowy", "ruta": "appflowy/frontend/rust-lib/flowy-search/build.rs", "capa": "rust-handler", "estado": "verificado"},
+    {"fuente": "appflowy", "ruta": "appflowy/frontend/rust-lib/flowy-search/src/document/cloud_search_handler.rs", "capa": "rust-handler", "estado": "verificado"},
+    {"fuente": "appflowy", "ruta": "appflowy/frontend/rust-lib/flowy-search/src/document/local_search_handler.rs", "capa": "rust-handler", "estado": "verificado"},
+    {"fuente": "appflowy", "ruta": "appflowy/frontend/rust-lib/flowy-search/src/document/mod.rs", "capa": "rust-handler", "estado": "verificado"},
+    {"fuente": "appflowy", "ruta": "appflowy/frontend/rust-lib/flowy-search/src/entities/mod.rs", "capa": "rust-handler", "estado": "verificado"},
+    {"fuente": "appflowy", "ruta": "appflowy/frontend/rust-lib/flowy-search/src/entities/notification.rs", "capa": "service", "estado": "verificado"},
+    {"fuente": "appflowy", "ruta": "appflowy/frontend/rust-lib/flowy-search/src/entities/query.rs", "capa": "rust-handler", "estado": "verificado"},
+    {"fuente": "appflowy", "ruta": "appflowy/frontend/rust-lib/flowy-search/src/entities/result.rs", "capa": "rust-handler", "estado": "verificado"},
+    {"fuente": "appflowy", "ruta": "appflowy/frontend/rust-lib/flowy-search/src/entities/search_filter.rs", "capa": "rust-handler", "estado": "verificado"},
+    {"fuente": "appflowy", "ruta": "appflowy/frontend/rust-lib/flowy-search/src/event_handler.rs", "capa": "rust-handler", "estado": "verificado"},
+    {"fuente": "appflowy", "ruta": "appflowy/frontend/rust-lib/flowy-search/src/event_map.rs", "capa": "rust-handler", "estado": "verificado"},
+    {"fuente": "appflowy", "ruta": "appflowy/frontend/rust-lib/flowy-search/src/lib.rs", "capa": "rust-handler", "estado": "verificado"},
+    {"fuente": "appflowy", "ruta": "appflowy/frontend/rust-lib/flowy-search/src/services/manager.rs", "capa": "rust-manager", "estado": "verificado"},
+    {"fuente": "appflowy", "ruta": "appflowy/frontend/rust-lib/flowy-search/src/services/mod.rs", "capa": "rust-handler", "estado": "verificado"},
+    {"fuente": "appflowy", "ruta": "appflowy/frontend/rust-lib/flowy-search/tests/main.rs", "capa": "rust-handler", "estado": "verificado"},
+    {"fuente": "appflowy", "ruta": "appflowy/frontend/rust-lib/flowy-search/tests/tantivy_test.rs", "capa": "rust-handler", "estado": "verificado"}
+  ],
+  "archivos_extra_detectados": [
+    {"ruta": "appflowy/frontend/rust-lib/flowy-core/src/deps_resolve/search_deps.rs", "motivo": "Cablea `DocumentCloudSearchHandler` al `SearchManager` (F08.json no la incluye; está en F00/F-feature-transversal). Referenciada en §7 sin reclamar su archivo."},
+    {"ruta": "appflowy/frontend/rust-lib/flowy-core/src/module.rs", "motivo": "Registra el plugin `flowy-search` en `make_plugins` (no listado en F08.json). Referenciada en §7."},
+    {"ruta": "appflowy/frontend/rust-lib/flowy-core/src/lib.rs", "motivo": "Declara `search_manager: Arc<SearchManager>` (no listado en F08.json). Referenciada en §7."},
+    {"ruta": "appflowy/frontend/rust-lib/flowy-core/src/app_life_cycle.rs", "motivo": "Dispara `start_full_indexed_data_provider` y `start_instant_indexed_data_provider` (no listado en F08.json). Referenciada en §10.2."}
+  ],
+  "preguntas_abiertas": [
+    "[NO DETERMINADO] ¿Está previsto usar SearchFilterPB en una variante futura de SearchEvent o es API muerta? (referencia: appflowy:appflowy/frontend/rust-lib/flowy-search/src/entities/search_filter.rs:4-7)",
+    "[NO DETERMINADO] ¿Por qué SearchNotification se compila y se exporta pero no se registra como rust_notifications en A2.3? (referencia cruzada: notifications.json)",
+    "[NO DETERMINADO] ¿Qué condiciones exactas producen el cutoff 0.4 en state.read().await.search(...)? (referencia: local_search_handler.rs:53)",
+    "[NO DETERMINADO] ¿event-integration-test tiene fixtures para StreamSearch?"
+  ]
+}

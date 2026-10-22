@@ -1,0 +1,314 @@
+{
+  "schema_version": 1,
+  "generado_en": "2026-10-21",
+  "ronda": 3,
+  "total": 30,
+  "veredictos": {"correcta": 27, "parcialmente_correcta": 3, "incorrecta": 0, "no_determinable": 0},
+  "llaves_incorrectas": 0,
+  "porcentaje_correctas": 90.0,
+  "umbral": 95.0,
+  "supera_umbral": false,
+  "respuestas_que_atribuyen_error_a_la_documentacion": [],
+  "resultados": [
+    {
+      "id": "Q01",
+      "area": "cold-start",
+      "veredicto": "correcta",
+      "llave_incorrecta": false,
+      "respuesta_dada": "InitRustSDKTask (rust_sdk.dart:13) → FlowySDK.init → ffi.set_stream_port:38 → ffi.init_sdk:51; init_sdk retorna -1 si data==null y 0 en éxito; Dart lanza Exception('Failed to initialize the SDK') si código !=0.",
+      "clave_verificada": "InitRustSDKTask (rust_sdk.dart:13); set_stream_port/lib.rs:240 invierte 0; init_sdk/lib.rs:114 retorna 0/-1 (con nullptr) y appflowy_backend.dart:53 lanza Exception.",
+      "analisis": "Coincide con la llave en tarea, orden de llamadas, líneas y manejo de error. La atribución a ErrorCode::Internal no figura en la llave pero no la contradice.",
+      "docs_consultados": ["B1.4", "B5.1", "06-01-ffi"]
+    },
+    {
+      "id": "Q02",
+      "area": "cold-start",
+      "veredicto": "correcta",
+      "llave_incorrecta": false,
+      "respuesta_dada": "AFPlugin registrados en module.rs:22-28 (flowy_folder, flowy_database2, flowy_document, flowy_search, flowy_ai, flowy_storage, flowy_user); managers en AppFlowyCore::init (lib.rs:124, struct 61-77); on_launch_if_authenticated en app_life_cycle.rs:142 lanza start_full_indexed_data_provider y start_instant_indexed_data_provider.",
+      "clave_verificada": "module.rs:22-28 registran los plugins; AppFlowyCore::init/lib.rs:124; on_launch_if_authenticated/app_life_cycle.rs:142 dispara indexadores.",
+      "analisis": "Coincide plenamente: archivo de registro, crates participantes, struct en lib.rs:61, hook de ciclo de vida y arranque de los dos indexadores.",
+      "docs_consultados": ["B1.4", "B5.1", "B1.3", "07-01-modelo-collab"]
+    },
+    {
+      "id": "Q03",
+      "area": "cold-start",
+      "veredicto": "correcta",
+      "llave_incorrecta": false,
+      "respuesta_dada": "UserEvent::SignOut=2 (flowy-user); sign_out_handler en event_handler.rs:123; on_token_expired en app_life_cycle.rs:386 limpia FolderManager; DidOpenWorkspace=9 emitido en manager_user_workspace.rs:244 y consumido por user_listener.dart.",
+      "clave_verificada": "UserEvent::SignOut=2; sign_out_handler/event_handler.rs:123; on_token_expired/app_life_cycle.rs:386; DidOpenWorkspace=9 en manager_user_workspace.rs:244.",
+      "analisis": "Las cuatro referencias (índice 2, evento SignOut en flowy-user, handler 123, hook on_token_expired/386 y notificación 9 con emisor en manager_user_workspace.rs:244) coinciden con el código.",
+      "docs_consultados": ["B1.4", "B5.2", "14-catalogo-notificaciones", "11-catalogo-eventos-ffi"]
+    },
+    {
+      "id": "Q04",
+      "area": "ffi-lib-dispatch",
+      "veredicto": "correcta",
+      "llave_incorrecta": false,
+      "respuesta_dada": "sync_event/lib.rs:231 (unimplemented) y set_env/lib.rs:308 (Deprecated) no son invocadas desde Dart; el camino vivo es async_event/lib.rs:175 → FFIRequest::from_u8_pointer → DART_APPFLOWY_CORE.dispatch → AFPluginDispatcher::boxed_async_send_with_callback/dispatcher.rs:99 → tokio::task::spawn_local/lib.rs:208 → post_to_flutter.",
+      "clave_verificada": "sync_event/lib.rs:231-236; set_env/lib.rs:308; async_event/lib.rs:175; AFPluginDispatcher::boxed_async_send_with_callback/dispatcher.rs:99; tokio::task::spawn_local/lib.rs:208.",
+      "analisis": "Identifica correctamente las dos funciones sin uso productivo, la línea de cada función del path vivo y la pieza de lib-dispatch que ejecuta el handler. Hay una pequeña imprecisión al hablar de un Runner (`:189`) cuando el spawn vive dentro del poll del Runner, pero no afecta a la veracidad.",
+      "docs_consultados": ["06-01-ffi", "06-02-lib-dispatch", "11-catalogo-eventos-ffi"]
+    },
+    {
+      "id": "Q05",
+      "area": "ffi-lib-dispatch",
+      "veredicto": "correcta",
+      "llave_incorrecta": false,
+      "respuesta_dada": "extend_front_four_bytes_into_bytes añade el prefijo BE; solo se ejercita desde sync_event (no productiva); el camino vivo usa FFIRequest::from_u8_pointer (sin header) y post_to_flutter envía FFIResponse.into_bytes().to_vec() sobre allo_isolate::Isolate::new(port).",
+      "clave_verificada": "extend_front_four_bytes_into_bytes en c.rs:19-26; invocado únicamente desde sync_event/lib.rs:235; async_event usa FFIRequest::from_u8_pointer/model/ffi_request.rs:16; post_to_flutter/lib.rs:258 postea FFIResponse::from(response).into_bytes() sobre allo_isolate::Isolate::new(port) sin cabecera adicional.",
+      "analisis": "Aunque la respuesta nota una inconsistencia entre docs (util.rs vs c.rs), finalmente identifica el helper correcto (c.rs:19-26) y su único punto de uso (sync_event). El contraste con el camino vivo coincide con la fuente.",
+      "docs_consultados": ["06-01-ffi", "06-02-lib-dispatch", "06-05-ejemplo-traza-opendocument", "06-03-codegen"]
+    },
+    {
+      "id": "Q06",
+      "area": "ffi-lib-dispatch",
+      "veredicto": "correcta",
+      "llave_incorrecta": false,
+      "respuesta_dada": "Cinco sin handler: flowy-database2::GetAllRows=177, flowy-folder::CreateFolderWorkspace=0, DeleteWorkspace=3, CopyLink=20, flowy-user::AddWorkspaceMember=37; total 229/224/5.",
+      "clave_verificada": "flowy-database2::GetAllRows=177 (event_map.rs:396); flowy-folder::CreateFolderWorkspace=0 (event_map.rs:68), DeleteWorkspace=3 (event_map.rs:80), CopyLink=20 (event_map.rs:121); flowy-user::AddWorkspaceMember=37 (event_map.rs:198).",
+      "analisis": "Las cinco variantes, sus crates y sus índices coinciden exactamente con la declaración en sus event_map.rs.",
+      "docs_consultados": ["11-catalogo-eventos-ffi", "06-02-lib-dispatch", "B1.3"]
+    },
+    {
+      "id": "Q07",
+      "area": "notifications",
+      "veredicto": "correcta",
+      "llave_incorrecta": false,
+      "respuesta_dada": "DocumentEvent::UploadFile=15 (flowy-document) con upload_file_handler en event_handler.rs:442; StorageNotification tiene 2 variantes (FileStorageLimitExceeded=0, SingleFileLimitExceeded=1); el progreso viaja por IsolateSink abierto con FileStorageEvent::RegisterStream (no por NotificationBuilder).",
+      "clave_verificada": "DocumentEvent::UploadFile (flowy-document, no flowy-storage); StorageNotification con 2 variantes declaradas en flowy-storage/src/notification.rs:7-12; progreso vía JSON por IsolateSink abierto por FileStorageEvent::RegisterStream/manager.rs:138-151.",
+      "analisis": "Crate correcto, índice correcto, dos variantes confirmadas, doble canal (NotificationBuilder para cuota, IsolateSink JSON para progreso) bien contrastado.",
+      "docs_consultados": ["B5.7", "14-catalogo-notificaciones", "F07", "11-catalogo-eventos-ffi"]
+    },
+    {
+      "id": "Q08",
+      "area": "notifications",
+      "veredicto": "correcta",
+      "llave_incorrecta": false,
+      "respuesta_dada": "DatabaseNotification::DidUpdateDatabaseSyncUpdate=84 con payload DatabaseSyncStatePB { value } emitida desde observe_sync_state/database_observe.rs:21-39; consumida por DatabaseSyncStateListener con id: databaseId; variante hermana DidUpdateDatabaseSnapshotState=85 (sin emisor) y blob bajo demanda vía GetDatabaseSnapshots=150.",
+      "clave_verificada": "DidUpdateDatabaseSyncUpdate=84/notification.rs:49 con payload DatabaseSyncStatePB { value: DatabaseSyncState }; emisor en services/database/database_observe.rs:21-39; DatabaseSyncStateListener usa id=databaseId; DidUpdateDatabaseSnapshotState=85 sin emisor y blob por GetDatabaseSnapshots=150.",
+      "analisis": "Las cuatro variantes de estado, el payload, la clave del listener (databaseId, no viewId) y el contraste con GetDatabaseSnapshots=150 coinciden con la fuente.",
+      "docs_consultados": ["F02.12", "14-catalogo-notificaciones", "B5.6", "F02.13"]
+    },
+    {
+      "id": "Q09",
+      "area": "notifications",
+      "veredicto": "parcialmente_correcta",
+      "llave_incorrecta": false,
+      "respuesta_dada": "Reparte emisores entre UserNotification (9 sitios) y DatabaseNotification (2 emisores directos: DidUpdateRow=20 y DidUpdateCell=40). Enum silencioso 4º que cita: ChatNotification (debería ser SearchNotification según la llave).",
+      "clave_verificada": "DocumentNotification, FolderNotification, StorageNotification y SearchNotification son los 4 enums sin emisor; los dos emisores con variante en flowy-database2 son DidUpdateRow=20 (database_observe.rs:327) y DidUpdateCell=40 (database_observe.rs:338).",
+      "analisis": "Acierta los dos emisores de flowy-database2, pero al listar los 4 enums sin emisor sustituye SearchNotification por ChatNotification, contradiciendo la llave y al propio enunciado (que reconoce que ChatNotification sí emite vía chat_notification_builder). Eso es un error factual material en uno de los puntos requeridos.",
+      "docs_consultados": ["14-catalogo-notificaciones", "06-04-notificaciones", "B5.9", "F09.1"]
+    },
+    {
+      "id": "Q10",
+      "area": "crdt",
+      "veredicto": "parcialmente_correcta",
+      "llave_incorrecta": false,
+      "respuesta_dada": "EncodedCollab tiene 3 campos (state_vector, doc_state, version) y EncoderVersion solo V1/V2; decode_from_bytes sin fallback (afirma que un blob antiguo se deserializa y se etiqueta V1, sin reintento).",
+      "clave_verificada": "EncodedCollab { state_vector, doc_state, version } en collab/src/entity.rs:6-11; EncoderVersion { V1=0, V2=1 } en entity.rs:14-19; decode_from_bytes intenta bincode::deserialize::<EncodedCollab>, si Err reintenta con EncodedCollabV0 y devuelve el EncodedCollab con version: EncoderVersion::V1 (entity.rs:42-58).",
+      "analisis": "Estructura correcta, pero la afirmación 'NO hay fallback por version' contradice el código: decode_from_bytes sí reintenta como EncodedCollabV0 (entity.rs:49-55). Aunque después admite vagamente el etiquetado en V1, niega explícitamente el reintento, que es la pieza material pedida por la llave.",
+      "docs_consultados": ["07-01-modelo-collab", "07-07-snapshots-conflict-resolution", "B5.12", "B5.5"]
+    },
+    {
+      "id": "Q11",
+      "area": "crdt",
+      "veredicto": "correcta",
+      "llave_incorrecta": false,
+      "respuesta_dada": "CollabType con 7 variantes (Document=0, Database=1, WorkspaceDatabase=2, Folder=3, DatabaseRow=4, UserAwareness=5, Unknown=6); CollabPluginType solo CloudStorage y Other(String); LocalStorage + CloudStorage enchufados por deps_resolve; DocumentManager/DatabaseManager añaden KVAction.",
+      "clave_verificada": "CollabType (collab-entity/src/collab_object.rs) con 7 variantes; CollabPluginType (collab/src/core/collab_plugin.rs:16-22) con sólo CloudStorage y Other(String); LocalStorage+CloudStorage siempre; KVAction en DocumentManager/DatabaseManager.",
+      "analisis": "Coincide con la declaración del enum en collab-plugin.rs y con la llave, incluida la advertencia explícita de que variantes antiguas (Snapshot, KV, Persistence) ya no existen.",
+      "docs_consultados": ["07-01-modelo-collab", "07-06-collab-plugins", "07-04-database", "08-03-collab-db"]
+    },
+    {
+      "id": "Q12",
+      "area": "crdt",
+      "veredicto": "correcta",
+      "llave_incorrecta": false,
+      "respuesta_dada": "DocumentEvent::Redo=6 y Undo=7 (DocumentRedoUndoPayloadPB → DocumentRedoUndoResponsePB); redo_handler en :188 y undo_handler en :207; CanUndoRedo=8; sostenidos por yrs::UndoManager (Collab::undo_manager_mut/collab.rs:162, undo/redo en collab.rs:173/178); undo per-client.",
+      "clave_verificada": "DocumentEvent::Redo=6 y Undo=7; redo_handler (event_handler.rs:188) y undo_handler (:207); yrs::UndoManager expuesto por Collab::undo_manager_mut (collab.rs:162), undo en collab.rs:173 y redo en :178; UndoManager solo opera sobre ClientID local.",
+      "analisis": "Pequeño off-by-one en las líneas (:187/206 vs :188/207) pero irrelevante para la veredicto.",
+      "docs_consultados": ["07-07-snapshots-conflict-resolution", "11-catalogo-eventos-ffi", "B5.4", "B5.5"]
+    },
+    {
+      "id": "Q13",
+      "area": "databases",
+      "veredicto": "correcta",
+      "llave_incorrecta": false,
+      "respuesta_dada": "DatabaseEvent::UpdateDatabaseSetting=3 con DatabaseSettingChangesetPB y handler en event_handler.rs:118 (registrado event_map.rs:20); campos one_of insert_filter/update_filter_type/update_filter_data/delete_filter + update_sort; GetAllFilters=4, GetAllSorts=5 para lectura y DeleteAllSorts=6 para borrado en bloque.",
+      "clave_verificada": "UpdateDatabaseSetting=3 con DatabaseSettingChangesetPB (update_database_setting_handler en event_handler.rs:118); GetAllFilters=4 (event_handler.rs:173), GetAllSorts=5 (event_handler.rs:187), DeleteAllSorts=6 (event_handler.rs:201).",
+      "analisis": "Índices y campos del one_of coinciden con la declaración en event_map.rs y event_handler.rs.",
+      "docs_consultados": ["B5.6", "F02.4", "F02.5", "11-catalogo-eventos-ffi"]
+    },
+    {
+      "id": "Q14",
+      "area": "databases",
+      "veredicto": "correcta",
+      "llave_incorrecta": false,
+      "respuesta_dada": "DatabaseEvent::MoveGroupRow=112 (move_group_row_handler en event_handler.rs:816, registrado event_map.rs:60); notificaciones DidUpdateGroupRow=61 (objectId=payload.group_id, payload GroupRowsNotificationPB), DidUpdateNumOfGroups=60 si grupo origen vacío, DidUpdateCell=40 (objectId=cell_id), DidUpdateRow=20 (objectId=view_id).",
+      "clave_verificada": "MoveGroupRow=112/event_map.rs:60 con move_group_row_handler/event_handler.rs:816; DidUpdateGroupRow=61 y DidUpdateNumOfGroups=60 con objectId/claves descritas; DidUpdateCell=40/database_observe.rs:338, DidUpdateRow=20/database_observe.rs:327.",
+      "analisis": "Evento, handler, índices y objectId coinciden con la llave y con la fuente.",
+      "docs_consultados": ["F02.6", "F02.10", "11-catalogo-eventos-ffi", "14-catalogo-notificaciones"]
+    },
+    {
+      "id": "Q15",
+      "area": "databases",
+      "veredicto": "correcta",
+      "llave_incorrecta": false,
+      "respuesta_dada": "DatabaseEvent::GetDatabaseSnapshots=150 con input DatabaseViewIdPB/output RepeatedDatabaseSnapshotPB; get_snapshots_handler (event_map.rs:81, event_handler.rs:1058); delega en DatabaseManager::get_database_snapshots/manager.rs:567 → cloud_service.get_database_collab_object_snapshots; los bytes viven en AppFlowy-Cloud; services/snapshot/ es un stub (mod.rs sólo declara pub mod entities, entities.rs vacío).",
+      "clave_verificada": "GetDatabaseSnapshots=150 (event_map.rs:345-346); handler en event_handler.rs:1058; DatabaseManager::get_database_snapshots/manager.rs:567 → cloud_service; services/snapshot/ es stub (mod.rs con sólo 'pub mod entities;' y entities.rs vacío).",
+      "analisis": "Todas las piezas (índice, input/output, handler, ruta cloud, stub del módulo local) coinciden con código y llave.",
+      "docs_consultados": ["F02.12", "11-catalogo-eventos-ffi", "08-03-collab-db", "F02.0.2.0"]
+    },
+    {
+      "id": "Q16",
+      "area": "export-import",
+      "veredicto": "correcta",
+      "llave_incorrecta": false,
+      "respuesta_dada": "DatabaseEvent::ExportCSV=141 con handler en event_handler.rs:1029 (CSVFormat::Original fijo); Markdown/HTML/JSON NO cruzan FFI: DocumentExporter.export (document_exporter.dart:27) sólo trae DocumentDataPB con openDocument y delega en customDocumentToMarkdown/documentToHTML/jsonEncode.",
+      "clave_verificada": "ExportCSV con DatabaseViewIdPB/DatabaseExportDataPB registrado event_map.rs:79 y handler en event_handler.rs:1029; DocumentExporter.export/document_exporter.dart:27 con bifurcación por DocumentExportType (markdown/html/json/text) sin más FFI.",
+      "analisis": "Confirma el evento Rust para CSV, el único cruce FFI para documentos (OpenDocument) y la rama text con UnimplementedError. Identifica bien ExportRawDatabaseData=178 sólo bajo kDebugMode.",
+      "docs_consultados": ["B4.5", "B5.10", "F11", "B4.1", "11-catalogo-eventos-ffi"]
+    },
+    {
+      "id": "Q17",
+      "area": "documents",
+      "veredicto": "parcialmente_correcta",
+      "llave_incorrecta": false,
+      "respuesta_dada": "DocumentEvent con 21 variantes; OpenDocument=1 (handler :69), ApplyAction=3 (handler :90 o :119 según doc), CloseDocument=2 (handler :83). Sobre DidReceiveUpdate=1 lista 4 versiones contradictorias entre docs (declared_only en 14-catalogo, tras apply_action_handler en B5.4, desde DM en F01.0.1, vía builder). No se compromete con la fuente real.",
+      "clave_verificada": "DocumentNotification::DidReceiveUpdate=1 se emite desde la suscripción de cambios de bloque en flowy-document/src/document.rs:22-27 con document_notification_builder(...).payload::<DocEventPB>((events, is_remote, None).into()).send().",
+      "analisis": "Acierta Open/ApplyAction/Close pero falla en precisar la fuente de emisión de DidReceiveUpdate, que la llave fija como document.rs:22-27. Aunque menciona la opción (d) 'builder document_notification_...' no la confirma, contradice al afirmar que 'no se localiza ninguna llamada a NotificationBuilder con esa variante' y deja tres alternativas incompatibles abiertas.",
+      "docs_consultados": ["B5.4", "14-catalogo-notificaciones", "11-catalogo-eventos-ffi", "F01.0.1"]
+    },
+    {
+      "id": "Q18",
+      "area": "documents",
+      "veredicto": "correcta",
+      "llave_incorrecta": false,
+      "respuesta_dada": "DocumentMarkdownEncoder.convert (Converter<Document, String>); customDocumentToMarkdown con 13 NodeParser en markdown_to_document.dart:46-59; empaquetado con Archive+ZipEncoder+File.writeAsBytes; DocumentExportType.text lanza UnimplementedError en document_exporter.dart:55-56.",
+      "clave_verificada": "DocumentMarkdownEncoder.convert (editor/.../encoder/document_markdown_encoder.dart:15); customParsers x13 en markdown_to_document.dart:46-59 con la lista exacta; Archive+ZipEncoder; UnimplementedError en document_exporter.dart:55-56.",
+      "analisis": "Los 13 parsers coinciden letra a letra con markdown_to_document.dart. Empaquetado y error en rama text coinciden.",
+      "docs_consultados": ["B5.10", "B4.1", "F11", "F01.0.3.3"]
+    },
+    {
+      "id": "Q19",
+      "area": "documents",
+      "veredicto": "correcta",
+      "llave_incorrecta": false,
+      "respuesta_dada": "GetDocumentText=20 (OpenDocumentPayloadPB → DocumentTextPB) y ConvertDocument=12 (ConvertDocumentPayloadPB → ConvertDocumentResponsePB); texto vía document.paragraphs().join('\\n'); consumido por chat_message_service.dart para ContextLoaderTypePB.Txt; DocumentExportType.text lanza UnimplementedError; ImportType.markdownOrText sí acepta .txt.",
+      "clave_verificada": "DocumentEvent::GetDocumentText=20 (event_map.rs:139), ConvertDocument=12 (event_map.rs:113); get_document_text_handler/event_handler.rs:107 produce document.paragraphs().join('\\n'); ImportType.markdownOrText sí acepta .txt.",
+      "analisis": "Eventos, índices, productos, ausencia de botón de UI y asimetría import sí/sí export no coinciden con llave y código.",
+      "docs_consultados": ["B4.3", "11-catalogo-eventos-ffi", "F11", "B5.10"]
+    },
+    {
+      "id": "Q20",
+      "area": "ai-chat",
+      "veredicto": "correcta",
+      "llave_incorrecta": false,
+      "respuesta_dada": "AIEvent::GetChatInfo=24 registrado en event_map.rs:44 con create_chat_context_handler (compartido con CreateChatContext=23); create_chat_context_handler en event_handler.rs:290-297 devuelve Ok(()); get_chat_info_handler existe en event_handler.rs:300-308 pero huérfano.",
+      "clave_verificada": "GetChatInfo=24/event_map.rs:44 emparejado con create_chat_context_handler; handler en event_handler.rs:290-297; get_chat_info_handler en event_handler.rs:300-308 nunca conectado.",
+      "analisis": "Identifica correctamente el desajuste, la línea exacta de registro compartido y la existencia del handler huérfano en la línea siguiente.",
+      "docs_consultados": ["F09.1", "11-catalogo-eventos-ffi", "B5.9"]
+    },
+    {
+      "id": "Q21",
+      "area": "ai-chat",
+      "veredicto": "correcta",
+      "llave_incorrecta": false,
+      "respuesta_dada": "AIModel.is_local en stream_answer (chat_service_mw.rs:108-123), get_related_message (181-202), stream_complete (218-229). create_question (:71-83) NO lo consulta y siempre escribe en cloud_service; get_answer (:126-147) decide sólo por local_ai.is_ready(); persistencia vía cloud_service.create_answer.",
+      "clave_verificada": "AIModel.is_local consultado en stream_answer/get_related_message/stream_complete; create_question siempre escribe a cloud; get_answer decide sólo por local_ai.is_ready; persistencia vía cloud_service.create_answer.",
+      "analisis": "Los cuatro métodos, sus rangos de líneas y la asimetría de privacidad coinciden con la llave y con la documentación F09.1/B6.3.",
+      "docs_consultados": ["B6.3", "F09.1", "B5.9"]
+    },
+    {
+      "id": "Q22",
+      "area": "search",
+      "veredicto": "correcta",
+      "llave_incorrecta": false,
+      "respuesta_dada": "search_id desde DateTime.now().millisecondsSinceEpoch.toString() (search_service.dart:18, String); Rust guarda current_search: Option<i64> en Mutex (manager.rs:44); descarta si current > search_id (132-139) y adopta; is_current_search exige igualdad estricta (manager.rs:220-229); mismo ms = ambas admitidas.",
+      "clave_verificada": "search_service.dart:18 con String de millisecondsSinceEpoch; Rust manager.rs:132-139 con 'current > search_id then return' + adopción; is_current_search/manager.rs:220 exige Some(c) == search_id; colisión de ms documentada.",
+      "analisis": "Doble guarda (Rust admisión vs cancelación, Dart _isActiveSearch) y la regla de colisión coinciden con código y llave.",
+      "docs_consultados": ["F08", "B5.8", "11-catalogo-eventos-ffi"]
+    },
+    {
+      "id": "Q23",
+      "area": "search",
+      "veredicto": "correcta",
+      "llave_incorrecta": false,
+      "respuesta_dada": "SearchDepsResolver sólo registra DocumentCloudSearchHandler (search_deps.rs:9-19); línea 13 comenta 'let folder_handler = ...'; DocumentLocalSearchHandler se inserta después en SearchManager::create_local_document_search (manager.rs:66-76) bajo SearchType::DocumentLocal sólo si Weak resuelve; LocalSearchResponseItemPB sin 'content'; SearchNotification sin emisor.",
+      "clave_verificada": "search_deps.rs:13 comentado folder_handler; DocumentCloudSearchHandler único en resolver; DocumentLocalSearchHandler en create_local_document_search/manager.rs:66-76; LocalSearchResponseItemPB sin content; SearchNotification sin NotificationBuilder.",
+      "analisis": "Registro en dos fases y ausencia de emisor en SearchNotification coinciden con llave y código.",
+      "docs_consultados": ["F08", "B5.8", "14-catalogo-notificaciones"]
+    },
+    {
+      "id": "Q24",
+      "area": "export-import",
+      "veredicto": "correcta",
+      "llave_incorrecta": false,
+      "respuesta_dada": "FolderEvent::ImportData=30 (flowy-folder), ImportPayloadPB con parent_view_id y Vec<ImportItemPayloadPB> (name/data/file_path/view_layout/import_type); ImportPanel agrupa todos los ficheros en un solo evento; CSV usa ViewLayoutPB.Grid e ImportTypePB.CSV. Contraste con GetAllFilters/GetAllSorts en flowy-database2.",
+      "clave_verificada": "FolderEvent::ImportData=30/event_map.rs:152 con import_data_handler/event_handler.rs:355-364; CSV layout Grid + ImportTypePB.CSV; contraste con GetAllFilters=4 y GetAllSorts=5.",
+      "analisis": "Crate, índice, payload y contraste con eventos de lectura coinciden con la llave.",
+      "docs_consultados": ["B5.11", "B4.9", "F10", "11-catalogo-eventos-ffi"]
+    },
+    {
+      "id": "Q25",
+      "area": "export-import",
+      "veredicto": "correcta",
+      "llave_incorrecta": false,
+      "respuesta_dada": "FolderEvent::ImportZipFile con ImportZipPB; import_zip_file_handler en event_handler.rs:367 llama FolderManager::import_zip_file → cloud_service.import_zip (sube ZIP a AppFlowy-Cloud); local server devuelve local_version_not_support en folder.rs:170-172; crate collab-importer sin caller productivo.",
+      "clave_verificada": "import_zip_file_handler/event_handler.rs:367 (registrado event_map.rs:34); storage cloud pide URL prefirmada en flowy-server/src/af_cloud/impls/folder.rs:262; local server falla con local_version_not_support en local_server/impls/folder.rs:170-172; collab-importer sin uso en producción.",
+      "analisis": "Camino feliz, fallo local y crate huérfano coinciden con la llave y con el código.",
+      "docs_consultados": ["B5.11", "B4.11", "F12.2", "11-catalogo-eventos-ffi"]
+    },
+    {
+      "id": "Q26",
+      "area": "export-import",
+      "veredicto": "correcta",
+      "llave_incorrecta": false,
+      "respuesta_dada": "Huecos verificados: texto plano (UnimplementedError), HTML/JSON (sin importador con UI), raw DB data (sólo export kDebugMode), PDF, publicación web. Tres pares cerrados: Markdown→Markdown, CSV→CSV, .afdb→.afdb.",
+      "clave_verificada": "Cinco huecos verificados (texto plano, HTML, JSON, raw DB data, PDF, publicación web) y tres pares redondos (Markdown, CSV, .afdb).",
+      "analisis": "Lista de huecos y pares coincide con la matriz.",
+      "docs_consultados": ["B4.13", "B4.3", "B4.11", "B5.10"]
+    },
+    {
+      "id": "Q27",
+      "area": "publish",
+      "veredicto": "correcta",
+      "llave_incorrecta": false,
+      "respuesta_dada": "FolderEvent::PublishView con publish_view_handler en event_handler.rs:402-417 (KEY 402, real 399); publish_name.unwrap_or_else(generate_publish_name) en manager.rs:1864; generate_publish_name (publish_util.rs:6-22) trunca a 49-id_len y total ≤ 50; vistas chat excluidas con `if view.layout == ViewLayoutPB::Chat { continue; }` y child_views=None.",
+      "clave_verificada": "publish_view_handler cercano a event_handler.rs:399 (KEY :402); generate_publish_name en publish_util.rs:6-22 con regex [^\\w-] y trunca a min(49-id_len, name_len); manager.rs:1864 con unwrap_or_else; exclusión de chats en manager.rs:1788-1791.",
+      "analisis": "Slug, regex, truncamiento a ≤50 chars y exclusión de chat coinciden con la fuente; pequeño off-by-one (402 vs 399) compartido con la llave.",
+      "docs_consultados": ["B4.12", "F12.2", "B5.12", "F12.1"]
+    },
+    {
+      "id": "Q28",
+      "area": "errors",
+      "veredicto": "correcta",
+      "llave_incorrecta": false,
+      "respuesta_dada": "ErrorCode #[repr(u8)] con 133 variantes; lib-dispatch StatusCode { Ok=0, Err=1 } (response.rs:11-26); FFIStatusCode { Ok=0, Err=1, Internal=2 } (dart-ffi/src/model/ffi_response.rs:5); ErrorCode::LocalVersionNotSupport=88 en code.rs:255 mapeado por static_flowy_error! local_version_not_support en errors.rs:150.",
+      "clave_verificada": "ErrorCode #[repr(u8)] con 133 variantes (code.rs); StatusCode en lib-dispatch/src/response/response.rs:14-17; FFIStatusCode con Internal=2 en ffi_response.rs:5-10; ErrorCode::LocalVersionNotSupport=88 en code.rs:255.",
+      "analisis": "Recuento, enums de estado cruzados, índice y macro de mapeo coinciden plenamente.",
+      "docs_consultados": ["15-catalogo-errores", "06-02-lib-dispatch", "F12.2", "B1.4"]
+    },
+    {
+      "id": "Q29",
+      "area": "security",
+      "veredicto": "correcta",
+      "llave_incorrecta": false,
+      "respuesta_dada": "user_table.token (Text, esquema:103-113) en texto claro; tres PRAGMAs (busy_timeout, journal_mode, synchronous, pool.rs:146-152); sin SQLCipher; único cifrado AES-256-GCM (PBKDF2-HMAC-SHA256 1000 iter, nonce 12 bytes) para encryption sign del uid (manager_user_encryption.rs); encrypt_secret en kv_table sin cifrar; URI del deep link en claro (appflowy_cloud_task.dart:37).",
+      "clave_verificada": "user_table.token en texto claro (schema.rs:103-113); pool.rs:146-152 con tres PRAGMA; AES-256-GCM/PBKDF2-HMAC-SHA256 1000 iter / nonce 12 B en lib-infra/src/encryption/mod.rs; encrypt_secret sin cifrar; deep link URI con access_token/refresh_token.",
+      "analisis": "Plano, PRAGMAs, único cifrado y ubicación de la clave coinciden con código y llave.",
+      "docs_consultados": ["B6.3", "08-01-sqlite-schema", "08-02-kv", "F17"]
+    },
+    {
+      "id": "Q30",
+      "area": "mobile",
+      "veredicto": "correcta",
+      "llave_incorrecta": false,
+      "respuesta_dada": "29 rutas bajo if (UniversalPlatform.isMobile); 4 ramas del StatefulShellRoute.indexedStack (MobileHomeScreen/SearchScreen/FavoriteScreen/NotificationsScreenV2 en generate_router.dart:170-209); esas 4 sin parentNavigatorKey porque viven en StatefulNavigationShell; 25 con parentNavigatorKey.",
+      "clave_verificada": "Bloque isMobile con 26 entradas: 25 GoRoute + 1 StatefulShellRoute con 4 ramas. Si se cuentan las 4 ramas del shell como 4 rutas, total = 29 (4+25), interpretación defendible usada por la llave.",
+      "analisis": "El conteo '29 = 25 GoRoute + 4 shell branches' es interpretación consistente entre llave, respuesta y documentación (F16.1.1); las cuatro ramas, líneas y la justificación 'no llevan parentNavigatorKey porque van en el shell' coinciden con generate_router.dart.",
+      "docs_consultados": ["F16.1.1", "F16.0", "B1.4", "16-catalogo-flags-rutas-atajos"]
+    }
+  ]
+}

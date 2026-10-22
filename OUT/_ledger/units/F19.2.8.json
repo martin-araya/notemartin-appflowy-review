@@ -1,0 +1,236 @@
+{
+  "schema_version": 1,
+  "id": "F19.2.8",
+  "feature_id": "F19",
+  "sub_index": 2,
+  "titulo": "Tests del editor: test/{plugins,editor,core,service,extensions,infra,render,legacy,customer,mobile} — plugins",
+  "fuentes": [
+    "editor"
+  ],
+  "archivos": [
+    {
+      "fuente": "editor",
+      "ruta": "editor/test/plugins/html/decoder/_samples.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/test/plugins/html/decoder/document_html_decoder_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/test/plugins/html/delta_encoder_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/test/plugins/html/encoder/document_html_encoder_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/test/plugins/html/encoder/parser/bulleted_list_parser_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/test/plugins/html/encoder/parser/image_node_parser_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/test/plugins/html/encoder/parser/numbered_list_parser_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/test/plugins/html/encoder/parser/table_node_parser_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/test/plugins/html/encoder/parser/text_node_parser_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/test/plugins/html/html_document_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/test/plugins/markdown/custom_parsers/test_custom_node_parsers.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/test/plugins/markdown/decoder/delta_markdown_decoder_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/test/plugins/markdown/decoder/divider_deocder_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/test/plugins/markdown/decoder/document_markdown_decoder_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/test/plugins/markdown/decoder/heading_markdown_decoder_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/test/plugins/markdown/decoder/image_decoder_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/test/plugins/markdown/decoder/ordered_list_decoder_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/test/plugins/markdown/decoder/quote_list_decoder_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/test/plugins/markdown/decoder/table_decoder_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/test/plugins/markdown/decoder/todo_list_markdown_decoder_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/test/plugins/markdown/decoder/unordered_list_decoder_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/test/plugins/markdown/document_markdown_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/test/plugins/markdown/encoder/delta_markdown_encoder_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/test/plugins/markdown/encoder/document_markdown_encoder_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/test/plugins/markdown/encoder/parser/divider_node_parser_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/test/plugins/markdown/encoder/parser/image_node_parser_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/test/plugins/markdown/encoder/parser/table_node_parser_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/test/plugins/markdown/encoder/parser/text_node_parser_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/test/plugins/markdown/markdown_customer_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/test/plugins/quill_delta/quill_delta_encoder_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/test/plugins/word_count/word_counter_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    }
+  ],
+  "archivos_total": 31,
+  "catalogos": [
+    "blocs.json",
+    "deps.json",
+    "events.json",
+    "misc.json",
+    "notifications.json",
+    "protobuf.json"
+  ],
+  "catalogos_razon": {
+    "events.json": "Eventos FFI / dispatch de esta feature",
+    "blocs.json": "BLoCs / Cubits presentes en los archivos de esta unidad",
+    "protobuf.json": "Entidades protobuf input/output de los eventos",
+    "notifications.json": "Notificaciones Rust→Dart emitidas o escuchadas",
+    "deps.json": "Dependencias del workspace rust y pubspec",
+    "misc.json": "Rutas, atajos, flags, error codes, i18n"
+  },
+  "dependencias": [
+    {
+      "id": "F19.0",
+      "tipo": "indice",
+      "nota": "Documento indice F19.0 debe existir antes de esta sub-unidad."
+    }
+  ],
+  "plantilla": "feature",
+  "documento": "OUT/09-features/F19-editor-tests-ejemplos-l10n-configuracion/2.8-tests-del-editor-test-plugins-editor-core-service-extensions-infra-render-legacy.md",
+  "metricas": {
+    "archivos": 31,
+    "por_capa": {
+      "test": 31
+    },
+    "por_fuente": {
+      "editor": 31
+    }
+  },
+  "prioridad": 2,
+  "concurrencia": "paralela",
+  "generado_en": "2026-10-20T22:05:46Z"
+}

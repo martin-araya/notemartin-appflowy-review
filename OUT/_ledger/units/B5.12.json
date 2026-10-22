@@ -1,0 +1,29 @@
+{
+  "id": "B5.12",
+  "titulo": "Publicación web",
+  "feature_id": "B5.12",
+  "documento": "OUT/15-secuencias-globales/12-publish.md",
+  "plantilla": "feature",
+  "archivos": [
+    "appflowy/frontend/appflowy_flutter/lib/plugins/shared/share/publish_tab.dart",
+    "appflowy/frontend/appflowy_flutter/lib/plugins/shared/share/publish_name_generator.dart",
+    "appflowy/frontend/appflowy_flutter/lib/workspace/presentation/settings/pages/sites/domain/domain_settings_dialog.dart",
+    "appflowy/frontend/rust-lib/flowy-folder/src/publish_util.rs",
+    "appflowy/frontend/rust-lib/flowy-folder/src/event_handler.rs",
+    "appflowy/frontend/rust-lib/flowy-folder/src/event_map.rs",
+    "appflowy/frontend/rust-lib/dart-ffi/src/lib.rs",
+    "appflowy/frontend/appflowy_flutter/lib/packages/appflowy_backend/lib/rust_stream.dart",
+    "appflowy/frontend/rust-lib/lib-dispatch/src/dispatcher.rs",
+    "appflowy/frontend/rust-lib/lib-dispatch/src/module.rs",
+    "appflowy/frontend/rust-lib/flowy-core/src/lib.rs"
+  ],
+  "archivos_total": 11,
+  "fuentes": [
+    "appflowy"
+  ],
+  "evidence_min_pct": 95,
+  "gate_100": false,
+  "transversal": true,
+  "secuencia": true,
+  "nota": "Secuencia global extremo a extremo: transversal, no ancla archivos a cobertura.csv. Sus archivos ya pertenecen a features F* y están verificados al 100 % desde el cierre de B3; B5 los re-presenta como recorrido con sequenceDiagram."
+}

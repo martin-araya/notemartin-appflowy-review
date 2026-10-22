@@ -1,0 +1,4 @@
+---
+id: STATE
+estado: pendiente
+---

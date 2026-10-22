@@ -1,0 +1,30 @@
+{
+  "id": "B4.4",
+  "titulo": "Export JSON del documento",
+  "feature_id": "B4.4",
+  "documento": "OUT/10-motor-export-import/04-json-documento-export.md",
+  "plantilla": "export",
+  "archivos": [
+    "appflowy/frontend/appflowy_flutter/lib/workspace/application/export/document_exporter.dart",
+    "appflowy/frontend/appflowy_flutter/lib/plugins/shared/share/export_tab.dart",
+    "appflowy/frontend/appflowy_flutter/lib/plugins/shared/share/share_bloc.dart",
+    "appflowy/frontend/appflowy_flutter/lib/plugins/shared/share/share_button.dart",
+    "appflowy/frontend/appflowy_flutter/lib/workspace/presentation/settings/widgets/files/settings_file_exporter_widget.dart",
+    "appflowy/frontend/appflowy_flutter/lib/workspace/presentation/settings/pages/settings_manage_data_view.dart",
+    "appflowy/frontend/appflowy_flutter/lib/plugins/document/application/document_data_pb_extension.dart",
+    "editor/lib/src/core/document/document.dart",
+    "editor/lib/src/core/document/node.dart",
+    "editor/lib/src/core/document/text_delta.dart",
+    "editor/test/core/document/document_test.dart",
+    "editor/test/core/document/text_delta_test.dart",
+    "editor/test/plugins/markdown/encoder/document_markdown_encoder_test.dart"
+  ],
+  "archivos_total": 13,
+  "fuentes": [
+    "appflowy",
+    "editor"
+  ],
+  "evidence_min_pct": 30,
+  "gate_100": true,
+  "nota": "Unidad transversal: sus archivos ya pertenecen a features F* y están verificados en cobertura.csv. El bloque B4 no modifica el ledger; documenta el motor re-trazando esos mismos ficheros."
+}

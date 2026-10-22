@@ -1,0 +1,16 @@
+─── validate_template (catalogue) ───
+--- summary: files=1 ok=1 errors=0 warns=0 ---
+OK: template
+─── validate_evidence ───
+--- summary: refs=267 ok=267 errors=0 ---
+OK: evidence
+─── validate_mermaid ───
+OK=4 FAIL=0
+OK: mermaid
+─── count_rows_133 (prueba literal del ROADMAP) ───
+  §4 índice global        : 133 filas (esperado 133) OK
+  §5.* suma               : 133 filas (esperado 133) OK
+  §6 sentinels            : 1 filas (esperado 1) OK
+OK: count_rows_133
+
+OK: B2.5 (template + evidence + mermaid + count_rows, 4/4 checks)

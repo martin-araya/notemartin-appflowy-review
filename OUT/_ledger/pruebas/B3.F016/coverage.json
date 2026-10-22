@@ -1,0 +1,25 @@
+{
+  "docs": {
+    "6.0-indice-interaccion.md": "~350 líneas",
+    "6.1-slash-menu-elementos.md": "~280 líneas",
+    "6.2-block-menu-actions-context-menu.md": "~270 líneas",
+    "6.3-drag-to-reorder.md": "~250 líneas",
+    "6.4-toolbars-desktop-mobile-items-link.md": "~430 líneas",
+    "6.5-copy-y-paste.md": "~270 líneas",
+    "6.6-shortcuts-find-replace-keyboard.md": "~300 líneas"
+  },
+  "sub_unidades": 7,
+  "archivos_F01.6": 115,
+  "cobertura_F01_global": 769,
+  "revisor_resultados": {
+    "F01.6.0": "aprobado",
+    "F01.6.1": "aprobado",
+    "F01.6.2": "aprobado",
+    "F01.6.3": "aprobado",
+    "F01.6.4": "aprobado",
+    "F01.6.5": "aprobado",
+    "F01.6.6": "aprobado"
+  },
+  "total_bloques_mermaid": 22,
+  "revisor_correcciones_total": 0
+}

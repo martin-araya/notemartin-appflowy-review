@@ -1,0 +1,724 @@
+{
+  "schema_version": 1,
+  "id": "F18",
+  "feature_id": "F18",
+  "sub_index": null,
+  "titulo": "Motor Colab (CRDT, plugins, importer, entity, derive)",
+  "fuentes": [
+    "collab"
+  ],
+  "archivos": [
+    {
+      "fuente": "collab",
+      "ruta": "collab/collab-derive/Cargo.toml",
+      "capa": "config",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "collab",
+      "ruta": "collab/collab-derive/src/collab.rs",
+      "capa": "collab",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "collab",
+      "ruta": "collab/collab-derive/src/internal/ast.rs",
+      "capa": "collab",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "collab",
+      "ruta": "collab/collab-derive/src/internal/ctxt.rs",
+      "capa": "collab",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "collab",
+      "ruta": "collab/collab-derive/src/internal/mod.rs",
+      "capa": "collab",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "collab",
+      "ruta": "collab/collab-derive/src/lib.rs",
+      "capa": "collab",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "collab",
+      "ruta": "collab/collab-derive/src/yrs_token.rs",
+      "capa": "collab",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "collab",
+      "ruta": "collab/collab-entity/Cargo.toml",
+      "capa": "config",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "collab",
+      "ruta": "collab/collab-entity/build.rs",
+      "capa": "collab",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "collab",
+      "ruta": "collab/collab-entity/proto/collab/common.proto",
+      "capa": "config",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "collab",
+      "ruta": "collab/collab-entity/proto/collab/encoding.proto",
+      "capa": "config",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "collab",
+      "ruta": "collab/collab-entity/proto/collab/params.proto",
+      "capa": "config",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "collab",
+      "ruta": "collab/collab-entity/proto/collab/protocol.proto",
+      "capa": "config",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "collab",
+      "ruta": "collab/collab-entity/proto/collab/pubsub.proto",
+      "capa": "config",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "collab",
+      "ruta": "collab/collab-entity/proto/collab/realtime.proto",
+      "capa": "config",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "collab",
+      "ruta": "collab/collab-entity/src/collab_object.rs",
+      "capa": "collab",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "collab",
+      "ruta": "collab/collab-entity/src/define.rs",
+      "capa": "collab",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "collab",
+      "ruta": "collab/collab-entity/src/lib.rs",
+      "capa": "collab",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "collab",
+      "ruta": "collab/collab-entity/src/proto/mod.rs",
+      "capa": "collab",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "collab",
+      "ruta": "collab/collab-entity/src/reminder.rs",
+      "capa": "collab",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "collab",
+      "ruta": "collab/collab-importer/Cargo.toml",
+      "capa": "config",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "collab",
+      "ruta": "collab/collab-importer/src/error.rs",
+      "capa": "collab",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "collab",
+      "ruta": "collab/collab-importer/src/imported_collab.rs",
+      "capa": "collab",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "collab",
+      "ruta": "collab/collab-importer/src/lib.rs",
+      "capa": "collab",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "collab",
+      "ruta": "collab/collab-importer/src/notion/file.rs",
+      "capa": "collab",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "collab",
+      "ruta": "collab/collab-importer/src/notion/importer.rs",
+      "capa": "collab",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "collab",
+      "ruta": "collab/collab-importer/src/notion/mod.rs",
+      "capa": "collab",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "collab",
+      "ruta": "collab/collab-importer/src/notion/page.rs",
+      "capa": "collab",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "collab",
+      "ruta": "collab/collab-importer/src/notion/walk_dir.rs",
+      "capa": "collab",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "collab",
+      "ruta": "collab/collab-importer/src/space_view.rs",
+      "capa": "collab",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "collab",
+      "ruta": "collab/collab-importer/src/util.rs",
+      "capa": "collab",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "collab",
+      "ruta": "collab/collab-importer/src/zip_tool/async_zip.rs",
+      "capa": "collab",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "collab",
+      "ruta": "collab/collab-importer/src/zip_tool/mod.rs",
+      "capa": "collab",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "collab",
+      "ruta": "collab/collab-importer/src/zip_tool/sync_zip.rs",
+      "capa": "collab",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "collab",
+      "ruta": "collab/collab-importer/src/zip_tool/util.rs",
+      "capa": "collab",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "collab",
+      "ruta": "collab/collab-importer/tests/main.rs",
+      "capa": "collab",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "collab",
+      "ruta": "collab/collab-importer/tests/notion_test/customer_import_test.rs",
+      "capa": "collab",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "collab",
+      "ruta": "collab/collab-importer/tests/notion_test/import_test.rs",
+      "capa": "collab",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "collab",
+      "ruta": "collab/collab-importer/tests/notion_test/mod.rs",
+      "capa": "collab",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "collab",
+      "ruta": "collab/collab-importer/tests/util.rs",
+      "capa": "collab",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "collab",
+      "ruta": "collab/collab-plugins/Cargo.toml",
+      "capa": "config",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "collab",
+      "ruta": "collab/collab-plugins/src/cloud_storage/channel.rs",
+      "capa": "collab",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "collab",
+      "ruta": "collab/collab-plugins/src/cloud_storage/error.rs",
+      "capa": "collab",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "collab",
+      "ruta": "collab/collab-plugins/src/cloud_storage/mod.rs",
+      "capa": "collab",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "collab",
+      "ruta": "collab/collab-plugins/src/cloud_storage/msg.rs",
+      "capa": "collab",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "collab",
+      "ruta": "collab/collab-plugins/src/cloud_storage/postgres/mod.rs",
+      "capa": "collab",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "collab",
+      "ruta": "collab/collab-plugins/src/cloud_storage/postgres/plugin.rs",
+      "capa": "collab",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "collab",
+      "ruta": "collab/collab-plugins/src/cloud_storage/remote_collab.rs",
+      "capa": "collab",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "collab",
+      "ruta": "collab/collab-plugins/src/cloud_storage/sink.rs",
+      "capa": "collab",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "collab",
+      "ruta": "collab/collab-plugins/src/connect_state.rs",
+      "capa": "collab",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "collab",
+      "ruta": "collab/collab-plugins/src/lib.rs",
+      "capa": "collab",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "collab",
+      "ruta": "collab/collab-plugins/src/local_storage/indexeddb/indexeddb_plugin.rs",
+      "capa": "collab",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "collab",
+      "ruta": "collab/collab-plugins/src/local_storage/indexeddb/kv_impl.rs",
+      "capa": "collab",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "collab",
+      "ruta": "collab/collab-plugins/src/local_storage/indexeddb/mod.rs",
+      "capa": "collab",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "collab",
+      "ruta": "collab/collab-plugins/src/local_storage/kv/db.rs",
+      "capa": "collab",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "collab",
+      "ruta": "collab/collab-plugins/src/local_storage/kv/doc.rs",
+      "capa": "collab",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "collab",
+      "ruta": "collab/collab-plugins/src/local_storage/kv/error.rs",
+      "capa": "collab",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "collab",
+      "ruta": "collab/collab-plugins/src/local_storage/kv/keys.rs",
+      "capa": "collab",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "collab",
+      "ruta": "collab/collab-plugins/src/local_storage/kv/mod.rs",
+      "capa": "collab",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "collab",
+      "ruta": "collab/collab-plugins/src/local_storage/kv/oid.rs",
+      "capa": "collab",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "collab",
+      "ruta": "collab/collab-plugins/src/local_storage/kv/range.rs",
+      "capa": "collab",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "collab",
+      "ruta": "collab/collab-plugins/src/local_storage/kv/snapshot.rs",
+      "capa": "collab",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "collab",
+      "ruta": "collab/collab-plugins/src/local_storage/mod.rs",
+      "capa": "collab",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "collab",
+      "ruta": "collab/collab-plugins/src/local_storage/rocksdb/kv_impl.rs",
+      "capa": "collab",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "collab",
+      "ruta": "collab/collab-plugins/src/local_storage/rocksdb/mod.rs",
+      "capa": "collab",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "collab",
+      "ruta": "collab/collab-plugins/src/local_storage/rocksdb/rocksdb_plugin.rs",
+      "capa": "collab",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "collab",
+      "ruta": "collab/collab-plugins/src/local_storage/rocksdb/snapshot_plugin.rs",
+      "capa": "collab",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "collab",
+      "ruta": "collab/collab-plugins/src/local_storage/rocksdb/util.rs",
+      "capa": "collab",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "collab",
+      "ruta": "collab/collab-plugins/src/local_storage/storage_config.rs",
+      "capa": "collab",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "collab",
+      "ruta": "collab/collab-plugins/tests/disk/delete_test.rs",
+      "capa": "collab",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "collab",
+      "ruta": "collab/collab-plugins/tests/disk/insert_test.rs",
+      "capa": "collab",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "collab",
+      "ruta": "collab/collab-plugins/tests/disk/mod.rs",
+      "capa": "collab",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "collab",
+      "ruta": "collab/collab-plugins/tests/disk/range_test.rs",
+      "capa": "collab",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "collab",
+      "ruta": "collab/collab-plugins/tests/disk/restore_test.rs",
+      "capa": "collab",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "collab",
+      "ruta": "collab/collab-plugins/tests/disk/script.rs",
+      "capa": "collab",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "collab",
+      "ruta": "collab/collab-plugins/tests/disk/undo_test.rs",
+      "capa": "collab",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "collab",
+      "ruta": "collab/collab-plugins/tests/disk/util.rs",
+      "capa": "collab",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "collab",
+      "ruta": "collab/collab-plugins/tests/main.rs",
+      "capa": "collab",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "collab",
+      "ruta": "collab/collab-plugins/tests/web/edit_collab_test.rs",
+      "capa": "collab",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "collab",
+      "ruta": "collab/collab-plugins/tests/web/indexeddb_test.rs",
+      "capa": "collab",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "collab",
+      "ruta": "collab/collab-plugins/tests/web/mod.rs",
+      "capa": "collab",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "collab",
+      "ruta": "collab/collab-plugins/tests/web/setup_tests.js",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "collab",
+      "ruta": "collab/collab-plugins/tests/web/test.md",
+      "capa": "config",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "collab",
+      "ruta": "collab/collab/Cargo.toml",
+      "capa": "config",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "collab",
+      "ruta": "collab/collab/src/any_mut.rs",
+      "capa": "collab",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "collab",
+      "ruta": "collab/collab/src/core/any_array.rs",
+      "capa": "collab",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "collab",
+      "ruta": "collab/collab/src/core/any_map.rs",
+      "capa": "collab",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "collab",
+      "ruta": "collab/collab/src/core/array_wrapper.rs",
+      "capa": "collab",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "collab",
+      "ruta": "collab/collab/src/core/collab.rs",
+      "capa": "collab",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "collab",
+      "ruta": "collab/collab/src/core/collab_plugin.rs",
+      "capa": "collab",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "collab",
+      "ruta": "collab/collab/src/core/collab_search.rs",
+      "capa": "collab",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "collab",
+      "ruta": "collab/collab/src/core/collab_state.rs",
+      "capa": "collab",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "collab",
+      "ruta": "collab/collab/src/core/fill.rs",
+      "capa": "collab",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "collab",
+      "ruta": "collab/collab/src/core/map_wrapper.rs",
+      "capa": "collab",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "collab",
+      "ruta": "collab/collab/src/core/mod.rs",
+      "capa": "collab",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "collab",
+      "ruta": "collab/collab/src/core/origin.rs",
+      "capa": "collab",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "collab",
+      "ruta": "collab/collab/src/core/text_wrapper.rs",
+      "capa": "collab",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "collab",
+      "ruta": "collab/collab/src/core/transaction.rs",
+      "capa": "collab",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "collab",
+      "ruta": "collab/collab/src/core/value.rs",
+      "capa": "collab",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "collab",
+      "ruta": "collab/collab/src/entity.rs",
+      "capa": "collab",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "collab",
+      "ruta": "collab/collab/src/error.rs",
+      "capa": "collab",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "collab",
+      "ruta": "collab/collab/src/lib.rs",
+      "capa": "collab",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "collab",
+      "ruta": "collab/collab/src/lock/lock_timeout.rs",
+      "capa": "collab",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "collab",
+      "ruta": "collab/collab/src/lock/mod.rs",
+      "capa": "collab",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "collab",
+      "ruta": "collab/collab/src/util.rs",
+      "capa": "collab",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "collab",
+      "ruta": "collab/collab/tests/edit_test/awareness_test.rs",
+      "capa": "collab",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "collab",
+      "ruta": "collab/collab/tests/edit_test/insert_test.rs",
+      "capa": "collab",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "collab",
+      "ruta": "collab/collab/tests/edit_test/mod.rs",
+      "capa": "collab",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "collab",
+      "ruta": "collab/collab/tests/edit_test/observer_test.rs",
+      "capa": "collab",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "collab",
+      "ruta": "collab/collab/tests/edit_test/restore_test.rs",
+      "capa": "collab",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "collab",
+      "ruta": "collab/collab/tests/edit_test/state_vec_test.rs",
+      "capa": "collab",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "collab",
+      "ruta": "collab/collab/tests/main.rs",
+      "capa": "collab",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "collab",
+      "ruta": "collab/collab/tests/util/mod.rs",
+      "capa": "collab",
+      "estado": "pendiente"
+    }
+  ],
+  "archivos_total": 113,
+  "catalogos": [
+    "blocs.json",
+    "deps.json",
+    "events.json",
+    "misc.json",
+    "notifications.json",
+    "protobuf.json"
+  ],
+  "catalogos_razon": {
+    "events.json": "Eventos FFI / dispatch de esta feature",
+    "blocs.json": "BLoCs / Cubits presentes en los archivos de esta unidad",
+    "protobuf.json": "Entidades protobuf input/output de los eventos",
+    "notifications.json": "Notificaciones Rust→Dart emitidas o escuchadas",
+    "deps.json": "Dependencias del workspace rust y pubspec",
+    "misc.json": "Rutas, atajos, flags, error codes, i18n"
+  },
+  "dependencias": [],
+  "plantilla": "feature",
+  "documento": "OUT/09-features/F18-motor-colab-crdt-plugins-importer-entity-derive/F18-motor-colab-crdt-plugins-importer-entity-derive.md",
+  "metricas": {
+    "archivos": 113,
+    "por_capa": {
+      "config": 12,
+      "collab": 100,
+      "ui": 1
+    },
+    "por_fuente": {
+      "collab": 113
+    }
+  },
+  "prioridad": 1,
+  "concurrencia": "paralela",
+  "generado_en": "2026-10-20T20:16:05Z"
+}

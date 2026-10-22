@@ -1,0 +1,81 @@
+{
+  "schema_version": 1,
+  "id": "F01.0",
+  "feature_id": "F01",
+  "sub_index": 0,
+  "titulo": "Indice de documentos y editor (modelo, DocumentBloc, servicios)",
+  "fuentes": [
+    "appflowy"
+  ],
+  "archivos": [
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/plugins/document/application/document_bloc.dart",
+      "capa": "bloc",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/plugins/document/application/document_collab_adapter.dart",
+      "capa": "service",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/plugins/document/application/document_service.dart",
+      "capa": "service",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/plugins/document/application/editor_transaction_adapter.dart",
+      "capa": "service",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/shared/markdown_to_document.dart",
+      "capa": "service",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/some_shared_module.dart",
+      "capa": "service",
+      "estado": "pendiente"
+    }
+  ],
+  "archivos_total": 6,
+  "catalogos": [
+    "blocs.json",
+    "deps.json",
+    "events.json",
+    "misc.json",
+    "notifications.json",
+    "protobuf.json"
+  ],
+  "catalogos_razon": {
+    "events.json": "Eventos FFI / dispatch de esta feature",
+    "blocs.json": "BLoCs / Cubits presentes en los archivos de esta unidad",
+    "protobuf.json": "Entidades protobuf input/output de los eventos",
+    "notifications.json": "Notificaciones Rust→Dart emitidas o escuchadas",
+    "deps.json": "Dependencias del workspace rust y pubspec",
+    "misc.json": "Rutas, atajos, flags, error codes, i18n"
+  },
+  "dependencias": [],
+  "plantilla": "feature",
+  "documento": "OUT/09-features/F01-documentos-y-editor/0-indice-de-documentos-y-editor-modelo-documentbloc-servicios.md",
+  "metricas": {
+    "archivos": 6,
+    "por_capa": {
+      "bloc": 1,
+      "service": 5
+    },
+    "por_fuente": {
+      "appflowy": 6
+    }
+  },
+  "prioridad": 1,
+  "concurrencia": "serial",
+  "generado_en": "2026-10-21T21:49:43Z"
+}

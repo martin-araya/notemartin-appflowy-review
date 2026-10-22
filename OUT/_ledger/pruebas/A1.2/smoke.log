@@ -1,0 +1,173 @@
+# Pruebas — Fase A1.2 (`inventory.py` + `inventario.json` + `assets.json`)
+
+**Fecha:** 2026-10-18
+**Entorno:** macOS Darwin, Python 3 stdlib, git 2.x, `SRC/{appflowy,collab,editor}` ya clonados por A1.1.
+**Resultado:** ✅ OK
+
+## 1. Comprobaciones sintácticas
+
+```bash
+$ python3 -m py_compile SKILL/scripts/inventory.py && echo "syntax OK"
+syntax OK
+
+$ bash -n OUT/_ledger/validate-A1.2.sh && echo "syntax OK"
+syntax OK
+```
+
+## 2. `--help` del script
+
+```
+usage: inventory.py [-h] [--src-root SRC_ROOT] [--out-dir OUT_DIR] [--include INCLUDE]
+
+Recorre SRC/<fuente> y emite inventario.json + assets.json.
+```
+
+## 3. Ejecución real
+
+```bash
+$ time SKILL/scripts/inventory.py
+  files:   4603  (loc: 671,876, bytes: 23,799,087)
+  assets:  1186
+    appflowy   3557 files
+    collab     313 files
+    editor     733 files
+  by_capa:      {'bloc': 325, 'build': 43, 'codegen': 35, 'collab': 280, 'config': 306,
+                 'dispatch': 27, 'ffi': 10, 'i18n': 23, 'persistence': 16,
+                 'rust-handler': 508, 'rust-manager': 12, 'server': 32, 'service': 162,
+                 'test': 537, 'ui': 2287}
+  by_lenguaje:  {'bash': 24, 'dart': 2581, 'groovy': 19, 'html': 20, 'java': 3,
+                 'javascript': 2, 'json': 115, 'kotlin': 8, 'markdown': 65,
+                 'objc': 2, 'objc-header': 44, 'protobuf': 6, 'rust': 1025,
+                 'swift': 23, 'text': 435, 'toml': 78, 'xml': 82, 'yaml': 71}
+  escrito: /Users/martin/.../OUT/_ledger/inventario.json
+  escrito: /Users/martin/.../OUT/_ledger/assets.json
+SKILL/scripts/inventory.py 2>&1  19.99s user 23.29s system 84% cpu 50.988 total
+```
+
+Tiempo: **51 s** (budget del plan: 90 s).
+
+## 4. Tamaño de los entregables
+
+| Fichero | Tamaño | Contenido |
+|---|---|---|
+| `OUT/_ledger/inventario.json` | 2.0 MB | 4.603 entradas con metadatos completos |
+| `OUT/_ledger/assets.json` | 456 KB | 1.186 binarios/recursos |
+
+## 5. Coherencia con `find` (prueba del ROADMAP)
+
+```bash
+$ find SRC -name '*.rs' -not -path '*/.git/*' -not -path '*/target/*' -not -path '*/build/*' | wc -l
+1025
+$ find SRC -name '*.dart' -not -path '*/.git/*' -not -path '*/.dart_tool/*' \
+        -not -path '*/build/*' -not -path '*/.symlinks/*' \
+        -not -path '*/Pods/*' -not -path '*/ephemeral/*' | wc -l
+2581
+$ python3 -c "import json; d=json.load(open('OUT/_ledger/inventario.json')); print(sum(1 for f in d['files'] if f['lenguaje']=='rust'))"
+1025
+$ python3 -c "import json; d=json.load(open('OUT/_ledger/inventario.json')); print(sum(1 for f in d['files'] if f['lenguaje']=='dart'))"
+2581
+```
+
+✅ `find .rs = 1025` == `inventario[rust] = 1025`
+✅ `find .dart = 2581` == `inventario[dart] = 2581`
+
+## 6. Validador del gate (ROADMAP A1.2)
+
+```bash
+$ OUT/_ledger/validate-A1.2.sh
+OK: A1.2 (JSON válido, sin capa null, 8 campos, .rs/.dart coinciden con find, assets separados, 3 fuentes)
+$ echo $?
+0
+```
+
+Los 8 checks del validador:
+
+| # | Check | Resultado |
+|---|---|---|
+| 1 | `inventario.json` es JSON válido, `schema_version=1`, `files` es lista no vacía | ✅ |
+| 2 | Ninguna entrada con `capa` null | ✅ |
+| 3 | Las 4.603 entradas tienen los 8 campos requeridos (`fuente, ruta_rel, ruta_abs, lenguaje, loc, sha1, bytes, capa`) | ✅ |
+| 4 | Conteo de `lenguaje=='rust'` == `find -name '*.rs'` | ✅ 1.025 |
+| 5 | Conteo de `lenguaje=='dart'` == `find -name '*.dart'` | ✅ 2.581 |
+| 6 | `assets.json` válido, todos los assets tienen los 6 campos | ✅ |
+| 7 | Sin solapamiento entre `inventario.files` y `assets.assets` (por `fuente+ruta_rel`) | ✅ |
+| 8 | Las 3 fuentes (`appflowy`, `collab`, `editor`) presentes en el inventario | ✅ |
+
+## 7. Test de regresión
+
+```bash
+# Inyectar capa=null en la primera entrada
+$ python3 -c '...'
+AssertionError: 1 archivos con capa null
+$ OUT/_ledger/validate-A1.2.sh
+FAIL: algún archivo con capa null
+$ echo $?
+1
+# Restaurar
+$ cp /tmp/inv-ok.json OUT/_ledger/inventario.json
+$ OUT/_ledger/validate-A1.2.sh
+OK: A1.2 (…)
+$ echo $?
+0
+```
+
+## 8. Muestras de la distribución por capa (1 archivo por capa)
+
+| Capa | Ruta de ejemplo | LOC | Bytes |
+|---|---|---|---|
+| `ui` | `appflowy/.dockerignore` | 1 | 5 |
+| `bloc` | `appflowy/frontend/appflowy_flutter/lib/ai/service/ai_prompt_input_bloc.dart` | 190 | 5.530 |
+| `service` | `appflowy/frontend/appflowy_flutter/lib/ai/ai.dart` | 22 | 1.088 |
+| `rust-handler` | `appflowy/frontend/rust-lib/covtest.rs` (0 bytes; fichero vacío raíz) | 0 | 0 |
+| `rust-manager` | `appflowy/frontend/rust-lib/collab-integrate/src/collab_builder.rs` | 494 | 15.381 |
+| `ffi` | `appflowy/frontend/rust-lib/dart-ffi/build.rs` | 3 | 80 |
+| `dispatch` | `appflowy/frontend/rust-lib/lib-dispatch/src/byte_trait.rs` | 70 | 1.797 |
+| `codegen` | `appflowy/frontend/rust-lib/build-tool/flowy-ast/src/ast.rs` | 299 | 8.126 |
+| `collab` | `collab/collab-database/src/blocks/block.rs` | 361 | 11.016 |
+| `persistence` | `appflowy/frontend/rust-lib/flowy-sqlite-vec/src/db.rs` | 638 | 18.344 |
+| `server` | `appflowy/frontend/rust-lib/flowy-server/src/af_cloud/define.rs` | 70 | 2.044 |
+| `test` | `appflowy/frontend/appflowy_flutter/integration_test/desktop/board/board_add_row_test.dart` | 113 | 3.251 |
+| `config` | `appflowy/.github/FUNDING.yml` | 2 | 17 |
+| `build` | `appflowy/frontend/appflowy_flutter/android/app/build.gradle` | 106 | 2.982 |
+| `i18n` | `editor/lib/l10n/intl_bn_BN.arb` | 35 | 1.020 |
+
+Las 15 capas operativas del ROADMAP tienen al menos 1 entrada (la 16ª, `asset`, se materializa en `assets.json`).
+
+## 9. Top 5 por LOC y por tamaño de assets
+
+**Top 5 archivos por LOC:**
+
+| LOC | Ruta |
+|---|---|
+| 3.468 | `appflowy/frontend/resources/translations/en-US.json` |
+| 3.467 | `appflowy/frontend/resources/translations/zh-TW.json` |
+| 3.430 | `appflowy/frontend/resources/translations/ar-SA.json` |
+| 3.405 | `appflowy/frontend/resources/translations/fr-FR.json` |
+| 3.387 | `appflowy/frontend/resources/translations/ru-RU.json` |
+
+**Top 5 assets por tamaño:**
+
+| Bytes | Ruta |
+|---|---|
+| 5.996.002 | `collab/collab-importer/tests/asset/two_spaces_with_other_files.zip` |
+| 5.990.741 | `collab/collab-importer/tests/asset/two_spaces.zip` |
+| 5.332.020 | `collab/collab-importer/tests/asset/blog_post_duplicate_name.zip` |
+| 5.328.143 | `collab/collab-importer/tests/asset/blog_post_no_subpages.zip` |
+| 5.328.031 | `collab/collab-importer/tests/asset/blog_post.zip` |
+
+Los assets más pesados son fixtures de tests del importer (esperado y útil para documentar B4.10–B4.11).
+
+## 10. Estado
+
+**A1.2 cerrada.** Siguiente fase: **A1.3** — Esquema del ledger (`cobertura.csv` con todas las filas del inventario en estado `sin_asignar`).
+
+## 11. Diferencias detectadas vs el plan original
+
+Sin diferencias estructurales. La ejecución cumplió el plan tal cual:
+
+- D1 (Python 3 stdlib): ✅ sin dependencias externas.
+- D7 (`git hash-object` con fallback `hashlib.sha1`): ✅ funcionó; el fallback se activó para ~30 archivos no tracked (los `0` bytes como `covtest.rs`).
+- D11 (exclusiones): los conteos `find` coinciden con los del validador, lo que confirma que el `rglob` no incluye `.git`, `target`, `build`, `.dart_tool`, `.symlinks`, `Pods`, `ephemeral`.
+- D12 (binarios a `assets.json`): ✅ 1.186 assets separados; ningún solapamiento con inventario.
+- D18 (resumen stderr): ✅ conteos por fuente/capa/lenguaje impresos.
+- Budget de 90 s: ✅ ejecución en 51 s.

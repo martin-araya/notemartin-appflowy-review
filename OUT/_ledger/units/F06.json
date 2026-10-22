@@ -1,0 +1,257 @@
+{
+  "schema_version": 1,
+  "id": "F06",
+  "feature_id": "F06",
+  "sub_index": null,
+  "titulo": "Sync y servidores",
+  "fuentes": [
+    "appflowy"
+  ],
+  "archivos": [
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/core/network_monitor.dart",
+      "capa": "service",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/plugins/document/application/doc_sync_state_listener.dart",
+      "capa": "bloc",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/flowy-server/Cargo.toml",
+      "capa": "config",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/flowy-server/src/af_cloud/define.rs",
+      "capa": "server",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/flowy-server/src/af_cloud/impls/chat.rs",
+      "capa": "server",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/flowy-server/src/af_cloud/impls/database.rs",
+      "capa": "server",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/flowy-server/src/af_cloud/impls/document.rs",
+      "capa": "server",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/flowy-server/src/af_cloud/impls/file_storage.rs",
+      "capa": "server",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/flowy-server/src/af_cloud/impls/folder.rs",
+      "capa": "server",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/flowy-server/src/af_cloud/impls/mod.rs",
+      "capa": "server",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/flowy-server/src/af_cloud/impls/search.rs",
+      "capa": "server",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/flowy-server/src/af_cloud/impls/user/cloud_service_impl.rs",
+      "capa": "server",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/flowy-server/src/af_cloud/impls/user/dto.rs",
+      "capa": "server",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/flowy-server/src/af_cloud/impls/user/mod.rs",
+      "capa": "server",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/flowy-server/src/af_cloud/impls/user/util.rs",
+      "capa": "server",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/flowy-server/src/af_cloud/impls/util.rs",
+      "capa": "server",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/flowy-server/src/af_cloud/mod.rs",
+      "capa": "server",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/flowy-server/src/af_cloud/server.rs",
+      "capa": "server",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/flowy-server/src/lib.rs",
+      "capa": "server",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/flowy-server/src/local_server/impls/chat.rs",
+      "capa": "server",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/flowy-server/src/local_server/impls/database.rs",
+      "capa": "server",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/flowy-server/src/local_server/impls/document.rs",
+      "capa": "server",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/flowy-server/src/local_server/impls/folder.rs",
+      "capa": "server",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/flowy-server/src/local_server/impls/mod.rs",
+      "capa": "server",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/flowy-server/src/local_server/impls/search.rs",
+      "capa": "server",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/flowy-server/src/local_server/impls/user.rs",
+      "capa": "server",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/flowy-server/src/local_server/mod.rs",
+      "capa": "server",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/flowy-server/src/local_server/server.rs",
+      "capa": "server",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/flowy-server/src/local_server/template/create_workspace.rs",
+      "capa": "server",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/flowy-server/src/local_server/template/mod.rs",
+      "capa": "server",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/flowy-server/src/local_server/uid.rs",
+      "capa": "server",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/flowy-server/src/local_server/util.rs",
+      "capa": "server",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/flowy-server/src/response.rs",
+      "capa": "server",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/flowy-server/src/server.rs",
+      "capa": "server",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/flowy-server/src/util.rs",
+      "capa": "server",
+      "estado": "pendiente"
+    }
+  ],
+  "archivos_total": 35,
+  "catalogos": [
+    "blocs.json",
+    "deps.json",
+    "events.json",
+    "misc.json",
+    "notifications.json",
+    "protobuf.json"
+  ],
+  "catalogos_razon": {
+    "events.json": "Eventos FFI / dispatch de esta feature",
+    "blocs.json": "BLoCs / Cubits presentes en los archivos de esta unidad",
+    "protobuf.json": "Entidades protobuf input/output de los eventos",
+    "notifications.json": "Notificaciones Rust→Dart emitidas o escuchadas",
+    "deps.json": "Dependencias del workspace rust y pubspec",
+    "misc.json": "Rutas, atajos, flags, error codes, i18n"
+  },
+  "dependencias": [],
+  "plantilla": "feature",
+  "documento": "OUT/09-features/F06-sync-y-servidores/F06-sync-y-servidores.md",
+  "metricas": {
+    "archivos": 35,
+    "por_capa": {
+      "service": 1,
+      "bloc": 1,
+      "config": 1,
+      "server": 32
+    },
+    "por_fuente": {
+      "appflowy": 35
+    }
+  },
+  "prioridad": 1,
+  "concurrencia": "paralela",
+  "generado_en": "2026-10-19T21:45:28Z"
+}

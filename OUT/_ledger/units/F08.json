@@ -1,0 +1,246 @@
+{
+  "schema_version": 1,
+  "id": "F08",
+  "feature_id": "F08",
+  "sub_index": null,
+  "titulo": "Busqueda e indexacion",
+  "fuentes": [
+    "appflowy"
+  ],
+  "archivos": [
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/workspace/presentation/command_palette/command_palette.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/workspace/presentation/command_palette/navigation_bloc_extension.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/workspace/presentation/command_palette/widgets/page_preview.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/workspace/presentation/command_palette/widgets/recent_views_list.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/workspace/presentation/command_palette/widgets/search_ask_ai_entrance.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/workspace/presentation/command_palette/widgets/search_field.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/workspace/presentation/command_palette/widgets/search_icon.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/workspace/presentation/command_palette/widgets/search_recent_view_cell.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/workspace/presentation/command_palette/widgets/search_result_cell.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/workspace/presentation/command_palette/widgets/search_results_list.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/workspace/presentation/command_palette/widgets/search_summary_cell.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/flowy-core/src/full_indexed_data_provider.rs",
+      "capa": "rust-handler",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/flowy-core/src/indexed_data_consumer.rs",
+      "capa": "rust-handler",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/flowy-core/src/indexing_data_runner.rs",
+      "capa": "rust-handler",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/flowy-search/Cargo.toml",
+      "capa": "config",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/flowy-search/Flowy.toml",
+      "capa": "config",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/flowy-search/build.rs",
+      "capa": "rust-handler",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/flowy-search/src/document/cloud_search_handler.rs",
+      "capa": "rust-handler",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/flowy-search/src/document/local_search_handler.rs",
+      "capa": "rust-handler",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/flowy-search/src/document/mod.rs",
+      "capa": "rust-handler",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/flowy-search/src/entities/mod.rs",
+      "capa": "rust-handler",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/flowy-search/src/entities/notification.rs",
+      "capa": "service",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/flowy-search/src/entities/query.rs",
+      "capa": "rust-handler",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/flowy-search/src/entities/result.rs",
+      "capa": "rust-handler",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/flowy-search/src/entities/search_filter.rs",
+      "capa": "rust-handler",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/flowy-search/src/event_handler.rs",
+      "capa": "rust-handler",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/flowy-search/src/event_map.rs",
+      "capa": "rust-handler",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/flowy-search/src/lib.rs",
+      "capa": "rust-handler",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/flowy-search/src/services/manager.rs",
+      "capa": "rust-manager",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/flowy-search/src/services/mod.rs",
+      "capa": "rust-handler",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/flowy-search/tests/main.rs",
+      "capa": "rust-handler",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/flowy-search/tests/tantivy_test.rs",
+      "capa": "rust-handler",
+      "estado": "verificado"
+    }
+  ],
+  "archivos_total": 32,
+  "catalogos": [
+    "blocs.json",
+    "deps.json",
+    "events.json",
+    "misc.json",
+    "notifications.json",
+    "protobuf.json"
+  ],
+  "catalogos_razon": {
+    "events.json": "Eventos FFI / dispatch de esta feature",
+    "blocs.json": "BLoCs / Cubits presentes en los archivos de esta unidad",
+    "protobuf.json": "Entidades protobuf input/output de los eventos",
+    "notifications.json": "Notificaciones Rust→Dart emitidas o escuchadas",
+    "deps.json": "Dependencias del workspace rust y pubspec",
+    "misc.json": "Rutas, atajos, flags, error codes, i18n"
+  },
+  "dependencias": [
+    {
+      "id": "F03",
+      "tipo": "feature",
+      "nota": "Documento de F03 debe estar disponible (referencia)."
+    }
+  ],
+  "plantilla": "feature",
+  "documento": "OUT/09-features/F08-busqueda-e-indexacion/F08-busqueda-e-indexacion.md",
+  "metricas": {
+    "archivos": 32,
+    "por_capa": {
+      "ui": 11,
+      "rust-handler": 17,
+      "config": 2,
+      "service": 1,
+      "rust-manager": 1
+    },
+    "por_fuente": {
+      "appflowy": 32
+    }
+  },
+  "prioridad": 2,
+  "concurrencia": "paralela",
+  "generado_en": "2026-10-20T18:14:27Z"
+}

@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "veredicto": "aprobado",
+  "correcciones": [],
+  "muestreo_verificado": {
+    "pct": 100,
+    "gate_100_explicit": true,
+    "gate_100_auto": true,
+    "total_afirmaciones": 23,
+    "verificadas": 23,
+    "afirmaciones": [
+      "refs[0] ok",
+      "refs[1] ok",
+      "refs[2] ok",
+      "refs[3] ok",
+      "refs[4] ok",
+      "refs[5] ok",
+      "refs[6] ok",
+      "refs[7] ok",
+      "refs[8] ok",
+      "refs[9] ok",
+      "refs[10] ok",
+      "refs[11] ok",
+      "refs[12] ok",
+      "refs[13] ok",
+      "refs[14] ok",
+      "refs[15] ok",
+      "refs[16] ok",
+      "refs[17] ok",
+      "refs[18] ok",
+      "refs[19] ok",
+      "refs[20] ok",
+      "refs[21] ok",
+      "refs[22] ok"
+    ]
+  },
+  "validaciones": {
+    "evidence": {
+      "summary": {
+        "files": 1,
+        "references": 23,
+        "ok": 23,
+        "errors": 0
+      },
+      "errors": [],
+      "schema_version": "1.0",
+      "exit": 0
+    },
+    "template": {
+      "summary": {
+        "files": 1,
+        "ok": 1,
+        "errors": 0,
+        "warns": 0
+      },
+      "errors": [],
+      "schema_version": "1.0",
+      "exit": 0
+    },
+    "mermaid": {
+      "exit": 0,
+      "bloques_ok": 4,
+      "bloques_ko": 0,
+      "errores": []
+    }
+  }
+}

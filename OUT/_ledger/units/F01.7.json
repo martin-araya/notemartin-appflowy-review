@@ -1,0 +1,105 @@
+{
+  "schema_version": 1,
+  "id": "F01.7",
+  "feature_id": "F01",
+  "sub_index": 7,
+  "titulo": "Estilo: font, background_color, page_style, i18n del editor",
+  "fuentes": [
+    "appflowy"
+  ],
+  "archivos": [
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/plugins/document/presentation/editor_plugins/background_color/theme_background_color.dart",
+      "capa": "ui",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/plugins/document/presentation/editor_plugins/font/customize_font_toolbar_item.dart",
+      "capa": "ui",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/plugins/document/presentation/editor_plugins/page_style/_page_cover_bottom_sheet.dart",
+      "capa": "ui",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/plugins/document/presentation/editor_plugins/page_style/_page_style_cover_image.dart",
+      "capa": "ui",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/plugins/document/presentation/editor_plugins/page_style/_page_style_icon.dart",
+      "capa": "ui",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/plugins/document/presentation/editor_plugins/page_style/_page_style_icon_bloc.dart",
+      "capa": "bloc",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/plugins/document/presentation/editor_plugins/page_style/_page_style_layout.dart",
+      "capa": "ui",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/plugins/document/presentation/editor_plugins/page_style/_page_style_util.dart",
+      "capa": "ui",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/plugins/document/presentation/editor_plugins/page_style/page_style_bottom_sheet.dart",
+      "capa": "ui",
+      "estado": "verificado"
+    }
+  ],
+  "archivos_total": 9,
+  "catalogos": [
+    "blocs.json",
+    "deps.json",
+    "events.json",
+    "misc.json",
+    "notifications.json",
+    "protobuf.json"
+  ],
+  "catalogos_razon": {
+    "events.json": "Eventos FFI / dispatch de esta feature",
+    "blocs.json": "BLoCs / Cubits presentes en los archivos de esta unidad",
+    "protobuf.json": "Entidades protobuf input/output de los eventos",
+    "notifications.json": "Notificaciones Rust→Dart emitidas o escuchadas",
+    "deps.json": "Dependencias del workspace rust y pubspec",
+    "misc.json": "Rutas, atajos, flags, error codes, i18n"
+  },
+  "dependencias": [
+    {
+      "id": "F01.0",
+      "tipo": "indice",
+      "nota": "Documento indice F01.0 debe existir antes de esta sub-unidad."
+    }
+  ],
+  "plantilla": "feature",
+  "documento": "OUT/09-features/F01-documentos-y-editor/7-estilo-font-background-color-page-style-i18n-del-editor.md",
+  "metricas": {
+    "archivos": 9,
+    "por_capa": {
+      "ui": 8,
+      "bloc": 1
+    },
+    "por_fuente": {
+      "appflowy": 9
+    }
+  },
+  "prioridad": 2,
+  "concurrencia": "paralela",
+  "generado_en": "2026-10-19T20:26:15Z"
+}

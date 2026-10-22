@@ -1,0 +1,104 @@
+# smoke.log — run_subagent.py (Fase A4.3)
+# Fecha: 2026-10-18T23:09:04Z
+
+## $ python3 SKILL/scripts/run_subagent.py --help
+```
+usage: run_subagent.py [-h] --rol {autor,revisor} --unit UNIT
+                       [--src-root SRC_ROOT] [--inventario INVENTARIO]
+                       [--extract-dir EXTRACT_DIR] [--plantilla PLANTILLA]
+                       --out OUT [--out-root OUT_ROOT]
+                       [--evidence-min-pct EVIDENCE_MIN_PCT]
+                       [--feature-id FEATURE_ID]
+                       [--max-secciones MAX_SECCIONES] [--quiet] [--no-color]
+                       [--json]
+
+Mock determinista del subagente autor/revisor de A4.3. Ejecuta el contrato
+definido en SKILL/references/subagent-contract.md.
+
+optional arguments:
+  -h, --help            show this help message and exit
+  --rol {autor,revisor}
+  --unit UNIT
+  --src-root SRC_ROOT
+  --inventario INVENTARIO
+  --extract-dir EXTRACT_DIR
+  --plantilla PLANTILLA
+  --out OUT             JSON de salida.
+  --out-root OUT_ROOT
+  --evidence-min-pct EVIDENCE_MIN_PCT
+  --feature-id FEATURE_ID
+  --max-secciones MAX_SECCIONES
+  --quiet
+  --no-color
+  --json
+```
+
+## $ python3 SKILL/scripts/run_subagent.py --rol autor (sobre F11)
+[run_subagent] rol=autor documento=OUT/09-features/F11-exportacion-ui/F11-exportacion-ui.md filas=2 extras=0
+
+## $ cat autor.json (resumido)
+```json
+{
+  "schema_version": 1,
+  "documento": "OUT/09-features/F11-exportacion-ui/F11-exportacion-ui.md",
+  "filas_ledger_cubiertas": [
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/plugins/shared/share/export_tab.dart"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/workspace/application/export/document_exporter.dart"
+    }
+  ],
+  "archivos_extra_detectados": [],
+  "preguntas_abiertas": [
+    "[NO DETERMINADO] Documento de la unidad F11 generado por mock run_subagent; pendiente de redaccion humana (autor real en A4.3.x o Parte B)."
+  ],
+  "metricas": {
+    "secciones_rellenas": 20,
+    "afirmaciones_verificadas": 2,
+    "afirmaciones_inferidas": 0,
+    "diagramas_mermaid": 0
+  }
+}
+```
+
+## $ python3 SKILL/scripts/run_subagent.py --rol revisor
+[run_subagent] rol=revisor veredicto=[32maprobado[0m correcciones=0
+
+## $ cat revisor.json (resumido)
+```json
+{
+  "veredicto": "aprobado",
+  "correcciones": [],
+  "validaciones": {
+    "evidence": {
+      "exit": 0,
+      "errores": []
+    },
+    "template": {
+      "exit": 0,
+      "errores": []
+    },
+    "mermaid": {
+      "exit": 0,
+      "bloques_ok": 0,
+      "bloques_ko": 0,
+      "errores": []
+    }
+  }
+}
+```
+
+## $ bash OUT/_ledger/validate-A4.3.sh
+```
+  referencias: 3 archivos no vacios, fixture presente
+  AutorOutput: documento=OUT/09-features/F11-exportacion-ui/F11-exportacion-ui.md filas=2
+  documento: /var/folders/hr/sbmrj9lj3_n56qv4b37q4y540000gn/T/tmp.TB4OEpmEMZ/OUT/09-features/F11-exportacion-ui/F11-exportacion-ui.md con 19 secciones
+[run_subagent] rol=revisor veredicto=[32maprobado[0m correcciones=0
+  RevisorOutput: veredicto=aprobado correcciones=0
+  contrato: 4 esquemas presentes (AutorInput/Output, RevisorInput/Output)
+  prompts: ambos referencian el contrato y los 3 validadores
+OK: A4.3 (run_subagent.py + 3 referencias: --help, autor produce AutorOutput + doc >= 19 secciones, revisor produce RevisorOutput, --json OK, contrato y prompts OK)
+```

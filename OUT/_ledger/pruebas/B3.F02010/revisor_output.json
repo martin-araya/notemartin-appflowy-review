@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "veredicto": "aprobado",
+  "correcciones": [],
+  "muestreo_verificado": {
+    "pct": 100,
+    "gate_100_explicit": true,
+    "gate_100_auto": false,
+    "total_afirmaciones": 0,
+    "verificadas": 0,
+    "afirmaciones": []
+  },
+  "validaciones": {
+    "evidence": {
+      "summary": {
+        "files": 1,
+        "references": 0,
+        "ok": 0,
+        "errors": 0
+      },
+      "errors": [],
+      "schema_version": "1.0",
+      "exit": 0
+    },
+    "template": {
+      "summary": {
+        "files": 1,
+        "ok": 1,
+        "errors": 0,
+        "warns": 0
+      },
+      "errors": [],
+      "schema_version": "1.0",
+      "exit": 0
+    },
+    "mermaid": {
+      "exit": 0,
+      "bloques_ok": 2,
+      "bloques_ko": 0,
+      "errores": []
+    }
+  }
+}

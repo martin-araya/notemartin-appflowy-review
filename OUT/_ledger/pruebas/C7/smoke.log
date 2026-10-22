@@ -1,0 +1,38 @@
+== C7 · smoke test de portabilidad ==
+repo sintetico: /tmp/smoke_src  (fuente: 'ejemplo')
+salida:         /tmp/smoke_out
+
+repo sintetico creado: 5 ficheros, fuente 'ejemplo'
+
+[OK  ] inventory.py
+         
+
+[OK  ] extract_events.py
+         
+
+[OK  ] extract_notifications.py
+         
+
+[OK  ] extract_blocs.py
+         
+
+[OK  ] extract_deps.py
+         
+
+[OK  ] extract_misc.py
+         
+
+[OK  ] extract_protobuf.py
+         
+
+[OK  ] validate_evidence.py (doc que cita el repo ajeno)
+         
+
+[OK  ] validate_mermaid.sh
+         OK=1 FAIL=0
+
+== events.json extraido del repo sintetico ==
+fuentes: ['ejemplo']
+  enum=EjemploEvent crate=ejemplo-crate
+    GetAlgo: in=EjemploPB out=RepeatedEjemploPB
+    UpdateAlgo: in=EjemploPB out=None

@@ -1,0 +1,3668 @@
+[
+  {
+    "name": "flowy-ast",
+    "raw_name": "build-tool/flowy-ast",
+    "path": "SRC/appflowy/frontend/rust-lib/build-tool/flowy-ast",
+    "version": "0.1.0",
+    "edition": "2018",
+    "internal_dependencies": [],
+    "workspace_dependencies": [],
+    "external_dependencies": [
+      {
+        "name": "syn",
+        "kind": "external_registry",
+        "version_constraint": "1.0.109",
+        "features": [
+          "extra-traits",
+          "parsing",
+          "derive",
+          "full"
+        ]
+      }
+    ],
+    "internal_count": 0,
+    "external_count": 1,
+    "in_degree": 2
+  },
+  {
+    "name": "flowy-codegen",
+    "raw_name": "build-tool/flowy-codegen",
+    "path": "SRC/appflowy/frontend/rust-lib/build-tool/flowy-codegen",
+    "version": "0.1.0",
+    "edition": "2024",
+    "internal_dependencies": [
+      "flowy-ast"
+    ],
+    "workspace_dependencies": [
+      {
+        "name": "flowy-ast",
+        "kind": "internal_workspace",
+        "path": "build-tool/flowy-ast"
+      }
+    ],
+    "external_dependencies": [
+      {
+        "name": "cmd_lib",
+        "kind": "external_registry",
+        "version_constraint": "1.9.5",
+        "features": []
+      },
+      {
+        "name": "console",
+        "kind": "external_registry",
+        "version_constraint": "0.14.1",
+        "features": []
+      },
+      {
+        "name": "fancy-regex",
+        "kind": "external_registry",
+        "version_constraint": "0.10.0",
+        "features": []
+      },
+      {
+        "name": "itertools",
+        "kind": "external_registry",
+        "version_constraint": "0.10",
+        "features": []
+      },
+      {
+        "name": "lazy_static",
+        "kind": "external_registry",
+        "version_constraint": "1.4.0",
+        "features": []
+      },
+      {
+        "name": "phf",
+        "kind": "external_registry",
+        "version_constraint": "0.8.0",
+        "features": [
+          "macros"
+        ]
+      },
+      {
+        "name": "protoc-bin-vendored",
+        "kind": "external_registry",
+        "version_constraint": "3.1.0",
+        "features": []
+      },
+      {
+        "name": "protoc-rust",
+        "kind": "external_registry",
+        "version_constraint": "2.28.0",
+        "features": []
+      },
+      {
+        "name": "serde",
+        "kind": "external_registry",
+        "version_constraint": "1.0.194",
+        "features": []
+      },
+      {
+        "name": "serde_json",
+        "kind": "external_registry",
+        "version_constraint": "1.0.108",
+        "features": []
+      },
+      {
+        "name": "similar",
+        "kind": "external_registry",
+        "version_constraint": "1.3.0",
+        "features": []
+      },
+      {
+        "name": "syn",
+        "kind": "external_registry",
+        "version_constraint": "1.0.109",
+        "features": [
+          "extra-traits",
+          "parsing",
+          "derive",
+          "full"
+        ]
+      },
+      {
+        "name": "tera",
+        "kind": "external_registry",
+        "version_constraint": "1.17.1",
+        "features": []
+      },
+      {
+        "name": "toml",
+        "kind": "external_registry",
+        "version_constraint": "0.5.11",
+        "features": []
+      },
+      {
+        "name": "walkdir",
+        "kind": "external_registry",
+        "version_constraint": "2",
+        "features": []
+      }
+    ],
+    "internal_count": 1,
+    "external_count": 15,
+    "in_degree": 1
+  },
+  {
+    "name": "flowy-derive",
+    "raw_name": "build-tool/flowy-derive",
+    "path": "SRC/appflowy/frontend/rust-lib/build-tool/flowy-derive",
+    "version": "0.1.0",
+    "edition": "2018",
+    "internal_dependencies": [
+      "flowy-ast",
+      "flowy-codegen"
+    ],
+    "workspace_dependencies": [
+      {
+        "name": "flowy-ast",
+        "kind": "internal_workspace",
+        "path": "build-tool/flowy-ast"
+      },
+      {
+        "name": "flowy-codegen",
+        "kind": "internal_workspace",
+        "path": "build-tool/flowy-codegen"
+      }
+    ],
+    "external_dependencies": [
+      {
+        "name": "dashmap",
+        "kind": "external_registry",
+        "version_constraint": "6.0.1",
+        "features": []
+      },
+      {
+        "name": "lazy_static",
+        "kind": "external_registry",
+        "version_constraint": "1.4.0",
+        "features": []
+      },
+      {
+        "name": "serde_json",
+        "kind": "external_registry",
+        "version_constraint": "1.0.108",
+        "features": []
+      },
+      {
+        "name": "syn",
+        "kind": "external_registry",
+        "version_constraint": "1.0.109",
+        "features": [
+          "extra-traits",
+          "visit"
+        ]
+      }
+    ],
+    "internal_count": 2,
+    "external_count": 4,
+    "in_degree": 11
+  },
+  {
+    "name": "collab-integrate",
+    "raw_name": "collab-integrate",
+    "path": "SRC/appflowy/frontend/rust-lib/collab-integrate",
+    "version": "0.1.0",
+    "edition": "2024",
+    "internal_dependencies": [
+      "flowy-ai-pub",
+      "flowy-error",
+      "lib-infra"
+    ],
+    "workspace_dependencies": [
+      {
+        "name": "flowy-ai-pub",
+        "kind": "internal_workspace",
+        "path": "flowy-ai-pub"
+      },
+      {
+        "name": "flowy-error",
+        "kind": "internal_workspace",
+        "path": "flowy-error"
+      },
+      {
+        "name": "lib-infra",
+        "kind": "internal_workspace",
+        "path": "lib-infra"
+      }
+    ],
+    "external_dependencies": [
+      {
+        "name": "anyhow",
+        "kind": "external_registry",
+        "version_constraint": "1.0",
+        "features": []
+      },
+      {
+        "name": "collab",
+        "kind": "external_registry",
+        "version_constraint": "0.2",
+        "features": []
+      },
+      {
+        "name": "collab-database",
+        "kind": "external_registry",
+        "version_constraint": "0.2",
+        "features": []
+      },
+      {
+        "name": "collab-document",
+        "kind": "external_registry",
+        "version_constraint": "0.2",
+        "features": []
+      },
+      {
+        "name": "collab-entity",
+        "kind": "external_registry",
+        "version_constraint": "0.2",
+        "features": []
+      },
+      {
+        "name": "collab-folder",
+        "kind": "external_registry",
+        "version_constraint": "0.2",
+        "features": []
+      },
+      {
+        "name": "collab-plugins",
+        "kind": "external_registry",
+        "version_constraint": "0.2",
+        "features": []
+      },
+      {
+        "name": "collab-user",
+        "kind": "external_registry",
+        "version_constraint": "0.2",
+        "features": []
+      },
+      {
+        "name": "serde",
+        "kind": "external_registry",
+        "version_constraint": "1.0.194",
+        "features": []
+      },
+      {
+        "name": "serde_json",
+        "kind": "external_registry",
+        "version_constraint": "1.0.108",
+        "features": []
+      },
+      {
+        "name": "tokio",
+        "kind": "external_registry",
+        "version_constraint": "1.38.0",
+        "features": []
+      },
+      {
+        "name": "tracing",
+        "kind": "external_registry",
+        "version_constraint": "0.1.40",
+        "features": []
+      },
+      {
+        "name": "uuid",
+        "kind": "external_registry",
+        "version_constraint": "1.5.0",
+        "features": []
+      }
+    ],
+    "internal_count": 3,
+    "external_count": 13,
+    "in_degree": 12
+  },
+  {
+    "name": "dart-ffi",
+    "raw_name": "dart-ffi",
+    "path": "SRC/appflowy/frontend/rust-lib/dart-ffi",
+    "version": "0.1.0",
+    "edition": "2018",
+    "internal_dependencies": [
+      "collab-integrate",
+      "flowy-core",
+      "flowy-date",
+      "flowy-derive",
+      "flowy-document",
+      "flowy-error",
+      "flowy-notification",
+      "flowy-server",
+      "flowy-server-pub",
+      "flowy-user",
+      "lib-dispatch",
+      "lib-log"
+    ],
+    "workspace_dependencies": [
+      {
+        "name": "collab-integrate",
+        "kind": "internal_workspace",
+        "path": "collab-integrate"
+      },
+      {
+        "name": "flowy-core",
+        "kind": "internal_workspace",
+        "path": "flowy-core"
+      },
+      {
+        "name": "flowy-date",
+        "kind": "internal_workspace",
+        "path": "flowy-date"
+      },
+      {
+        "name": "flowy-derive",
+        "kind": "internal_workspace",
+        "path": "build-tool/flowy-derive"
+      },
+      {
+        "name": "flowy-document",
+        "kind": "internal_workspace",
+        "path": "flowy-document"
+      },
+      {
+        "name": "flowy-error",
+        "kind": "internal_workspace",
+        "path": "flowy-error"
+      },
+      {
+        "name": "flowy-notification",
+        "kind": "internal_workspace",
+        "path": "flowy-notification"
+      },
+      {
+        "name": "flowy-server",
+        "kind": "internal_workspace",
+        "path": "flowy-server"
+      },
+      {
+        "name": "flowy-server-pub",
+        "kind": "internal_workspace",
+        "path": "flowy-server-pub"
+      },
+      {
+        "name": "flowy-user",
+        "kind": "internal_workspace",
+        "path": "flowy-user"
+      },
+      {
+        "name": "lib-dispatch",
+        "kind": "internal_workspace",
+        "path": "lib-dispatch"
+      },
+      {
+        "name": "lib-log",
+        "kind": "internal_workspace",
+        "path": "lib-log"
+      }
+    ],
+    "external_dependencies": [
+      {
+        "name": "allo-isolate",
+        "kind": "external_registry",
+        "version_constraint": "^0.1",
+        "features": [
+          "catch-unwind"
+        ]
+      },
+      {
+        "name": "byteorder",
+        "kind": "external_registry",
+        "version_constraint": "1.4.3",
+        "features": []
+      },
+      {
+        "name": "bytes",
+        "kind": "external_registry",
+        "version_constraint": "1.5.0",
+        "features": []
+      },
+      {
+        "name": "protobuf",
+        "kind": "external_registry",
+        "version_constraint": "2.28.0",
+        "features": []
+      },
+      {
+        "name": "serde",
+        "kind": "external_registry",
+        "version_constraint": "1.0.194",
+        "features": []
+      },
+      {
+        "name": "serde_json",
+        "kind": "external_registry",
+        "version_constraint": "1.0.108",
+        "features": []
+      },
+      {
+        "name": "serde_repr",
+        "kind": "external_registry",
+        "version_constraint": "0.1",
+        "features": []
+      },
+      {
+        "name": "tokio",
+        "kind": "external_registry",
+        "version_constraint": "1.38.0",
+        "features": []
+      },
+      {
+        "name": "tracing",
+        "kind": "external_registry",
+        "version_constraint": "0.1.40",
+        "features": []
+      }
+    ],
+    "internal_count": 12,
+    "external_count": 9,
+    "in_degree": 0
+  },
+  {
+    "name": "event-integration-test",
+    "raw_name": "event-integration-test",
+    "path": "SRC/appflowy/frontend/rust-lib/event-integration-test",
+    "version": "0.1.0",
+    "edition": "2018",
+    "internal_dependencies": [
+      "flowy-ai",
+      "flowy-core",
+      "flowy-error",
+      "flowy-folder-pub",
+      "flowy-notification",
+      "flowy-search",
+      "flowy-server-pub",
+      "flowy-storage",
+      "flowy-storage-pub",
+      "flowy-user",
+      "flowy-user-pub",
+      "lib-dispatch",
+      "lib-infra"
+    ],
+    "workspace_dependencies": [
+      {
+        "name": "flowy-ai",
+        "kind": "internal_workspace",
+        "path": "flowy-ai"
+      },
+      {
+        "name": "flowy-core",
+        "kind": "internal_workspace",
+        "path": "flowy-core"
+      },
+      {
+        "name": "flowy-error",
+        "kind": "internal_workspace",
+        "path": "flowy-error"
+      },
+      {
+        "name": "flowy-folder-pub",
+        "kind": "internal_workspace",
+        "path": "flowy-folder-pub"
+      },
+      {
+        "name": "flowy-notification",
+        "kind": "internal_workspace",
+        "path": "flowy-notification"
+      },
+      {
+        "name": "flowy-search",
+        "kind": "internal_workspace",
+        "path": "flowy-search"
+      },
+      {
+        "name": "flowy-server-pub",
+        "kind": "internal_workspace",
+        "path": "flowy-server-pub"
+      },
+      {
+        "name": "flowy-storage",
+        "kind": "internal_workspace",
+        "path": "flowy-storage"
+      },
+      {
+        "name": "flowy-storage-pub",
+        "kind": "internal_workspace",
+        "path": "flowy-storage-pub"
+      },
+      {
+        "name": "flowy-user",
+        "kind": "internal_workspace",
+        "path": "flowy-user"
+      },
+      {
+        "name": "flowy-user-pub",
+        "kind": "internal_workspace",
+        "path": "flowy-user-pub"
+      },
+      {
+        "name": "lib-dispatch",
+        "kind": "internal_workspace",
+        "path": "lib-dispatch"
+      },
+      {
+        "name": "lib-infra",
+        "kind": "internal_workspace",
+        "path": "lib-infra"
+      }
+    ],
+    "external_dependencies": [
+      {
+        "name": "bytes",
+        "kind": "external_registry",
+        "version_constraint": "1.5.0",
+        "features": []
+      },
+      {
+        "name": "collab",
+        "kind": "external_registry",
+        "version_constraint": "0.2",
+        "features": []
+      },
+      {
+        "name": "collab-database",
+        "kind": "external_registry",
+        "version_constraint": "0.2",
+        "features": []
+      },
+      {
+        "name": "collab-document",
+        "kind": "external_registry",
+        "version_constraint": "0.2",
+        "features": []
+      },
+      {
+        "name": "collab-entity",
+        "kind": "external_registry",
+        "version_constraint": "0.2",
+        "features": []
+      },
+      {
+        "name": "collab-folder",
+        "kind": "external_registry",
+        "version_constraint": "0.2",
+        "features": []
+      },
+      {
+        "name": "flowy-database2",
+        "kind": "external_path",
+        "version_constraint": null,
+        "features": []
+      },
+      {
+        "name": "flowy-document",
+        "kind": "external_path",
+        "version_constraint": null,
+        "features": []
+      },
+      {
+        "name": "flowy-folder",
+        "kind": "external_path",
+        "version_constraint": null,
+        "features": []
+      },
+      {
+        "name": "flowy-server",
+        "kind": "external_path",
+        "version_constraint": null,
+        "features": []
+      },
+      {
+        "name": "protobuf",
+        "kind": "external_registry",
+        "version_constraint": "2.28.0",
+        "features": []
+      },
+      {
+        "name": "rand",
+        "kind": "external_registry",
+        "version_constraint": "0.8.5",
+        "features": []
+      },
+      {
+        "name": "serde",
+        "kind": "external_registry",
+        "version_constraint": "1.0.194",
+        "features": []
+      },
+      {
+        "name": "serde_json",
+        "kind": "external_registry",
+        "version_constraint": "1.0.108",
+        "features": []
+      },
+      {
+        "name": "tokio",
+        "kind": "external_registry",
+        "version_constraint": "1.38.0",
+        "features": []
+      },
+      {
+        "name": "tracing",
+        "kind": "external_registry",
+        "version_constraint": "0.1.40",
+        "features": []
+      },
+      {
+        "name": "uuid",
+        "kind": "external_registry",
+        "version_constraint": "1.5.0",
+        "features": []
+      }
+    ],
+    "internal_count": 13,
+    "external_count": 17,
+    "in_degree": 0
+  },
+  {
+    "name": "flowy-ai",
+    "raw_name": "flowy-ai",
+    "path": "SRC/appflowy/frontend/rust-lib/flowy-ai",
+    "version": "0.1.0",
+    "edition": "2024",
+    "internal_dependencies": [
+      "flowy-ai-pub",
+      "flowy-database-pub",
+      "flowy-derive",
+      "flowy-notification",
+      "flowy-sqlite",
+      "flowy-sqlite-vec",
+      "flowy-storage-pub",
+      "lib-dispatch",
+      "lib-infra"
+    ],
+    "workspace_dependencies": [
+      {
+        "name": "flowy-ai-pub",
+        "kind": "internal_workspace",
+        "path": "flowy-ai-pub"
+      },
+      {
+        "name": "flowy-database-pub",
+        "kind": "internal_workspace",
+        "path": "flowy-database-pub"
+      },
+      {
+        "name": "flowy-derive",
+        "kind": "internal_workspace",
+        "path": "build-tool/flowy-derive"
+      },
+      {
+        "name": "flowy-notification",
+        "kind": "internal_workspace",
+        "path": "flowy-notification"
+      },
+      {
+        "name": "flowy-sqlite",
+        "kind": "internal_workspace",
+        "path": "flowy-sqlite"
+      },
+      {
+        "name": "flowy-sqlite-vec",
+        "kind": "internal_workspace",
+        "path": "flowy-sqlite-vec"
+      },
+      {
+        "name": "flowy-storage-pub",
+        "kind": "internal_workspace",
+        "path": "flowy-storage-pub"
+      },
+      {
+        "name": "lib-dispatch",
+        "kind": "internal_workspace",
+        "path": "lib-dispatch"
+      },
+      {
+        "name": "lib-infra",
+        "kind": "internal_workspace",
+        "path": "lib-infra"
+      }
+    ],
+    "external_dependencies": [
+      {
+        "name": "allo-isolate",
+        "kind": "external_registry",
+        "version_constraint": "^0.1",
+        "features": [
+          "catch-unwind"
+        ]
+      },
+      {
+        "name": "arc-swap",
+        "kind": "external_registry",
+        "version_constraint": "1.7",
+        "features": []
+      },
+      {
+        "name": "async-trait",
+        "kind": "external_registry",
+        "version_constraint": "0.1.81",
+        "features": []
+      },
+      {
+        "name": "bytes",
+        "kind": "external_registry",
+        "version_constraint": "1.5.0",
+        "features": []
+      },
+      {
+        "name": "dashmap",
+        "kind": "external_registry",
+        "version_constraint": "6.0.1",
+        "features": []
+      },
+      {
+        "name": "flowy-error",
+        "kind": "external_path",
+        "version_constraint": null,
+        "features": []
+      },
+      {
+        "name": "futures",
+        "kind": "external_registry",
+        "version_constraint": "0.3.31",
+        "features": []
+      },
+      {
+        "name": "langchain-rust",
+        "kind": "external_registry",
+        "version_constraint": "4.6.0",
+        "features": [
+          "ollama"
+        ]
+      },
+      {
+        "name": "ollama-rs",
+        "kind": "external_registry",
+        "version_constraint": "0.3.0",
+        "features": []
+      },
+      {
+        "name": "protobuf",
+        "kind": "external_registry",
+        "version_constraint": "2.28.0",
+        "features": []
+      },
+      {
+        "name": "reqwest",
+        "kind": "external_registry",
+        "version_constraint": "0.11.27",
+        "features": [
+          "json"
+        ]
+      },
+      {
+        "name": "serde",
+        "kind": "external_registry",
+        "version_constraint": "1.0.194",
+        "features": []
+      },
+      {
+        "name": "serde_json",
+        "kind": "external_registry",
+        "version_constraint": "1.0.108",
+        "features": []
+      },
+      {
+        "name": "text-splitter",
+        "kind": "external_registry",
+        "version_constraint": "0.25.1",
+        "features": []
+      },
+      {
+        "name": "tokio",
+        "kind": "external_registry",
+        "version_constraint": "1.38.0",
+        "features": []
+      },
+      {
+        "name": "tokio-stream",
+        "kind": "external_registry",
+        "version_constraint": "0.1.17",
+        "features": []
+      },
+      {
+        "name": "tokio-util",
+        "kind": "external_registry",
+        "version_constraint": "0.7.11",
+        "features": []
+      },
+      {
+        "name": "tracing",
+        "kind": "external_registry",
+        "version_constraint": "0.1.40",
+        "features": []
+      },
+      {
+        "name": "twox-hash",
+        "kind": "external_registry",
+        "version_constraint": "2.1.0",
+        "features": [
+          "xxhash64"
+        ]
+      },
+      {
+        "name": "uuid",
+        "kind": "external_registry",
+        "version_constraint": "1.5.0",
+        "features": []
+      },
+      {
+        "name": "validator",
+        "kind": "external_registry",
+        "version_constraint": "0.18",
+        "features": []
+      }
+    ],
+    "internal_count": 9,
+    "external_count": 21,
+    "in_degree": 6
+  },
+  {
+    "name": "flowy-ai-pub",
+    "raw_name": "flowy-ai-pub",
+    "path": "SRC/appflowy/frontend/rust-lib/flowy-ai-pub",
+    "version": "0.1.0",
+    "edition": "2024",
+    "internal_dependencies": [
+      "flowy-error",
+      "flowy-sqlite",
+      "flowy-user-pub",
+      "lib-infra"
+    ],
+    "workspace_dependencies": [
+      {
+        "name": "flowy-error",
+        "kind": "internal_workspace",
+        "path": "flowy-error"
+      },
+      {
+        "name": "flowy-sqlite",
+        "kind": "internal_workspace",
+        "path": "flowy-sqlite"
+      },
+      {
+        "name": "flowy-user-pub",
+        "kind": "internal_workspace",
+        "path": "flowy-user-pub"
+      },
+      {
+        "name": "lib-infra",
+        "kind": "internal_workspace",
+        "path": "lib-infra"
+      }
+    ],
+    "external_dependencies": [
+      {
+        "name": "chrono",
+        "kind": "external_registry",
+        "version_constraint": "0.4.31",
+        "features": []
+      },
+      {
+        "name": "client-api",
+        "kind": "external_git",
+        "version_constraint": "",
+        "features": []
+      },
+      {
+        "name": "futures",
+        "kind": "external_registry",
+        "version_constraint": "0.3.31",
+        "features": []
+      },
+      {
+        "name": "serde",
+        "kind": "external_registry",
+        "version_constraint": "1.0.194",
+        "features": []
+      },
+      {
+        "name": "serde_json",
+        "kind": "external_registry",
+        "version_constraint": "1.0.108",
+        "features": []
+      },
+      {
+        "name": "tracing",
+        "kind": "external_registry",
+        "version_constraint": "0.1.40",
+        "features": []
+      },
+      {
+        "name": "twox-hash",
+        "kind": "external_registry",
+        "version_constraint": "2.1.0",
+        "features": [
+          "xxhash64"
+        ]
+      },
+      {
+        "name": "uuid",
+        "kind": "external_registry",
+        "version_constraint": "1.5.0",
+        "features": []
+      }
+    ],
+    "internal_count": 4,
+    "external_count": 8,
+    "in_degree": 10
+  },
+  {
+    "name": "flowy-core",
+    "raw_name": "flowy-core",
+    "path": "SRC/appflowy/frontend/rust-lib/flowy-core",
+    "version": "0.1.0",
+    "edition": "2018",
+    "internal_dependencies": [
+      "collab-integrate",
+      "flowy-ai",
+      "flowy-ai-pub",
+      "flowy-database-pub",
+      "flowy-database2",
+      "flowy-date",
+      "flowy-document",
+      "flowy-document-pub",
+      "flowy-error",
+      "flowy-folder",
+      "flowy-folder-pub",
+      "flowy-search",
+      "flowy-search-pub",
+      "flowy-server",
+      "flowy-server-pub",
+      "flowy-sqlite",
+      "flowy-storage",
+      "flowy-storage-pub",
+      "flowy-user",
+      "flowy-user-pub",
+      "lib-dispatch",
+      "lib-infra",
+      "lib-log"
+    ],
+    "workspace_dependencies": [
+      {
+        "name": "collab-integrate",
+        "kind": "internal_workspace",
+        "path": "collab-integrate"
+      },
+      {
+        "name": "flowy-ai",
+        "kind": "internal_workspace",
+        "path": "flowy-ai"
+      },
+      {
+        "name": "flowy-ai-pub",
+        "kind": "internal_workspace",
+        "path": "flowy-ai-pub"
+      },
+      {
+        "name": "flowy-database-pub",
+        "kind": "internal_workspace",
+        "path": "flowy-database-pub"
+      },
+      {
+        "name": "flowy-database2",
+        "kind": "internal_workspace",
+        "path": "flowy-database2"
+      },
+      {
+        "name": "flowy-date",
+        "kind": "internal_workspace",
+        "path": "flowy-date"
+      },
+      {
+        "name": "flowy-document",
+        "kind": "internal_workspace",
+        "path": "flowy-document"
+      },
+      {
+        "name": "flowy-document-pub",
+        "kind": "internal_workspace",
+        "path": "flowy-document-pub"
+      },
+      {
+        "name": "flowy-error",
+        "kind": "internal_workspace",
+        "path": "flowy-error"
+      },
+      {
+        "name": "flowy-folder",
+        "kind": "internal_workspace",
+        "path": "flowy-folder"
+      },
+      {
+        "name": "flowy-folder-pub",
+        "kind": "internal_workspace",
+        "path": "flowy-folder-pub"
+      },
+      {
+        "name": "flowy-search",
+        "kind": "internal_workspace",
+        "path": "flowy-search"
+      },
+      {
+        "name": "flowy-search-pub",
+        "kind": "internal_workspace",
+        "path": "flowy-search-pub"
+      },
+      {
+        "name": "flowy-server",
+        "kind": "internal_workspace",
+        "path": "flowy-server"
+      },
+      {
+        "name": "flowy-server-pub",
+        "kind": "internal_workspace",
+        "path": "flowy-server-pub"
+      },
+      {
+        "name": "flowy-sqlite",
+        "kind": "internal_workspace",
+        "path": "flowy-sqlite"
+      },
+      {
+        "name": "flowy-storage",
+        "kind": "internal_workspace",
+        "path": "flowy-storage"
+      },
+      {
+        "name": "flowy-storage-pub",
+        "kind": "internal_workspace",
+        "path": "flowy-storage-pub"
+      },
+      {
+        "name": "flowy-user",
+        "kind": "internal_workspace",
+        "path": "flowy-user"
+      },
+      {
+        "name": "flowy-user-pub",
+        "kind": "internal_workspace",
+        "path": "flowy-user-pub"
+      },
+      {
+        "name": "lib-dispatch",
+        "kind": "internal_workspace",
+        "path": "lib-dispatch"
+      },
+      {
+        "name": "lib-infra",
+        "kind": "internal_workspace",
+        "path": "lib-infra"
+      },
+      {
+        "name": "lib-log",
+        "kind": "internal_workspace",
+        "path": "lib-log"
+      }
+    ],
+    "external_dependencies": [
+      {
+        "name": "anyhow",
+        "kind": "external_registry",
+        "version_constraint": "1.0",
+        "features": []
+      },
+      {
+        "name": "arc-swap",
+        "kind": "external_registry",
+        "version_constraint": "1.7",
+        "features": []
+      },
+      {
+        "name": "bytes",
+        "kind": "external_registry",
+        "version_constraint": "1.5.0",
+        "features": []
+      },
+      {
+        "name": "client-api",
+        "kind": "external_git",
+        "version_constraint": "",
+        "features": []
+      },
+      {
+        "name": "collab",
+        "kind": "external_registry",
+        "version_constraint": "0.2",
+        "features": []
+      },
+      {
+        "name": "collab-document",
+        "kind": "external_registry",
+        "version_constraint": "0.2",
+        "features": []
+      },
+      {
+        "name": "collab-entity",
+        "kind": "external_registry",
+        "version_constraint": "0.2",
+        "features": []
+      },
+      {
+        "name": "collab-folder",
+        "kind": "external_registry",
+        "version_constraint": "0.2",
+        "features": []
+      },
+      {
+        "name": "collab-plugins",
+        "kind": "external_registry",
+        "version_constraint": "0.2",
+        "features": []
+      },
+      {
+        "name": "console-subscriber",
+        "kind": "external_registry",
+        "version_constraint": "0.2",
+        "features": []
+      },
+      {
+        "name": "dashmap",
+        "kind": "external_registry",
+        "version_constraint": "6.0.1",
+        "features": []
+      },
+      {
+        "name": "diesel",
+        "kind": "external_registry",
+        "version_constraint": "2.1.0",
+        "features": []
+      },
+      {
+        "name": "futures-core",
+        "kind": "external_registry",
+        "version_constraint": "0.3",
+        "features": []
+      },
+      {
+        "name": "semver",
+        "kind": "external_registry",
+        "version_constraint": "1.0.22",
+        "features": [
+          "serde"
+        ]
+      },
+      {
+        "name": "serde",
+        "kind": "external_registry",
+        "version_constraint": "1.0.194",
+        "features": []
+      },
+      {
+        "name": "serde_json",
+        "kind": "external_registry",
+        "version_constraint": "1.0.108",
+        "features": []
+      },
+      {
+        "name": "tokio",
+        "kind": "external_registry",
+        "version_constraint": "1.38.0",
+        "features": []
+      },
+      {
+        "name": "tokio-stream",
+        "kind": "external_registry",
+        "version_constraint": "0.1.17",
+        "features": []
+      },
+      {
+        "name": "tokio-util",
+        "kind": "external_registry",
+        "version_constraint": "0.7.11",
+        "features": []
+      },
+      {
+        "name": "tracing",
+        "kind": "external_registry",
+        "version_constraint": "0.1.40",
+        "features": []
+      },
+      {
+        "name": "uuid",
+        "kind": "external_registry",
+        "version_constraint": "1.5.0",
+        "features": []
+      }
+    ],
+    "internal_count": 23,
+    "external_count": 21,
+    "in_degree": 4
+  },
+  {
+    "name": "flowy-database-pub",
+    "raw_name": "flowy-database-pub",
+    "path": "SRC/appflowy/frontend/rust-lib/flowy-database-pub",
+    "version": "0.1.0",
+    "edition": "2024",
+    "internal_dependencies": [
+      "flowy-error",
+      "lib-infra"
+    ],
+    "workspace_dependencies": [
+      {
+        "name": "flowy-error",
+        "kind": "internal_workspace",
+        "path": "flowy-error"
+      },
+      {
+        "name": "lib-infra",
+        "kind": "internal_workspace",
+        "path": "lib-infra"
+      }
+    ],
+    "external_dependencies": [
+      {
+        "name": "client-api",
+        "kind": "external_git",
+        "version_constraint": "",
+        "features": []
+      },
+      {
+        "name": "collab",
+        "kind": "external_registry",
+        "version_constraint": "0.2",
+        "features": []
+      },
+      {
+        "name": "collab-entity",
+        "kind": "external_registry",
+        "version_constraint": "0.2",
+        "features": []
+      },
+      {
+        "name": "uuid",
+        "kind": "external_registry",
+        "version_constraint": "1.5.0",
+        "features": []
+      }
+    ],
+    "internal_count": 2,
+    "external_count": 4,
+    "in_degree": 8
+  },
+  {
+    "name": "flowy-database2",
+    "raw_name": "flowy-database2",
+    "path": "SRC/appflowy/frontend/rust-lib/flowy-database2",
+    "version": "0.1.0",
+    "edition": "2024",
+    "internal_dependencies": [
+      "collab-integrate",
+      "flowy-database-pub",
+      "flowy-derive",
+      "flowy-notification",
+      "lib-dispatch",
+      "lib-infra"
+    ],
+    "workspace_dependencies": [
+      {
+        "name": "collab-integrate",
+        "kind": "internal_workspace",
+        "path": "collab-integrate"
+      },
+      {
+        "name": "flowy-database-pub",
+        "kind": "internal_workspace",
+        "path": "flowy-database-pub"
+      },
+      {
+        "name": "flowy-derive",
+        "kind": "internal_workspace",
+        "path": "build-tool/flowy-derive"
+      },
+      {
+        "name": "flowy-notification",
+        "kind": "internal_workspace",
+        "path": "flowy-notification"
+      },
+      {
+        "name": "lib-dispatch",
+        "kind": "internal_workspace",
+        "path": "lib-dispatch"
+      },
+      {
+        "name": "lib-infra",
+        "kind": "internal_workspace",
+        "path": "lib-infra"
+      }
+    ],
+    "external_dependencies": [
+      {
+        "name": "anyhow",
+        "kind": "external_registry",
+        "version_constraint": "1.0",
+        "features": []
+      },
+      {
+        "name": "arc-swap",
+        "kind": "external_registry",
+        "version_constraint": "1.7",
+        "features": []
+      },
+      {
+        "name": "async-trait",
+        "kind": "external_registry",
+        "version_constraint": "0.1.81",
+        "features": []
+      },
+      {
+        "name": "bytes",
+        "kind": "external_registry",
+        "version_constraint": "1.5.0",
+        "features": []
+      },
+      {
+        "name": "chrono",
+        "kind": "external_registry",
+        "version_constraint": "0.4.31",
+        "features": []
+      },
+      {
+        "name": "collab",
+        "kind": "external_registry",
+        "version_constraint": "0.2",
+        "features": []
+      },
+      {
+        "name": "collab-database",
+        "kind": "external_registry",
+        "version_constraint": "0.2",
+        "features": []
+      },
+      {
+        "name": "collab-entity",
+        "kind": "external_registry",
+        "version_constraint": "0.2",
+        "features": []
+      },
+      {
+        "name": "collab-plugins",
+        "kind": "external_registry",
+        "version_constraint": "0.2",
+        "features": []
+      },
+      {
+        "name": "dashmap",
+        "kind": "external_registry",
+        "version_constraint": "6.0.1",
+        "features": []
+      },
+      {
+        "name": "flowy-error",
+        "kind": "external_path",
+        "version_constraint": null,
+        "features": []
+      },
+      {
+        "name": "futures",
+        "kind": "external_registry",
+        "version_constraint": "0.3.31",
+        "features": []
+      },
+      {
+        "name": "indexmap",
+        "kind": "external_registry",
+        "version_constraint": "2.1.0",
+        "features": [
+          "serde"
+        ]
+      },
+      {
+        "name": "moka",
+        "kind": "external_registry",
+        "version_constraint": "0.12.8",
+        "features": [
+          "future"
+        ]
+      },
+      {
+        "name": "protobuf",
+        "kind": "external_registry",
+        "version_constraint": "2.28.0",
+        "features": []
+      },
+      {
+        "name": "rusty-money",
+        "kind": "external_registry",
+        "version_constraint": "0.4.1",
+        "features": [
+          "iso"
+        ]
+      },
+      {
+        "name": "serde",
+        "kind": "external_registry",
+        "version_constraint": "1.0.194",
+        "features": []
+      },
+      {
+        "name": "serde_json",
+        "kind": "external_registry",
+        "version_constraint": "1.0.108",
+        "features": []
+      },
+      {
+        "name": "serde_repr",
+        "kind": "external_registry",
+        "version_constraint": "0.1",
+        "features": []
+      },
+      {
+        "name": "tokio",
+        "kind": "external_registry",
+        "version_constraint": "1.38.0",
+        "features": []
+      },
+      {
+        "name": "tokio-util",
+        "kind": "external_registry",
+        "version_constraint": "0.7.11",
+        "features": []
+      },
+      {
+        "name": "tracing",
+        "kind": "external_registry",
+        "version_constraint": "0.1.40",
+        "features": []
+      },
+      {
+        "name": "url",
+        "kind": "external_registry",
+        "version_constraint": "2",
+        "features": []
+      },
+      {
+        "name": "uuid",
+        "kind": "external_registry",
+        "version_constraint": "1.5.0",
+        "features": []
+      },
+      {
+        "name": "validator",
+        "kind": "external_registry",
+        "version_constraint": "0.18",
+        "features": []
+      }
+    ],
+    "internal_count": 6,
+    "external_count": 25,
+    "in_degree": 2
+  },
+  {
+    "name": "flowy-date",
+    "raw_name": "flowy-date",
+    "path": "SRC/appflowy/frontend/rust-lib/flowy-date",
+    "version": "0.1.0",
+    "edition": "2024",
+    "internal_dependencies": [
+      "flowy-derive"
+    ],
+    "workspace_dependencies": [
+      {
+        "name": "flowy-derive",
+        "kind": "internal_workspace",
+        "path": "build-tool/flowy-derive"
+      }
+    ],
+    "external_dependencies": [
+      {
+        "name": "bytes",
+        "kind": "external_registry",
+        "version_constraint": "1.5.0",
+        "features": []
+      },
+      {
+        "name": "chrono",
+        "kind": "external_registry",
+        "version_constraint": "0.4.31",
+        "features": []
+      },
+      {
+        "name": "date_time_parser",
+        "kind": "external_registry",
+        "version_constraint": "0.2.0",
+        "features": []
+      },
+      {
+        "name": "fancy-regex",
+        "kind": "external_registry",
+        "version_constraint": "0.11.0",
+        "features": []
+      },
+      {
+        "name": "flowy-error",
+        "kind": "external_path",
+        "version_constraint": null,
+        "features": []
+      },
+      {
+        "name": "lib-dispatch",
+        "kind": "external_path",
+        "version_constraint": null,
+        "features": []
+      },
+      {
+        "name": "protobuf",
+        "kind": "external_registry",
+        "version_constraint": "2.28.0",
+        "features": []
+      },
+      {
+        "name": "tracing",
+        "kind": "external_registry",
+        "version_constraint": "0.1.40",
+        "features": []
+      }
+    ],
+    "internal_count": 1,
+    "external_count": 8,
+    "in_degree": 4
+  },
+  {
+    "name": "flowy-document",
+    "raw_name": "flowy-document",
+    "path": "SRC/appflowy/frontend/rust-lib/flowy-document",
+    "version": "0.1.0",
+    "edition": "2024",
+    "internal_dependencies": [
+      "collab-integrate",
+      "flowy-derive",
+      "flowy-document-pub",
+      "flowy-notification",
+      "flowy-storage-pub",
+      "lib-dispatch",
+      "lib-infra"
+    ],
+    "workspace_dependencies": [
+      {
+        "name": "collab-integrate",
+        "kind": "internal_workspace",
+        "path": "collab-integrate"
+      },
+      {
+        "name": "flowy-derive",
+        "kind": "internal_workspace",
+        "path": "build-tool/flowy-derive"
+      },
+      {
+        "name": "flowy-document-pub",
+        "kind": "internal_workspace",
+        "path": "flowy-document-pub"
+      },
+      {
+        "name": "flowy-notification",
+        "kind": "internal_workspace",
+        "path": "flowy-notification"
+      },
+      {
+        "name": "flowy-storage-pub",
+        "kind": "internal_workspace",
+        "path": "flowy-storage-pub"
+      },
+      {
+        "name": "lib-dispatch",
+        "kind": "internal_workspace",
+        "path": "lib-dispatch"
+      },
+      {
+        "name": "lib-infra",
+        "kind": "internal_workspace",
+        "path": "lib-infra"
+      }
+    ],
+    "external_dependencies": [
+      {
+        "name": "bytes",
+        "kind": "external_registry",
+        "version_constraint": "1.5.0",
+        "features": []
+      },
+      {
+        "name": "collab",
+        "kind": "external_registry",
+        "version_constraint": "0.2",
+        "features": []
+      },
+      {
+        "name": "collab-document",
+        "kind": "external_registry",
+        "version_constraint": "0.2",
+        "features": []
+      },
+      {
+        "name": "collab-entity",
+        "kind": "external_registry",
+        "version_constraint": "0.2",
+        "features": []
+      },
+      {
+        "name": "collab-plugins",
+        "kind": "external_registry",
+        "version_constraint": "0.2",
+        "features": []
+      },
+      {
+        "name": "dashmap",
+        "kind": "external_registry",
+        "version_constraint": "6.0.1",
+        "features": []
+      },
+      {
+        "name": "flowy-error",
+        "kind": "external_path",
+        "version_constraint": null,
+        "features": []
+      },
+      {
+        "name": "futures",
+        "kind": "external_registry",
+        "version_constraint": "0.3.31",
+        "features": []
+      },
+      {
+        "name": "indexmap",
+        "kind": "external_registry",
+        "version_constraint": "2.1.0",
+        "features": [
+          "serde"
+        ]
+      },
+      {
+        "name": "protobuf",
+        "kind": "external_registry",
+        "version_constraint": "2.28.0",
+        "features": []
+      },
+      {
+        "name": "serde",
+        "kind": "external_registry",
+        "version_constraint": "1.0.194",
+        "features": []
+      },
+      {
+        "name": "serde_json",
+        "kind": "external_registry",
+        "version_constraint": "1.0.108",
+        "features": []
+      },
+      {
+        "name": "tokio",
+        "kind": "external_registry",
+        "version_constraint": "1.38.0",
+        "features": []
+      },
+      {
+        "name": "tracing",
+        "kind": "external_registry",
+        "version_constraint": "0.1.40",
+        "features": []
+      },
+      {
+        "name": "uuid",
+        "kind": "external_registry",
+        "version_constraint": "1.5.0",
+        "features": []
+      },
+      {
+        "name": "validator",
+        "kind": "external_registry",
+        "version_constraint": "0.18",
+        "features": []
+      }
+    ],
+    "internal_count": 7,
+    "external_count": 16,
+    "in_degree": 4
+  },
+  {
+    "name": "flowy-document-pub",
+    "raw_name": "flowy-document-pub",
+    "path": "SRC/appflowy/frontend/rust-lib/flowy-document-pub",
+    "version": "0.1.0",
+    "edition": "2024",
+    "internal_dependencies": [
+      "flowy-error",
+      "lib-infra"
+    ],
+    "workspace_dependencies": [
+      {
+        "name": "flowy-error",
+        "kind": "internal_workspace",
+        "path": "flowy-error"
+      },
+      {
+        "name": "lib-infra",
+        "kind": "internal_workspace",
+        "path": "lib-infra"
+      }
+    ],
+    "external_dependencies": [
+      {
+        "name": "collab",
+        "kind": "external_registry",
+        "version_constraint": "0.2",
+        "features": []
+      },
+      {
+        "name": "collab-document",
+        "kind": "external_registry",
+        "version_constraint": "0.2",
+        "features": []
+      },
+      {
+        "name": "uuid",
+        "kind": "external_registry",
+        "version_constraint": "1.5.0",
+        "features": []
+      }
+    ],
+    "internal_count": 2,
+    "external_count": 3,
+    "in_degree": 6
+  },
+  {
+    "name": "flowy-error",
+    "raw_name": "flowy-error",
+    "path": "SRC/appflowy/frontend/rust-lib/flowy-error",
+    "version": "0.1.0",
+    "edition": "2018",
+    "internal_dependencies": [
+      "flowy-derive",
+      "flowy-sqlite",
+      "lib-dispatch"
+    ],
+    "workspace_dependencies": [
+      {
+        "name": "flowy-derive",
+        "kind": "internal_workspace",
+        "path": "build-tool/flowy-derive"
+      },
+      {
+        "name": "flowy-sqlite",
+        "kind": "internal_workspace",
+        "path": "flowy-sqlite"
+      },
+      {
+        "name": "lib-dispatch",
+        "kind": "internal_workspace",
+        "path": "lib-dispatch"
+      }
+    ],
+    "external_dependencies": [
+      {
+        "name": "anyhow",
+        "kind": "external_registry",
+        "version_constraint": "1.0",
+        "features": []
+      },
+      {
+        "name": "bytes",
+        "kind": "external_registry",
+        "version_constraint": "1.5.0",
+        "features": []
+      },
+      {
+        "name": "client-api",
+        "kind": "external_git",
+        "version_constraint": "",
+        "features": []
+      },
+      {
+        "name": "collab",
+        "kind": "external_registry",
+        "version_constraint": "0.2",
+        "features": []
+      },
+      {
+        "name": "collab-database",
+        "kind": "external_registry",
+        "version_constraint": "0.2",
+        "features": []
+      },
+      {
+        "name": "collab-document",
+        "kind": "external_registry",
+        "version_constraint": "0.2",
+        "features": []
+      },
+      {
+        "name": "collab-folder",
+        "kind": "external_registry",
+        "version_constraint": "0.2",
+        "features": []
+      },
+      {
+        "name": "collab-plugins",
+        "kind": "external_registry",
+        "version_constraint": "0.2",
+        "features": []
+      },
+      {
+        "name": "fancy-regex",
+        "kind": "external_registry",
+        "version_constraint": "0.11.0",
+        "features": []
+      },
+      {
+        "name": "ollama-rs",
+        "kind": "external_registry",
+        "version_constraint": "0.3.0",
+        "features": []
+      },
+      {
+        "name": "protobuf",
+        "kind": "external_registry",
+        "version_constraint": "2.28.0",
+        "features": []
+      },
+      {
+        "name": "r2d2",
+        "kind": "external_registry",
+        "version_constraint": "0.8",
+        "features": []
+      },
+      {
+        "name": "reqwest",
+        "kind": "external_registry",
+        "version_constraint": "0.11.14",
+        "features": [
+          "native-tls-vendored"
+        ]
+      },
+      {
+        "name": "serde",
+        "kind": "external_registry",
+        "version_constraint": "1.0.194",
+        "features": []
+      },
+      {
+        "name": "serde_json",
+        "kind": "external_registry",
+        "version_constraint": "1.0.108",
+        "features": []
+      },
+      {
+        "name": "serde_repr",
+        "kind": "external_registry",
+        "version_constraint": "0.1",
+        "features": []
+      },
+      {
+        "name": "tantivy",
+        "kind": "external_registry",
+        "version_constraint": "0.24.1",
+        "features": []
+      },
+      {
+        "name": "tokio",
+        "kind": "external_registry",
+        "version_constraint": "1.38.0",
+        "features": []
+      },
+      {
+        "name": "url",
+        "kind": "external_registry",
+        "version_constraint": "2.2",
+        "features": []
+      },
+      {
+        "name": "uuid",
+        "kind": "external_registry",
+        "version_constraint": "1.5.0",
+        "features": []
+      },
+      {
+        "name": "validator",
+        "kind": "external_registry",
+        "version_constraint": "0.18",
+        "features": []
+      }
+    ],
+    "internal_count": 3,
+    "external_count": 21,
+    "in_degree": 32
+  },
+  {
+    "name": "flowy-folder",
+    "raw_name": "flowy-folder",
+    "path": "SRC/appflowy/frontend/rust-lib/flowy-folder",
+    "version": "0.1.0",
+    "edition": "2024",
+    "internal_dependencies": [
+      "collab-integrate",
+      "flowy-derive",
+      "flowy-folder-pub",
+      "flowy-notification",
+      "flowy-search-pub",
+      "flowy-sqlite",
+      "flowy-user-pub",
+      "lib-dispatch",
+      "lib-infra"
+    ],
+    "workspace_dependencies": [
+      {
+        "name": "collab-integrate",
+        "kind": "internal_workspace",
+        "path": "collab-integrate"
+      },
+      {
+        "name": "flowy-derive",
+        "kind": "internal_workspace",
+        "path": "build-tool/flowy-derive"
+      },
+      {
+        "name": "flowy-folder-pub",
+        "kind": "internal_workspace",
+        "path": "flowy-folder-pub"
+      },
+      {
+        "name": "flowy-notification",
+        "kind": "internal_workspace",
+        "path": "flowy-notification"
+      },
+      {
+        "name": "flowy-search-pub",
+        "kind": "internal_workspace",
+        "path": "flowy-search-pub"
+      },
+      {
+        "name": "flowy-sqlite",
+        "kind": "internal_workspace",
+        "path": "flowy-sqlite"
+      },
+      {
+        "name": "flowy-user-pub",
+        "kind": "internal_workspace",
+        "path": "flowy-user-pub"
+      },
+      {
+        "name": "lib-dispatch",
+        "kind": "internal_workspace",
+        "path": "lib-dispatch"
+      },
+      {
+        "name": "lib-infra",
+        "kind": "internal_workspace",
+        "path": "lib-infra"
+      }
+    ],
+    "external_dependencies": [
+      {
+        "name": "arc-swap",
+        "kind": "external_registry",
+        "version_constraint": "1.7",
+        "features": []
+      },
+      {
+        "name": "async-trait",
+        "kind": "external_registry",
+        "version_constraint": "0.1.81",
+        "features": []
+      },
+      {
+        "name": "bytes",
+        "kind": "external_registry",
+        "version_constraint": "1.5.0",
+        "features": []
+      },
+      {
+        "name": "client-api",
+        "kind": "external_git",
+        "version_constraint": "",
+        "features": []
+      },
+      {
+        "name": "collab",
+        "kind": "external_registry",
+        "version_constraint": "0.2",
+        "features": []
+      },
+      {
+        "name": "collab-entity",
+        "kind": "external_registry",
+        "version_constraint": "0.2",
+        "features": []
+      },
+      {
+        "name": "collab-folder",
+        "kind": "external_registry",
+        "version_constraint": "0.2",
+        "features": []
+      },
+      {
+        "name": "dashmap",
+        "kind": "external_registry",
+        "version_constraint": "6.0.1",
+        "features": []
+      },
+      {
+        "name": "flowy-error",
+        "kind": "external_path",
+        "version_constraint": null,
+        "features": []
+      },
+      {
+        "name": "num_enum",
+        "kind": "external_registry",
+        "version_constraint": "0.7.3",
+        "features": []
+      },
+      {
+        "name": "protobuf",
+        "kind": "external_registry",
+        "version_constraint": "2.28.0",
+        "features": []
+      },
+      {
+        "name": "serde",
+        "kind": "external_registry",
+        "version_constraint": "1.0.194",
+        "features": []
+      },
+      {
+        "name": "serde_json",
+        "kind": "external_registry",
+        "version_constraint": "1.0.108",
+        "features": []
+      },
+      {
+        "name": "tokio",
+        "kind": "external_registry",
+        "version_constraint": "1.38.0",
+        "features": []
+      },
+      {
+        "name": "tokio-stream",
+        "kind": "external_registry",
+        "version_constraint": "0.1.17",
+        "features": []
+      },
+      {
+        "name": "tracing",
+        "kind": "external_registry",
+        "version_constraint": "0.1.40",
+        "features": []
+      },
+      {
+        "name": "uuid",
+        "kind": "external_registry",
+        "version_constraint": "1.5.0",
+        "features": []
+      },
+      {
+        "name": "validator",
+        "kind": "external_registry",
+        "version_constraint": "0.18",
+        "features": []
+      }
+    ],
+    "internal_count": 9,
+    "external_count": 18,
+    "in_degree": 4
+  },
+  {
+    "name": "flowy-folder-pub",
+    "raw_name": "flowy-folder-pub",
+    "path": "SRC/appflowy/frontend/rust-lib/flowy-folder-pub",
+    "version": "0.1.0",
+    "edition": "2024",
+    "internal_dependencies": [
+      "flowy-error",
+      "flowy-sqlite",
+      "lib-infra"
+    ],
+    "workspace_dependencies": [
+      {
+        "name": "flowy-error",
+        "kind": "internal_workspace",
+        "path": "flowy-error"
+      },
+      {
+        "name": "flowy-sqlite",
+        "kind": "internal_workspace",
+        "path": "flowy-sqlite"
+      },
+      {
+        "name": "lib-infra",
+        "kind": "internal_workspace",
+        "path": "lib-infra"
+      }
+    ],
+    "external_dependencies": [
+      {
+        "name": "anyhow",
+        "kind": "external_registry",
+        "version_constraint": "1.0",
+        "features": []
+      },
+      {
+        "name": "chrono",
+        "kind": "external_registry",
+        "version_constraint": "0.4.31",
+        "features": []
+      },
+      {
+        "name": "client-api",
+        "kind": "external_git",
+        "version_constraint": "",
+        "features": []
+      },
+      {
+        "name": "collab",
+        "kind": "external_registry",
+        "version_constraint": "0.2",
+        "features": []
+      },
+      {
+        "name": "collab-entity",
+        "kind": "external_registry",
+        "version_constraint": "0.2",
+        "features": []
+      },
+      {
+        "name": "collab-folder",
+        "kind": "external_registry",
+        "version_constraint": "0.2",
+        "features": []
+      },
+      {
+        "name": "diesel",
+        "kind": "external_registry",
+        "version_constraint": "2.1.0",
+        "features": []
+      },
+      {
+        "name": "serde",
+        "kind": "external_registry",
+        "version_constraint": "1.0.202",
+        "features": [
+          "derive"
+        ]
+      },
+      {
+        "name": "serde_json",
+        "kind": "external_registry",
+        "version_constraint": "1.0.108",
+        "features": []
+      },
+      {
+        "name": "uuid",
+        "kind": "external_registry",
+        "version_constraint": "1.5.0",
+        "features": []
+      }
+    ],
+    "internal_count": 3,
+    "external_count": 10,
+    "in_degree": 12
+  },
+  {
+    "name": "flowy-notification",
+    "raw_name": "flowy-notification",
+    "path": "SRC/appflowy/frontend/rust-lib/flowy-notification",
+    "version": "0.1.0",
+    "edition": "2018",
+    "internal_dependencies": [
+      "flowy-derive",
+      "lib-dispatch"
+    ],
+    "workspace_dependencies": [
+      {
+        "name": "flowy-derive",
+        "kind": "internal_workspace",
+        "path": "build-tool/flowy-derive"
+      },
+      {
+        "name": "lib-dispatch",
+        "kind": "internal_workspace",
+        "path": "lib-dispatch"
+      }
+    ],
+    "external_dependencies": [
+      {
+        "name": "bytes",
+        "kind": "external_registry",
+        "version_constraint": "1.5.0",
+        "features": []
+      },
+      {
+        "name": "dashmap",
+        "kind": "external_registry",
+        "version_constraint": "6.0.1",
+        "features": []
+      },
+      {
+        "name": "lazy_static",
+        "kind": "external_registry",
+        "version_constraint": "1.4.0",
+        "features": []
+      },
+      {
+        "name": "protobuf",
+        "kind": "external_registry",
+        "version_constraint": "2.28.0",
+        "features": []
+      },
+      {
+        "name": "serde",
+        "kind": "external_registry",
+        "version_constraint": "1.0.194",
+        "features": []
+      },
+      {
+        "name": "tokio",
+        "kind": "external_registry",
+        "version_constraint": "1.38.0",
+        "features": []
+      },
+      {
+        "name": "tracing",
+        "kind": "external_registry",
+        "version_constraint": "0.1.40",
+        "features": []
+      }
+    ],
+    "internal_count": 2,
+    "external_count": 7,
+    "in_degree": 16
+  },
+  {
+    "name": "flowy-search",
+    "raw_name": "flowy-search",
+    "path": "SRC/appflowy/frontend/rust-lib/flowy-search",
+    "version": "0.1.0",
+    "edition": "2024",
+    "internal_dependencies": [
+      "flowy-derive",
+      "flowy-error",
+      "flowy-folder",
+      "flowy-search-pub",
+      "flowy-user",
+      "lib-dispatch",
+      "lib-infra"
+    ],
+    "workspace_dependencies": [
+      {
+        "name": "flowy-derive",
+        "kind": "internal_workspace",
+        "path": "build-tool/flowy-derive"
+      },
+      {
+        "name": "flowy-error",
+        "kind": "internal_workspace",
+        "path": "flowy-error"
+      },
+      {
+        "name": "flowy-folder",
+        "kind": "internal_workspace",
+        "path": "flowy-folder"
+      },
+      {
+        "name": "flowy-search-pub",
+        "kind": "internal_workspace",
+        "path": "flowy-search-pub"
+      },
+      {
+        "name": "flowy-user",
+        "kind": "internal_workspace",
+        "path": "flowy-user"
+      },
+      {
+        "name": "lib-dispatch",
+        "kind": "internal_workspace",
+        "path": "lib-dispatch"
+      },
+      {
+        "name": "lib-infra",
+        "kind": "internal_workspace",
+        "path": "lib-infra"
+      }
+    ],
+    "external_dependencies": [
+      {
+        "name": "allo-isolate",
+        "kind": "external_registry",
+        "version_constraint": "^0.1",
+        "features": [
+          "catch-unwind"
+        ]
+      },
+      {
+        "name": "arc-swap",
+        "kind": "external_registry",
+        "version_constraint": "1.7",
+        "features": []
+      },
+      {
+        "name": "bytes",
+        "kind": "external_registry",
+        "version_constraint": "1.5.0",
+        "features": []
+      },
+      {
+        "name": "collab",
+        "kind": "external_registry",
+        "version_constraint": "0.2",
+        "features": []
+      },
+      {
+        "name": "collab-folder",
+        "kind": "external_registry",
+        "version_constraint": "0.2",
+        "features": []
+      },
+      {
+        "name": "dashmap",
+        "kind": "external_registry",
+        "version_constraint": "6.0.1",
+        "features": []
+      },
+      {
+        "name": "derive_builder",
+        "kind": "external_registry",
+        "version_constraint": "0.20.2",
+        "features": []
+      },
+      {
+        "name": "futures",
+        "kind": "external_registry",
+        "version_constraint": "0.3.31",
+        "features": []
+      },
+      {
+        "name": "protobuf",
+        "kind": "external_registry",
+        "version_constraint": "2.28.0",
+        "features": []
+      },
+      {
+        "name": "serde",
+        "kind": "external_registry",
+        "version_constraint": "1.0.194",
+        "features": []
+      },
+      {
+        "name": "serde_json",
+        "kind": "external_registry",
+        "version_constraint": "1.0.108",
+        "features": []
+      },
+      {
+        "name": "tantivy",
+        "kind": "external_registry",
+        "version_constraint": "0.24.1",
+        "features": []
+      },
+      {
+        "name": "tokio",
+        "kind": "external_registry",
+        "version_constraint": "1.38.0",
+        "features": []
+      },
+      {
+        "name": "tokio-stream",
+        "kind": "external_registry",
+        "version_constraint": "0.1.17",
+        "features": []
+      },
+      {
+        "name": "tracing",
+        "kind": "external_registry",
+        "version_constraint": "0.1.40",
+        "features": []
+      },
+      {
+        "name": "uuid",
+        "kind": "external_registry",
+        "version_constraint": "1.5.0",
+        "features": []
+      }
+    ],
+    "internal_count": 7,
+    "external_count": 16,
+    "in_degree": 4
+  },
+  {
+    "name": "flowy-search-pub",
+    "raw_name": "flowy-search-pub",
+    "path": "SRC/appflowy/frontend/rust-lib/flowy-search-pub",
+    "version": "0.1.0",
+    "edition": "2024",
+    "internal_dependencies": [
+      "flowy-error",
+      "lib-infra"
+    ],
+    "workspace_dependencies": [
+      {
+        "name": "flowy-error",
+        "kind": "internal_workspace",
+        "path": "flowy-error"
+      },
+      {
+        "name": "lib-infra",
+        "kind": "internal_workspace",
+        "path": "lib-infra"
+      }
+    ],
+    "external_dependencies": [
+      {
+        "name": "client-api",
+        "kind": "external_git",
+        "version_constraint": "",
+        "features": []
+      },
+      {
+        "name": "collab",
+        "kind": "external_registry",
+        "version_constraint": "0.2",
+        "features": []
+      },
+      {
+        "name": "collab-folder",
+        "kind": "external_registry",
+        "version_constraint": "0.2",
+        "features": []
+      },
+      {
+        "name": "dashmap",
+        "kind": "external_registry",
+        "version_constraint": "6.0.1",
+        "features": []
+      },
+      {
+        "name": "tantivy",
+        "kind": "external_registry",
+        "version_constraint": "0.24.1",
+        "features": []
+      },
+      {
+        "name": "tokio",
+        "kind": "external_registry",
+        "version_constraint": "1.38.0",
+        "features": []
+      },
+      {
+        "name": "tracing",
+        "kind": "external_registry",
+        "version_constraint": "0.1.40",
+        "features": []
+      },
+      {
+        "name": "uuid",
+        "kind": "external_registry",
+        "version_constraint": "1.5.0",
+        "features": []
+      }
+    ],
+    "internal_count": 2,
+    "external_count": 8,
+    "in_degree": 8
+  },
+  {
+    "name": "flowy-server",
+    "raw_name": "flowy-server",
+    "path": "SRC/appflowy/frontend/rust-lib/flowy-server",
+    "version": "0.1.0",
+    "edition": "2024",
+    "internal_dependencies": [
+      "flowy-ai",
+      "flowy-ai-pub",
+      "flowy-database-pub",
+      "flowy-document-pub",
+      "flowy-error",
+      "flowy-folder-pub",
+      "flowy-search-pub",
+      "flowy-server-pub",
+      "flowy-sqlite",
+      "flowy-storage",
+      "flowy-storage-pub",
+      "flowy-user-pub",
+      "lib-infra"
+    ],
+    "workspace_dependencies": [
+      {
+        "name": "flowy-ai",
+        "kind": "internal_workspace",
+        "path": "flowy-ai"
+      },
+      {
+        "name": "flowy-ai-pub",
+        "kind": "internal_workspace",
+        "path": "flowy-ai-pub"
+      },
+      {
+        "name": "flowy-database-pub",
+        "kind": "internal_workspace",
+        "path": "flowy-database-pub"
+      },
+      {
+        "name": "flowy-document-pub",
+        "kind": "internal_workspace",
+        "path": "flowy-document-pub"
+      },
+      {
+        "name": "flowy-error",
+        "kind": "internal_workspace",
+        "path": "flowy-error"
+      },
+      {
+        "name": "flowy-folder-pub",
+        "kind": "internal_workspace",
+        "path": "flowy-folder-pub"
+      },
+      {
+        "name": "flowy-search-pub",
+        "kind": "internal_workspace",
+        "path": "flowy-search-pub"
+      },
+      {
+        "name": "flowy-server-pub",
+        "kind": "internal_workspace",
+        "path": "flowy-server-pub"
+      },
+      {
+        "name": "flowy-sqlite",
+        "kind": "internal_workspace",
+        "path": "flowy-sqlite"
+      },
+      {
+        "name": "flowy-storage",
+        "kind": "internal_workspace",
+        "path": "flowy-storage"
+      },
+      {
+        "name": "flowy-storage-pub",
+        "kind": "internal_workspace",
+        "path": "flowy-storage-pub"
+      },
+      {
+        "name": "flowy-user-pub",
+        "kind": "internal_workspace",
+        "path": "flowy-user-pub"
+      },
+      {
+        "name": "lib-infra",
+        "kind": "internal_workspace",
+        "path": "lib-infra"
+      }
+    ],
+    "external_dependencies": [
+      {
+        "name": "anyhow",
+        "kind": "external_registry",
+        "version_constraint": "1.0",
+        "features": []
+      },
+      {
+        "name": "arc-swap",
+        "kind": "external_registry",
+        "version_constraint": "1.7",
+        "features": []
+      },
+      {
+        "name": "bytes",
+        "kind": "external_registry",
+        "version_constraint": "1.5.0",
+        "features": []
+      },
+      {
+        "name": "chrono",
+        "kind": "external_registry",
+        "version_constraint": "0.4.31",
+        "features": []
+      },
+      {
+        "name": "client-api",
+        "kind": "external_git",
+        "version_constraint": "",
+        "features": []
+      },
+      {
+        "name": "collab",
+        "kind": "external_registry",
+        "version_constraint": "0.2",
+        "features": []
+      },
+      {
+        "name": "collab-database",
+        "kind": "external_registry",
+        "version_constraint": "0.2",
+        "features": []
+      },
+      {
+        "name": "collab-document",
+        "kind": "external_registry",
+        "version_constraint": "0.2",
+        "features": []
+      },
+      {
+        "name": "collab-entity",
+        "kind": "external_registry",
+        "version_constraint": "0.2",
+        "features": []
+      },
+      {
+        "name": "collab-plugins",
+        "kind": "external_registry",
+        "version_constraint": "0.2",
+        "features": []
+      },
+      {
+        "name": "collab-user",
+        "kind": "external_registry",
+        "version_constraint": "0.2",
+        "features": []
+      },
+      {
+        "name": "serde",
+        "kind": "external_registry",
+        "version_constraint": "1.0.194",
+        "features": []
+      },
+      {
+        "name": "serde_json",
+        "kind": "external_registry",
+        "version_constraint": "1.0.108",
+        "features": []
+      },
+      {
+        "name": "tokio",
+        "kind": "external_registry",
+        "version_constraint": "1.38.0",
+        "features": []
+      },
+      {
+        "name": "tokio-stream",
+        "kind": "external_registry",
+        "version_constraint": "0.1.17",
+        "features": []
+      },
+      {
+        "name": "tracing",
+        "kind": "external_registry",
+        "version_constraint": "0.1.40",
+        "features": []
+      },
+      {
+        "name": "uuid",
+        "kind": "external_registry",
+        "version_constraint": "1.5.0",
+        "features": []
+      },
+      {
+        "name": "workspace-template",
+        "kind": "external_git",
+        "version_constraint": "",
+        "features": []
+      }
+    ],
+    "internal_count": 13,
+    "external_count": 18,
+    "in_degree": 4
+  },
+  {
+    "name": "flowy-server-pub",
+    "raw_name": "flowy-server-pub",
+    "path": "SRC/appflowy/frontend/rust-lib/flowy-server-pub",
+    "version": "0.1.0",
+    "edition": "2024",
+    "internal_dependencies": [
+      "flowy-error"
+    ],
+    "workspace_dependencies": [
+      {
+        "name": "flowy-error",
+        "kind": "internal_workspace",
+        "path": "flowy-error"
+      }
+    ],
+    "external_dependencies": [
+      {
+        "name": "client-api",
+        "kind": "external_git",
+        "version_constraint": "",
+        "features": []
+      },
+      {
+        "name": "serde",
+        "kind": "external_registry",
+        "version_constraint": "1.0.194",
+        "features": []
+      },
+      {
+        "name": "serde_repr",
+        "kind": "external_registry",
+        "version_constraint": "0.1",
+        "features": []
+      }
+    ],
+    "internal_count": 1,
+    "external_count": 3,
+    "in_degree": 10
+  },
+  {
+    "name": "flowy-sqlite",
+    "raw_name": "flowy-sqlite",
+    "path": "SRC/appflowy/frontend/rust-lib/flowy-sqlite",
+    "version": "0.1.0",
+    "edition": "2018",
+    "internal_dependencies": [],
+    "workspace_dependencies": [],
+    "external_dependencies": [
+      {
+        "name": "anyhow",
+        "kind": "external_registry",
+        "version_constraint": "1.0",
+        "features": []
+      },
+      {
+        "name": "diesel",
+        "kind": "external_registry",
+        "version_constraint": "2.1.0",
+        "features": []
+      },
+      {
+        "name": "diesel_derives",
+        "kind": "external_registry",
+        "version_constraint": "2.1.0",
+        "features": []
+      },
+      {
+        "name": "diesel_migrations",
+        "kind": "external_registry",
+        "version_constraint": "2.1.0",
+        "features": [
+          "sqlite"
+        ]
+      },
+      {
+        "name": "libsqlite3-sys",
+        "kind": "external_registry",
+        "version_constraint": "0.33.0",
+        "features": [
+          "bundled"
+        ]
+      },
+      {
+        "name": "openssl",
+        "kind": "external_registry",
+        "version_constraint": "0.10.62",
+        "features": [
+          "vendored"
+        ]
+      },
+      {
+        "name": "openssl-sys",
+        "kind": "external_registry",
+        "version_constraint": "0.9.98",
+        "features": [
+          "vendored"
+        ]
+      },
+      {
+        "name": "serde",
+        "kind": "external_registry",
+        "version_constraint": "1.0.194",
+        "features": []
+      },
+      {
+        "name": "serde_json",
+        "kind": "external_registry",
+        "version_constraint": "1.0.108",
+        "features": []
+      },
+      {
+        "name": "tracing",
+        "kind": "external_registry",
+        "version_constraint": "0.1.40",
+        "features": []
+      }
+    ],
+    "internal_count": 0,
+    "external_count": 10,
+    "in_degree": 20
+  },
+  {
+    "name": "flowy-sqlite-vec",
+    "raw_name": "flowy-sqlite-vec",
+    "path": "SRC/appflowy/frontend/rust-lib/flowy-sqlite-vec",
+    "version": "0.1.0",
+    "edition": "2024",
+    "internal_dependencies": [
+      "flowy-ai-pub"
+    ],
+    "workspace_dependencies": [
+      {
+        "name": "flowy-ai-pub",
+        "kind": "internal_workspace",
+        "path": "flowy-ai-pub"
+      }
+    ],
+    "external_dependencies": [
+      {
+        "name": "anyhow",
+        "kind": "external_registry",
+        "version_constraint": "1.0",
+        "features": []
+      },
+      {
+        "name": "chrono",
+        "kind": "external_registry",
+        "version_constraint": "0.4.31",
+        "features": []
+      },
+      {
+        "name": "r2d2",
+        "kind": "external_registry",
+        "version_constraint": "0.8",
+        "features": []
+      },
+      {
+        "name": "r2d2_sqlite",
+        "kind": "external_registry",
+        "version_constraint": "0.28",
+        "features": []
+      },
+      {
+        "name": "rusqlite",
+        "kind": "external_registry",
+        "version_constraint": "0.35.0",
+        "features": [
+          "bundled"
+        ]
+      },
+      {
+        "name": "rusqlite_migration",
+        "kind": "external_registry",
+        "version_constraint": "2.1.0",
+        "features": [
+          "from-directory"
+        ]
+      },
+      {
+        "name": "serde",
+        "kind": "external_registry",
+        "version_constraint": "1.0.219",
+        "features": [
+          "derive"
+        ]
+      },
+      {
+        "name": "serde_json",
+        "kind": "external_registry",
+        "version_constraint": "1.0.108",
+        "features": []
+      },
+      {
+        "name": "tokio",
+        "kind": "external_registry",
+        "version_constraint": "1.38.0",
+        "features": []
+      },
+      {
+        "name": "tracing",
+        "kind": "external_registry",
+        "version_constraint": "0.1.40",
+        "features": []
+      },
+      {
+        "name": "uuid",
+        "kind": "external_registry",
+        "version_constraint": "1.5.0",
+        "features": []
+      }
+    ],
+    "internal_count": 1,
+    "external_count": 11,
+    "in_degree": 2
+  },
+  {
+    "name": "flowy-storage",
+    "raw_name": "flowy-storage",
+    "path": "SRC/appflowy/frontend/rust-lib/flowy-storage",
+    "version": "0.1.0",
+    "edition": "2024",
+    "internal_dependencies": [
+      "flowy-derive",
+      "flowy-error",
+      "flowy-notification",
+      "flowy-sqlite",
+      "flowy-storage-pub",
+      "lib-dispatch",
+      "lib-infra"
+    ],
+    "workspace_dependencies": [
+      {
+        "name": "flowy-derive",
+        "kind": "internal_workspace",
+        "path": "build-tool/flowy-derive"
+      },
+      {
+        "name": "flowy-error",
+        "kind": "internal_workspace",
+        "path": "flowy-error"
+      },
+      {
+        "name": "flowy-notification",
+        "kind": "internal_workspace",
+        "path": "flowy-notification"
+      },
+      {
+        "name": "flowy-sqlite",
+        "kind": "internal_workspace",
+        "path": "flowy-sqlite"
+      },
+      {
+        "name": "flowy-storage-pub",
+        "kind": "internal_workspace",
+        "path": "flowy-storage-pub"
+      },
+      {
+        "name": "lib-dispatch",
+        "kind": "internal_workspace",
+        "path": "lib-dispatch"
+      },
+      {
+        "name": "lib-infra",
+        "kind": "internal_workspace",
+        "path": "lib-infra"
+      }
+    ],
+    "external_dependencies": [
+      {
+        "name": "allo-isolate",
+        "kind": "external_registry",
+        "version_constraint": "^0.1",
+        "features": [
+          "catch-unwind"
+        ]
+      },
+      {
+        "name": "async-trait",
+        "kind": "external_registry",
+        "version_constraint": "0.1.81",
+        "features": []
+      },
+      {
+        "name": "bytes",
+        "kind": "external_registry",
+        "version_constraint": "1.5.0",
+        "features": []
+      },
+      {
+        "name": "collab-importer",
+        "kind": "external_registry",
+        "version_constraint": "0.1",
+        "features": []
+      },
+      {
+        "name": "dashmap",
+        "kind": "external_registry",
+        "version_constraint": "6.0.1",
+        "features": []
+      },
+      {
+        "name": "protobuf",
+        "kind": "external_registry",
+        "version_constraint": "2.28.0",
+        "features": []
+      },
+      {
+        "name": "serde",
+        "kind": "external_registry",
+        "version_constraint": "1.0.194",
+        "features": []
+      },
+      {
+        "name": "serde_json",
+        "kind": "external_registry",
+        "version_constraint": "1.0.108",
+        "features": []
+      },
+      {
+        "name": "tokio",
+        "kind": "external_registry",
+        "version_constraint": "1.38.0",
+        "features": []
+      },
+      {
+        "name": "tracing",
+        "kind": "external_registry",
+        "version_constraint": "0.1.40",
+        "features": []
+      },
+      {
+        "name": "uuid",
+        "kind": "external_registry",
+        "version_constraint": "1.5.0",
+        "features": []
+      }
+    ],
+    "internal_count": 7,
+    "external_count": 11,
+    "in_degree": 6
+  },
+  {
+    "name": "flowy-storage-pub",
+    "raw_name": "flowy-storage-pub",
+    "path": "SRC/appflowy/frontend/rust-lib/flowy-storage-pub",
+    "version": "0.1.0",
+    "edition": "2024",
+    "internal_dependencies": [
+      "flowy-error",
+      "lib-infra"
+    ],
+    "workspace_dependencies": [
+      {
+        "name": "flowy-error",
+        "kind": "internal_workspace",
+        "path": "flowy-error"
+      },
+      {
+        "name": "lib-infra",
+        "kind": "internal_workspace",
+        "path": "lib-infra"
+      }
+    ],
+    "external_dependencies": [
+      {
+        "name": "async-trait",
+        "kind": "external_registry",
+        "version_constraint": "0.1.81",
+        "features": []
+      },
+      {
+        "name": "bytes",
+        "kind": "external_registry",
+        "version_constraint": "1.5.0",
+        "features": []
+      },
+      {
+        "name": "client-api-entity",
+        "kind": "external_git",
+        "version_constraint": "",
+        "features": []
+      },
+      {
+        "name": "serde",
+        "kind": "external_registry",
+        "version_constraint": "1.0.194",
+        "features": []
+      },
+      {
+        "name": "tokio",
+        "kind": "external_registry",
+        "version_constraint": "1.38.0",
+        "features": []
+      },
+      {
+        "name": "uuid",
+        "kind": "external_registry",
+        "version_constraint": "1.5.0",
+        "features": []
+      }
+    ],
+    "internal_count": 2,
+    "external_count": 6,
+    "in_degree": 12
+  },
+  {
+    "name": "flowy-user",
+    "raw_name": "flowy-user",
+    "path": "SRC/appflowy/frontend/rust-lib/flowy-user",
+    "version": "0.1.0",
+    "edition": "2018",
+    "internal_dependencies": [
+      "collab-integrate",
+      "flowy-derive",
+      "flowy-error",
+      "flowy-folder-pub",
+      "flowy-notification",
+      "flowy-server-pub",
+      "flowy-sqlite",
+      "flowy-user-pub",
+      "lib-dispatch",
+      "lib-infra"
+    ],
+    "workspace_dependencies": [
+      {
+        "name": "collab-integrate",
+        "kind": "internal_workspace",
+        "path": "collab-integrate"
+      },
+      {
+        "name": "flowy-derive",
+        "kind": "internal_workspace",
+        "path": "build-tool/flowy-derive"
+      },
+      {
+        "name": "flowy-error",
+        "kind": "internal_workspace",
+        "path": "flowy-error"
+      },
+      {
+        "name": "flowy-folder-pub",
+        "kind": "internal_workspace",
+        "path": "flowy-folder-pub"
+      },
+      {
+        "name": "flowy-notification",
+        "kind": "internal_workspace",
+        "path": "flowy-notification"
+      },
+      {
+        "name": "flowy-server-pub",
+        "kind": "internal_workspace",
+        "path": "flowy-server-pub"
+      },
+      {
+        "name": "flowy-sqlite",
+        "kind": "internal_workspace",
+        "path": "flowy-sqlite"
+      },
+      {
+        "name": "flowy-user-pub",
+        "kind": "internal_workspace",
+        "path": "flowy-user-pub"
+      },
+      {
+        "name": "lib-dispatch",
+        "kind": "internal_workspace",
+        "path": "lib-dispatch"
+      },
+      {
+        "name": "lib-infra",
+        "kind": "internal_workspace",
+        "path": "lib-infra"
+      }
+    ],
+    "external_dependencies": [
+      {
+        "name": "anyhow",
+        "kind": "external_registry",
+        "version_constraint": "1.0",
+        "features": []
+      },
+      {
+        "name": "arc-swap",
+        "kind": "external_registry",
+        "version_constraint": "1.7",
+        "features": []
+      },
+      {
+        "name": "bytes",
+        "kind": "external_registry",
+        "version_constraint": "1.5.0",
+        "features": []
+      },
+      {
+        "name": "chrono",
+        "kind": "external_registry",
+        "version_constraint": "0.4.31",
+        "features": []
+      },
+      {
+        "name": "client-api",
+        "kind": "external_git",
+        "version_constraint": "",
+        "features": []
+      },
+      {
+        "name": "collab",
+        "kind": "external_registry",
+        "version_constraint": "0.2",
+        "features": []
+      },
+      {
+        "name": "collab-database",
+        "kind": "external_registry",
+        "version_constraint": "0.2",
+        "features": []
+      },
+      {
+        "name": "collab-document",
+        "kind": "external_registry",
+        "version_constraint": "0.2",
+        "features": []
+      },
+      {
+        "name": "collab-entity",
+        "kind": "external_registry",
+        "version_constraint": "0.2",
+        "features": []
+      },
+      {
+        "name": "collab-folder",
+        "kind": "external_registry",
+        "version_constraint": "0.2",
+        "features": []
+      },
+      {
+        "name": "collab-plugins",
+        "kind": "external_registry",
+        "version_constraint": "0.2",
+        "features": []
+      },
+      {
+        "name": "collab-user",
+        "kind": "external_registry",
+        "version_constraint": "0.2",
+        "features": []
+      },
+      {
+        "name": "dashmap",
+        "kind": "external_registry",
+        "version_constraint": "6.0.1",
+        "features": []
+      },
+      {
+        "name": "diesel",
+        "kind": "external_registry",
+        "version_constraint": "2.1.0",
+        "features": []
+      },
+      {
+        "name": "num_enum",
+        "kind": "external_registry",
+        "version_constraint": "0.7.3",
+        "features": []
+      },
+      {
+        "name": "protobuf",
+        "kind": "external_registry",
+        "version_constraint": "2.28.0",
+        "features": []
+      },
+      {
+        "name": "serde",
+        "kind": "external_registry",
+        "version_constraint": "1.0.194",
+        "features": []
+      },
+      {
+        "name": "serde_json",
+        "kind": "external_registry",
+        "version_constraint": "1.0.108",
+        "features": []
+      },
+      {
+        "name": "tokio",
+        "kind": "external_registry",
+        "version_constraint": "1.38.0",
+        "features": []
+      },
+      {
+        "name": "tokio-stream",
+        "kind": "external_registry",
+        "version_constraint": "0.1.17",
+        "features": []
+      },
+      {
+        "name": "tracing",
+        "kind": "external_registry",
+        "version_constraint": "0.1.40",
+        "features": []
+      },
+      {
+        "name": "uuid",
+        "kind": "external_registry",
+        "version_constraint": "1.5.0",
+        "features": []
+      },
+      {
+        "name": "validator",
+        "kind": "external_registry",
+        "version_constraint": "0.18",
+        "features": []
+      }
+    ],
+    "internal_count": 10,
+    "external_count": 23,
+    "in_degree": 8
+  },
+  {
+    "name": "flowy-user-pub",
+    "raw_name": "flowy-user-pub",
+    "path": "SRC/appflowy/frontend/rust-lib/flowy-user-pub",
+    "version": "0.1.0",
+    "edition": "2024",
+    "internal_dependencies": [
+      "flowy-error",
+      "flowy-folder-pub",
+      "flowy-sqlite",
+      "lib-infra"
+    ],
+    "workspace_dependencies": [
+      {
+        "name": "flowy-error",
+        "kind": "internal_workspace",
+        "path": "flowy-error"
+      },
+      {
+        "name": "flowy-folder-pub",
+        "kind": "internal_workspace",
+        "path": "flowy-folder-pub"
+      },
+      {
+        "name": "flowy-sqlite",
+        "kind": "internal_workspace",
+        "path": "flowy-sqlite"
+      },
+      {
+        "name": "lib-infra",
+        "kind": "internal_workspace",
+        "path": "lib-infra"
+      }
+    ],
+    "external_dependencies": [
+      {
+        "name": "chrono",
+        "kind": "external_registry",
+        "version_constraint": "0.4.31",
+        "features": []
+      },
+      {
+        "name": "client-api",
+        "kind": "external_git",
+        "version_constraint": "",
+        "features": []
+      },
+      {
+        "name": "collab",
+        "kind": "external_registry",
+        "version_constraint": "0.2",
+        "features": []
+      },
+      {
+        "name": "collab-entity",
+        "kind": "external_registry",
+        "version_constraint": "0.2",
+        "features": []
+      },
+      {
+        "name": "collab-folder",
+        "kind": "external_registry",
+        "version_constraint": "0.2",
+        "features": []
+      },
+      {
+        "name": "serde",
+        "kind": "external_registry",
+        "version_constraint": "1.0.194",
+        "features": []
+      },
+      {
+        "name": "serde_json",
+        "kind": "external_registry",
+        "version_constraint": "1.0.108",
+        "features": []
+      },
+      {
+        "name": "serde_repr",
+        "kind": "external_registry",
+        "version_constraint": "0.1",
+        "features": []
+      },
+      {
+        "name": "tokio",
+        "kind": "external_registry",
+        "version_constraint": "1.38.0",
+        "features": []
+      },
+      {
+        "name": "tokio-stream",
+        "kind": "external_registry",
+        "version_constraint": "0.1.17",
+        "features": []
+      },
+      {
+        "name": "tracing",
+        "kind": "external_registry",
+        "version_constraint": "0.1.40",
+        "features": []
+      },
+      {
+        "name": "uuid",
+        "kind": "external_registry",
+        "version_constraint": "1.5.0",
+        "features": []
+      }
+    ],
+    "internal_count": 4,
+    "external_count": 12,
+    "in_degree": 12
+  },
+  {
+    "name": "lib-dispatch",
+    "raw_name": "lib-dispatch",
+    "path": "SRC/appflowy/frontend/rust-lib/lib-dispatch",
+    "version": "0.1.0",
+    "edition": "2018",
+    "internal_dependencies": [],
+    "workspace_dependencies": [],
+    "external_dependencies": [
+      {
+        "name": "bincode",
+        "kind": "external_registry",
+        "version_constraint": "1.3",
+        "features": []
+      },
+      {
+        "name": "bytes",
+        "kind": "external_registry",
+        "version_constraint": "1.4",
+        "features": [
+          "serde"
+        ]
+      },
+      {
+        "name": "futures",
+        "kind": "external_registry",
+        "version_constraint": "0.3.31",
+        "features": []
+      },
+      {
+        "name": "futures-core",
+        "kind": "external_registry",
+        "version_constraint": "0.3",
+        "features": []
+      },
+      {
+        "name": "protobuf",
+        "kind": "external_registry",
+        "version_constraint": "2.28.0",
+        "features": []
+      },
+      {
+        "name": "serde",
+        "kind": "external_registry",
+        "version_constraint": "1.0",
+        "features": [
+          "derive"
+        ]
+      },
+      {
+        "name": "serde_json",
+        "kind": "external_registry",
+        "version_constraint": "1.0.108",
+        "features": []
+      },
+      {
+        "name": "serde_repr",
+        "kind": "external_registry",
+        "version_constraint": "0.1",
+        "features": []
+      },
+      {
+        "name": "tracing",
+        "kind": "external_registry",
+        "version_constraint": "0.1.40",
+        "features": []
+      },
+      {
+        "name": "validator",
+        "kind": "external_registry",
+        "version_constraint": "0.18",
+        "features": []
+      }
+    ],
+    "internal_count": 0,
+    "external_count": 10,
+    "in_degree": 24
+  },
+  {
+    "name": "lib-infra",
+    "raw_name": "lib-infra",
+    "path": "SRC/appflowy/frontend/rust-lib/lib-infra",
+    "version": "0.1.0",
+    "edition": "2018",
+    "internal_dependencies": [],
+    "workspace_dependencies": [],
+    "external_dependencies": [
+      {
+        "name": "aes-gcm",
+        "kind": "external_registry",
+        "version_constraint": "0.10.2",
+        "features": []
+      },
+      {
+        "name": "allo-isolate",
+        "kind": "external_registry",
+        "version_constraint": "^0.1",
+        "features": [
+          "catch-unwind"
+        ]
+      },
+      {
+        "name": "anyhow",
+        "kind": "external_registry",
+        "version_constraint": "1.0",
+        "features": []
+      },
+      {
+        "name": "async-trait",
+        "kind": "external_registry",
+        "version_constraint": "0.1.81",
+        "features": []
+      },
+      {
+        "name": "base64",
+        "kind": "external_registry",
+        "version_constraint": "0.22.1",
+        "features": []
+      },
+      {
+        "name": "bytes",
+        "kind": "external_registry",
+        "version_constraint": "1.5",
+        "features": []
+      },
+      {
+        "name": "chrono",
+        "kind": "external_registry",
+        "version_constraint": "0.4.31",
+        "features": []
+      },
+      {
+        "name": "futures-core",
+        "kind": "external_registry",
+        "version_constraint": "0.3",
+        "features": []
+      },
+      {
+        "name": "hmac",
+        "kind": "external_registry",
+        "version_constraint": "0.12.1",
+        "features": []
+      },
+      {
+        "name": "pbkdf2",
+        "kind": "external_registry",
+        "version_constraint": "0.12.2",
+        "features": []
+      },
+      {
+        "name": "rand",
+        "kind": "external_registry",
+        "version_constraint": "0.8.5",
+        "features": []
+      },
+      {
+        "name": "sha2",
+        "kind": "external_registry",
+        "version_constraint": "0.10.7",
+        "features": []
+      },
+      {
+        "name": "tokio",
+        "kind": "external_registry",
+        "version_constraint": "1.38.0",
+        "features": []
+      },
+      {
+        "name": "tracing",
+        "kind": "external_registry",
+        "version_constraint": "0.1.40",
+        "features": []
+      },
+      {
+        "name": "validator",
+        "kind": "external_registry",
+        "version_constraint": "0.18",
+        "features": []
+      }
+    ],
+    "internal_count": 0,
+    "external_count": 15,
+    "in_degree": 38
+  },
+  {
+    "name": "lib-log",
+    "raw_name": "lib-log",
+    "path": "SRC/appflowy/frontend/rust-lib/lib-log",
+    "version": "0.1.0",
+    "edition": "2018",
+    "internal_dependencies": [
+      "lib-infra"
+    ],
+    "workspace_dependencies": [
+      {
+        "name": "lib-infra",
+        "kind": "internal_workspace",
+        "path": "lib-infra"
+      }
+    ],
+    "external_dependencies": [
+      {
+        "name": "serde",
+        "kind": "external_registry",
+        "version_constraint": "1.0.194",
+        "features": []
+      },
+      {
+        "name": "serde_json",
+        "kind": "external_registry",
+        "version_constraint": "1.0.108",
+        "features": []
+      },
+      {
+        "name": "tracing",
+        "kind": "external_registry",
+        "version_constraint": "0.1.40",
+        "features": []
+      },
+      {
+        "name": "tracing-subscriber",
+        "kind": "external_registry",
+        "version_constraint": "0.3.19",
+        "features": [
+          "registry",
+          "env-filter",
+          "ansi",
+          "json"
+        ]
+      }
+    ],
+    "internal_count": 1,
+    "external_count": 4,
+    "in_degree": 4
+  }
+]

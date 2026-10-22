@@ -1,0 +1,652 @@
+{
+  "schema_version": 1,
+  "id": "F00.7.1",
+  "feature_id": "F00",
+  "sub_index": 7,
+  "titulo": "App glue: scripts de build, packaging y resources/translations (36 bundles i18n)",
+  "fuentes": [
+    "appflowy"
+  ],
+  "archivos": [
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/resources/translations/am-ET.json",
+      "capa": "config",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/resources/translations/ar-SA.json",
+      "capa": "config",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/resources/translations/ca-ES.json",
+      "capa": "config",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/resources/translations/ckb-KU.json",
+      "capa": "config",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/resources/translations/cs-CZ.json",
+      "capa": "config",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/resources/translations/de-DE.json",
+      "capa": "config",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/resources/translations/el-GR.json",
+      "capa": "config",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/resources/translations/en-GB.json",
+      "capa": "config",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/resources/translations/en-US.json",
+      "capa": "config",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/resources/translations/es-VE.json",
+      "capa": "config",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/resources/translations/eu-ES.json",
+      "capa": "config",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/resources/translations/fa.json",
+      "capa": "config",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/resources/translations/fr-CA.json",
+      "capa": "config",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/resources/translations/fr-FR.json",
+      "capa": "config",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/resources/translations/ga-IE.json",
+      "capa": "config",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/resources/translations/he.json",
+      "capa": "config",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/resources/translations/hin.json",
+      "capa": "config",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/resources/translations/hu-HU.json",
+      "capa": "config",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/resources/translations/id-ID.json",
+      "capa": "config",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/resources/translations/it-IT.json",
+      "capa": "config",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/resources/translations/ja-JP.json",
+      "capa": "config",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/resources/translations/ko-KR.json",
+      "capa": "config",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/resources/translations/mr-IN.json",
+      "capa": "config",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/resources/translations/pl-PL.json",
+      "capa": "config",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/resources/translations/pt-BR.json",
+      "capa": "config",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/resources/translations/pt-PT.json",
+      "capa": "config",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/resources/translations/ru-RU.json",
+      "capa": "config",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/resources/translations/sv-SE.json",
+      "capa": "config",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/resources/translations/th-TH.json",
+      "capa": "config",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/resources/translations/tr-TR.json",
+      "capa": "config",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/resources/translations/uk-UA.json",
+      "capa": "config",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/resources/translations/ur.json",
+      "capa": "config",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/resources/translations/vi-VN.json",
+      "capa": "config",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/resources/translations/vi.json",
+      "capa": "config",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/resources/translations/zh-CN.json",
+      "capa": "config",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/resources/translations/zh-TW.json",
+      "capa": "config",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/scripts/code_generation/flowy_icons/generate_flowy_icons.cmd",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/scripts/code_generation/flowy_icons/generate_flowy_icons.sh",
+      "capa": "build",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/scripts/code_generation/freezed/generate_freezed.cmd",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/scripts/code_generation/freezed/generate_freezed.sh",
+      "capa": "build",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/scripts/code_generation/generate.cmd",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/scripts/code_generation/generate.sh",
+      "capa": "build",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/scripts/code_generation/language_files/generate_language_files.cmd",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/scripts/code_generation/language_files/generate_language_files.sh",
+      "capa": "build",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/scripts/docker-buildfiles/Dockerfile",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/scripts/docker-buildfiles/README.md",
+      "capa": "config",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/scripts/docker-buildfiles/docker-compose.yml",
+      "capa": "config",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/scripts/flatpack-buildfiles/.gitignore",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/scripts/flatpack-buildfiles/dbus-interface.xml",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/scripts/flatpack-buildfiles/io.appflowy.AppFlowy.desktop",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/scripts/flatpack-buildfiles/io.appflowy.AppFlowy.launcher.desktop",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/scripts/flatpack-buildfiles/io.appflowy.AppFlowy.metainfo.xml",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/scripts/flatpack-buildfiles/io.appflowy.AppFlowy.service",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/scripts/flatpack-buildfiles/io.appflowy.AppFlowy.yml",
+      "capa": "config",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/scripts/flatpack-buildfiles/launcher.sh",
+      "capa": "build",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/scripts/flutter_release_build/build_flowy.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/scripts/flutter_release_build/build_universal_package_for_macos.sh",
+      "capa": "build",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/scripts/flutter_release_build/tool.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/scripts/install_dev_env/install_ios.sh",
+      "capa": "build",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/scripts/install_dev_env/install_linux.sh",
+      "capa": "build",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/scripts/install_dev_env/install_macos.sh",
+      "capa": "build",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/scripts/install_dev_env/install_windows.sh",
+      "capa": "build",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/scripts/linux_distribution/appimage/AppImageBuilder.yml",
+      "capa": "config",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/scripts/linux_distribution/appimage/build_appimage.sh",
+      "capa": "build",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/scripts/linux_distribution/appimage/io.appflowy.AppFlowy.desktop",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/scripts/linux_distribution/deb/AppFlowy.desktop",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/scripts/linux_distribution/deb/DEBIAN/control",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/scripts/linux_distribution/deb/DEBIAN/postinst",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/scripts/linux_distribution/deb/DEBIAN/postrm",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/scripts/linux_distribution/deb/README.md",
+      "capa": "config",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/scripts/linux_distribution/deb/build_deb.sh",
+      "capa": "build",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/scripts/linux_distribution/flatpak/README.md",
+      "capa": "config",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/scripts/linux_distribution/packaging/io.appflowy.AppFlowy.launcher.desktop",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/scripts/linux_distribution/packaging/io.appflowy.AppFlowy.metainfo.xml",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/scripts/linux_distribution/packaging/io.appflowy.AppFlowy.service",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/scripts/linux_distribution/packaging/launcher.sh",
+      "capa": "build",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/scripts/linux_installer/control",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/scripts/linux_installer/postinst",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/scripts/linux_installer/postrm",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/scripts/makefile/desktop.toml",
+      "capa": "config",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/scripts/makefile/docker.toml",
+      "capa": "config",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/scripts/makefile/env.toml",
+      "capa": "config",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/scripts/makefile/flutter.toml",
+      "capa": "config",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/scripts/makefile/mobile.toml",
+      "capa": "config",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/scripts/makefile/protobuf.toml",
+      "capa": "config",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/scripts/makefile/tauri.toml",
+      "capa": "config",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/scripts/makefile/tests.toml",
+      "capa": "config",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/scripts/makefile/tool.toml",
+      "capa": "config",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/scripts/makefile/web.toml",
+      "capa": "config",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/scripts/tool/update_client_api_rev.sh",
+      "capa": "build",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/scripts/tool/update_collab_rev.sh",
+      "capa": "build",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/scripts/tool/update_collab_source.sh",
+      "capa": "build",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/scripts/tool/update_local_ai_rev.sh",
+      "capa": "build",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/scripts/white_label/code_white_label.sh",
+      "capa": "build",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/scripts/white_label/font_white_label.sh",
+      "capa": "build",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/scripts/white_label/i18n_white_label.sh",
+      "capa": "build",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/scripts/white_label/icon_white_label.sh",
+      "capa": "build",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/scripts/white_label/white_label.sh",
+      "capa": "build",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/scripts/white_label/windows_white_label.sh",
+      "capa": "build",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/scripts/windows_installer/inno_setup_config.iss",
+      "capa": "ui",
+      "estado": "pendiente"
+    }
+  ],
+  "archivos_total": 100,
+  "catalogos": [
+    "blocs.json",
+    "deps.json",
+    "events.json",
+    "misc.json",
+    "notifications.json",
+    "protobuf.json"
+  ],
+  "catalogos_razon": {
+    "events.json": "Eventos FFI / dispatch de esta feature",
+    "blocs.json": "BLoCs / Cubits presentes en los archivos de esta unidad",
+    "protobuf.json": "Entidades protobuf input/output de los eventos",
+    "notifications.json": "Notificaciones Rust→Dart emitidas o escuchadas",
+    "deps.json": "Dependencias del workspace rust y pubspec",
+    "misc.json": "Rutas, atajos, flags, error codes, i18n"
+  },
+  "dependencias": [
+    {
+      "id": "F00.0",
+      "tipo": "indice",
+      "nota": "Documento indice F00.0 debe existir antes de esta sub-unidad."
+    }
+  ],
+  "plantilla": "feature",
+  "documento": "OUT/09-features/F00-infraestructura-compartida-ffi-dispatch-errores-build-nativo/7.1-app-glue-scripts-de-build-packaging-y-resources-translations-36-bundles-i18n.md",
+  "metricas": {
+    "archivos": 100,
+    "por_capa": {
+      "config": 52,
+      "ui": 25,
+      "build": 23
+    },
+    "por_fuente": {
+      "appflowy": 100
+    }
+  },
+  "prioridad": 2,
+  "concurrencia": "paralela",
+  "generado_en": "2026-10-20T22:05:46Z"
+}

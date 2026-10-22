@@ -1,0 +1,634 @@
+{
+  "schema_version": 1,
+  "id": "F00.5.6.2.8",
+  "feature_id": "F00",
+  "sub_index": 5,
+  "titulo": "Paquetes Dart internos: flowy_infra_ui (nativo, web, platform interface, config) — example",
+  "fuentes": [
+    "appflowy"
+  ],
+  "archivos": [
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/packages/flowy_infra_ui/example/.gitignore",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/packages/flowy_infra_ui/example/.metadata",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/packages/flowy_infra_ui/example/README.md",
+      "capa": "config",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/packages/flowy_infra_ui/example/analysis_options.yaml",
+      "capa": "config",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/packages/flowy_infra_ui/example/android/.gitignore",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/packages/flowy_infra_ui/example/android/.project",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/packages/flowy_infra_ui/example/android/.settings/org.eclipse.buildship.core.prefs",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/packages/flowy_infra_ui/example/android/app/.classpath",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/packages/flowy_infra_ui/example/android/app/.project",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/packages/flowy_infra_ui/example/android/app/.settings/org.eclipse.buildship.core.prefs",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/packages/flowy_infra_ui/example/android/app/build.gradle",
+      "capa": "build",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/packages/flowy_infra_ui/example/android/app/src/debug/AndroidManifest.xml",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/packages/flowy_infra_ui/example/android/app/src/main/AndroidManifest.xml",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/packages/flowy_infra_ui/example/android/app/src/main/kotlin/com/example/example/MainActivity.kt",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/packages/flowy_infra_ui/example/android/app/src/main/kotlin/com/example/flowy_infra_ui_example/MainActivity.kt",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/packages/flowy_infra_ui/example/android/app/src/main/res/drawable-v21/launch_background.xml",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/packages/flowy_infra_ui/example/android/app/src/main/res/drawable/launch_background.xml",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/packages/flowy_infra_ui/example/android/app/src/main/res/values-night/styles.xml",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/packages/flowy_infra_ui/example/android/app/src/main/res/values/styles.xml",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/packages/flowy_infra_ui/example/android/app/src/profile/AndroidManifest.xml",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/packages/flowy_infra_ui/example/android/build.gradle",
+      "capa": "build",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/packages/flowy_infra_ui/example/android/gradle.properties",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/packages/flowy_infra_ui/example/android/gradle/wrapper/gradle-wrapper.properties",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/packages/flowy_infra_ui/example/android/settings.gradle",
+      "capa": "build",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/packages/flowy_infra_ui/example/example/android/app/src/main/java/com/example/flowy_infra_ui_example/FlutterActivity.java",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/packages/flowy_infra_ui/example/ios/.gitignore",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/packages/flowy_infra_ui/example/ios/Flutter/AppFrameworkInfo.plist",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/packages/flowy_infra_ui/example/ios/Flutter/Debug.xcconfig",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/packages/flowy_infra_ui/example/ios/Flutter/Release.xcconfig",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/packages/flowy_infra_ui/example/ios/Podfile",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/packages/flowy_infra_ui/example/ios/Podfile.lock",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/packages/flowy_infra_ui/example/ios/Runner.xcodeproj/project.pbxproj",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/packages/flowy_infra_ui/example/ios/Runner.xcodeproj/project.xcworkspace/contents.xcworkspacedata",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/packages/flowy_infra_ui/example/ios/Runner.xcodeproj/project.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/packages/flowy_infra_ui/example/ios/Runner.xcodeproj/project.xcworkspace/xcshareddata/WorkspaceSettings.xcsettings",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/packages/flowy_infra_ui/example/ios/Runner.xcodeproj/xcshareddata/xcschemes/Runner.xcscheme",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/packages/flowy_infra_ui/example/ios/Runner.xcworkspace/contents.xcworkspacedata",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/packages/flowy_infra_ui/example/ios/Runner.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/packages/flowy_infra_ui/example/ios/Runner.xcworkspace/xcshareddata/WorkspaceSettings.xcsettings",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/packages/flowy_infra_ui/example/ios/Runner/AppDelegate.swift",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/packages/flowy_infra_ui/example/ios/Runner/Assets.xcassets/AppIcon.appiconset/Contents.json",
+      "capa": "config",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/packages/flowy_infra_ui/example/ios/Runner/Assets.xcassets/LaunchImage.imageset/Contents.json",
+      "capa": "config",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/packages/flowy_infra_ui/example/ios/Runner/Assets.xcassets/LaunchImage.imageset/README.md",
+      "capa": "config",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/packages/flowy_infra_ui/example/ios/Runner/Base.lproj/LaunchScreen.storyboard",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/packages/flowy_infra_ui/example/ios/Runner/Base.lproj/Main.storyboard",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/packages/flowy_infra_ui/example/ios/Runner/Info.plist",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/packages/flowy_infra_ui/example/ios/Runner/Runner-Bridging-Header.h",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/packages/flowy_infra_ui/example/lib/home/demo_item.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/packages/flowy_infra_ui/example/lib/home/home_screen.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/packages/flowy_infra_ui/example/lib/keyboard/keyboard_screen.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/packages/flowy_infra_ui/example/lib/main.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/packages/flowy_infra_ui/example/lib/overlay/overlay_screen.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/packages/flowy_infra_ui/example/linux/.gitignore",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/packages/flowy_infra_ui/example/linux/CMakeLists.txt",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/packages/flowy_infra_ui/example/linux/flutter/CMakeLists.txt",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/packages/flowy_infra_ui/example/linux/main.cc",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/packages/flowy_infra_ui/example/linux/my_application.cc",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/packages/flowy_infra_ui/example/linux/my_application.h",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/packages/flowy_infra_ui/example/macos/.gitignore",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/packages/flowy_infra_ui/example/macos/Flutter/Flutter-Debug.xcconfig",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/packages/flowy_infra_ui/example/macos/Flutter/Flutter-Release.xcconfig",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/packages/flowy_infra_ui/example/macos/Podfile",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/packages/flowy_infra_ui/example/macos/Podfile.lock",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/packages/flowy_infra_ui/example/macos/Runner.xcodeproj/project.pbxproj",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/packages/flowy_infra_ui/example/macos/Runner.xcodeproj/project.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/packages/flowy_infra_ui/example/macos/Runner.xcodeproj/xcshareddata/xcschemes/Runner.xcscheme",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/packages/flowy_infra_ui/example/macos/Runner.xcworkspace/contents.xcworkspacedata",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/packages/flowy_infra_ui/example/macos/Runner.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/packages/flowy_infra_ui/example/macos/Runner/AppDelegate.swift",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/packages/flowy_infra_ui/example/macos/Runner/Assets.xcassets/AppIcon.appiconset/Contents.json",
+      "capa": "config",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/packages/flowy_infra_ui/example/macos/Runner/Base.lproj/MainMenu.xib",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/packages/flowy_infra_ui/example/macos/Runner/Configs/AppInfo.xcconfig",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/packages/flowy_infra_ui/example/macos/Runner/Configs/Debug.xcconfig",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/packages/flowy_infra_ui/example/macos/Runner/Configs/Release.xcconfig",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/packages/flowy_infra_ui/example/macos/Runner/Configs/Warnings.xcconfig",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/packages/flowy_infra_ui/example/macos/Runner/DebugProfile.entitlements",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/packages/flowy_infra_ui/example/macos/Runner/Info.plist",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/packages/flowy_infra_ui/example/macos/Runner/MainFlutterWindow.swift",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/packages/flowy_infra_ui/example/macos/Runner/Release.entitlements",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/packages/flowy_infra_ui/example/pubspec.yaml",
+      "capa": "config",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/packages/flowy_infra_ui/example/test/widget_test.dart",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/packages/flowy_infra_ui/example/web/index.html",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/packages/flowy_infra_ui/example/web/manifest.json",
+      "capa": "config",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/packages/flowy_infra_ui/example/windows/.gitignore",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/packages/flowy_infra_ui/example/windows/CMakeLists.txt",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/packages/flowy_infra_ui/example/windows/flutter/CMakeLists.txt",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/packages/flowy_infra_ui/example/windows/runner/CMakeLists.txt",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/packages/flowy_infra_ui/example/windows/runner/Runner.rc",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/packages/flowy_infra_ui/example/windows/runner/flutter_window.cpp",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/packages/flowy_infra_ui/example/windows/runner/flutter_window.h",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/packages/flowy_infra_ui/example/windows/runner/main.cpp",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/packages/flowy_infra_ui/example/windows/runner/resource.h",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/packages/flowy_infra_ui/example/windows/runner/runner.exe.manifest",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/packages/flowy_infra_ui/example/windows/runner/utils.cpp",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/packages/flowy_infra_ui/example/windows/runner/utils.h",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/packages/flowy_infra_ui/example/windows/runner/win32_window.cpp",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/packages/flowy_infra_ui/example/windows/runner/win32_window.h",
+      "capa": "ui",
+      "estado": "pendiente"
+    }
+  ],
+  "archivos_total": 97,
+  "catalogos": [
+    "blocs.json",
+    "deps.json",
+    "events.json",
+    "misc.json",
+    "notifications.json",
+    "protobuf.json"
+  ],
+  "catalogos_razon": {
+    "events.json": "Eventos FFI / dispatch de esta feature",
+    "blocs.json": "BLoCs / Cubits presentes en los archivos de esta unidad",
+    "protobuf.json": "Entidades protobuf input/output de los eventos",
+    "notifications.json": "Notificaciones Rust→Dart emitidas o escuchadas",
+    "deps.json": "Dependencias del workspace rust y pubspec",
+    "misc.json": "Rutas, atajos, flags, error codes, i18n"
+  },
+  "dependencias": [
+    {
+      "id": "F00.0",
+      "tipo": "indice",
+      "nota": "Documento indice F00.0 debe existir antes de esta sub-unidad."
+    }
+  ],
+  "plantilla": "feature",
+  "documento": "OUT/09-features/F00-infraestructura-compartida-ffi-dispatch-errores-build-nativo/5.6.2.8-paquetes-dart-internos-flowy-infra-ui-nativo-web-platform-interface-config-examp.md",
+  "metricas": {
+    "archivos": 97,
+    "por_capa": {
+      "ui": 86,
+      "config": 8,
+      "build": 3
+    },
+    "por_fuente": {
+      "appflowy": 97
+    }
+  },
+  "prioridad": 2,
+  "concurrencia": "paralela",
+  "generado_en": "2026-10-20T18:14:01Z"
+}

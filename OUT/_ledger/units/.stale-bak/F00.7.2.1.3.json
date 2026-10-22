@@ -1,0 +1,206 @@
+{
+  "schema_version": 1,
+  "id": "F00.7.2.1.3",
+  "feature_id": "F00",
+  "sub_index": 7,
+  "titulo": "App glue: integration_test/** (runners de escritorio y moviles) — desktop — cloud",
+  "fuentes": [
+    "appflowy"
+  ],
+  "archivos": [
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/integration_test/desktop/cloud/cloud_runner.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/integration_test/desktop/cloud/data_migration/anon_user_data_migration_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/integration_test/desktop/cloud/data_migration/data_migration_test_runner.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/integration_test/desktop/cloud/database/database_image_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/integration_test/desktop/cloud/database/database_test_runner.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/integration_test/desktop/cloud/document/document_ai_writer_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/integration_test/desktop/cloud/document/document_copy_link_to_block_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/integration_test/desktop/cloud/document/document_option_actions_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/integration_test/desktop/cloud/document/document_publish_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/integration_test/desktop/cloud/document/document_test_runner.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/integration_test/desktop/cloud/set_env.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/integration_test/desktop/cloud/sidebar/sidebar_icon_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/integration_test/desktop/cloud/sidebar/sidebar_move_page_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/integration_test/desktop/cloud/sidebar/sidebar_rename_untitled_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/integration_test/desktop/cloud/sidebar/sidebar_search_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/integration_test/desktop/cloud/uncategorized/appflowy_cloud_auth_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/integration_test/desktop/cloud/uncategorized/document_sync_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/integration_test/desktop/cloud/uncategorized/uncategorized_test_runner.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/integration_test/desktop/cloud/uncategorized/user_setting_sync_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/integration_test/desktop/cloud/workspace/change_name_and_icon_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/integration_test/desktop/cloud/workspace/collaborative_workspace_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/integration_test/desktop/cloud/workspace/share_menu_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/integration_test/desktop/cloud/workspace/tabs_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/integration_test/desktop/cloud/workspace/workspace_icon_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/integration_test/desktop/cloud/workspace/workspace_settings_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/integration_test/desktop/cloud/workspace/workspace_test_runner.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    }
+  ],
+  "archivos_total": 26,
+  "catalogos": [
+    "blocs.json",
+    "deps.json",
+    "events.json",
+    "misc.json",
+    "notifications.json",
+    "protobuf.json"
+  ],
+  "catalogos_razon": {
+    "events.json": "Eventos FFI / dispatch de esta feature",
+    "blocs.json": "BLoCs / Cubits presentes en los archivos de esta unidad",
+    "protobuf.json": "Entidades protobuf input/output de los eventos",
+    "notifications.json": "Notificaciones Rust→Dart emitidas o escuchadas",
+    "deps.json": "Dependencias del workspace rust y pubspec",
+    "misc.json": "Rutas, atajos, flags, error codes, i18n"
+  },
+  "dependencias": [
+    {
+      "id": "F00.0",
+      "tipo": "indice",
+      "nota": "Documento indice F00.0 debe existir antes de esta sub-unidad."
+    }
+  ],
+  "plantilla": "feature",
+  "documento": "OUT/09-features/F00-infraestructura-compartida-ffi-dispatch-errores-build-paquetes-nativo-tests/7.2.1.3-app-glue-integration-test-runners-de-escritorio-y-moviles-desktop-cloud.md",
+  "metricas": {
+    "archivos": 26,
+    "por_capa": {
+      "test": 26
+    },
+    "por_fuente": {
+      "appflowy": 26
+    }
+  },
+  "prioridad": 2,
+  "concurrencia": "paralela",
+  "generado_en": "2026-10-20T18:07:05Z"
+}

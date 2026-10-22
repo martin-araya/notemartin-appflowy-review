@@ -1,0 +1,277 @@
+{
+  "schema_version": 1,
+  "generado_en": "2026-10-21",
+  "total": 30,
+  "preguntas": [
+    {
+      "id": "Q01",
+      "area": "cold-start",
+      "pregunta": "En el arranque en frío, ¿qué `LaunchTask` abre el canal de notificaciones Rust→Dart antes de inicializar el SDK, a qué función `extern \"C\"` corresponde ese canal y qué valores devuelve `init_sdk` en éxito y en error? Indica además qué hace el lado Dart cuando recibe el valor de error.",
+      "respuesta_esperada": "La tarea es `InitRustSDKTask` (`appflowy/frontend/appflowy_flutter/lib/startup/tasks/rust_sdk.dart:13`), que llama a `FlowySDK.init`; allí Dart ejecuta primero `ffi.set_stream_port(RustStreamReceiver.shared.port)` (`appflowy/frontend/appflowy_flutter/packages/appflowy_backend/lib/appflowy_backend.dart:38`) y después `ffi.init_sdk(0, configuration.toNativeUtf8())` (`.../appflowy_backend.dart:51`). El canal corresponde a `set_stream_port(port: i64) -> i32` (`appflowy/frontend/rust-lib/dart-ffi/src/lib.rs:240`), que limpia emisores previos con `unregister_all_notification_sender()` y registra `DartNotificationSender::new(notification_port)`, devolviendo `0`. `init_sdk` (`dart-ffi/src/lib.rs:114`) devuelve `0` en éxito y `-1` si `data` es nulo (`dart-ffi/src/lib.rs:117-118`); Dart lanza `Exception('Failed to initialize the SDK')` cuando el código no es 0 (`appflowy_backend.dart:52-54`).",
+      "docs_fuente": ["B1.4", "B5.1", "06-01-ffi"],
+      "verificacion_codigo": "appflowy/frontend/rust-lib/dart-ffi/src/lib.rs:114",
+      "notas": "El orden `set_stream_port` → `init_sdk` y sus consecuencias sólo se obtienen cruzando el doc de ciclo de vida (B1.4 §4.5), la secuencia de cold start (B5.1 §10) y la tabla de las 8 funciones `extern \"C\"` de `06-puente-flutter-rust/01-ffi.md`; ninguno de los tres basta por sí solo."
+    },
+    {
+      "id": "Q02",
+      "area": "cold-start",
+      "pregunta": "Durante el arranque en frío, `init_sdk` construye el SDK Rust completo. ¿En qué fichero se registran los `AFPlugin` de cada crate de feature y dónde se construyen los managers? ¿Qué método del ciclo de vida (`AppLifeCycle`) se invoca cuando la app arranca con una sesión ya iniciada, y qué trabajo adicional lanza además de re-inicializar los managers?",
+      "respuesta_esperada": "Los `AFPlugin` se registran en `appflowy/frontend/rust-lib/flowy-core/src/module.rs:22-28`, uno por crate (`flowy_folder::event_map::init(folder_manager)`, `flowy_database2::event_map::init(...)`, `flowy_document::event_map::init(...)`, `flowy_search`, `flowy_ai`, `flowy_storage`, más `flowy-user`), sumándolos al `AFPluginDispatcher`; los managers se construyen en `AppFlowyCore::init` (`flowy-core/src/lib.rs:124`, struct en `lib.rs:61`). El hook es `on_launch_if_authenticated` (`flowy-core/src/app_life_cycle.rs:142`), que inicializa folder/database/document/search/ai y además arranca `start_full_indexed_data_provider` y `start_instant_indexed_data_provider`.",
+      "docs_fuente": ["B1.4", "B5.1", "B1.3", "07-01-modelo-collab"],
+      "verificacion_codigo": "appflowy/frontend/rust-lib/flowy-core/src/app_life_cycle.rs:142",
+      "notas": "El reparto entre `flowy-core/src/module.rs` (registro de plugins) y `flowy-core/src/lib.rs` (construcción de managers) sólo aparece junto en B1.4 §4; el nombre del hook y su efecto sobre la indexación requiere B1.4 §6 y el diagrama de B5.1 §10."
+    },
+    {
+      "id": "Q03",
+      "area": "cold-start",
+      "pregunta": "El usuario está autenticado y pulsa «salir». ¿Qué evento FFI dispara el cierre de sesión, en qué crate vive (no en `flowy-folder`), qué método del ciclo de vida reacciona a un token expirado y qué notificación de `UserNotification` confirma que el workspace se abrió correctamente tras el siguiente inicio de sesión? Da índices y rutas.",
+      "respuesta_esperada": "El cierre de sesión es `UserEvent::SignOut` (índice 2, `flowy-user`), con handler `sign_out_handler` en `appflowy/frontend/rust-lib/flowy-user/src/event_handler.rs:123`; es un evento de `flowy-user`, no de `flowy-folder`. El hook de token expirado es `AppLifeCycle::on_token_expired` (`flowy-core/src/app_life_cycle.rs:386`), que limpia el `FolderManager`. La confirmación de apertura de workspace es `UserNotification::DidOpenWorkspace` (índice 9), emitida en `flowy-user/src/user_manager/manager_user_workspace.rs:244` y consumida por `user_listener.dart`.",
+      "docs_fuente": ["B1.4", "B5.2", "14-catalogo-notificaciones", "11-catalogo-eventos-ffi"],
+      "verificacion_codigo": "appflowy/frontend/rust-lib/flowy-user/src/user_manager/manager_user_workspace.rs:244",
+      "notas": "Exige cruzar la tabla de ciclo de vida de B1.4 §6/§7 con el índice y el emisor real de la variante en el catálogo de notificaciones (que da `status: ok` y `ruta:línea` del emisor), y con el catálogo de eventos para el índice numérico de `SignOut`."
+    },
+    {
+      "id": "Q04",
+      "area": "ffi-lib-dispatch",
+      "pregunta": "`dart-ffi/src/lib.rs` exporta 8 funciones `extern \"C\"`. ¿Cuáles son las dos que no sirven para el camino de producción (una sin implementar y otra deprecada), qué símbolos Dart las invocan y qué función de `lib-dispatch` enruta realmente la petición al handler registrado?",
+      "respuesta_esperada": "`sync_event(_input: *const u8, _len: usize) -> *const u8` (`dart-ffi/src/lib.rs:231`) está marcada como no implementada: hace `error!(\"unimplemented sync_event\")` y devuelve `extend_front_four_bytes_into_bytes(&vec![])` (`lib.rs:232-236`); `set_env(_data: *const c_char)` (`lib.rs:308`) está marcada `// Deprecated` y no hace nada. Ninguna se llama desde Dart en producción: el camino vivo es `async_event(port, input, len)` (`lib.rs:175`) → `DART_APPFLOWY_CORE.dispatch` → `AFPluginDispatcher::boxed_async_send_with_callback` (`lib-dispatch/src/dispatcher.rs:99`), que busca el plugin con `plugin_map_or_crash(request.event.id)` y ejecuta el handler en `tokio::task::spawn_local` (`dart-ffi/src/lib.rs:208`).",
+      "docs_fuente": ["06-01-ffi", "06-02-lib-dispatch", "11-catalogo-eventos-ffi"],
+      "verificacion_codigo": "appflowy/frontend/rust-lib/dart-ffi/src/lib.rs:231",
+      "notas": "La tabla de las 8 funciones con su estado (`06-01-ffi` §2) debe cruzarse con la cadena de dispatch de `06-02-lib-dispatch` §3/§7 para saber cuál es realmente el enrutador y qué se ejecuta en el runtime."
+    },
+    {
+      "id": "Q05",
+      "area": "ffi-lib-dispatch",
+      "pregunta": "Los bytes que cruzan la frontera llevan un framing de 4 bytes de longitud. ¿Quién añade ese prefijo de 4 bytes big-endian y en qué punto delPipeline? Contrasta con lo que realmente viaja por el camino vivo (`async_event` → `post_to_flutter`).",
+      "respuesta_esperada": "El prefijo lo añade `extend_front_four_bytes_into_bytes(bytes)` (`appflowy/frontend/rust-lib/dart-ffi/src/c.rs:19-26`), que escribe `BigEndian::write_u32(&mut marker_bytes, bytes.len())` delante del payload. En el workspace ese helper se invoca **sólo** desde `sync_event` (`dart-ffi/src/lib.rs:235`), es decir, desde la función sin implementar. El camino vivo no lo usa: `async_event` deserializa con `FFIRequest::from_u8_pointer(pointer, len)` (`dart-ffi/src/model/ffi_request.rs:16`), cuyo mensaje es `FFIRequest { event: String (pb 1), payload: Vec<u8> (pb 2) }`, y la respuesta vuelve por `post_to_flutter` (`dart-ffi/src/lib.rs:258`), que postea `FFIResponse::from(response).into_bytes()` sobre un `allo_isolate::Isolate::new(port)`; el derive `ProtoBuf` genera `TryInto<Vec<u8>>` vía `protobuf::Message::write_to_bytes`, sin cabecera adicional.",
+      "docs_fuente": ["06-01-ffi", "06-02-lib-dispatch", "06-05-ejemplo-traza-opendocument", "06-03-codegen"],
+      "verificacion_codigo": "appflowy/frontend/rust-lib/dart-ffi/src/c.rs:19",
+      "notas": "El diagrama de framing de `06-01-ffi` §6 hay que contrastarlo con la traza extremo a extremo de `06-05-ejemplo-traza-opendocument` y con lo que describe el codegen (`06-03-codegen` §2/§5); el alcance real del helper sólo se resuelve cruzando los tres."
+    },
+    {
+      "id": "Q06",
+      "area": "ffi-lib-dispatch",
+      "pregunta": "`AFPluginDispatcher` reparte 229 variantes de evento entre los crates de feature. Nombra las cinco variantes de evento que están declaradas en un `event_map.rs` pero **no** tienen handler registrado, con su crate y su índice.",
+      "respuesta_esperada": "Las cinco son: `flowy-database2::GetAllRows` (índice 177), `flowy-folder::CreateFolderWorkspace` (0), `flowy-folder::DeleteWorkspace` (3), `flowy-folder::CopyLink` (20) y `flowy-user::AddWorkspaceMember` (37). Todas aparecen con `registrations: []` y `sin_handler: true` en `OUT/_ledger/extract/events.json`, es decir, están declaradas con `#[event(...)]` pero ninguna `AFPlugin::event(...)` las engancha a un handler; el resto (224 de 229) sí lo están.",
+      "docs_fuente": ["11-catalogo-eventos-ffi", "06-02-lib-dispatch", "B1.3"],
+      "verificacion_codigo": "OUT/_ledger/extract/events.json",
+      "notas": "El recuento (229 declared / 224 registrados / 5 sin handler) sólo aparece en el resumen del catálogo de eventos y hay que contrastarlo con la afirmación de `06-02-lib-dispatch` de que el dispatcher enruta «los 229 … a sus 224 handlers», y con la lista de plugins que registra `flowy-core` en B1.3/B1.4."
+    },
+    {
+      "id": "Q07",
+      "area": "notifications",
+      "pregunta": "Al subir una imagen desde el editor, ¿qué evento FFI dispara la subida y en qué crate vive? Contrasta los dos canales de retorno distintos: ¿qué variantes tiene `StorageNotification` y por qué el progreso de subida no viaja por el sistema de notificaciones `NotificationBuilder`?",
+      "respuesta_esperada": "La subida la dispara `DocumentEvent::UploadFile` (`UploadFileParamsPB` → `UploadedFilePB`), un evento de **`flowy-document`**, no de `flowy-storage`, con handler `upload_file_handler` (`appflowy/frontend/rust-lib/flowy-document/src/event_handler.rs:442`, registrado en `flowy-document/src/event_map.rs:48`). `StorageNotification` tiene exactamente **dos** variantes, ambas de cuota: `FileStorageLimitExceeded` (0) y `SingleFileLimitExceeded` (1), emitidas por `make_notification` (`flowy-storage/src/notification.rs:22`) y consumidas por `StoreageNotificationListener`, cuyo `switch` sólo llama a `onError`. El progreso no viaja por ese canal: `FileProgress` se serializa a **JSON** y se postea por un `IsolateSink` abierto con `FileStorageEvent::RegisterStream` (`flowy-storage/src/manager.rs:138-151`), que Dart recibe en `FileStorageService` (`file_storage_task.dart:31-53`) y reparte en `_notifierList`; además `onFileProgress` (`file_storage_task.dart:61`) no tiene ningún consumidor en `appflowy_flutter/lib/`, por lo que el progreso nunca llega a la UI.",
+      "docs_fuente": ["B5.7", "14-catalogo-notificaciones", "F07", "11-catalogo-eventos-ffi"],
+      "verificacion_codigo": "appflowy/frontend/rust-lib/flowy-document/src/event_map.rs:48",
+      "notas": "La respuesta exige cruzar la secuencia de subida (B5.7), el catálogo de notificaciones (que da las 2 variantes de `StorageNotification` y sus índices 0/1) y la feature de almacenamiento (F07), más el catálogo de eventos para saber que `FileStorageEvent` sólo tiene `RegisterStream` y `QueryFile`."
+    },
+    {
+      "id": "Q08",
+      "area": "notifications",
+      "pregunta": "El indicador de sincronización de una base de datos se actualiza sin polling. ¿Qué variante de `DatabaseNotification` lo empuja, qué índice tiene, qué payload lleva y qué clase Dart la consume? Contrástala con la variante hermana de snapshots.",
+      "respuesta_esperada": "Es `DatabaseNotification::DidUpdateDatabaseSyncUpdate`, índice **84** (`appflowy/frontend/rust-lib/flowy-database2/src/notification.rs:49`), emitida desde `observe_sync_state` (`flowy-database2/src/services/database/database_observe.rs:21-39`) con payload `DatabaseSyncStatePB { value: DatabaseSyncState }` (`InitSyncBegin=0, InitSyncEnd=1, Syncing=2, SyncFinished=3`). La consume `DatabaseSyncStateListener` (`appflowy_flutter/lib/plugins/database/application/sync/database_sync_state_listener.dart`), que se registra con `id: databaseId` (no con el `viewId`) y convierte el evento en `DatabaseSyncEvent.syncStateChanged` del `DatabaseSyncBloc`. La variante hermana es `DidUpdateDatabaseSnapshotState` (índice **85**), que lleva `DatabaseSnapshotStatePB { new_snapshot_id }` y **no** tiene emisor en el cliente: el blob del snapshot se pide bajo demanda con `DatabaseEvent::GetDatabaseSnapshots` (índice 150).",
+      "docs_fuente": ["F02.12", "14-catalogo-notificaciones", "B5.6", "F02.13"],
+      "verificacion_codigo": "appflowy/frontend/rust-lib/flowy-database2/src/notification.rs:49",
+      "notas": "Los índices 84/85 y su `status` (`declared_only` la primera, `unused` la segunda) están en el catálogo de notificaciones; quién las consume y con qué clave de parser (`databaseId`, no `viewId`) sólo está en F02.12, y el contraste con `GetDatabaseSnapshots` exige el catálogo de eventos."
+    },
+    {
+      "id": "Q09",
+      "area": "notifications",
+      "pregunta": "El catálogo enumera 70 notificaciones Rust→Dart en 6 enums. ¿Qué enum es el único que emite variantes concretas desde el código Rust, cuántos sitios de emisión tiene, y qué enums declaran variantes que nunca se emiten? Nombra los dos únicos emisores con variante que existen en `flowy-database2`.",
+      "respuesta_esperada": "[LLAVE CORREGIDA 2026-10-21 tras la auditoría de C4: la versión anterior afirmaba que `UserNotification` era el único enum con emisores de variante y que los dos únicos emisores con variante en `flowy-database2` eran `DidUpdateRow` y `DidUpdateCell`, pero la inspección directa de `SRC/appflowy/frontend/rust-lib/flowy-database2/src/` y `SRC/appflowy/frontend/rust-lib/flowy-ai/src/` muestra que eso no se sostiene — el extractor `extract_notifications.py` solo captura llamadas directas a `NotificationBuilder::new`, no las wrappers `database_notification_builder` / `chat_notification_builder`.] `UserNotification` tiene 9 sitios de emisión (los 9 los confirma el extractor: `UserAuthStateChanged`, `DidLoadUserAwareness`, `DidOpenWorkspace`, `DidUpdateCloudConfig`, `DidUpdateUserProfile`, `DidUpdateUserWorkspaces`, `DidUpdateUserWorkspace`, `DidUpdateWorkspaceSetting`). Los enums **sin** ningún emisor de variante son sólo cuatro: `DocumentNotification` (5 variantes, 0 emisiones), `FolderNotification` (19, 0), `StorageNotification` (2, 0) y `SearchNotification` (2, 0). `DatabaseNotification` (35 variantes) **sí** emite variantes concretas: `notify_row` (`flowy-database2/src/services/database/database_observe.rs:319-335`, variantes `DidUpdateRow = 20`) y `notify_cell` (`database_observe.rs:337-345`, `DidUpdateCell = 40`) directamente con `NotificationBuilder::new`, y además el wrapper `database_notification_builder` (`notification.rs:93`) emite `DidFetchRow` (`database_observe.rs:309`), `DidUpdateFields` (`database_editor.rs:771, 1421, 2437`), `DidUpdateField` (`:2442`), `DidUpdateRowMeta` (`:890`), `DidUpdateLayoutSettings` (`view_editor.rs:978`), `DidUpdateDatabaseLayout` (`:1234`), `DidUpdateSettings`, `DidUpdateSort`, `DidUpdateFilter` y `DidUpdateCalculation` (`notifier.rs:53-121`). `ChatNotification` (10 variantes) **también** emite, vía `chat_notification_builder` (`flowy-ai/src/notification.rs:44`): `DidUpdateSelectedModel` (`ai_manager.rs:423, 468`), `DidUpdateChatSettings` (`:800`), `DidReceiveChatMessage` (`chat.rs:662`), `DidLoadPrevChatMessage` (`chat.rs:345, 461`), `DidLoadLatestChatMessage` (`:465`), `FinishStreaming` (`:291`), `StreamChatMessageError` (`:243, 284`), `UpdateLocalAIState`/`LocalAIResourceUpdated` (`local_ai/controller.rs`, `local_ai/resource.rs`). Así, los únicos enums **sin** emisión de variante son `DocumentNotification`, `FolderNotification`, `StorageNotification` y `SearchNotification` — no cinco como decía la versión anterior de esta respuesta.",
+      "docs_fuente": ["14-catalogo-notificaciones", "06-04-notificaciones", "B5.9", "F09.1"],
+      "verificacion_codigo": "OUT/_ledger/extract/notifications.json",
+      "notas": "La tabla por enum (variantes / emisores / listeners / estados) está en `14-catalogo-notificaciones` §3-§5 y hay que cruzarla con el canal y el debounce descritos en `06-puente-flutter-rust/04-notificaciones`, y con lo que afirma la secuencia de chat sobre quién emite `ChatNotification`."
+    },
+    {
+      "id": "Q10",
+      "area": "crdt",
+      "pregunta": "¿Cuántos campos tiene realmente el struct `EncodedCollab` que serializa un `Collab`, cuáles son y qué variantes tiene el enum `EncoderVersion`? ¿Qué hace `decode_from_bytes` cuando la deserialización falla y con qué versión etiqueta el resultado?",
+      "respuesta_esperada": "`EncodedCollab` tiene exactamente **tres** campos: `state_vector: Bytes`, `doc_state: Bytes` y `version: EncoderVersion` (con `#[serde(default)]`), en `collab/collab/src/entity.rs:6-11`; no existe ningún campo `version_vector` ni `features`. `EncoderVersion` tiene **dos** variantes: `V1 = 0` (por defecto) y `V2 = 1` (`collab/collab/src/entity.rs:14-19`); no hay `V0`. `decode_from_bytes` intenta primero `bincode::deserialize::<EncodedCollab>` y, si falla, reintenta como `EncodedCollabV0` y devuelve un `EncodedCollab` con la versión puesta a `EncoderVersion::V1` (`entity.rs:37-56`). El formato de serialización es `bincode::serialize` (`encode_to_bytes`, `entity.rs:33`).",
+      "docs_fuente": ["07-01-modelo-collab", "07-07-snapshots-conflict-resolution", "B5.12", "B5.5"],
+      "verificacion_codigo": "collab/collab/src/entity.rs:6",
+      "notas": "`07-01-modelo-collab` §6 y `07-07-snapshots-conflict-resolution` §2 dan definiciones del mismo struct que hay que contrastar entre sí (y con lo quedice la secuencia de publish sobre `EncoderVersion::V1`); el número real de campos y de variantes sólo se resuelve leyendo la declaración."
+    },
+    {
+      "id": "Q11",
+      "area": "crdt",
+      "pregunta": "El enum `CollabType` de `collab-entity` declara los tipos de objeto colaborativo, y `CollabPluginType` los tipos de plugin. Nombra las variantes de ambos enums y qué plugins enchufa cada manager (`FolderManager`, `DocumentManager`, `DatabaseManager`) según `deps_resolve/`.",
+      "respuesta_esperada": "`CollabType` (`collab/collab-entity/src/collab_object.rs`) declara siete variantes con estos discriminantes: `Document = 0`, `Database = 1`, `WorkspaceDatabase = 2`, `Folder = 3`, `DatabaseRow = 4`, `UserAwareness = 5`, `Unknown = 6`, y cada una valida que el `yrs::Doc` tenga las secciones requeridas con `validate_require_data`. `CollabPluginType` (`collab/collab/src/core/collab_plugin.rs:16-22`) tiene **sólo dos** variantes: `CloudStorage` y `Other(String)` — no `Snapshot`, `KV` ni `Persistence`. `deps_resolve/` crea cada `Collab` con `LocalStorage` (persistencia local) siempre y `CloudStorage` sólo en modo cloud; `DocumentManager` y `DatabaseManager` añaden además el `KVAction` para el índice secundario `view_id → object_id`.",
+      "docs_fuente": ["07-01-modelo-collab", "07-06-collab-plugins", "07-04-database", "08-03-collab-db"],
+      "verificacion_codigo": "collab/collab/src/core/collab_plugin.rs:16",
+      "notas": "La lista de plugins por manager está en `07-06-collab-plugins` §6 y la lista de variantes de `CollabType` en `07-01-modelo-collab` §5; el número real de variantes de `CollabPluginType` hay que contrastarlo con ambas y con el enum de la base de datos (`07-04-database`)."
+    },
+    {
+      "id": "Q12",
+      "area": "crdt",
+      "pregunta": "¿Qué eventos FFI exposes `flowy-document` para deshacer y rehacer una edición, qué handlers tienen y qué estructura de `yrs` los sostiene? Explica por qué el undo de un cliente no puede deshacer la edición de otro.",
+      "respuesta_esperada": "Son `DocumentEvent::Undo` (índice 7) y `DocumentEvent::Redo` (índice 6), ambos con input `DocumentRedoUndoPayloadPB` y output `DocumentRedoUndoResponsePB`, registrados con `undo_handler` (`appflowy/frontend/rust-lib/flowy-document/src/event_handler.rs:206`) y `redo_handler` (`event_handler.rs:187`) en `flowy-document/src/event_map.rs:30-31`. Los sostienen `Collab::undo` / `Collab::redo` (`collab/collab/src/core/collab.rs:173` y `:178`), que operan sobre el `yrs::UndoManager` por cliente obtenido con `undo_manager_mut()` (`collab.rs:162`). El `UndoManager` de `yrs` solo apila y revierte operaciones originadas en el `ClientID` local, de modo que un cliente nunca deshace la escritura de otro; existe además `DocumentEvent::CanUndoRedo` (índice 8) para consultar el estado.",
+      "docs_fuente": ["07-07-snapshots-conflict-resolution", "11-catalogo-eventos-ffi", "B5.4", "B5.5"],
+      "verificacion_codigo": "collab/collab/src/core/collab.rs:173",
+      "notas": "Los índices y los nombres de handler están en el catálogo de eventos; la línea exacta de `undo`/`redo`/`undo_manager_mut` y la explicación del `UndoManager` per-client están en `07-07-snapshots-conflict-resolution` §5, y la consecuencia para la edición concurrente en `B5.5`."
+    },
+    {
+      "id": "Q13",
+      "area": "databases",
+      "pregunta": "En `flowy-database2` no existen eventos dedicados para escribir filtros ni para crear/actualizar un orden. ¿Por qué evento FFI viajan ambas cosas, qué campos del payload los transporta, qué eventos sí existen sólo para leerlos y cuál existe para borrarlos en bloque?",
+      "respuesta_esperada": "Ambos van por `DatabaseEvent::UpdateDatabaseSetting`, cuyo input es `DatabaseSettingChangesetPB` y cuyo handler es `update_database_setting_handler` (`appflowy/frontend/rust-lib/flowy-database2/src/event_handler.rs:118`). El handler extrae del changeset los campos opcionales `insert_filter`, `update_filter_type`, `update_filter_data` y `delete_filter` (cada uno llama a `DatabaseEditor::modify_view_filters`, `event_handler.rs:128-148`) y `update_sort`; el lado Dart los rellena en `filter_service.dart:239` y `sort_service.dart:39` con `DatabaseEventUpdateDatabaseSetting(...).send()`. Para lectura sí hay eventos propios: `GetAllFilters` y `GetAllSorts` (registrados en `event_map.rs:21-22`), y para borrar todos los órdenes en bloque, `DeleteAllSorts` (`event_map.rs:23`, invoked desde `sort_service.dart:111`). El agrupamiento, en cambio, sí tiene evento propio: `SetGroupByField` (`event_map.rs:58`).",
+      "docs_fuente": ["B5.6", "F02.4", "F02.5", "11-catalogo-eventos-ffi"],
+      "verificacion_codigo": "appflowy/frontend/rust-lib/flowy-database2/src/event_handler.rs:118",
+      "notas": "La ausencia de `SetFilters`/`CreateOrUpdateSort` sólo se ve al contrastar la tabla de eventos de la secuencia (B5.6, con su nota de corrección de C3) con los servicios Dart de filtros y de orden (F02.4 y F02.5) y con el registro real en `flowy-database2/src/event_map.rs`."
+    },
+    {
+      "id": "Q14",
+      "area": "databases",
+      "pregunta": "En una vista Board, el usuario arrastra una tarjeta de una columna a otra. ¿Qué evento FFI dispara el movimiento, qué handler lo atiende y qué notificaciones `DatabaseNotification` vuelven a Dart (variante, índice, clave del `objectId` y payload)?",
+      "respuesta_esperada": "El evento es `DatabaseEvent::MoveGroupRow` (índice **112**, input `MoveGroupRowPayloadPB`), registrado con `move_group_row_handler` (`appflowy/frontend/rust-lib/flowy-database2/src/event_map.rs:60`), que resuelve el `DatabaseEditor` de la vista y llama a `DatabaseEditor::move_group_row(view_id, from_group_id, to_group_id, from_row_id, to_row_id)` (`event_handler.rs:816-835`; la lógica en `services/database/database_editor.rs:628`). La cadena interna es `DatabaseViewEditor::v_move_group_row` (`services/database_view/view_editor.rs:437`) → `handle_mut_group_result` (`view_editor.rs:1328`), que emite `DatabaseNotification::DidUpdateGroupRow` (índice **61**) con `objectId = payload.group_id` y payload `GroupRowsNotificationPB`, y `DatabaseNotification::DidUpdateNumOfGroups` (60) si el grupo de origen queda vacío. Además, como el movimiento reescribe las celdas de la fila, el observador emite `DidUpdateCell` (40, `objectId = cell_id`, sin payload) y/o `DidUpdateRow` (20, `objectId = view_id`, payload `RowsChangePB`) desde `services/database/database_observe.rs:327` y `:338`.",
+      "docs_fuente": ["F02.6", "F02.10", "11-catalogo-eventos-ffi", "14-catalogo-notificaciones"],
+      "verificacion_codigo": "appflowy/frontend/rust-lib/flowy-database2/src/event_map.rs:60",
+      "notas": "El índice 112 y el handler salen del catálogo de eventos; el índice 61 y el payload, del catálogo de notificaciones (que lo marca `unused`, dato que hay que contrastar con F02.10, que sí lo cita como la notificación que escucha el `BoardBloc`, y con F02.6, que usa nombres inexistentes)."
+    },
+    {
+      "id": "Q15",
+      "area": "databases",
+      "pregunta": "El historial de versiones de una base de datos se abre con un único evento FFI. ¿Cuál es, con su índice, su input/output y su handler? ¿Dónde acaban realmente los bytes del snapshot y por qué el módulo Rust `services/snapshot/` del crate no interviene?",
+      "respuesta_esperada": "El evento es `DatabaseEvent::GetDatabaseSnapshots`, índice **150**, con `#[event(input = \"DatabaseViewIdPB\", output = \"RepeatedDatabaseSnapshotPB\")]` (`appflowy/frontend/rust-lib/flowy-database2/src/event_map.rs:345-346`), registrado con `get_snapshots_handler` (`event_map.rs:81`; handler en `flowy-database2/src/event_handler.rs:1029-1066` con `limit` fijo). El handler delega en `DatabaseManager::get_database_snapshots` (`flowy-database2/src/manager.rs:567-584`), que consulta `cloud_service.get_database_collab_object_snapshots(&database_id, limit)`: los snapshots viven en **AppFlowy-Cloud**, no en el SQLite del cliente (el `data: Vec<u8>` de `DatabaseSnapshotPB` es el blob opaco del collab). El módulo local `flowy-database2/src/services/snapshot/` es un stub: `mod.rs` sólo declara `pub mod entities;` y `entities.rs` está vacío, sin ningún `pub struct`/`pub enum` importable.",
+      "docs_fuente": ["F02.12", "11-catalogo-eventos-ffi", "08-03-collab-db", "F02.0.2.0"],
+      "verificacion_codigo": "appflowy/frontend/rust-lib/flowy-database2/src/manager.rs:567",
+      "notas": "El índice 150 sólo aparece en el catálogo de eventos y en la tabla de F02.12; que el snapshot no se persista en local y que `services/snapshot/` sea un stub hay que cruzarlo con la sección de persistencia de F02.12 y con el documento de persistencia/collab-KV."
+    },
+    {
+      "id": "Q16",
+      "area": "databases",
+      "pregunta": "El bloque de export/import documenta que Markdown, HTML y JSON del documento se hacen 100 % en Dart, mientras que el CSV de base de datos se hace en Rust. ¿Qué evento FFI usa cada uno y por qué la exportación a Markdown no cruza el FFI?",
+      "respuesta_esperada": "El CSV de base de datos lo serializa Rust: `DatabaseEvent::ExportCSV` (input `DatabaseViewIdPB`, output `DatabaseExportDataPB`) con `export_csv_handler` (`appflowy/frontend/rust-lib/flowy-database2/src/event_map.rs:79`, handler en `flowy-database2/src/event_handler.rs:1029`), que llama a `DatabaseEditor::export_csv(CSVFormat::Original)` y devuelve `export_type: DatabaseExportDataType::CSV`. La exportación a Markdown **no usa ningún evento FFI**: `DocumentExporter.export` (`appflowy/frontend/appflowy_flutter/lib/workspace/application/export/document_exporter.dart:27`) sólo llama a `DocumentService.openDocument` para traer el `DocumentDataPB` a memoria y a partir de ahí todo es Dart — `documentToMarkdown` con 13 `customParsers`, `Archive` de `package:archive` y `ZipEncoder`, escribiendo con `File.writeAsBytes`. El único cruce FFI es, por tanto, la lectura del documento (`DocumentEvent::OpenDocument`), no la serialización.",
+      "docs_fuente": ["B4.5", "B5.10", "F11", "B4.1", "11-catalogo-eventos-ffi"],
+      "verificacion_codigo": "appflowy/frontend/rust-lib/flowy-database2/src/event_handler.rs:1029",
+      "notas": "La tabla «lado de conversión» de `B4.13` afirma que Markdown es 100 % Dart y CSV 100 % Rust, pero el nombre del evento FFI sólo está en el catálogo de eventos y en el motor de CSV (B4.5); el caso especial del ZIP hay que sacarlo de B5.10 y del contrato de UI de F11."
+    },
+    {
+      "id": "Q17",
+      "area": "documents",
+      "pregunta": "El enum `DocumentEvent` declara 21 variantes. Al abrir y editar un documento, ¿qué evento trae el `DocumentDataPB`, cuál aplica las ediciones y cuál cierra el `Collab`? ¿Qué notificación devuelve el estado al cliente y desde dónde se emite exactamente?",
+      "respuesta_esperada": "Abrir es `DocumentEvent::OpenDocument` (input `OpenDocumentPayloadPB`, output `DocumentDataPB`, handler `open_document_handler` en `appflowy/frontend/rust-lib/flowy-document/src/event_handler.rs:69`, registrado en `event_map.rs:19`); editar es `DocumentEvent::ApplyAction` (input `ApplyActionPayloadPB`, handler `apply_action_handler`, `event_handler.rs:90`); cerrar es `DocumentEvent::CloseDocument` (input `CloseDocumentPayloadPB`, sin output, `event_handler.rs:83`). La notificación es `DocumentNotification::DidReceiveUpdate` (índice 1, `flowy-document/src/notification.rs:11`), y se emite **desde la suscripción a los cambios de bloque** del propio `Collab`, en `flowy-document/src/document.rs:22-27`, con `document_notification_builder(&doc_id, DidReceiveUpdate).payload::<DocEventPB>((events, is_remote, None).into()).send()`; no la emite ningún handler de evento FFI.",
+      "docs_fuente": ["B5.4", "14-catalogo-notificaciones", "11-catalogo-eventos-ffi", "F01.0.1"],
+      "verificacion_codigo": "appflowy/frontend/rust-lib/flowy-document/src/document.rs:22",
+      "notas": "El catálogo de notificaciones marca `DidReceiveUpdate` como `declared_only` (sin emisor localizado) mientras la secuencia B5.4 la presenta como emitida por `apply_action_handler`: sólo cruzando el enum con la suscripción de `document.rs` se obtiene el emisor real y el payload `DocEventPB`."
+    },
+    {
+      "id": "Q18",
+      "area": "documents",
+      "pregunta": "La exportación a Markdown produce siempre un `.zip`. ¿Qué clases reales hacen la conversión y el empaquetado, cuántos `NodeParser` adicionales registra la app y qué ocurre si el usuario elige la opción de texto plano?",
+      "respuesta_esperada": "La conversión la hace `DocumentMarkdownEncoder.convert` (`editor/lib/src/plugins/markdown/encoder/document_markdown_encoder.dart`, `Converter<Document, String>`), invocado por `documentToMarkdown` con una lista `customParsers` de **13** `NodeParser` registrada en `appflowy/frontend/appflowy_flutter/lib/shared/markdown_to_document.dart:46-59` (MathEquation, Callout, ToggleList, CustomImage, CustomMultiImage, Grid, Board, Calendar, CustomParagraph, SubPage, SimpleTable, LinkPreview, FileBlock). El empaquetado usa `Archive` de `package:archive` (directorio de recursos `'<docId>/'` + `'<nombre>-<docId>.md'`) comprimido con `ZipEncoder().encode(...)` y escrito con `File.writeAsBytes` (`markdown_to_document.dart:74-90`). Si se elige texto plano, `DocumentExporter.export` ejecuta `case DocumentExportType.text: throw UnimplementedError();` (`appflowy/frontend/appflowy_flutter/lib/workspace/application/export/document_exporter.dart:55-56`) y ningún widget de la UI llega a dispatcharlo.",
+      "docs_fuente": ["B5.10", "B4.1", "F11", "F01.0.3.3"],
+      "verificacion_codigo": "appflowy/frontend/appflowy_flutter/lib/workspace/application/export/document_exporter.dart:55",
+      "notas": "Los nombres reales de las clases y el número de parsers sólo están en la nota de corrección de C3 de B5.10 y en el motor B4.1; el `throw UnimplementedError()` está en B4.3 y en el contrato de UI de F11, que además declara las cuatro variantes del enum `DocumentExportType`."
+    },
+    {
+      "id": "Q19",
+      "area": "documents",
+      "pregunta": "AppFlowy no tiene exportación a texto plano, pero el crate `flowy-document` sí expone eventos que producen texto. ¿Cuáles son, qué producen y por qué el bloque de exportación los trata como rutas colaterales sin botón de UI?",
+      "respuesta_esperada": "Los eventos son `DocumentEvent::GetDocumentText` (input `OpenDocumentPayloadPB`, output `DocumentTextPB`, handler `get_document_text_handler` en `appflowy/frontend/rust-lib/flowy-document/src/event_handler.rs:106`, registrado en `event_map.rs:21`) y `DocumentEvent::ConvertDocument` (input `ConvertDocumentPayloadPB`, output `ConvertDocumentResponsePB`, handler `convert_document_handler` en `event_handler.rs:381`). Son rutas colaterales porque el enum `DocumentExportType` declara `text` pero su rama lanza `UnimplementedError`, y la pestaña `ExportTab` sólo ofrece cuatro botones para documentos (HTML, Markdown, Clipboard y JSON, este último bajo `kDebugMode`); el botón de portapapeles invoca el motor de **Markdown**, no el de texto. El importador, en cambio, sí acepta `.txt` a través de `ImportType.markdownOrText`.",
+      "docs_fuente": ["B4.3", "11-catalogo-eventos-ffi", "F11", "B5.10"],
+      "verificacion_codigo": "appflowy/frontend/rust-lib/flowy-document/src/event_map.rs:21",
+      "notas": "Que los dos eventos existen y qué producen sale del catálogo de eventos; que no hay botón de texto plano y que el import sí acepta `.txt` sale de B4.3, y el desglose de los cuatro botones de `ExportTab` está en F11 y en B5.10."
+    },
+    {
+      "id": "Q20",
+      "area": "ai-chat",
+      "pregunta": "`AIEvent::GetChatInfo` está registrado contra un handler que no hace nada. ¿Con qué handler está registrado en realidad, qué variante de evento comparte ese handler y qué.handler correcto existe sin conectar? Da líneas.",
+      "respuesta_esperada": "En `appflowy/frontend/rust-lib/flowy-ai/src/event_map.rs:44` la línea es `.event(AIEvent::GetChatInfo, create_chat_context_handler)`, es decir comparte handler con `AIEvent::CreateChatContext` (`event_map.rs:43`), pese a que `GetChatInfo` declara `output = \"ChatInfoPB\"`. `create_chat_context_handler` (`flowy-ai/src/event_handler.rs:290-297`) descarta su payload y devuelve `Ok(())` sin hacer nada. El handler correcto, `get_chat_info_handler`, sí está implementado en `flowy-ai/src/event_handler.rs:300-308` pero no está conectado a ninguna variante del enum (`AIEvent::GetChatInfo` es el índice 24).",
+      "docs_fuente": ["F09.1", "11-catalogo-eventos-ffi", "B5.9"],
+      "verificacion_codigo": "appflowy/frontend/rust-lib/flowy-ai/src/event_map.rs:44",
+      "notas": "El índice 24 y el `output` anunciado salen del catálogo de eventos; el desajuste handler/variante y la existencia del handler huérfano los documenta F09.1 como «defecto de registro», y B5.9 lo recoge como riesgo («Dart siempre recibe vacío») sin dar las líneas, así que hay que cruzarlos."
+    },
+    {
+      "id": "Q21",
+      "area": "ai-chat",
+      "pregunta": "Elegir un modelo local de IA no significa que nada salga del dispositivo. ¿Qué campo decide el enrutado en `ChatServiceMiddleware` y en qué métodos se consulta? ¿Qué método **no** lo consulta y por tanto manda la pregunta al servidor igualmente?",
+      "respuesta_esperada": "El campo es `AIModel.is_local`. `ChatServiceMiddleware::stream_answer` lo consulta junto con `local_ai.is_ready()` (`appflowy/frontend/rust-lib/flowy-ai/src/middleware/chat_service_mw.rs:99-124`) y devuelve `FlowyError::local_ai_not_ready()` si el modelo es local pero Ollama no responde; también se consulta en `get_related_message` (`:181-202`) y en `stream_complete` (`:218-229`). Lo que **no** lo consulta es `create_question` (`:71-83`), que siempre escribe la pregunta en `cloud_service`, de modo que el texto de la pregunta sale del dispositivo aunque la respuesta se calcule en local. Además `get_answer` decide **sólo** por `local_ai.is_ready()` (`:126-147`), sin mirar `is_local`.",
+      "docs_fuente": ["B6.3", "F09.1", "B5.9"],
+      "verificacion_codigo": "appflowy/frontend/rust-lib/flowy-ai/src/middleware/chat_service_mw.rs:71",
+      "notas": "La frontera de privacidad y las tres asimetrías las documenta B6.3 §4.4/§5.4; F09.1 describe el mismo middleware desde el crate y añade que la respuesta se persiste vía `cloud_service.create_answer`; B5.9 sólo muestra el camino feliz del streaming y no menciona esta fuga."
+    },
+    {
+      "id": "Q22",
+      "area": "search",
+      "pregunta": "La búsqueda descarta los resultados de una consulta anterior cuando llega una más nueva. ¿Cómo se construye el `search_id`, qué guarda Rust para decidir y qué guarda Dart para no consumir? Explica qué pasa si dos consultas distintas caen en el mismo milisegundo.",
+      "respuesta_esperada": "Dart construye el `search_id` con `DateTime.now().millisecondsSinceEpoch.toString()` (`appflowy/frontend/appflowy_flutter/lib/workspace/application/command_palette/search_service.dart:18`) y lo manda dentro de `SearchQueryPB` junto al `stream_port` (`search_service.dart:21-27`). Rust mantiene `current_search: Option<i64>` protegido por un `Mutex` en `flowy-search/src/services/manager.rs`; al entrar en `perform_search_with_sink` descarta la búsqueda si `current.map_or(false, |cur| cur > search_id)` y luego adopta el nuevo valor (`manager.rs:132-139`). Dart aplica un segundo filtro independiente: `bool _isActiveSearch(String searchId) => !isClosed && state.searchId == searchId;` (`command_palette_bloc.dart:332-333`). Consecuencia: como Rust admite cuando `current <= search_id` pero la cancelación posterior exige **igualdad estricta**, dos búsquedas distintas con el mismo `search_id` se ejecutan ambas y escriben en el mismo isolate.",
+      "docs_fuente": ["F08", "B5.8", "11-catalogo-eventos-ffi"],
+      "verificacion_codigo": "appflowy/frontend/rust-lib/flowy-search/src/services/manager.rs:132",
+      "notas": "La doble guarda y la colisión por milisegundo sólo están descritas en F08 §10/§11/§13; B5.8 describe la secuencia pero da un debounce de 200 ms y afirma que hay cuatro handlers con `FolderView`, lo que hay que contrastar con el registro real."
+    },
+    {
+      "id": "Q23",
+      "area": "search",
+      "pregunta": "`SearchDepsResolver` registra un único handler y el enum `SearchNotification` no tiene emisor. ¿Qué handler se registra al resolver dependencias, qué línea está comentada, dónde se registra el handler local y por qué los resultados locales no traen texto?",
+      "respuesta_esperada": "`SearchDepsResolver::resolve` registra **sólo** `DocumentCloudSearchHandler` (`appflowy/frontend/rust-lib/flowy-core/src/deps_resolve/search_deps.rs:14-18`), y la línea 13 tiene comentado `let folder_handler = Arc::new(FolderSearchHandler::new(folder_indexer));`: los títulos de vistas no se buscan aunque `folder_manager` se siga pasando. El handler local, `DocumentLocalSearchHandler`, se registra más tarde, en `SearchManager::create_local_document_search`, en el `DashMap` bajo la clave `SearchType::DocumentLocal` y sólo si se pudo resolver el `Weak<RwLock<DocumentTantivyState>>` (`flowy-search/src/services/manager.rs:66-76`). Los resultados locales no traen texto porque `LocalSearchResponseItemPB` no tiene campo `content` (a diferencia de `SearchResponseItemPB`), por lo que el BLoC Dart lo rellena con `content: ''` y fusiona con `putIfAbsent` tras los del servidor. `SearchNotification` (`Unknown=0`, `DidUpdateResults=1`) existe en Rust y tiene parser Dart, pero no hay ninguna llamada a `NotificationBuilder` con esa fuente.",
+      "docs_fuente": ["F08", "B5.8", "14-catalogo-notificaciones"],
+      "verificacion_codigo": "appflowy/frontend/rust-lib/flowy-core/src/deps_resolve/search_deps.rs:13",
+      "notas": "El registro en dos fases y la ausencia de emisor de `SearchNotification` están en F08 §5 y §7.2; B5.8 afirma que hay cuatro handlers activos (incluido `FolderView`), lo que sólo se resuelve confrontando ambos documentos con `search_deps.rs`."
+    },
+    {
+      "id": "Q24",
+      "area": "export-import",
+      "pregunta": "La importación de un CSV no es un evento del crate de bases de datos. ¿Qué evento FFI la transporta, en qué crate vive, qué payload lleva, y qué información lleva cada ítem? Indica además con qué evento se leen los filtros/órdenes, para contraste.",
+      "respuesta_esperada": "La importación de CSV entra por `FolderEvent::ImportData` (índice 30, input `ImportPayloadPB`, output `RepeatedViewPB`), del crate **`flowy-folder`**, registrado con `import_data_handler` (`appflowy/frontend/rust-lib/flowy-folder/src/event_map.rs:33`; handler en `flowy-folder/src/event_handler.rs:356`). El `ImportPanel` agrupa **todos** los ficheros elegidos en un único `ImportPayloadPB` y emite un solo evento (`import_service.dart:19`); cada ítem es un `ImportItemPayloadPB { name, data, viewLayout, importType }`, y el CSV usa `ViewLayoutPB.Grid` con `ImportTypePB.CSV` (`import_panel.dart:187-195`). El handler lo convierte a `ImportParams` y `FolderManager::import` llama por ítem a `import_single_file`, creando vistas nuevas en el folder collab. Como contraste, la lectura de filtros y órdenes de una base de datos sí usa eventos propios de `flowy-database2`: `GetAllFilters` y `GetAllSorts`.",
+      "docs_fuente": ["B5.11", "B4.9", "F10", "11-catalogo-eventos-ffi"],
+      "verificacion_codigo": "appflowy/frontend/rust-lib/flowy-folder/src/event_map.rs:33",
+      "notas": "La nota de corrección de C3 de B5.11 elimina el inexistente `ImportCsvData`; contrastarlo con el motor de importación de CSV (B4.9), con la UI del `ImportPanel` (F10) y con el catálogo de eventos es lo que fija el crate y el índice correctos."
+    },
+    {
+      "id": "Q25",
+      "area": "export-import",
+      "pregunta": "La importación de un ZIP de Notion no descomprime nada en el cliente. ¿Qué evento la dispara, qué hace su handler, qué ocurre en un workspace puramente local y qué queda del crate `collab-importer` sin uso?",
+      "respuesta_esperada": "La dispara `FolderEvent::ImportZipFile` (input `ImportZipPB`, sin output), registrado con `import_zip_file_handler` (`appflowy/frontend/rust-lib/flowy-folder/src/event_map.rs:34`; handler en `flowy-folder/src/event_handler.rs:367`), que se reduce a `FolderManager::import_zip_file` → `StorageCloudService::import_zip`: pide a AppFlowy-Cloud una URL prefirmada y sube allí el ZIP (`flowy-server/src/af_cloud/impls/folder.rs:262`). La extracción y el parseo de Notion ocurren **en el servidor**, fuera del alcance. En el servidor local la operación falla con `FlowyError::local_version_not_support()` (`flowy-server/src/local_server/impls/folder.rs:170`). El crate `collab-importer` de `AppFlowy-Collab` —con su `NotionImporter` de Rust (`collab-importer/src/notion/importer.rs:27`) y `zip_tool::async_zip`— no tiene ningún llamador en producción: sus únicas referencias están en los tests del propio crate.",
+      "docs_fuente": ["B5.11", "B4.11", "F12.2", "11-catalogo-eventos-ffi"],
+      "verificacion_codigo": "appflowy/frontend/rust-lib/flowy-folder/src/event_handler.rs:367",
+      "notas": "El camino feliz y sus dos homónimos (`NotionImporter` de Dart frente al de Rust) están en B5.11; el motor por formato en B4.11; y el comportamiento del servidor local (`local_version_not_support`) sólo aparece al cruzar con la tabla de superficies de F12.2."
+    },
+    {
+      "id": "Q26",
+      "area": "export-import",
+      "pregunta": "La matriz de round-trip del bloque de exportación/importación marca varios formatos como «hueco verificado». ¿Cuáles son los formatos sin camino de exportación o sin importador real desde la UI, y qué tres pares de ida y vuelta sí quedan cerrados?",
+      "respuesta_esperada": "Los huecos verificados son: texto plano (el `DocumentExportType.text` lanza `UnimplementedError` y ningún botón lo despacha), HTML y JSON del documento (existen los decoders `documentToHTML` y el parser inverso, pero no hay importador con UI), «raw database data» (se exporta pero no se importa), PDF (exportable desde el ejemplo del paquete editor, sin decoder) y la publicación web (no tiene vuelta: ningún `ImportType` acepta una URL pública). Los tres pares canónicos que sí cierran ida y vuelta son Markdown → Markdown, CSV → CSV (con el importador heurístico `CSVTemplate`) y `.afdb` (META) → `.afdb`.",
+      "docs_fuente": ["B4.13", "B4.3", "B4.11", "B5.10"],
+      "verificacion_codigo": "OUT/10-motor-export-import/13-matriz-round-trip.md",
+      "notas": "La matriz y los tres pares cerrados están en B4.13; cada hueco necesita su propio documento del bloque (B4.3 para texto plano, B4.7 para PDF/Quill, B4.11 para ZIP/Notion) y B5.10 para confirmar que el ZIP de Markdown siempre se produce, de modo que ninguna respuesta se puede leer en un solo sitio."
+    },
+    {
+      "id": "Q27",
+      "area": "publish",
+      "pregunta": "La publicación web no genera HTML en el cliente. ¿Qué evento FFI la dispara, cómo se decide el slug público cuando el cliente no lo envía, quéViews quedan excluidas y qué límite de longitud impone la función Rust?",
+      "respuesta_esperada": "La dispara `FolderEvent::PublishView` (input `PublishViewParamsPB`), registrado con `publish_view_handler` (`appflowy/frontend/rust-lib/flowy-folder/src/event_map.rs:45`; handler en `flowy-folder/src/event_handler.rs:402`). El cliente nunca produce HTML: `FolderManager::publish_view` rechaza explícitamente las vistas de tipo chat, recorre `get_batch_publish_payload(view_id, publish_name, false)` y `get_publish_payload` aplica `publish_name.unwrap_or_else(|| generate_publish_name(&view.id, &view.name))` (`flowy-folder/src/manager.rs:1864`). `generate_publish_name` (`flowy-folder/src/publish_util.rs:11-22`) reemplaza con guiones todo lo que no case con la regex `[\\w-]` y trunca con `&name[..std::cmp::min(49 - id_len, name_len)]`, de modo que el resultado final —nombre + guion + UUID— no supera los **50 caracteres**, límite que impone el backend. Las vistas hijas se saltan si son chats (`manager.rs:1788-1791`) y `view_pb_to_publish_view` deja `child_views: None` (`publish_util.rs:24-37`).",
+      "docs_fuente": ["B4.12", "F12.2", "B5.12", "F12.1"],
+      "verificacion_codigo": "appflowy/frontend/rust-lib/flowy-folder/src/publish_util.rs:11",
+      "notas": "El motor (payload, recorrido recursivo, `EncodedCollab` → bincode → POST) está en B4.12; el punto exacto donde se decide el slug (`get_publish_payload`, línea 1864) y la exclusión de chats están en F12.2; y la secuencia B5.12 da la cadena desde la UI. Ninguno de los tres basta solo."
+    },
+    {
+      "id": "Q28",
+      "area": "errors",
+      "pregunta": "¿Cuántas variantes tiene el enum `ErrorCode` y con qué representación se serializa? Contrasta los dos enums de código de estado que atraviesan la frontera: el interno de `lib-dispatch` y el que ve Dart. ¿A qué `ErrorCode` concreto corresponde el fallo del servidor local al importar un ZIP?",
+      "respuesta_esperada": "`ErrorCode` es un `#[repr(u8)]` con **133** variantes (`appflowy/frontend/rust-lib/flowy-error/src/code.rs`), y su valor `u8` es estable para que Dart pueda reconstruirlo como `FlowyError.code`. El enum interno de `lib-dispatch` es `StatusCode { Ok = 0, Err = 1 }` (`lib-dispatch/src/response/response.rs:14-17`), dentro de `AFPluginEventResponse { payload, status_code }` (`response.rs:22-26`); el que ve Dart es `FFIStatusCode { Ok = 0, Err = 1, Internal = 2 }` (`dart-ffi/src/model/ffi_response.rs:5-10`), que añade una tercera variante. El fallo del servidor local al importar un ZIP es `FlowyError::local_version_not_support()`, definido con la macro `static_flowy_error!` (`flowy-error/src/errors.rs:150`) y mapeado a `ErrorCode::LocalVersionNotSupport = 88` (`flowy-error/src/code.rs:255`).",
+      "docs_fuente": ["15-catalogo-errores", "06-02-lib-dispatch", "F12.2", "B1.4"],
+      "verificacion_codigo": "appflowy/frontend/rust-lib/flowy-error/src/code.rs:255",
+      "notas": "El recuento de 133 y el `repr(u8)` están en `15-catalogo-errores`; los dos enums de estado y su diferencia sólo se ven al cruzar `06-02-lib-dispatch` §5 con la capa FFI de `06-01-ffi`; y el código concreto del servidor local aparece en F12.2 y en la secuencia de importación, no en el catálogo de errores."
+    },
+    {
+      "id": "Q29",
+      "area": "security",
+      "pregunta": "El token de sesión se obtiene en Rust y vuelve a Dart. ¿En qué tabla y columna se persiste, con qué cifrado, qué únicos `PRAGMA` aplica el pool de SQLite, y cuál es el único cifrado que existe en el cliente y por qué no protege el disco?",
+      "respuesta_esperada": "Se persiste en la columna `token` de la tabla `user_table`, declarada como `Text` (`appflowy/frontend/rust-lib/flowy-sqlite/src/schema.rs:103-113`), en texto claro. El pool de SQLite sólo aplica tres `PRAGMA`: `busy_timeout`, `journal_mode` y `synchronous` (`flowy-sqlite/src/sqlite_impl/pool.rs:146-152`); no hay `PRAGMA key`, ni SQLCipher, ni cifrado de página, así que la base `flowy-database.db` no está cifrada. El único cifrado del cliente es AES-256-GCM (PBKDF2-HMAC-SHA256, 1000 iteraciones, nonce de 12 bytes) en `lib-infra/src/encryption/mod.rs`, y se usa únicamente para la *encryption sign* del `uid` (`flowy-user/src/user_manager/manager_user_encryption.rs:7-10`), activado por `cloud_config.enable_encrypt` (`flowy-core/src/app_life_cycle.rs:151-160`); su clave (`encrypt_secret`) se guarda en la propia tabla `kv_table`, sin cifrar (`flowy-user/src/services/cloud_config.rs:10-15`, `:50-55`). A esto se suma que la URI del deep link, que lleva `access_token` y `refresh_token`, se registra en claro (`startup/tasks/appflowy_cloud_task.dart:37`).",
+      "docs_fuente": ["B6.3", "08-01-sqlite-schema", "08-02-kv", "F17"],
+      "verificacion_codigo": "appflowy/frontend/rust-lib/flowy-sqlite/src/schema.rs:103",
+      "notas": "La columna y las 16 tablas salen de `08-01-sqlite-schema`; los `PRAGMA`, el algoritmo y la ubicación de la clave sólo están en B6.3 §5.2; y la fuga por el deep link hay que cruzarla con la feature de plataforma (F17), que es quien documenta el registro de esa URI."
+    },
+    {
+      "id": "Q30",
+      "area": "mobile",
+      "pregunta": "El árbol de rutas móvil se construye bajo un guard de plataforma. ¿Cuántas rutas declara, cuántas viven dentro del `StatefulShellRoute.indexedStack`, cuáles son sus cuatro ramas y por qué esas cuatro —y sólo esas cuatro— no llevan `parentNavigatorKey`?",
+      "respuesta_esperada": "Bajo `if (UniversalPlatform.isMobile)` se registran **29** rutas en `appflowy/frontend/appflowy_flutter/lib/startup/tasks/generate_router.dart`, frente al árbol de escritorio que se construye con `if (UniversalPlatform.isDesktop)`. Cuatro de ellas son las ramas del `StatefulShellRoute.indexedStack` (`generate_router.dart:133`) y son, en orden: `MobileHomeScreen`, `MobileSearchScreen`, `MobileFavoriteScreen` y `MobileNotificationsScreenV2` (`generate_router.dart:167-213`), que el shell renderiza con `MobileBottomNavigationBar`. Esas cuatro son las únicas sin `parentNavigatorKey: AppGlobals.rootNavKey` porque se renderizan dentro del `StatefulNavigationShell` y así conservan cada una su pila y su estado al alternar pestañas; las 25 restantes sí lo llevan y se montan sobre el navegador raíz (`generate_router.dart:220`, `:573`).",
+      "docs_fuente": ["F16.1.1", "F16.0", "B1.4", "16-catalogo-flags-rutas-atajos"],
+      "verificacion_codigo": "appflowy/frontend/appflowy_flutter/lib/startup/tasks/generate_router.dart:133",
+      "notas": "El reparto 29/4/25 y la lista de las cuatro ramas están en F16.1.1; F16.0 explica la corrección de scope (dos superficies móviles distintas) y el contraste con el escritorio; y el recuento global de rutas del catálogo (`35` en total) hay que cruzarlo con B1.4 §5.2, que documenta las 35 `GoRoute` del router."
+    }
+  ]
+}

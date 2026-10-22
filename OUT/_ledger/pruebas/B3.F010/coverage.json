@@ -1,0 +1,56 @@
+{
+  "docs": {
+    "0.0-indice-documentos-y-editor.md": {
+      "lines": 416
+    },
+    "0.1-indice-de-documentos-y-editor-modelo-documentbloc-servicios-appflowy.md": {
+      "lines": 536
+    },
+    "0.2-indice-de-documentos-y-editor-modelo-documentbloc-servicios-collab.md": {
+      "lines": 361
+    },
+    "0.3.1-editor-core-estado-bloques-infraestructura.md": {
+      "lines": 494
+    },
+    "0.3.2-editor-toolbars-find-replace-selection-menu.md": {
+      "lines": 221
+    },
+    "0.3.3-editor-encoders-decoders-markdown-html-json-pdf.md": {
+      "lines": 191
+    },
+    "0.3.4-editor-shortcuts-ime-context-menu-servicios.md": {
+      "lines": 156
+    },
+    "0.3.5-editor-l10n-utils-bloques-misc.md": {
+      "lines": 176
+    }
+  },
+  "units": {
+    "F01.0": {
+      "archivos_total": 0
+    },
+    "F01.0.1": {
+      "archivos_total": 139
+    },
+    "F01.0.2": {
+      "archivos_total": 37
+    },
+    "F01.0.3.1": {
+      "archivos_total": 205
+    },
+    "F01.0.3.2": {
+      "archivos_total": 69
+    },
+    "F01.0.3.3": {
+      "archivos_total": 52
+    },
+    "F01.0.3.4": {
+      "archivos_total": 12
+    },
+    "F01.0.3.5": {
+      "archivos_total": 41
+    }
+  },
+  "cobertura_verified": 555,
+  "total_archivos_F01": 798
+}

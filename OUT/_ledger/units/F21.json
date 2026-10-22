@@ -1,0 +1,110 @@
+{
+  "schema_version": 1,
+  "id": "F21",
+  "feature_id": "F21",
+  "sub_index": null,
+  "titulo": "Icon/Emoji picker",
+  "fuentes": [
+    "appflowy"
+  ],
+  "archivos": [
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/shared/icon_emoji_picker/colors.dart",
+      "capa": "service",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/shared/icon_emoji_picker/emoji_search_bar.dart",
+      "capa": "service",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/shared/icon_emoji_picker/emoji_skin_tone.dart",
+      "capa": "service",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/shared/icon_emoji_picker/flowy_icon_emoji_picker.dart",
+      "capa": "service",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/shared/icon_emoji_picker/icon.dart",
+      "capa": "service",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/shared/icon_emoji_picker/icon_color_picker.dart",
+      "capa": "service",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/shared/icon_emoji_picker/icon_picker.dart",
+      "capa": "service",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/shared/icon_emoji_picker/icon_search_bar.dart",
+      "capa": "service",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/shared/icon_emoji_picker/icon_uploader.dart",
+      "capa": "service",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/shared/icon_emoji_picker/recent_icons.dart",
+      "capa": "service",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/shared/icon_emoji_picker/tab.dart",
+      "capa": "service",
+      "estado": "pendiente"
+    }
+  ],
+  "archivos_total": 11,
+  "catalogos": [
+    "blocs.json",
+    "deps.json",
+    "events.json",
+    "misc.json",
+    "notifications.json",
+    "protobuf.json"
+  ],
+  "catalogos_razon": {
+    "events.json": "Eventos FFI / dispatch de esta feature",
+    "blocs.json": "BLoCs / Cubits presentes en los archivos de esta unidad",
+    "protobuf.json": "Entidades protobuf input/output de los eventos",
+    "notifications.json": "Notificaciones Rust→Dart emitidas o escuchadas",
+    "deps.json": "Dependencias del workspace rust y pubspec",
+    "misc.json": "Rutas, atajos, flags, error codes, i18n"
+  },
+  "dependencias": [],
+  "plantilla": "feature",
+  "documento": "OUT/09-features/F21-icon-emoji-picker/F21-icon-emoji-picker.md",
+  "metricas": {
+    "archivos": 11,
+    "por_capa": {
+      "service": 11
+    },
+    "por_fuente": {
+      "appflowy": 11
+    }
+  },
+  "prioridad": 1,
+  "concurrencia": "paralela",
+  "generado_en": "2026-10-20T18:14:27Z"
+}

@@ -1,0 +1,21 @@
+{
+  "id": "B4.7",
+  "titulo": "Otros formatos: PDF, quill delta y recuento de palabras",
+  "feature_id": "B4.7",
+  "documento": "OUT/10-motor-export-import/07-otros-formatos-export.md",
+  "plantilla": "export",
+  "archivos": [
+    "editor/lib/src/plugins/pdf/html_to_pdf_encoder.dart",
+    "editor/lib/src/plugins/pdf/extension/color_ext.dart",
+    "editor/lib/src/plugins/quill_delta/quill_delta_encoder.dart",
+    "editor/lib/src/plugins/word_count/word_counter_service.dart",
+    "editor/lib/src/plugins/plugins.dart"
+  ],
+  "archivos_total": 5,
+  "fuentes": [
+    "editor"
+  ],
+  "evidence_min_pct": 30,
+  "gate_100": true,
+  "nota": "Unidad transversal: sus archivos ya pertenecen a features F* y están verificados en cobertura.csv. El bloque B4 no modifica el ledger; documenta el motor re-trazando esos mismos ficheros."
+}

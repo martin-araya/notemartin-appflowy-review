@@ -1,0 +1,177 @@
+{
+  "schema_version": 1,
+  "id": "F02.8",
+  "feature_id": "F02",
+  "sub_index": 8,
+  "titulo": "Field settings, settings de vista, database_view",
+  "fuentes": [
+    "appflowy"
+  ],
+  "archivos": [
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/plugins/database/application/setting/group_bloc.dart",
+      "capa": "bloc",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/plugins/database/application/setting/property_bloc.dart",
+      "capa": "bloc",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/plugins/database/application/setting/setting_listener.dart",
+      "capa": "bloc",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/plugins/database/application/setting/setting_service.dart",
+      "capa": "bloc",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/flowy-database2/src/services/database_view/layout_deps.rs",
+      "capa": "rust-handler",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/flowy-database2/src/services/database_view/mod.rs",
+      "capa": "rust-handler",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/flowy-database2/src/services/database_view/notifier.rs",
+      "capa": "rust-handler",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/flowy-database2/src/services/database_view/view_calculations.rs",
+      "capa": "rust-handler",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/flowy-database2/src/services/database_view/view_editor.rs",
+      "capa": "rust-handler",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/flowy-database2/src/services/database_view/view_filter.rs",
+      "capa": "rust-handler",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/flowy-database2/src/services/database_view/view_group.rs",
+      "capa": "rust-handler",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/flowy-database2/src/services/database_view/view_operation.rs",
+      "capa": "rust-handler",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/flowy-database2/src/services/database_view/view_sort.rs",
+      "capa": "rust-handler",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/flowy-database2/src/services/database_view/views.rs",
+      "capa": "rust-handler",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/flowy-database2/src/services/field_settings/entities.rs",
+      "capa": "rust-handler",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/flowy-database2/src/services/field_settings/field_settings_builder.rs",
+      "capa": "rust-handler",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/flowy-database2/src/services/field_settings/mod.rs",
+      "capa": "rust-handler",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/flowy-database2/src/services/share/csv/export.rs",
+      "capa": "rust-handler",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/flowy-database2/src/services/share/csv/import.rs",
+      "capa": "rust-handler",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/flowy-database2/src/services/share/csv/mod.rs",
+      "capa": "rust-handler",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/flowy-database2/src/services/share/mod.rs",
+      "capa": "rust-handler",
+      "estado": "verificado"
+    }
+  ],
+  "archivos_total": 21,
+  "catalogos": [
+    "blocs.json",
+    "deps.json",
+    "events.json",
+    "misc.json",
+    "notifications.json",
+    "protobuf.json"
+  ],
+  "catalogos_razon": {
+    "events.json": "Eventos FFI / dispatch de esta feature",
+    "blocs.json": "BLoCs / Cubits presentes en los archivos de esta unidad",
+    "protobuf.json": "Entidades protobuf input/output de los eventos",
+    "notifications.json": "Notificaciones Rust→Dart emitidas o escuchadas",
+    "deps.json": "Dependencias del workspace rust y pubspec",
+    "misc.json": "Rutas, atajos, flags, error codes, i18n"
+  },
+  "dependencias": [
+    {
+      "id": "F02.0",
+      "tipo": "indice",
+      "nota": "Documento indice F02.0 debe existir antes de esta sub-unidad."
+    }
+  ],
+  "plantilla": "feature",
+  "documento": "OUT/09-features/F02-bases-de-datos/8-field-settings-settings-de-vista-database-view.md",
+  "metricas": {
+    "archivos": 21,
+    "por_capa": {
+      "bloc": 4,
+      "rust-handler": 17
+    },
+    "por_fuente": {
+      "appflowy": 21
+    }
+  },
+  "prioridad": 2,
+  "concurrencia": "paralela",
+  "generado_en": "2026-10-19T21:45:28Z"
+}

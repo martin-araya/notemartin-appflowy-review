@@ -1,0 +1,452 @@
+{
+  "schema_version": 1,
+  "id": "F01.2",
+  "feature_id": "F01",
+  "sub_index": 2,
+  "titulo": "Bloques ricos: code_block, math_equation, inline_math_equation, simple_table, table, columns, outline, page_block, sub_page",
+  "fuentes": [
+    "appflowy"
+  ],
+  "archivos": [
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/plugins/document/presentation/editor_plugins/code_block/code_block_copy_button.dart",
+      "capa": "ui",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/plugins/document/presentation/editor_plugins/code_block/code_block_language_selector.dart",
+      "capa": "ui",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/plugins/document/presentation/editor_plugins/code_block/code_block_menu_item.dart",
+      "capa": "ui",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/plugins/document/presentation/editor_plugins/code_block/code_language_screen.dart",
+      "capa": "ui",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/plugins/document/presentation/editor_plugins/columns/simple_column_block_component.dart",
+      "capa": "ui",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/plugins/document/presentation/editor_plugins/columns/simple_column_block_width_resizer.dart",
+      "capa": "ui",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/plugins/document/presentation/editor_plugins/columns/simple_column_node_extension.dart",
+      "capa": "ui",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/plugins/document/presentation/editor_plugins/columns/simple_columns_block_component.dart",
+      "capa": "ui",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/plugins/document/presentation/editor_plugins/columns/simple_columns_block_constant.dart",
+      "capa": "ui",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/plugins/document/presentation/editor_plugins/inline_math_equation/inline_math_equation.dart",
+      "capa": "ui",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/plugins/document/presentation/editor_plugins/inline_math_equation/inline_math_equation_toolbar_item.dart",
+      "capa": "ui",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/plugins/document/presentation/editor_plugins/math_equation/math_equation_block_component.dart",
+      "capa": "ui",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/plugins/document/presentation/editor_plugins/math_equation/math_equation_shortcut.dart",
+      "capa": "ui",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/plugins/document/presentation/editor_plugins/math_equation/mobile_math_equation_toolbar_item.dart",
+      "capa": "ui",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/plugins/document/presentation/editor_plugins/outline/outline_block_component.dart",
+      "capa": "ui",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/plugins/document/presentation/editor_plugins/page_block/custom_page_block_component.dart",
+      "capa": "ui",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/plugins/document/presentation/editor_plugins/simple_table/simple_table.dart",
+      "capa": "ui",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/plugins/document/presentation/editor_plugins/simple_table/simple_table_block_component.dart",
+      "capa": "ui",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/plugins/document/presentation/editor_plugins/simple_table/simple_table_cell_block_component.dart",
+      "capa": "ui",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/plugins/document/presentation/editor_plugins/simple_table/simple_table_constants.dart",
+      "capa": "ui",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/plugins/document/presentation/editor_plugins/simple_table/simple_table_more_action.dart",
+      "capa": "ui",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/plugins/document/presentation/editor_plugins/simple_table/simple_table_operations/simple_table_content_operation.dart",
+      "capa": "ui",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/plugins/document/presentation/editor_plugins/simple_table/simple_table_operations/simple_table_delete_operation.dart",
+      "capa": "ui",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/plugins/document/presentation/editor_plugins/simple_table/simple_table_operations/simple_table_duplicate_operation.dart",
+      "capa": "ui",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/plugins/document/presentation/editor_plugins/simple_table/simple_table_operations/simple_table_header_operation.dart",
+      "capa": "ui",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/plugins/document/presentation/editor_plugins/simple_table/simple_table_operations/simple_table_insert_operation.dart",
+      "capa": "ui",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/plugins/document/presentation/editor_plugins/simple_table/simple_table_operations/simple_table_map_operation.dart",
+      "capa": "ui",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/plugins/document/presentation/editor_plugins/simple_table/simple_table_operations/simple_table_node_extension.dart",
+      "capa": "ui",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/plugins/document/presentation/editor_plugins/simple_table/simple_table_operations/simple_table_operations.dart",
+      "capa": "ui",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/plugins/document/presentation/editor_plugins/simple_table/simple_table_operations/simple_table_reorder_operation.dart",
+      "capa": "ui",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/plugins/document/presentation/editor_plugins/simple_table/simple_table_operations/simple_table_style_operation.dart",
+      "capa": "ui",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/plugins/document/presentation/editor_plugins/simple_table/simple_table_row_block_component.dart",
+      "capa": "ui",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/plugins/document/presentation/editor_plugins/simple_table/simple_table_shortcuts/simple_table_arrow_down_command.dart",
+      "capa": "ui",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/plugins/document/presentation/editor_plugins/simple_table/simple_table_shortcuts/simple_table_arrow_left_command.dart",
+      "capa": "ui",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/plugins/document/presentation/editor_plugins/simple_table/simple_table_shortcuts/simple_table_arrow_right_command.dart",
+      "capa": "ui",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/plugins/document/presentation/editor_plugins/simple_table/simple_table_shortcuts/simple_table_arrow_up_command.dart",
+      "capa": "ui",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/plugins/document/presentation/editor_plugins/simple_table/simple_table_shortcuts/simple_table_backspace_command.dart",
+      "capa": "ui",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/plugins/document/presentation/editor_plugins/simple_table/simple_table_shortcuts/simple_table_command_extension.dart",
+      "capa": "ui",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/plugins/document/presentation/editor_plugins/simple_table/simple_table_shortcuts/simple_table_commands.dart",
+      "capa": "ui",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/plugins/document/presentation/editor_plugins/simple_table/simple_table_shortcuts/simple_table_enter_command.dart",
+      "capa": "ui",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/plugins/document/presentation/editor_plugins/simple_table/simple_table_shortcuts/simple_table_navigation_command.dart",
+      "capa": "ui",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/plugins/document/presentation/editor_plugins/simple_table/simple_table_shortcuts/simple_table_select_all_command.dart",
+      "capa": "ui",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/plugins/document/presentation/editor_plugins/simple_table/simple_table_shortcuts/simple_table_tab_command.dart",
+      "capa": "ui",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/plugins/document/presentation/editor_plugins/simple_table/simple_table_widgets/_desktop_simple_table_widget.dart",
+      "capa": "ui",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/plugins/document/presentation/editor_plugins/simple_table/simple_table_widgets/_mobile_simple_table_widget.dart",
+      "capa": "ui",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/plugins/document/presentation/editor_plugins/simple_table/simple_table_widgets/_simple_table_bottom_sheet_actions.dart",
+      "capa": "ui",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/plugins/document/presentation/editor_plugins/simple_table/simple_table_widgets/simple_table_action_sheet.dart",
+      "capa": "ui",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/plugins/document/presentation/editor_plugins/simple_table/simple_table_widgets/simple_table_add_column_and_row_button.dart",
+      "capa": "ui",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/plugins/document/presentation/editor_plugins/simple_table/simple_table_widgets/simple_table_add_column_button.dart",
+      "capa": "ui",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/plugins/document/presentation/editor_plugins/simple_table/simple_table_widgets/simple_table_add_row_button.dart",
+      "capa": "ui",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/plugins/document/presentation/editor_plugins/simple_table/simple_table_widgets/simple_table_align_button.dart",
+      "capa": "ui",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/plugins/document/presentation/editor_plugins/simple_table/simple_table_widgets/simple_table_background_menu.dart",
+      "capa": "ui",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/plugins/document/presentation/editor_plugins/simple_table/simple_table_widgets/simple_table_basic_button.dart",
+      "capa": "ui",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/plugins/document/presentation/editor_plugins/simple_table/simple_table_widgets/simple_table_border_builder.dart",
+      "capa": "ui",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/plugins/document/presentation/editor_plugins/simple_table/simple_table_widgets/simple_table_bottom_sheet.dart",
+      "capa": "ui",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/plugins/document/presentation/editor_plugins/simple_table/simple_table_widgets/simple_table_column_resize_handle.dart",
+      "capa": "ui",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/plugins/document/presentation/editor_plugins/simple_table/simple_table_widgets/simple_table_divider.dart",
+      "capa": "ui",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/plugins/document/presentation/editor_plugins/simple_table/simple_table_widgets/simple_table_feedback.dart",
+      "capa": "ui",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/plugins/document/presentation/editor_plugins/simple_table/simple_table_widgets/simple_table_more_action_popup.dart",
+      "capa": "ui",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/plugins/document/presentation/editor_plugins/simple_table/simple_table_widgets/simple_table_reorder_button.dart",
+      "capa": "ui",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/plugins/document/presentation/editor_plugins/simple_table/simple_table_widgets/simple_table_widget.dart",
+      "capa": "ui",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/plugins/document/presentation/editor_plugins/simple_table/simple_table_widgets/widgets.dart",
+      "capa": "ui",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/plugins/document/presentation/editor_plugins/sub_page/block_transaction_handler.dart",
+      "capa": "ui",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/plugins/document/presentation/editor_plugins/sub_page/sub_page_block_component.dart",
+      "capa": "ui",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/plugins/document/presentation/editor_plugins/sub_page/sub_page_transaction_handler.dart",
+      "capa": "ui",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/plugins/document/presentation/editor_plugins/table/table_menu.dart",
+      "capa": "ui",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/plugins/document/presentation/editor_plugins/table/table_option_action.dart",
+      "capa": "ui",
+      "estado": "verificado"
+    }
+  ],
+  "archivos_total": 67,
+  "catalogos": [
+    "blocs.json",
+    "deps.json",
+    "events.json",
+    "misc.json",
+    "notifications.json",
+    "protobuf.json"
+  ],
+  "catalogos_razon": {
+    "events.json": "Eventos FFI / dispatch de esta feature",
+    "blocs.json": "BLoCs / Cubits presentes en los archivos de esta unidad",
+    "protobuf.json": "Entidades protobuf input/output de los eventos",
+    "notifications.json": "Notificaciones Rust→Dart emitidas o escuchadas",
+    "deps.json": "Dependencias del workspace rust y pubspec",
+    "misc.json": "Rutas, atajos, flags, error codes, i18n"
+  },
+  "dependencias": [
+    {
+      "id": "F01.0",
+      "tipo": "indice",
+      "nota": "Documento indice F01.0 debe existir antes de esta sub-unidad."
+    }
+  ],
+  "plantilla": "feature",
+  "documento": "OUT/09-features/F01-documentos-y-editor/2-bloques-ricos-code-block-math-equation-inline-math-equation-simple-table-table-c.md",
+  "metricas": {
+    "archivos": 67,
+    "por_capa": {
+      "ui": 67
+    },
+    "por_fuente": {
+      "appflowy": 67
+    }
+  },
+  "prioridad": 2,
+  "concurrencia": "paralela",
+  "generado_en": "2026-10-19T19:04:56Z"
+}

@@ -1,0 +1,74 @@
+{
+  "schema_version": 1,
+  "id": "F02.5",
+  "feature_id": "F02",
+  "sub_index": 5,
+  "titulo": "Orden (services/sort)",
+  "fuentes": [
+    "appflowy"
+  ],
+  "archivos": [
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/flowy-database2/src/services/sort/controller.rs",
+      "capa": "rust-handler",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/flowy-database2/src/services/sort/entities.rs",
+      "capa": "rust-handler",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/flowy-database2/src/services/sort/mod.rs",
+      "capa": "rust-handler",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/flowy-database2/src/services/sort/task.rs",
+      "capa": "rust-handler",
+      "estado": "pendiente"
+    }
+  ],
+  "archivos_total": 4,
+  "catalogos": [
+    "blocs.json",
+    "deps.json",
+    "events.json",
+    "misc.json",
+    "notifications.json",
+    "protobuf.json"
+  ],
+  "catalogos_razon": {
+    "events.json": "Eventos FFI / dispatch de esta feature",
+    "blocs.json": "BLoCs / Cubits presentes en los archivos de esta unidad",
+    "protobuf.json": "Entidades protobuf input/output de los eventos",
+    "notifications.json": "Notificaciones Rust→Dart emitidas o escuchadas",
+    "deps.json": "Dependencias del workspace rust y pubspec",
+    "misc.json": "Rutas, atajos, flags, error codes, i18n"
+  },
+  "dependencias": [
+    {
+      "id": "F02.0",
+      "tipo": "indice",
+      "nota": "Documento indice F02.0 debe existir antes de esta sub-unidad."
+    }
+  ],
+  "plantilla": "feature",
+  "documento": "OUT/09-features/F02-bases-de-datos/5-orden-services-sort.md",
+  "metricas": {
+    "archivos": 4,
+    "por_capa": {
+      "rust-handler": 4
+    },
+    "por_fuente": {
+      "appflowy": 4
+    }
+  },
+  "prioridad": 2,
+  "concurrencia": "paralela",
+  "generado_en": "2026-10-19T21:45:28Z"
+}

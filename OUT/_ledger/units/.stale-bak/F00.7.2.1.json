@@ -1,0 +1,812 @@
+{
+  "schema_version": 1,
+  "id": "F00.7.2.1",
+  "feature_id": "F00",
+  "sub_index": 7,
+  "titulo": "App glue: integration_test/** (runners de escritorio y moviles) — desktop",
+  "fuentes": [
+    "appflowy"
+  ],
+  "archivos": [
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/integration_test/desktop/board/board_add_row_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/integration_test/desktop/board/board_field_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/integration_test/desktop/board/board_group_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/integration_test/desktop/board/board_hide_groups_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/integration_test/desktop/board/board_row_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/integration_test/desktop/board/board_test_runner.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/integration_test/desktop/chat/chat_page_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/integration_test/desktop/cloud/cloud_runner.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/integration_test/desktop/cloud/data_migration/anon_user_data_migration_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/integration_test/desktop/cloud/data_migration/data_migration_test_runner.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/integration_test/desktop/cloud/database/database_image_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/integration_test/desktop/cloud/database/database_test_runner.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/integration_test/desktop/cloud/document/document_ai_writer_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/integration_test/desktop/cloud/document/document_copy_link_to_block_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/integration_test/desktop/cloud/document/document_option_actions_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/integration_test/desktop/cloud/document/document_publish_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/integration_test/desktop/cloud/document/document_test_runner.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/integration_test/desktop/cloud/set_env.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/integration_test/desktop/cloud/sidebar/sidebar_icon_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/integration_test/desktop/cloud/sidebar/sidebar_move_page_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/integration_test/desktop/cloud/sidebar/sidebar_rename_untitled_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/integration_test/desktop/cloud/sidebar/sidebar_search_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/integration_test/desktop/cloud/uncategorized/appflowy_cloud_auth_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/integration_test/desktop/cloud/uncategorized/document_sync_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/integration_test/desktop/cloud/uncategorized/uncategorized_test_runner.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/integration_test/desktop/cloud/uncategorized/user_setting_sync_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/integration_test/desktop/cloud/workspace/change_name_and_icon_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/integration_test/desktop/cloud/workspace/collaborative_workspace_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/integration_test/desktop/cloud/workspace/share_menu_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/integration_test/desktop/cloud/workspace/tabs_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/integration_test/desktop/cloud/workspace/workspace_icon_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/integration_test/desktop/cloud/workspace/workspace_settings_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/integration_test/desktop/cloud/workspace/workspace_test_runner.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/integration_test/desktop/command_palette/command_palette_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/integration_test/desktop/command_palette/command_palette_test_runner.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/integration_test/desktop/command_palette/folder_search_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/integration_test/desktop/command_palette/recent_history_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/integration_test/desktop/database/database_calendar_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/integration_test/desktop/database/database_cell_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/integration_test/desktop/database/database_field_settings_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/integration_test/desktop/database/database_field_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/integration_test/desktop/database/database_filter_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/integration_test/desktop/database/database_icon_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/integration_test/desktop/database/database_media_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/integration_test/desktop/database/database_reminder_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/integration_test/desktop/database/database_row_cover_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/integration_test/desktop/database/database_row_page_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/integration_test/desktop/database/database_setting_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/integration_test/desktop/database/database_share_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/integration_test/desktop/database/database_sort_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/integration_test/desktop/database/database_test_runner_1.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/integration_test/desktop/database/database_test_runner_2.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/integration_test/desktop/database/database_view_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/integration_test/desktop/document/document_alignment_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/integration_test/desktop/document/document_app_lifecycle_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/integration_test/desktop/document/document_block_option_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/integration_test/desktop/document/document_callout_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/integration_test/desktop/document/document_codeblock_paste_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/integration_test/desktop/document/document_copy_and_paste_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/integration_test/desktop/document/document_create_and_delete_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/integration_test/desktop/document/document_customer_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/integration_test/desktop/document/document_deletion_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/integration_test/desktop/document/document_find_menu_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/integration_test/desktop/document/document_inline_page_reference_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/integration_test/desktop/document/document_inline_sub_page_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/integration_test/desktop/document/document_link_preview_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/integration_test/desktop/document/document_more_actions_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/integration_test/desktop/document/document_option_action_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/integration_test/desktop/document/document_selection_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/integration_test/desktop/document/document_shortcuts_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/integration_test/desktop/document/document_sub_page_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/integration_test/desktop/document/document_test_runner_1.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/integration_test/desktop/document/document_test_runner_2.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/integration_test/desktop/document/document_test_runner_3.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/integration_test/desktop/document/document_test_runner_4.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/integration_test/desktop/document/document_text_direction_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/integration_test/desktop/document/document_title_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/integration_test/desktop/document/document_toolbar_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/integration_test/desktop/document/document_with_cover_image_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/integration_test/desktop/document/document_with_database_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/integration_test/desktop/document/document_with_date_reminder_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/integration_test/desktop/document/document_with_file_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/integration_test/desktop/document/document_with_image_block_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/integration_test/desktop/document/document_with_inline_math_equation_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/integration_test/desktop/document/document_with_inline_page_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/integration_test/desktop/document/document_with_link_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/integration_test/desktop/document/document_with_multi_image_block_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/integration_test/desktop/document/document_with_outline_block_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/integration_test/desktop/document/document_with_simple_table_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/integration_test/desktop/document/document_with_toggle_heading_block_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/integration_test/desktop/document/document_with_toggle_list_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/integration_test/desktop/document/edit_document_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/integration_test/desktop/first_test/first_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/integration_test/desktop/grid/grid_calculations_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/integration_test/desktop/grid/grid_edit_row_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/integration_test/desktop/grid/grid_filter_and_sort_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/integration_test/desktop/grid/grid_reopen_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/integration_test/desktop/grid/grid_reorder_row_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/integration_test/desktop/grid/grid_row_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/integration_test/desktop/grid/grid_test_extensions.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/integration_test/desktop/grid/grid_test_runner_1.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/integration_test/desktop/reminder/document_reminder_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/integration_test/desktop/settings/notifications_settings_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/integration_test/desktop/settings/settings_billing_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/integration_test/desktop/settings/settings_runner.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/integration_test/desktop/settings/shortcuts_settings_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/integration_test/desktop/settings/sign_in_page_settings_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/integration_test/desktop/sidebar/rename_current_item_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/integration_test/desktop/sidebar/sidebar_expand_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/integration_test/desktop/sidebar/sidebar_favorites_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/integration_test/desktop/sidebar/sidebar_icon_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/integration_test/desktop/sidebar/sidebar_recent_icon_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/integration_test/desktop/sidebar/sidebar_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/integration_test/desktop/sidebar/sidebar_test_runner.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/integration_test/desktop/sidebar/sidebar_view_item_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/integration_test/desktop/uncategorized/board_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/integration_test/desktop/uncategorized/code_block_language_selector_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/integration_test/desktop/uncategorized/emoji_shortcut_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/integration_test/desktop/uncategorized/empty_document_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/integration_test/desktop/uncategorized/hotkeys_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/integration_test/desktop/uncategorized/import_files_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/integration_test/desktop/uncategorized/language_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/integration_test/desktop/uncategorized/share_markdown_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/integration_test/desktop/uncategorized/switch_folder_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/integration_test/desktop/uncategorized/tabs_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/integration_test/desktop/uncategorized/uncategorized_test_runner_1.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/integration_test/desktop/uncategorized/zoom_in_out_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    }
+  ],
+  "archivos_total": 127,
+  "catalogos": [
+    "blocs.json",
+    "deps.json",
+    "events.json",
+    "misc.json",
+    "notifications.json",
+    "protobuf.json"
+  ],
+  "catalogos_razon": {
+    "events.json": "Eventos FFI / dispatch de esta feature",
+    "blocs.json": "BLoCs / Cubits presentes en los archivos de esta unidad",
+    "protobuf.json": "Entidades protobuf input/output de los eventos",
+    "notifications.json": "Notificaciones Rust→Dart emitidas o escuchadas",
+    "deps.json": "Dependencias del workspace rust y pubspec",
+    "misc.json": "Rutas, atajos, flags, error codes, i18n"
+  },
+  "dependencias": [
+    {
+      "id": "F00.0",
+      "tipo": "indice",
+      "nota": "Documento indice F00.0 debe existir antes de esta sub-unidad."
+    }
+  ],
+  "plantilla": "feature",
+  "documento": "OUT/09-features/F00-infraestructura-compartida-ffi-dispatch-errores-build-paquetes-nativo-tests/7.2.1-app-glue-integration-test-runners-de-escritorio-y-moviles-desktop.md",
+  "metricas": {
+    "archivos": 127,
+    "por_capa": {
+      "test": 127
+    },
+    "por_fuente": {
+      "appflowy": 127
+    }
+  },
+  "prioridad": 2,
+  "concurrencia": "paralela",
+  "generado_en": "2026-10-20T18:09:52Z"
+}

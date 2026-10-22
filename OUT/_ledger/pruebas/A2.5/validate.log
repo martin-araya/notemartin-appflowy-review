@@ -1,0 +1,1 @@
+OK: A2.5 (JSON valido, 31 crates Rust con 150 internal edges, flowy-core -> 8 flowy-* features OK, dart-ffi -> flowy-core OK, appflowy -> 7 internal_path packages OK, 1+1 packages Dart con 12 internal edges)

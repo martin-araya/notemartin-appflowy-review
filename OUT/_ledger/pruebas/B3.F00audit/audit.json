@@ -1,0 +1,1025 @@
+{
+  "total_leak": 114,
+  "docs_analizados": [
+    "0.1.0-indice-appflowy-side-database-controller-services-widgets.md",
+    "0.1.1-database-widgets-cell-row-field-setting-card-group.md",
+    "0.1.2-database-application-domain-misc.md",
+    "0.1.3-database-tests.md",
+    "0.2.0-indice-collab-database-rust-manager-model-template-view.md",
+    "0.2.1-collab-database-fields-blocks-meta-workspace-relation.md",
+    "0.2.2-collab-database-template-views-rows-misc.md",
+    "0.2.3-collab-database-tests.md",
+    "1-campos-y-tipos-services-field-application-field.md",
+    "10-board-plugins-database-board.md",
+    "11-calendar-plugins-database-calendar.md",
+    "12-tab-bar-de-vistas-sync-de-database-snapshots.md",
+    "2-celdas-services-cell-application-cell.md",
+    "3-filas-y-row-detail-application-row-relaciones.md",
+    "4-filtros-services-filter.md",
+    "5-orden-services-sort.md",
+    "6-agrupacion-services-group.md",
+    "7-calculos-services-calculations-application-calculations.md",
+    "8-field-settings-settings-de-vista-database-view.md",
+    "9.0-grid-indice-plugins-database-grid.md",
+    "9.1-grid-filtros-y-filter-choicechips.md",
+    "9.2-grid-sort-header-row-footer-toolbar-shortcuts.md"
+  ],
+  "categorias": {
+    "a_citado": 10,
+    "b_mencionado_sin_cita": 0,
+    "c_sin_cubrir": 104
+  },
+  "por_grupo": {
+    "raiz de flowy-database2": {
+      "a": 4,
+      "c": 5
+    },
+    "src/entities/**": {
+      "a": 4,
+      "c": 45
+    },
+    "src/{services,utils}": {
+      "a": 2,
+      "c": 3
+    },
+    "tests/database/**": {
+      "c": 51
+    }
+  },
+  "detalle": {
+    "a": [
+      {
+        "ruta": "appflowy/frontend/rust-lib/flowy-database2/src/entities/calculation/calculation_changeset.rs",
+        "ruta_rel": "appflowy/frontend/rust-lib/flowy-database2/src/entities/calculation/calculation_changeset.rs",
+        "loc": 81,
+        "grupo": "src/entities/**",
+        "citas": [
+          "7-calculos-services-calculations-application-calculations.md:133",
+          "7-calculos-services-calculations-application-calculations.md:435"
+        ]
+      },
+      {
+        "ruta": "appflowy/frontend/rust-lib/flowy-database2/src/entities/calculation/calculation_entities.rs",
+        "ruta_rel": "appflowy/frontend/rust-lib/flowy-database2/src/entities/calculation/calculation_entities.rs",
+        "loc": 164,
+        "grupo": "src/entities/**",
+        "citas": [
+          "7-calculos-services-calculations-application-calculations.md:83",
+          "7-calculos-services-calculations-application-calculations.md:133",
+          "7-calculos-services-calculations-application-calculations.md:455",
+          "7-calculos-services-calculations-application-calculations.md:456",
+          "7-calculos-services-calculations-application-calculations.md:507",
+          "7-calculos-services-calculations-application-calculations.md:525"
+        ]
+      },
+      {
+        "ruta": "appflowy/frontend/rust-lib/flowy-database2/src/entities/database_entities.rs",
+        "ruta_rel": "appflowy/frontend/rust-lib/flowy-database2/src/entities/database_entities.rs",
+        "loc": 394,
+        "grupo": "src/entities/**",
+        "citas": [
+          "12-tab-bar-de-vistas-sync-de-database-snapshots.md:247"
+        ]
+      },
+      {
+        "ruta": "appflowy/frontend/rust-lib/flowy-database2/src/entities/setting_entities.rs",
+        "ruta_rel": "appflowy/frontend/rust-lib/flowy-database2/src/entities/setting_entities.rs",
+        "loc": 214,
+        "grupo": "src/entities/**",
+        "citas": [
+          "9.1-grid-filtros-y-filter-choicechips.md:116",
+          "9.1-grid-filtros-y-filter-choicechips.md:117",
+          "9.1-grid-filtros-y-filter-choicechips.md:118",
+          "9.1-grid-filtros-y-filter-choicechips.md:119",
+          "9.1-grid-filtros-y-filter-choicechips.md:200"
+        ]
+      },
+      {
+        "ruta": "appflowy/frontend/rust-lib/flowy-database2/src/event_handler.rs",
+        "ruta_rel": "appflowy/frontend/rust-lib/flowy-database2/src/event_handler.rs",
+        "loc": 1450,
+        "grupo": "raiz de flowy-database2",
+        "citas": [
+          "12-tab-bar-de-vistas-sync-de-database-snapshots.md:101",
+          "12-tab-bar-de-vistas-sync-de-database-snapshots.md:212",
+          "12-tab-bar-de-vistas-sync-de-database-snapshots.md:453",
+          "7-calculos-services-calculations-application-calculations.md:206",
+          "7-calculos-services-calculations-application-calculations.md:207",
+          "7-calculos-services-calculations-application-calculations.md:208",
+          "7-calculos-services-calculations-application-calculations.md:410",
+          "7-calculos-services-calculations-application-calculations.md:466",
+          "9.1-grid-filtros-y-filter-choicechips.md:407"
+        ]
+      },
+      {
+        "ruta": "appflowy/frontend/rust-lib/flowy-database2/src/event_map.rs",
+        "ruta_rel": "appflowy/frontend/rust-lib/flowy-database2/src/event_map.rs",
+        "loc": 415,
+        "grupo": "raiz de flowy-database2",
+        "citas": [
+          "12-tab-bar-de-vistas-sync-de-database-snapshots.md:212",
+          "12-tab-bar-de-vistas-sync-de-database-snapshots.md:212",
+          "7-calculos-services-calculations-application-calculations.md:30",
+          "7-calculos-services-calculations-application-calculations.md:30",
+          "7-calculos-services-calculations-application-calculations.md:206",
+          "7-calculos-services-calculations-application-calculations.md:207",
+          "7-calculos-services-calculations-application-calculations.md:208",
+          "7-calculos-services-calculations-application-calculations.md:466",
+          "9.1-grid-filtros-y-filter-choicechips.md:115",
+          "9.1-grid-filtros-y-filter-choicechips.md:115",
+          "9.1-grid-filtros-y-filter-choicechips.md:116",
+          "9.1-grid-filtros-y-filter-choicechips.md:120",
+          "9.1-grid-filtros-y-filter-choicechips.md:120",
+          "9.1-grid-filtros-y-filter-choicechips.md:121",
+          "9.1-grid-filtros-y-filter-choicechips.md:121",
+          "9.1-grid-filtros-y-filter-choicechips.md:122",
+          "9.1-grid-filtros-y-filter-choicechips.md:122"
+        ]
+      },
+      {
+        "ruta": "appflowy/frontend/rust-lib/flowy-database2/src/manager.rs",
+        "ruta_rel": "appflowy/frontend/rust-lib/flowy-database2/src/manager.rs",
+        "loc": 1226,
+        "grupo": "raiz de flowy-database2",
+        "citas": [
+          "12-tab-bar-de-vistas-sync-de-database-snapshots.md:100",
+          "12-tab-bar-de-vistas-sync-de-database-snapshots.md:242",
+          "12-tab-bar-de-vistas-sync-de-database-snapshots.md:242",
+          "12-tab-bar-de-vistas-sync-de-database-snapshots.md:464"
+        ]
+      },
+      {
+        "ruta": "appflowy/frontend/rust-lib/flowy-database2/src/notification.rs",
+        "ruta_rel": "appflowy/frontend/rust-lib/flowy-database2/src/notification.rs",
+        "loc": 98,
+        "grupo": "raiz de flowy-database2",
+        "citas": [
+          "12-tab-bar-de-vistas-sync-de-database-snapshots.md:70",
+          "12-tab-bar-de-vistas-sync-de-database-snapshots.md:89",
+          "12-tab-bar-de-vistas-sync-de-database-snapshots.md:222",
+          "12-tab-bar-de-vistas-sync-de-database-snapshots.md:223",
+          "7-calculos-services-calculations-application-calculations.md:31",
+          "7-calculos-services-calculations-application-calculations.md:230",
+          "7-calculos-services-calculations-application-calculations.md:466",
+          "9.1-grid-filtros-y-filter-choicechips.md:132",
+          "9.1-grid-filtros-y-filter-choicechips.md:133",
+          "9.1-grid-filtros-y-filter-choicechips.md:135"
+        ]
+      },
+      {
+        "ruta": "appflowy/frontend/rust-lib/flowy-database2/src/services/mod.rs",
+        "ruta_rel": "appflowy/frontend/rust-lib/flowy-database2/src/services/mod.rs",
+        "loc": 12,
+        "grupo": "src/{services,utils}",
+        "citas": [
+          "12-tab-bar-de-vistas-sync-de-database-snapshots.md:98"
+        ]
+      },
+      {
+        "ruta": "appflowy/frontend/rust-lib/flowy-database2/src/utils/cache.rs",
+        "ruta_rel": "appflowy/frontend/rust-lib/flowy-database2/src/utils/cache.rs",
+        "loc": 96,
+        "grupo": "src/{services,utils}",
+        "citas": [
+          "7-calculos-services-calculations-application-calculations.md:142",
+          "7-calculos-services-calculations-application-calculations.md:142"
+        ]
+      }
+    ],
+    "b": [],
+    "c": [
+      {
+        "ruta": "appflowy/frontend/rust-lib/flowy-database2/Cargo.toml",
+        "ruta_rel": "appflowy/frontend/rust-lib/flowy-database2/Cargo.toml",
+        "loc": 66,
+        "grupo": "raiz de flowy-database2",
+        "citas": [],
+        "mencionada": false
+      },
+      {
+        "ruta": "appflowy/frontend/rust-lib/flowy-database2/Flowy.toml",
+        "ruta_rel": "appflowy/frontend/rust-lib/flowy-database2/Flowy.toml",
+        "loc": 6,
+        "grupo": "raiz de flowy-database2",
+        "citas": [],
+        "mencionada": false
+      },
+      {
+        "ruta": "appflowy/frontend/rust-lib/flowy-database2/build.rs",
+        "ruta_rel": "appflowy/frontend/rust-lib/flowy-database2/build.rs",
+        "loc": 23,
+        "grupo": "raiz de flowy-database2",
+        "citas": [],
+        "mencionada": false
+      },
+      {
+        "ruta": "appflowy/frontend/rust-lib/flowy-database2/src/entities/board_entities.rs",
+        "ruta_rel": "appflowy/frontend/rust-lib/flowy-database2/src/entities/board_entities.rs",
+        "loc": 30,
+        "grupo": "src/entities/**",
+        "citas": [],
+        "mencionada": false
+      },
+      {
+        "ruta": "appflowy/frontend/rust-lib/flowy-database2/src/entities/calculation/mod.rs",
+        "ruta_rel": "appflowy/frontend/rust-lib/flowy-database2/src/entities/calculation/mod.rs",
+        "loc": 5,
+        "grupo": "src/entities/**",
+        "citas": [],
+        "mencionada": false
+      },
+      {
+        "ruta": "appflowy/frontend/rust-lib/flowy-database2/src/entities/calendar_entities.rs",
+        "ruta_rel": "appflowy/frontend/rust-lib/flowy-database2/src/entities/calendar_entities.rs",
+        "loc": 143,
+        "grupo": "src/entities/**",
+        "citas": [],
+        "mencionada": false
+      },
+      {
+        "ruta": "appflowy/frontend/rust-lib/flowy-database2/src/entities/cell_entities.rs",
+        "ruta_rel": "appflowy/frontend/rust-lib/flowy-database2/src/entities/cell_entities.rs",
+        "loc": 171,
+        "grupo": "src/entities/**",
+        "citas": [],
+        "mencionada": false
+      },
+      {
+        "ruta": "appflowy/frontend/rust-lib/flowy-database2/src/entities/field_entities.rs",
+        "ruta_rel": "appflowy/frontend/rust-lib/flowy-database2/src/entities/field_entities.rs",
+        "loc": 655,
+        "grupo": "src/entities/**",
+        "citas": [],
+        "mencionada": false
+      },
+      {
+        "ruta": "appflowy/frontend/rust-lib/flowy-database2/src/entities/field_settings_entities.rs",
+        "ruta_rel": "appflowy/frontend/rust-lib/flowy-database2/src/entities/field_settings_entities.rs",
+        "loc": 120,
+        "grupo": "src/entities/**",
+        "citas": [],
+        "mencionada": false
+      },
+      {
+        "ruta": "appflowy/frontend/rust-lib/flowy-database2/src/entities/file_entities.rs",
+        "ruta_rel": "appflowy/frontend/rust-lib/flowy-database2/src/entities/file_entities.rs",
+        "loc": 53,
+        "grupo": "src/entities/**",
+        "citas": [],
+        "mencionada": false
+      },
+      {
+        "ruta": "appflowy/frontend/rust-lib/flowy-database2/src/entities/filter_entities/checkbox_filter.rs",
+        "ruta_rel": "appflowy/frontend/rust-lib/flowy-database2/src/entities/filter_entities/checkbox_filter.rs",
+        "loc": 45,
+        "grupo": "src/entities/**",
+        "citas": [],
+        "mencionada": false
+      },
+      {
+        "ruta": "appflowy/frontend/rust-lib/flowy-database2/src/entities/filter_entities/checklist_filter.rs",
+        "ruta_rel": "appflowy/frontend/rust-lib/flowy-database2/src/entities/filter_entities/checklist_filter.rs",
+        "loc": 45,
+        "grupo": "src/entities/**",
+        "citas": [],
+        "mencionada": false
+      },
+      {
+        "ruta": "appflowy/frontend/rust-lib/flowy-database2/src/entities/filter_entities/date_filter.rs",
+        "ruta_rel": "appflowy/frontend/rust-lib/flowy-database2/src/entities/filter_entities/date_filter.rs",
+        "loc": 143,
+        "grupo": "src/entities/**",
+        "citas": [],
+        "mencionada": false
+      },
+      {
+        "ruta": "appflowy/frontend/rust-lib/flowy-database2/src/entities/filter_entities/filter_changeset.rs",
+        "ruta_rel": "appflowy/frontend/rust-lib/flowy-database2/src/entities/filter_entities/filter_changeset.rs",
+        "loc": 22,
+        "grupo": "src/entities/**",
+        "citas": [],
+        "mencionada": false
+      },
+      {
+        "ruta": "appflowy/frontend/rust-lib/flowy-database2/src/entities/filter_entities/media_filter.rs",
+        "ruta_rel": "appflowy/frontend/rust-lib/flowy-database2/src/entities/filter_entities/media_filter.rs",
+        "loc": 49,
+        "grupo": "src/entities/**",
+        "citas": [],
+        "mencionada": false
+      },
+      {
+        "ruta": "appflowy/frontend/rust-lib/flowy-database2/src/entities/filter_entities/mod.rs",
+        "ruta_rel": "appflowy/frontend/rust-lib/flowy-database2/src/entities/filter_entities/mod.rs",
+        "loc": 23,
+        "grupo": "src/entities/**",
+        "citas": [],
+        "mencionada": false
+      },
+      {
+        "ruta": "appflowy/frontend/rust-lib/flowy-database2/src/entities/filter_entities/number_filter.rs",
+        "ruta_rel": "appflowy/frontend/rust-lib/flowy-database2/src/entities/filter_entities/number_filter.rs",
+        "loc": 60,
+        "grupo": "src/entities/**",
+        "citas": [],
+        "mencionada": false
+      },
+      {
+        "ruta": "appflowy/frontend/rust-lib/flowy-database2/src/entities/filter_entities/relation_filter.rs",
+        "ruta_rel": "appflowy/frontend/rust-lib/flowy-database2/src/entities/filter_entities/relation_filter.rs",
+        "loc": 22,
+        "grupo": "src/entities/**",
+        "citas": [],
+        "mencionada": false
+      },
+      {
+        "ruta": "appflowy/frontend/rust-lib/flowy-database2/src/entities/filter_entities/select_option_filter.rs",
+        "ruta_rel": "appflowy/frontend/rust-lib/flowy-database2/src/entities/filter_entities/select_option_filter.rs",
+        "loc": 85,
+        "grupo": "src/entities/**",
+        "citas": [],
+        "mencionada": false
+      },
+      {
+        "ruta": "appflowy/frontend/rust-lib/flowy-database2/src/entities/filter_entities/text_filter.rs",
+        "ruta_rel": "appflowy/frontend/rust-lib/flowy-database2/src/entities/filter_entities/text_filter.rs",
+        "loc": 61,
+        "grupo": "src/entities/**",
+        "citas": [],
+        "mencionada": false
+      },
+      {
+        "ruta": "appflowy/frontend/rust-lib/flowy-database2/src/entities/filter_entities/time_filter.rs",
+        "ruta_rel": "appflowy/frontend/rust-lib/flowy-database2/src/entities/filter_entities/time_filter.rs",
+        "loc": 23,
+        "grupo": "src/entities/**",
+        "citas": [],
+        "mencionada": false
+      },
+      {
+        "ruta": "appflowy/frontend/rust-lib/flowy-database2/src/entities/filter_entities/util.rs",
+        "ruta_rel": "appflowy/frontend/rust-lib/flowy-database2/src/entities/filter_entities/util.rs",
+        "loc": 298,
+        "grupo": "src/entities/**",
+        "citas": [],
+        "mencionada": false
+      },
+      {
+        "ruta": "appflowy/frontend/rust-lib/flowy-database2/src/entities/group_entities/configuration.rs",
+        "ruta_rel": "appflowy/frontend/rust-lib/flowy-database2/src/entities/group_entities/configuration.rs",
+        "loc": 141,
+        "grupo": "src/entities/**",
+        "citas": [],
+        "mencionada": false
+      },
+      {
+        "ruta": "appflowy/frontend/rust-lib/flowy-database2/src/entities/group_entities/group.rs",
+        "ruta_rel": "appflowy/frontend/rust-lib/flowy-database2/src/entities/group_entities/group.rs",
+        "loc": 260,
+        "grupo": "src/entities/**",
+        "citas": [],
+        "mencionada": false
+      },
+      {
+        "ruta": "appflowy/frontend/rust-lib/flowy-database2/src/entities/group_entities/group_changeset.rs",
+        "ruta_rel": "appflowy/frontend/rust-lib/flowy-database2/src/entities/group_entities/group_changeset.rs",
+        "loc": 151,
+        "grupo": "src/entities/**",
+        "citas": [],
+        "mencionada": false
+      },
+      {
+        "ruta": "appflowy/frontend/rust-lib/flowy-database2/src/entities/group_entities/mod.rs",
+        "ruta_rel": "appflowy/frontend/rust-lib/flowy-database2/src/entities/group_entities/mod.rs",
+        "loc": 7,
+        "grupo": "src/entities/**",
+        "citas": [],
+        "mencionada": false
+      },
+      {
+        "ruta": "appflowy/frontend/rust-lib/flowy-database2/src/entities/macros.rs",
+        "ruta_rel": "appflowy/frontend/rust-lib/flowy-database2/src/entities/macros.rs",
+        "loc": 73,
+        "grupo": "src/entities/**",
+        "citas": [],
+        "mencionada": false
+      },
+      {
+        "ruta": "appflowy/frontend/rust-lib/flowy-database2/src/entities/mod.rs",
+        "ruta_rel": "appflowy/frontend/rust-lib/flowy-database2/src/entities/mod.rs",
+        "loc": 61,
+        "grupo": "src/entities/**",
+        "citas": [],
+        "mencionada": false
+      },
+      {
+        "ruta": "appflowy/frontend/rust-lib/flowy-database2/src/entities/parser.rs",
+        "ruta_rel": "appflowy/frontend/rust-lib/flowy-database2/src/entities/parser.rs",
+        "loc": 17,
+        "grupo": "src/entities/**",
+        "citas": [],
+        "mencionada": false
+      },
+      {
+        "ruta": "appflowy/frontend/rust-lib/flowy-database2/src/entities/position_entities.rs",
+        "ruta_rel": "appflowy/frontend/rust-lib/flowy-database2/src/entities/position_entities.rs",
+        "loc": 89,
+        "grupo": "src/entities/**",
+        "citas": [],
+        "mencionada": false
+      },
+      {
+        "ruta": "appflowy/frontend/rust-lib/flowy-database2/src/entities/row_entities.rs",
+        "ruta_rel": "appflowy/frontend/rust-lib/flowy-database2/src/entities/row_entities.rs",
+        "loc": 508,
+        "grupo": "src/entities/**",
+        "citas": [],
+        "mencionada": false
+      },
+      {
+        "ruta": "appflowy/frontend/rust-lib/flowy-database2/src/entities/share_entities.rs",
+        "ruta_rel": "appflowy/frontend/rust-lib/flowy-database2/src/entities/share_entities.rs",
+        "loc": 19,
+        "grupo": "src/entities/**",
+        "citas": [],
+        "mencionada": false
+      },
+      {
+        "ruta": "appflowy/frontend/rust-lib/flowy-database2/src/entities/sort_entities.rs",
+        "ruta_rel": "appflowy/frontend/rust-lib/flowy-database2/src/entities/sort_entities.rs",
+        "loc": 194,
+        "grupo": "src/entities/**",
+        "citas": [],
+        "mencionada": false
+      },
+      {
+        "ruta": "appflowy/frontend/rust-lib/flowy-database2/src/entities/type_option_entities/checkbox_entities.rs",
+        "ruta_rel": "appflowy/frontend/rust-lib/flowy-database2/src/entities/type_option_entities/checkbox_entities.rs",
+        "loc": 45,
+        "grupo": "src/entities/**",
+        "citas": [],
+        "mencionada": false
+      },
+      {
+        "ruta": "appflowy/frontend/rust-lib/flowy-database2/src/entities/type_option_entities/checklist_entities.rs",
+        "ruta_rel": "appflowy/frontend/rust-lib/flowy-database2/src/entities/type_option_entities/checklist_entities.rs",
+        "loc": 47,
+        "grupo": "src/entities/**",
+        "citas": [],
+        "mencionada": false
+      },
+      {
+        "ruta": "appflowy/frontend/rust-lib/flowy-database2/src/entities/type_option_entities/date_entities.rs",
+        "ruta_rel": "appflowy/frontend/rust-lib/flowy-database2/src/entities/type_option_entities/date_entities.rs",
+        "loc": 159,
+        "grupo": "src/entities/**",
+        "citas": [],
+        "mencionada": false
+      },
+      {
+        "ruta": "appflowy/frontend/rust-lib/flowy-database2/src/entities/type_option_entities/media_entities.rs",
+        "ruta_rel": "appflowy/frontend/rust-lib/flowy-database2/src/entities/type_option_entities/media_entities.rs",
+        "loc": 179,
+        "grupo": "src/entities/**",
+        "citas": [],
+        "mencionada": false
+      },
+      {
+        "ruta": "appflowy/frontend/rust-lib/flowy-database2/src/entities/type_option_entities/mod.rs",
+        "ruta_rel": "appflowy/frontend/rust-lib/flowy-database2/src/entities/type_option_entities/mod.rs",
+        "loc": 27,
+        "grupo": "src/entities/**",
+        "citas": [],
+        "mencionada": false
+      },
+      {
+        "ruta": "appflowy/frontend/rust-lib/flowy-database2/src/entities/type_option_entities/number_entities.rs",
+        "ruta_rel": "appflowy/frontend/rust-lib/flowy-database2/src/entities/type_option_entities/number_entities.rs",
+        "loc": 167,
+        "grupo": "src/entities/**",
+        "citas": [],
+        "mencionada": false
+      },
+      {
+        "ruta": "appflowy/frontend/rust-lib/flowy-database2/src/entities/type_option_entities/relation_entities.rs",
+        "ruta_rel": "appflowy/frontend/rust-lib/flowy-database2/src/entities/type_option_entities/relation_entities.rs",
+        "loc": 88,
+        "grupo": "src/entities/**",
+        "citas": [],
+        "mencionada": false
+      },
+      {
+        "ruta": "appflowy/frontend/rust-lib/flowy-database2/src/entities/type_option_entities/select_option_entities.rs",
+        "ruta_rel": "appflowy/frontend/rust-lib/flowy-database2/src/entities/type_option_entities/select_option_entities.rs",
+        "loc": 294,
+        "grupo": "src/entities/**",
+        "citas": [],
+        "mencionada": false
+      },
+      {
+        "ruta": "appflowy/frontend/rust-lib/flowy-database2/src/entities/type_option_entities/summary_entities.rs",
+        "ruta_rel": "appflowy/frontend/rust-lib/flowy-database2/src/entities/type_option_entities/summary_entities.rs",
+        "loc": 24,
+        "grupo": "src/entities/**",
+        "citas": [],
+        "mencionada": false
+      },
+      {
+        "ruta": "appflowy/frontend/rust-lib/flowy-database2/src/entities/type_option_entities/text_entities.rs",
+        "ruta_rel": "appflowy/frontend/rust-lib/flowy-database2/src/entities/type_option_entities/text_entities.rs",
+        "loc": 22,
+        "grupo": "src/entities/**",
+        "citas": [],
+        "mencionada": false
+      },
+      {
+        "ruta": "appflowy/frontend/rust-lib/flowy-database2/src/entities/type_option_entities/time_entities.rs",
+        "ruta_rel": "appflowy/frontend/rust-lib/flowy-database2/src/entities/type_option_entities/time_entities.rs",
+        "loc": 28,
+        "grupo": "src/entities/**",
+        "citas": [],
+        "mencionada": false
+      },
+      {
+        "ruta": "appflowy/frontend/rust-lib/flowy-database2/src/entities/type_option_entities/timestamp_entities.rs",
+        "ruta_rel": "appflowy/frontend/rust-lib/flowy-database2/src/entities/type_option_entities/timestamp_entities.rs",
+        "loc": 51,
+        "grupo": "src/entities/**",
+        "citas": [],
+        "mencionada": false
+      },
+      {
+        "ruta": "appflowy/frontend/rust-lib/flowy-database2/src/entities/type_option_entities/translate_entities.rs",
+        "ruta_rel": "appflowy/frontend/rust-lib/flowy-database2/src/entities/type_option_entities/translate_entities.rs",
+        "loc": 60,
+        "grupo": "src/entities/**",
+        "citas": [],
+        "mencionada": false
+      },
+      {
+        "ruta": "appflowy/frontend/rust-lib/flowy-database2/src/entities/type_option_entities/url_entities.rs",
+        "ruta_rel": "appflowy/frontend/rust-lib/flowy-database2/src/entities/type_option_entities/url_entities.rs",
+        "loc": 35,
+        "grupo": "src/entities/**",
+        "citas": [],
+        "mencionada": false
+      },
+      {
+        "ruta": "appflowy/frontend/rust-lib/flowy-database2/src/entities/view_entities.rs",
+        "ruta_rel": "appflowy/frontend/rust-lib/flowy-database2/src/entities/view_entities.rs",
+        "loc": 147,
+        "grupo": "src/entities/**",
+        "citas": [],
+        "mencionada": false
+      },
+      {
+        "ruta": "appflowy/frontend/rust-lib/flowy-database2/src/lib.rs",
+        "ruta_rel": "appflowy/frontend/rust-lib/flowy-database2/src/lib.rs",
+        "loc": 11,
+        "grupo": "raiz de flowy-database2",
+        "citas": [],
+        "mencionada": false
+      },
+      {
+        "ruta": "appflowy/frontend/rust-lib/flowy-database2/src/services/setting/entities.rs",
+        "ruta_rel": "appflowy/frontend/rust-lib/flowy-database2/src/services/setting/entities.rs",
+        "loc": 123,
+        "grupo": "src/{services,utils}",
+        "citas": [],
+        "mencionada": false
+      },
+      {
+        "ruta": "appflowy/frontend/rust-lib/flowy-database2/src/services/setting/mod.rs",
+        "ruta_rel": "appflowy/frontend/rust-lib/flowy-database2/src/services/setting/mod.rs",
+        "loc": 3,
+        "grupo": "src/{services,utils}",
+        "citas": [],
+        "mencionada": false
+      },
+      {
+        "ruta": "appflowy/frontend/rust-lib/flowy-database2/src/template.rs",
+        "ruta_rel": "appflowy/frontend/rust-lib/flowy-database2/src/template.rs",
+        "loc": 177,
+        "grupo": "raiz de flowy-database2",
+        "citas": [],
+        "mencionada": false
+      },
+      {
+        "ruta": "appflowy/frontend/rust-lib/flowy-database2/src/utils/mod.rs",
+        "ruta_rel": "appflowy/frontend/rust-lib/flowy-database2/src/utils/mod.rs",
+        "loc": 1,
+        "grupo": "src/{services,utils}",
+        "citas": [],
+        "mencionada": false
+      },
+      {
+        "ruta": "appflowy/frontend/rust-lib/flowy-database2/tests/database/block_test/mod.rs",
+        "ruta_rel": "appflowy/frontend/rust-lib/flowy-database2/tests/database/block_test/mod.rs",
+        "loc": 2,
+        "grupo": "tests/database/**",
+        "citas": [],
+        "mencionada": false
+      },
+      {
+        "ruta": "appflowy/frontend/rust-lib/flowy-database2/tests/database/block_test/row_test.rs",
+        "ruta_rel": "appflowy/frontend/rust-lib/flowy-database2/tests/database/block_test/row_test.rs",
+        "loc": 64,
+        "grupo": "tests/database/**",
+        "citas": [],
+        "mencionada": false
+      },
+      {
+        "ruta": "appflowy/frontend/rust-lib/flowy-database2/tests/database/block_test/script.rs",
+        "ruta_rel": "appflowy/frontend/rust-lib/flowy-database2/tests/database/block_test/script.rs",
+        "loc": 48,
+        "grupo": "tests/database/**",
+        "citas": [],
+        "mencionada": false
+      },
+      {
+        "ruta": "appflowy/frontend/rust-lib/flowy-database2/tests/database/calculations_test/calculation_test.rs",
+        "ruta_rel": "appflowy/frontend/rust-lib/flowy-database2/tests/database/calculations_test/calculation_test.rs",
+        "loc": 195,
+        "grupo": "tests/database/**",
+        "citas": [],
+        "mencionada": false
+      },
+      {
+        "ruta": "appflowy/frontend/rust-lib/flowy-database2/tests/database/calculations_test/mod.rs",
+        "ruta_rel": "appflowy/frontend/rust-lib/flowy-database2/tests/database/calculations_test/mod.rs",
+        "loc": 2,
+        "grupo": "tests/database/**",
+        "citas": [],
+        "mencionada": false
+      },
+      {
+        "ruta": "appflowy/frontend/rust-lib/flowy-database2/tests/database/calculations_test/script.rs",
+        "ruta_rel": "appflowy/frontend/rust-lib/flowy-database2/tests/database/calculations_test/script.rs",
+        "loc": 71,
+        "grupo": "tests/database/**",
+        "citas": [],
+        "mencionada": false
+      },
+      {
+        "ruta": "appflowy/frontend/rust-lib/flowy-database2/tests/database/cell_test/mod.rs",
+        "ruta_rel": "appflowy/frontend/rust-lib/flowy-database2/tests/database/cell_test/mod.rs",
+        "loc": 2,
+        "grupo": "tests/database/**",
+        "citas": [],
+        "mencionada": false
+      },
+      {
+        "ruta": "appflowy/frontend/rust-lib/flowy-database2/tests/database/cell_test/script.rs",
+        "ruta_rel": "appflowy/frontend/rust-lib/flowy-database2/tests/database/cell_test/script.rs",
+        "loc": 42,
+        "grupo": "tests/database/**",
+        "citas": [],
+        "mencionada": false
+      },
+      {
+        "ruta": "appflowy/frontend/rust-lib/flowy-database2/tests/database/cell_test/test.rs",
+        "ruta_rel": "appflowy/frontend/rust-lib/flowy-database2/tests/database/cell_test/test.rs",
+        "loc": 206,
+        "grupo": "tests/database/**",
+        "citas": [],
+        "mencionada": false
+      },
+      {
+        "ruta": "appflowy/frontend/rust-lib/flowy-database2/tests/database/database_editor.rs",
+        "ruta_rel": "appflowy/frontend/rust-lib/flowy-database2/tests/database/database_editor.rs",
+        "loc": 312,
+        "grupo": "tests/database/**",
+        "citas": [],
+        "mencionada": false
+      },
+      {
+        "ruta": "appflowy/frontend/rust-lib/flowy-database2/tests/database/field_settings_test/mod.rs",
+        "ruta_rel": "appflowy/frontend/rust-lib/flowy-database2/tests/database/field_settings_test/mod.rs",
+        "loc": 2,
+        "grupo": "tests/database/**",
+        "citas": [],
+        "mencionada": false
+      },
+      {
+        "ruta": "appflowy/frontend/rust-lib/flowy-database2/tests/database/field_settings_test/script.rs",
+        "ruta_rel": "appflowy/frontend/rust-lib/flowy-database2/tests/database/field_settings_test/script.rs",
+        "loc": 111,
+        "grupo": "tests/database/**",
+        "citas": [],
+        "mencionada": false
+      },
+      {
+        "ruta": "appflowy/frontend/rust-lib/flowy-database2/tests/database/field_settings_test/test.rs",
+        "ruta_rel": "appflowy/frontend/rust-lib/flowy-database2/tests/database/field_settings_test/test.rs",
+        "loc": 253,
+        "grupo": "tests/database/**",
+        "citas": [],
+        "mencionada": false
+      },
+      {
+        "ruta": "appflowy/frontend/rust-lib/flowy-database2/tests/database/field_test/mod.rs",
+        "ruta_rel": "appflowy/frontend/rust-lib/flowy-database2/tests/database/field_test/mod.rs",
+        "loc": 3,
+        "grupo": "tests/database/**",
+        "citas": [],
+        "mencionada": false
+      },
+      {
+        "ruta": "appflowy/frontend/rust-lib/flowy-database2/tests/database/field_test/script.rs",
+        "ruta_rel": "appflowy/frontend/rust-lib/flowy-database2/tests/database/field_test/script.rs",
+        "loc": 111,
+        "grupo": "tests/database/**",
+        "citas": [],
+        "mencionada": false
+      },
+      {
+        "ruta": "appflowy/frontend/rust-lib/flowy-database2/tests/database/field_test/test.rs",
+        "ruta_rel": "appflowy/frontend/rust-lib/flowy-database2/tests/database/field_test/test.rs",
+        "loc": 257,
+        "grupo": "tests/database/**",
+        "citas": [],
+        "mencionada": false
+      },
+      {
+        "ruta": "appflowy/frontend/rust-lib/flowy-database2/tests/database/field_test/util.rs",
+        "ruta_rel": "appflowy/frontend/rust-lib/flowy-database2/tests/database/field_test/util.rs",
+        "loc": 122,
+        "grupo": "tests/database/**",
+        "citas": [],
+        "mencionada": false
+      },
+      {
+        "ruta": "appflowy/frontend/rust-lib/flowy-database2/tests/database/filter_test/advanced_filter_test.rs",
+        "ruta_rel": "appflowy/frontend/rust-lib/flowy-database2/tests/database/filter_test/advanced_filter_test.rs",
+        "loc": 314,
+        "grupo": "tests/database/**",
+        "citas": [],
+        "mencionada": false
+      },
+      {
+        "ruta": "appflowy/frontend/rust-lib/flowy-database2/tests/database/filter_test/checkbox_filter_test.rs",
+        "ruta_rel": "appflowy/frontend/rust-lib/flowy-database2/tests/database/filter_test/checkbox_filter_test.rs",
+        "loc": 51,
+        "grupo": "tests/database/**",
+        "citas": [],
+        "mencionada": false
+      },
+      {
+        "ruta": "appflowy/frontend/rust-lib/flowy-database2/tests/database/filter_test/checklist_filter_test.rs",
+        "ruta_rel": "appflowy/frontend/rust-lib/flowy-database2/tests/database/filter_test/checklist_filter_test.rs",
+        "loc": 79,
+        "grupo": "tests/database/**",
+        "citas": [],
+        "mencionada": false
+      },
+      {
+        "ruta": "appflowy/frontend/rust-lib/flowy-database2/tests/database/filter_test/date_filter_test.rs",
+        "ruta_rel": "appflowy/frontend/rust-lib/flowy-database2/tests/database/filter_test/date_filter_test.rs",
+        "loc": 143,
+        "grupo": "tests/database/**",
+        "citas": [],
+        "mencionada": false
+      },
+      {
+        "ruta": "appflowy/frontend/rust-lib/flowy-database2/tests/database/filter_test/mod.rs",
+        "ruta_rel": "appflowy/frontend/rust-lib/flowy-database2/tests/database/filter_test/mod.rs",
+        "loc": 9,
+        "grupo": "tests/database/**",
+        "citas": [],
+        "mencionada": false
+      },
+      {
+        "ruta": "appflowy/frontend/rust-lib/flowy-database2/tests/database/filter_test/number_filter_test.rs",
+        "ruta_rel": "appflowy/frontend/rust-lib/flowy-database2/tests/database/filter_test/number_filter_test.rs",
+        "loc": 160,
+        "grupo": "tests/database/**",
+        "citas": [],
+        "mencionada": false
+      },
+      {
+        "ruta": "appflowy/frontend/rust-lib/flowy-database2/tests/database/filter_test/script.rs",
+        "ruta_rel": "appflowy/frontend/rust-lib/flowy-database2/tests/database/filter_test/script.rs",
+        "loc": 333,
+        "grupo": "tests/database/**",
+        "citas": [],
+        "mencionada": false
+      },
+      {
+        "ruta": "appflowy/frontend/rust-lib/flowy-database2/tests/database/filter_test/select_option_filter_test.rs",
+        "ruta_rel": "appflowy/frontend/rust-lib/flowy-database2/tests/database/filter_test/select_option_filter_test.rs",
+        "loc": 192,
+        "grupo": "tests/database/**",
+        "citas": [],
+        "mencionada": false
+      },
+      {
+        "ruta": "appflowy/frontend/rust-lib/flowy-database2/tests/database/filter_test/text_filter_test.rs",
+        "ruta_rel": "appflowy/frontend/rust-lib/flowy-database2/tests/database/filter_test/text_filter_test.rs",
+        "loc": 314,
+        "grupo": "tests/database/**",
+        "citas": [],
+        "mencionada": false
+      },
+      {
+        "ruta": "appflowy/frontend/rust-lib/flowy-database2/tests/database/filter_test/time_filter_test.rs",
+        "ruta_rel": "appflowy/frontend/rust-lib/flowy-database2/tests/database/filter_test/time_filter_test.rs",
+        "loc": 133,
+        "grupo": "tests/database/**",
+        "citas": [],
+        "mencionada": false
+      },
+      {
+        "ruta": "appflowy/frontend/rust-lib/flowy-database2/tests/database/group_test/date_group_test.rs",
+        "ruta_rel": "appflowy/frontend/rust-lib/flowy-database2/tests/database/group_test/date_group_test.rs",
+        "loc": 128,
+        "grupo": "tests/database/**",
+        "citas": [],
+        "mencionada": false
+      },
+      {
+        "ruta": "appflowy/frontend/rust-lib/flowy-database2/tests/database/group_test/mod.rs",
+        "ruta_rel": "appflowy/frontend/rust-lib/flowy-database2/tests/database/group_test/mod.rs",
+        "loc": 4,
+        "grupo": "tests/database/**",
+        "citas": [],
+        "mencionada": false
+      },
+      {
+        "ruta": "appflowy/frontend/rust-lib/flowy-database2/tests/database/group_test/script.rs",
+        "ruta_rel": "appflowy/frontend/rust-lib/flowy-database2/tests/database/group_test/script.rs",
+        "loc": 247,
+        "grupo": "tests/database/**",
+        "citas": [],
+        "mencionada": false
+      },
+      {
+        "ruta": "appflowy/frontend/rust-lib/flowy-database2/tests/database/group_test/test.rs",
+        "ruta_rel": "appflowy/frontend/rust-lib/flowy-database2/tests/database/group_test/test.rs",
+        "loc": 234,
+        "grupo": "tests/database/**",
+        "citas": [],
+        "mencionada": false
+      },
+      {
+        "ruta": "appflowy/frontend/rust-lib/flowy-database2/tests/database/group_test/url_group_test.rs",
+        "ruta_rel": "appflowy/frontend/rust-lib/flowy-database2/tests/database/group_test/url_group_test.rs",
+        "loc": 102,
+        "grupo": "tests/database/**",
+        "citas": [],
+        "mencionada": false
+      },
+      {
+        "ruta": "appflowy/frontend/rust-lib/flowy-database2/tests/database/layout_test/mod.rs",
+        "ruta_rel": "appflowy/frontend/rust-lib/flowy-database2/tests/database/layout_test/mod.rs",
+        "loc": 2,
+        "grupo": "tests/database/**",
+        "citas": [],
+        "mencionada": false
+      },
+      {
+        "ruta": "appflowy/frontend/rust-lib/flowy-database2/tests/database/layout_test/script.rs",
+        "ruta_rel": "appflowy/frontend/rust-lib/flowy-database2/tests/database/layout_test/script.rs",
+        "loc": 142,
+        "grupo": "tests/database/**",
+        "citas": [],
+        "mencionada": false
+      },
+      {
+        "ruta": "appflowy/frontend/rust-lib/flowy-database2/tests/database/layout_test/test.rs",
+        "ruta_rel": "appflowy/frontend/rust-lib/flowy-database2/tests/database/layout_test/test.rs",
+        "loc": 53,
+        "grupo": "tests/database/**",
+        "citas": [],
+        "mencionada": false
+      },
+      {
+        "ruta": "appflowy/frontend/rust-lib/flowy-database2/tests/database/mock_data/board_mock_data.rs",
+        "ruta_rel": "appflowy/frontend/rust-lib/flowy-database2/tests/database/mock_data/board_mock_data.rs",
+        "loc": 278,
+        "grupo": "tests/database/**",
+        "citas": [],
+        "mencionada": false
+      },
+      {
+        "ruta": "appflowy/frontend/rust-lib/flowy-database2/tests/database/mock_data/calendar_mock_data.rs",
+        "ruta_rel": "appflowy/frontend/rust-lib/flowy-database2/tests/database/mock_data/calendar_mock_data.rs",
+        "loc": 124,
+        "grupo": "tests/database/**",
+        "citas": [],
+        "mencionada": false
+      },
+      {
+        "ruta": "appflowy/frontend/rust-lib/flowy-database2/tests/database/mock_data/grid_mock_data.rs",
+        "ruta_rel": "appflowy/frontend/rust-lib/flowy-database2/tests/database/mock_data/grid_mock_data.rs",
+        "loc": 409,
+        "grupo": "tests/database/**",
+        "citas": [],
+        "mencionada": false
+      },
+      {
+        "ruta": "appflowy/frontend/rust-lib/flowy-database2/tests/database/mock_data/mod.rs",
+        "ruta_rel": "appflowy/frontend/rust-lib/flowy-database2/tests/database/mock_data/mod.rs",
+        "loc": 19,
+        "grupo": "tests/database/**",
+        "citas": [],
+        "mencionada": false
+      },
+      {
+        "ruta": "appflowy/frontend/rust-lib/flowy-database2/tests/database/mod.rs",
+        "ruta_rel": "appflowy/frontend/rust-lib/flowy-database2/tests/database/mod.rs",
+        "loc": 13,
+        "grupo": "tests/database/**",
+        "citas": [],
+        "mencionada": false
+      },
+      {
+        "ruta": "appflowy/frontend/rust-lib/flowy-database2/tests/database/pre_fill_cell_test/mod.rs",
+        "ruta_rel": "appflowy/frontend/rust-lib/flowy-database2/tests/database/pre_fill_cell_test/mod.rs",
+        "loc": 3,
+        "grupo": "tests/database/**",
+        "citas": [],
+        "mencionada": false
+      },
+      {
+        "ruta": "appflowy/frontend/rust-lib/flowy-database2/tests/database/pre_fill_cell_test/pre_fill_row_according_to_filter_test.rs",
+        "ruta_rel": "appflowy/frontend/rust-lib/flowy-database2/tests/database/pre_fill_cell_test/pre_fill_row_according_to_filter_test.rs",
+        "loc": 350,
+        "grupo": "tests/database/**",
+        "citas": [],
+        "mencionada": false
+      },
+      {
+        "ruta": "appflowy/frontend/rust-lib/flowy-database2/tests/database/pre_fill_cell_test/pre_fill_row_with_payload_test.rs",
+        "ruta_rel": "appflowy/frontend/rust-lib/flowy-database2/tests/database/pre_fill_cell_test/pre_fill_row_with_payload_test.rs",
+        "loc": 325,
+        "grupo": "tests/database/**",
+        "citas": [],
+        "mencionada": false
+      },
+      {
+        "ruta": "appflowy/frontend/rust-lib/flowy-database2/tests/database/pre_fill_cell_test/script.rs",
+        "ruta_rel": "appflowy/frontend/rust-lib/flowy-database2/tests/database/pre_fill_cell_test/script.rs",
+        "loc": 110,
+        "grupo": "tests/database/**",
+        "citas": [],
+        "mencionada": false
+      },
+      {
+        "ruta": "appflowy/frontend/rust-lib/flowy-database2/tests/database/share_test/export_test.rs",
+        "ruta_rel": "appflowy/frontend/rust-lib/flowy-database2/tests/database/share_test/export_test.rs",
+        "loc": 184,
+        "grupo": "tests/database/**",
+        "citas": [],
+        "mencionada": false
+      },
+      {
+        "ruta": "appflowy/frontend/rust-lib/flowy-database2/tests/database/share_test/mod.rs",
+        "ruta_rel": "appflowy/frontend/rust-lib/flowy-database2/tests/database/share_test/mod.rs",
+        "loc": 1,
+        "grupo": "tests/database/**",
+        "citas": [],
+        "mencionada": false
+      },
+      {
+        "ruta": "appflowy/frontend/rust-lib/flowy-database2/tests/database/sort_test/mod.rs",
+        "ruta_rel": "appflowy/frontend/rust-lib/flowy-database2/tests/database/sort_test/mod.rs",
+        "loc": 3,
+        "grupo": "tests/database/**",
+        "citas": [],
+        "mencionada": false
+      },
+      {
+        "ruta": "appflowy/frontend/rust-lib/flowy-database2/tests/database/sort_test/multi_sort_test.rs",
+        "ruta_rel": "appflowy/frontend/rust-lib/flowy-database2/tests/database/sort_test/multi_sort_test.rs",
+        "loc": 126,
+        "grupo": "tests/database/**",
+        "citas": [],
+        "mencionada": false
+      },
+      {
+        "ruta": "appflowy/frontend/rust-lib/flowy-database2/tests/database/sort_test/script.rs",
+        "ruta_rel": "appflowy/frontend/rust-lib/flowy-database2/tests/database/sort_test/script.rs",
+        "loc": 216,
+        "grupo": "tests/database/**",
+        "citas": [],
+        "mencionada": false
+      },
+      {
+        "ruta": "appflowy/frontend/rust-lib/flowy-database2/tests/database/sort_test/single_sort_test.rs",
+        "ruta_rel": "appflowy/frontend/rust-lib/flowy-database2/tests/database/sort_test/single_sort_test.rs",
+        "loc": 312,
+        "grupo": "tests/database/**",
+        "citas": [],
+        "mencionada": false
+      },
+      {
+        "ruta": "appflowy/frontend/rust-lib/flowy-database2/tests/main.rs",
+        "ruta_rel": "appflowy/frontend/rust-lib/flowy-database2/tests/main.rs",
+        "loc": 1,
+        "grupo": "tests/database/**",
+        "citas": [],
+        "mencionada": false
+      }
+    ]
+  }
+}

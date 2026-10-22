@@ -1,0 +1,19 @@
+─── validate_template (catalogue) ───
+--- summary: files=1 ok=1 errors=0 warns=0 ---
+OK: template
+─── validate_evidence ───
+--- summary: refs=57 ok=57 errors=0 ---
+OK: evidence
+─── validate_mermaid ───
+OK=1 FAIL=0
+OK: mermaid
+─── count_rows_misc (prueba literal del ROADMAP) ───
+  §4 rutas      : 35 filas (esperado 35) OK
+  §5 atajos     : 13 filas (esperado 13) OK
+  §6 flags      : 9 filas (esperado 9) OK
+  §7 i18n keys  : 1637 filas (esperado 1637) OK
+  §8 startup    : 15 filas (esperado 15) OK
+  TOTAL         : 1709 filas (esperado 1709) OK
+OK: count_rows_misc
+
+OK: B2.6 (template + evidence + mermaid + count_rows, 4/4 checks)

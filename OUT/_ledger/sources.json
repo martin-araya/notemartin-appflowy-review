@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-10-18T14:05:01Z",
+  "skill_root": "/Users/martin/Desktop/projects/Skills/notemartin-appflowy-review",
+  "sources": [
+    {
+      "url": "https://github.com/AppFlowy-IO/AppFlowy",
+      "requested_ref": "default-branch",
+      "commit": "5cf3a365dec0d59f64bad1ee4bb1050471a39b93",
+      "method": "shallow",
+      "name": "appflowy",
+      "cloned_at": "2026-10-18T14:05:01Z",
+      "path": "SRC/appflowy",
+      "commit_short": "5cf3a36"
+    },
+    {
+      "url": "https://github.com/AppFlowy-IO/AppFlowy-Collab",
+      "requested_ref": "4dfccef-from-cargo-toml",
+      "commit": "4dfccefb9e4fd35240107b93fb4b5966295b452e",
+      "method": "full",
+      "evidence": {
+        "cargo_toml_path": "SRC/appflowy/frontend/rust-lib/Cargo.toml",
+        "section": "[patch.crates-io]"
+      },
+      "name": "collab",
+      "cloned_at": "2026-10-18T14:05:01Z",
+      "path": "SRC/collab",
+      "commit_short": "4dfccef"
+    },
+    {
+      "url": "https://github.com/AppFlowy-IO/appflowy-editor",
+      "requested_ref": "470c4e7-from-pubspec-yaml",
+      "commit": "470c4e77c71b63f693ce0923a927afcd667d6f3b",
+      "method": "full",
+      "evidence": {
+        "pubspec_path": "SRC/appflowy/frontend/appflowy_flutter/pubspec.yaml",
+        "node": "dependency_overrides.appflowy_editor.git.ref"
+      },
+      "name": "editor",
+      "cloned_at": "2026-10-18T14:05:01Z",
+      "path": "SRC/editor",
+      "commit_short": "470c4e7"
+    }
+  ]
+}

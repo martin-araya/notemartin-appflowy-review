@@ -1,0 +1,166 @@
+{
+  "schema_version": 1,
+  "id": "F19.5",
+  "feature_id": "F19",
+  "sub_index": 5,
+  "titulo": "Editor: configuracion (pubspec.*, .github, CHANGELOG, LICENSE, documentation) + raiz de test/",
+  "fuentes": [
+    "editor"
+  ],
+  "archivos": [
+    {
+      "fuente": "editor",
+      "ruta": "editor/.github/ISSUE_TEMPLATE/bug_report.yaml",
+      "capa": "config",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/.github/ISSUE_TEMPLATE/feature_request.yaml",
+      "capa": "config",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/.github/workflows/commit_lint.yml",
+      "capa": "config",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/.github/workflows/test.yml",
+      "capa": "config",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/.gitignore",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/CHANGELOG.md",
+      "capa": "config",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/LICENSE",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/README.md",
+      "capa": "config",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/analysis_options.yaml",
+      "capa": "config",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/codecov.yml",
+      "capa": "config",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/documentation/UPGRADING.md",
+      "capa": "config",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/documentation/customizing.md",
+      "capa": "config",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/documentation/importing.md",
+      "capa": "config",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/documentation/testing.md",
+      "capa": "config",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/documentation/translation.md",
+      "capa": "config",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/pubspec.yaml",
+      "capa": "config",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/test/editor_state_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/test/l10n/l10n_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/test/test_helper.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    }
+  ],
+  "archivos_total": 19,
+  "catalogos": [
+    "blocs.json",
+    "deps.json",
+    "events.json",
+    "misc.json",
+    "notifications.json",
+    "protobuf.json"
+  ],
+  "catalogos_razon": {
+    "events.json": "Eventos FFI / dispatch de esta feature",
+    "blocs.json": "BLoCs / Cubits presentes en los archivos de esta unidad",
+    "protobuf.json": "Entidades protobuf input/output de los eventos",
+    "notifications.json": "Notificaciones Rust→Dart emitidas o escuchadas",
+    "deps.json": "Dependencias del workspace rust y pubspec",
+    "misc.json": "Rutas, atajos, flags, error codes, i18n"
+  },
+  "dependencias": [
+    {
+      "id": "F19.0",
+      "tipo": "indice",
+      "nota": "Documento indice F19.0 debe existir antes de esta sub-unidad."
+    }
+  ],
+  "plantilla": "feature",
+  "documento": "OUT/09-features/F19-editor-tests-ejemplos-l10n-configuracion/5-editor-configuracion-pubspec-github-changelog-license-documentation-raiz-de-test.md",
+  "metricas": {
+    "archivos": 19,
+    "por_capa": {
+      "config": 14,
+      "ui": 2,
+      "test": 3
+    },
+    "por_fuente": {
+      "editor": 19
+    }
+  },
+  "prioridad": 2,
+  "concurrencia": "paralela",
+  "generado_en": "2026-10-20T22:05:46Z"
+}

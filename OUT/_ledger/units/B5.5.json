@@ -1,0 +1,35 @@
+{
+  "id": "B5.5",
+  "titulo": "Edición concurrente y merge",
+  "feature_id": "B5.5",
+  "documento": "OUT/15-secuencias-globales/05-edicion-concurrente-y-merge.md",
+  "plantilla": "feature",
+  "archivos": [
+    "appflowy/frontend/rust-lib/collab-integrate/src/collab_builder.rs",
+    "appflowy/frontend/rust-lib/collab-integrate/src/plugin_provider.rs",
+    "collab/collab/src/lib.rs",
+    "collab/collab-entity/src/lib.rs",
+    "collab/collab-document/src/document.rs",
+    "collab/collab-folder/src/folder.rs",
+    "collab/collab-database/src/database.rs",
+    "appflowy/frontend/appflowy_flutter/lib/plugins/document/application/document_bloc.dart",
+    "appflowy/frontend/appflowy_flutter/lib/plugins/document/application/document_service.dart",
+    "appflowy/frontend/appflowy_flutter/lib/plugins/document/application/document_collab_adapter.dart",
+    "appflowy/frontend/appflowy_flutter/lib/plugins/document/application/doc_sync_state_listener.dart",
+    "appflowy/frontend/rust-lib/flowy-document/src/manager.rs",
+    "appflowy/frontend/rust-lib/flowy-document/src/event_handler.rs",
+    "appflowy/frontend/rust-lib/flowy-document/src/event_map.rs",
+    "appflowy/frontend/rust-lib/flowy-document/src/notification.rs",
+    "appflowy/frontend/rust-lib/flowy-document/src/document.rs"
+  ],
+  "archivos_total": 16,
+  "fuentes": [
+    "appflowy",
+    "collab"
+  ],
+  "evidence_min_pct": 95,
+  "gate_100": false,
+  "transversal": true,
+  "secuencia": true,
+  "nota": "Secuencia global extremo a extremo: transversal, no ancla archivos a cobertura.csv. Sus archivos ya pertenecen a features F* y están verificados al 100 % desde el cierre de B3; B5 los re-presenta como recorrido con sequenceDiagram."
+}

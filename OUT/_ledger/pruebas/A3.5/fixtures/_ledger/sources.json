@@ -1,0 +1,8 @@
+{
+  "schema_version": 1,
+  "sources": [
+    {"name": "appflowy", "commit_short": "5cf3a36", "url": "https://github.com/AppFlowy-IO/AppFlowy"},
+    {"name": "collab",    "commit_short": "4dfccef", "url": "https://github.com/AppFlowy-IO/AppFlowy-Collab"},
+    {"name": "editor",    "commit_short": "470c4e7", "url": "https://github.com/AppFlowy-IO/appflowy-editor"}
+  ]
+}

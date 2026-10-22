@@ -1,0 +1,10 @@
+{
+  "unit_id": "F02.4",
+  "archivos_total": 4,
+  "archivos_cubiertos": [
+    "appflowy/frontend/rust-lib/flowy-database2/src/services/filter/controller.rs",
+    "appflowy/frontend/rust-lib/flowy-database2/src/services/filter/entities.rs",
+    "appflowy/frontend/rust-lib/flowy-database2/src/services/filter/mod.rs",
+    "appflowy/frontend/rust-lib/flowy-database2/src/services/filter/task.rs"
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "id": "B4.2",
+  "titulo": "Export HTML",
+  "feature_id": "B4.2",
+  "documento": "OUT/10-motor-export-import/02-html-export.md",
+  "plantilla": "export",
+  "archivos": [
+    "editor/lib/src/plugins/html/html_document.dart",
+    "editor/lib/src/plugins/html/html_document_encoder.dart",
+    "editor/lib/src/plugins/html/html_document_decoder.dart",
+    "editor/lib/src/plugins/html/encoder/delta_html_encoder.dart",
+    "editor/lib/src/plugins/html/encoder/parser/html_node_parser.dart",
+    "editor/lib/src/plugins/html/encoder/parser/html_parser.dart",
+    "editor/lib/src/plugins/html/encoder/parser/text_node_parser.dart",
+    "editor/lib/src/plugins/html/encoder/parser/heading_node_parser.dart",
+    "editor/lib/src/plugins/html/encoder/parser/bulleted_list_node_parser.dart",
+    "editor/lib/src/plugins/html/encoder/parser/numbered_list_node_parser.dart",
+    "editor/lib/src/plugins/html/encoder/parser/todo_list_node_parser.dart",
+    "editor/lib/src/plugins/html/encoder/parser/quote_node_parser.dart",
+    "editor/lib/src/plugins/html/encoder/parser/divider_node_parser.dart",
+    "editor/lib/src/plugins/html/encoder/parser/image_node_parser.dart",
+    "editor/lib/src/plugins/html/encoder/parser/table_node_parser.dart",
+    "appflowy/frontend/appflowy_flutter/lib/workspace/application/export/document_exporter.dart",
+    "appflowy/frontend/appflowy_flutter/lib/plugins/shared/share/export_tab.dart",
+    "appflowy/frontend/appflowy_flutter/lib/plugins/shared/share/_shared.dart"
+  ],
+  "archivos_total": 18,
+  "fuentes": [
+    "appflowy",
+    "editor"
+  ],
+  "evidence_min_pct": 30,
+  "gate_100": true,
+  "nota": "Unidad transversal: sus archivos ya pertenecen a features F* y están verificados en cobertura.csv. El bloque B4 no modifica el ledger; documenta el motor re-trazando esos mismos ficheros."
+}

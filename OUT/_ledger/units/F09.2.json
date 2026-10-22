@@ -1,0 +1,94 @@
+{
+  "schema_version": 1,
+  "id": "F09.2",
+  "feature_id": "F09",
+  "sub_index": 2,
+  "titulo": "IA: flowy-sqlite-vec (vectores)",
+  "fuentes": [
+    "appflowy"
+  ],
+  "archivos": [
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/flowy-sqlite-vec/Cargo.toml",
+      "capa": "config",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/flowy-sqlite-vec/migrations/001-init/up.sql",
+      "capa": "ui",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/flowy-sqlite-vec/src/db.rs",
+      "capa": "persistence",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/flowy-sqlite-vec/src/entities.rs",
+      "capa": "persistence",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/flowy-sqlite-vec/src/lib.rs",
+      "capa": "persistence",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/flowy-sqlite-vec/src/migration.rs",
+      "capa": "persistence",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/flowy-sqlite-vec/tests/main.rs",
+      "capa": "persistence",
+      "estado": "pendiente"
+    }
+  ],
+  "archivos_total": 7,
+  "catalogos": [
+    "blocs.json",
+    "deps.json",
+    "events.json",
+    "misc.json",
+    "notifications.json",
+    "protobuf.json"
+  ],
+  "catalogos_razon": {
+    "events.json": "Eventos FFI / dispatch de esta feature",
+    "blocs.json": "BLoCs / Cubits presentes en los archivos de esta unidad",
+    "protobuf.json": "Entidades protobuf input/output de los eventos",
+    "notifications.json": "Notificaciones Rust→Dart emitidas o escuchadas",
+    "deps.json": "Dependencias del workspace rust y pubspec",
+    "misc.json": "Rutas, atajos, flags, error codes, i18n"
+  },
+  "dependencias": [
+    {
+      "id": "F09.0",
+      "tipo": "indice",
+      "nota": "Documento indice F09.0 debe existir antes de esta sub-unidad."
+    }
+  ],
+  "plantilla": "feature",
+  "documento": "OUT/09-features/F09-ia/2-ia-flowy-sqlite-vec-vectores.md",
+  "metricas": {
+    "archivos": 7,
+    "por_capa": {
+      "config": 1,
+      "ui": 1,
+      "persistence": 5
+    },
+    "por_fuente": {
+      "appflowy": 7
+    }
+  },
+  "prioridad": 2,
+  "concurrencia": "paralela",
+  "generado_en": "2026-10-20T18:14:27Z"
+}

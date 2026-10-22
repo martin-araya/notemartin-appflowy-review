@@ -1,0 +1,11 @@
+{
+  "unit_id": "F02.3",
+  "archivos_total": 5,
+  "archivos_cubiertos": [
+    "appflowy/frontend/rust-lib/flowy-database2/src/services/database/database_editor.rs",
+    "appflowy/frontend/rust-lib/flowy-database2/src/services/database/database_observe.rs",
+    "appflowy/frontend/rust-lib/flowy-database2/src/services/database/entities.rs",
+    "appflowy/frontend/rust-lib/flowy-database2/src/services/database/mod.rs",
+    "appflowy/frontend/rust-lib/flowy-database2/src/services/database/util.rs"
+  ]
+}

@@ -1,0 +1,542 @@
+{
+  "schema_version": 1,
+  "id": "F19.1",
+  "feature_id": "F19",
+  "sub_index": 1,
+  "titulo": "Tests del editor: test/new",
+  "fuentes": [
+    "editor"
+  ],
+  "archivos": [
+    {
+      "fuente": "editor",
+      "ruta": "editor/test/new/block_component/bulleted_list_block_component/bulleted_list_character_shortcut_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/test/new/block_component/divider_block_component/divider_character_shortcut_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/test/new/block_component/heading_block_component/heading_character_shortcut_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/test/new/block_component/heading_block_component/heading_command_shortcut_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/test/new/block_component/numbered_list_block_component/numbered_list_block_component_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/test/new/block_component/numbered_list_block_component/numbered_list_character_shortcut_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/test/new/block_component/quote_block_component/quote_character_shortcut_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/test/new/block_component/table_block_component/table_action_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/test/new/block_component/table_block_component/table_block_component_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/test/new/block_component/table_block_component/table_commands_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/test/new/block_component/table_block_component/table_node_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/test/new/block_component/table_block_component/table_view_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/test/new/block_component/test_character_shortcut.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/test/new/block_component/text_block_component/text_block_component_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/test/new/block_component/text_direction_mixin_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/test/new/block_component/todo_list_block_component/todo_list_character_shortcut_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/test/new/block_component/todo_list_block_component/todo_list_power_toggle_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/test/new/command/selection_commands_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/test/new/command/text_commands_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/test/new/editor_component/service/shortcuts/character_shortcuts/format_double_hyphen_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/test/new/editor_component/service/shortcuts/character_shortcuts/format_greater_hyphen_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/test/new/editor_component/service/shortcuts/character_shortcuts/undo_markdown_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/test/new/editor_component/service/shortcuts/command_shortcuts/paste_command_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/test/new/extensions/node_extension_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/test/new/find_replace_menu/find_replace_menu_find_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/test/new/find_replace_menu/find_replace_menu_replace_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/test/new/find_replace_menu/find_replace_menu_utils.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/test/new/find_replace_menu/search_algorithm_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/test/new/infra/testable_editor.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/test/new/service/ime/delta_input_on_insert_impl_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/test/new/service/shortcuts/character_shortcut_events/character_shortcut_event_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/test/new/service/shortcuts/character_shortcut_events/double_characters_shortcut_events/format_bold_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/test/new/service/shortcuts/character_shortcut_events/double_characters_shortcut_events/format_equal_greater_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/test/new/service/shortcuts/character_shortcut_events/format_by_wrapping_with_single_char/format_code_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/test/new/service/shortcuts/character_shortcut_events/format_by_wrapping_with_single_char/format_italic_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/test/new/service/shortcuts/character_shortcut_events/format_by_wrapping_with_single_char/format_strikethrough_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/test/new/service/shortcuts/character_shortcut_events/markdown_shortcut_events/format_markdown_link_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/test/new/service/shortcuts/command_shortcut_events/arrow_keys_handler_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/test/new/service/shortcuts/command_shortcut_events/arrow_left_command_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/test/new/service/shortcuts/command_shortcut_events/arrow_right_command_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/test/new/service/shortcuts/command_shortcut_events/backspace_command_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/test/new/service/shortcuts/command_shortcut_events/checkbox_event_handler_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/test/new/service/shortcuts/command_shortcut_events/copy_command_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/test/new/service/shortcuts/command_shortcut_events/copy_paste_handler_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/test/new/service/shortcuts/command_shortcut_events/cut_command_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/test/new/service/shortcuts/command_shortcut_events/delete_command_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/test/new/service/shortcuts/command_shortcut_events/delete_left_character_command_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/test/new/service/shortcuts/command_shortcut_events/end_command_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/test/new/service/shortcuts/command_shortcut_events/enter_without_shift_in_text_node_handler_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/test/new/service/shortcuts/command_shortcut_events/exit_editing_mode_handler_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/test/new/service/shortcuts/command_shortcut_events/format_style_handler_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/test/new/service/shortcuts/command_shortcut_events/home_command_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/test/new/service/shortcuts/command_shortcut_events/indent_command_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/test/new/service/shortcuts/command_shortcut_events/markdown_commands_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/test/new/service/shortcuts/command_shortcut_events/markdown_syntax_to_styled_text_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/test/new/service/shortcuts/command_shortcut_events/open_link_command_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/test/new/service/shortcuts/command_shortcut_events/open_links_comand_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/test/new/service/shortcuts/command_shortcut_events/outdent_command_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/test/new/service/shortcuts/command_shortcut_events/page_up_down_handler_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/test/new/service/shortcuts/command_shortcut_events/paste_command_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/test/new/service/shortcuts/command_shortcut_events/plaintext_paste_command_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/test/new/service/shortcuts/command_shortcut_events/redo_undo_handler_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/test/new/service/shortcuts/command_shortcut_events/remove_line_command_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/test/new/service/shortcuts/command_shortcut_events/remove_word_command_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/test/new/service/shortcuts/command_shortcut_events/select_all_command_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/test/new/service/shortcuts/command_shortcut_events/select_all_handler_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/test/new/service/shortcuts/command_shortcut_events/show_link_menu_command_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/test/new/service/shortcuts/command_shortcut_events/slash_handler_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/test/new/service/shortcuts/command_shortcut_events/tab_handler_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/test/new/service/shortcuts/command_shortcut_events/toggle_color_commands_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/test/new/service/shortcuts/command_shortcut_events/undo_redo_command_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/test/new/service/shortcuts/command_shortcut_events/white_space_handler_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/test/new/toolbar/desktop/floating_toolbar_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/test/new/toolbar/desktop/items/color/color_picker_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/test/new/toolbar/desktop/items/link/link_menu_test.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/test/new/util/arrow_util.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/test/new/util/document_util.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/test/new/util/keyboard_util.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/test/new/util/log_util.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/test/new/util/node_util.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/test/new/util/typedef_util.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/test/new/util/util.dart",
+      "capa": "test",
+      "estado": "pendiente"
+    }
+  ],
+  "archivos_total": 82,
+  "catalogos": [
+    "blocs.json",
+    "deps.json",
+    "events.json",
+    "misc.json",
+    "notifications.json",
+    "protobuf.json"
+  ],
+  "catalogos_razon": {
+    "events.json": "Eventos FFI / dispatch de esta feature",
+    "blocs.json": "BLoCs / Cubits presentes en los archivos de esta unidad",
+    "protobuf.json": "Entidades protobuf input/output de los eventos",
+    "notifications.json": "Notificaciones Rust→Dart emitidas o escuchadas",
+    "deps.json": "Dependencias del workspace rust y pubspec",
+    "misc.json": "Rutas, atajos, flags, error codes, i18n"
+  },
+  "dependencias": [
+    {
+      "id": "F19.0",
+      "tipo": "indice",
+      "nota": "Documento indice F19.0 debe existir antes de esta sub-unidad."
+    }
+  ],
+  "plantilla": "feature",
+  "documento": "OUT/09-features/F19-editor-tests-ejemplos-l10n-configuracion/1-tests-del-editor-test-new.md",
+  "metricas": {
+    "archivos": 82,
+    "por_capa": {
+      "test": 82
+    },
+    "por_fuente": {
+      "editor": 82
+    }
+  },
+  "prioridad": 2,
+  "concurrencia": "paralela",
+  "generado_en": "2026-10-20T22:05:46Z"
+}

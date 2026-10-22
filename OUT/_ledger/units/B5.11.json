@@ -1,0 +1,27 @@
+{
+  "id": "B5.11",
+  "titulo": "Import (CSV/ZIP/Notion)",
+  "feature_id": "B5.11",
+  "documento": "OUT/15-secuencias-globales/11-import-csv-zip.md",
+  "plantilla": "feature",
+  "archivos": [
+    "appflowy/frontend/appflowy_flutter/lib/workspace/presentation/home/menu/sidebar/import/import_panel.dart",
+    "appflowy/frontend/appflowy_flutter/lib/workspace/application/settings/share/import_service.dart",
+    "appflowy/frontend/rust-lib/flowy-database2/src/services/share/csv/import.rs",
+    "appflowy/frontend/rust-lib/flowy-database2/src/services/share/csv/mod.rs",
+    "appflowy/frontend/rust-lib/flowy-folder/src/share/import.rs",
+    "collab/collab-importer/src/lib.rs",
+    "collab/collab-importer/src/zip_tool/mod.rs",
+    "collab/collab-importer/src/notion/mod.rs"
+  ],
+  "archivos_total": 8,
+  "fuentes": [
+    "appflowy",
+    "collab"
+  ],
+  "evidence_min_pct": 95,
+  "gate_100": false,
+  "transversal": true,
+  "secuencia": true,
+  "nota": "Secuencia global extremo a extremo: transversal, no ancla archivos a cobertura.csv. Sus archivos ya pertenecen a features F* y están verificados al 100 % desde el cierre de B3; B5 los re-presenta como recorrido con sequenceDiagram."
+}

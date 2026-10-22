@@ -1,0 +1,300 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-10-18T22:00:00Z",
+  "src_root": "/fake/src",
+  "fuentes": [
+    "appflowy",
+    "collab",
+    "editor"
+  ],
+  "files": [
+    {
+      "fuente": "appflowy",
+      "ruta_rel": "appflowy/frontend/appflowy_flutter/lib/plugins/document/application/document_bloc.dart",
+      "capa": "bloc",
+      "lenguaje": "dart",
+      "loc": 100,
+      "sha1": "a1",
+      "bytes": 3000
+    },
+    {
+      "fuente": "appflowy",
+      "ruta_rel": "appflowy/frontend/appflowy_flutter/lib/plugins/document/presentation/editor_plugins/heading/heading_block.dart",
+      "capa": "ui",
+      "lenguaje": "dart",
+      "loc": 50,
+      "sha1": "a2",
+      "bytes": 1500
+    },
+    {
+      "fuente": "appflowy",
+      "ruta_rel": "appflowy/frontend/appflowy_flutter/lib/shared/markdown_to_document.dart",
+      "capa": "service",
+      "lenguaje": "dart",
+      "loc": 80,
+      "sha1": "a3",
+      "bytes": 2400
+    },
+    {
+      "fuente": "editor",
+      "ruta_rel": "editor/lib/src/editor/editor_component.dart",
+      "capa": "ui",
+      "lenguaje": "dart",
+      "loc": 200,
+      "sha1": "e1",
+      "bytes": 6000
+    },
+    {
+      "fuente": "collab",
+      "ruta_rel": "collab/collab-document/src/document.rs",
+      "capa": "collab",
+      "lenguaje": "rust",
+      "loc": 300,
+      "sha1": "c1",
+      "bytes": 9000
+    },
+    {
+      "fuente": "appflowy",
+      "ruta_rel": "appflowy/frontend/appflowy_flutter/lib/plugins/database/grid/presentation/grid_bloc.dart",
+      "capa": "bloc",
+      "lenguaje": "dart",
+      "loc": 150,
+      "sha1": "a4",
+      "bytes": 4500
+    },
+    {
+      "fuente": "appflowy",
+      "ruta_rel": "appflowy/frontend/rust-lib/flowy-database2/src/manager.rs",
+      "capa": "rust-manager",
+      "lenguaje": "rust",
+      "loc": 250,
+      "sha1": "a5",
+      "bytes": 7500
+    },
+    {
+      "fuente": "collab",
+      "ruta_rel": "collab/collab-database/src/database.rs",
+      "capa": "collab",
+      "lenguaje": "rust",
+      "loc": 200,
+      "sha1": "c2",
+      "bytes": 6000
+    },
+    {
+      "fuente": "appflowy",
+      "ruta_rel": "appflowy/frontend/appflowy_flutter/lib/workspace/application/view/view_bloc.dart",
+      "capa": "bloc",
+      "lenguaje": "dart",
+      "loc": 120,
+      "sha1": "a6",
+      "bytes": 3600
+    },
+    {
+      "fuente": "appflowy",
+      "ruta_rel": "appflowy/frontend/rust-lib/flowy-folder/src/manager.rs",
+      "capa": "rust-manager",
+      "lenguaje": "rust",
+      "loc": 180,
+      "sha1": "a7",
+      "bytes": 5400
+    },
+    {
+      "fuente": "collab",
+      "ruta_rel": "collab/collab-folder/src/folder.rs",
+      "capa": "collab",
+      "lenguaje": "rust",
+      "loc": 160,
+      "sha1": "c3",
+      "bytes": 4800
+    },
+    {
+      "fuente": "appflowy",
+      "ruta_rel": "appflowy/frontend/appflowy_flutter/lib/user/application/user_bloc.dart",
+      "capa": "bloc",
+      "lenguaje": "dart",
+      "loc": 100,
+      "sha1": "a8",
+      "bytes": 3000
+    },
+    {
+      "fuente": "appflowy",
+      "ruta_rel": "appflowy/frontend/rust-lib/flowy-user/src/user_manager.rs",
+      "capa": "rust-manager",
+      "lenguaje": "rust",
+      "loc": 140,
+      "sha1": "a9",
+      "bytes": 4200
+    },
+    {
+      "fuente": "collab",
+      "ruta_rel": "collab/collab-user/src/user_awareness.rs",
+      "capa": "collab",
+      "lenguaje": "rust",
+      "loc": 90,
+      "sha1": "c4",
+      "bytes": 2700
+    },
+    {
+      "fuente": "appflowy",
+      "ruta_rel": "appflowy/frontend/rust-lib/flowy-search/src/tantivy_state.rs",
+      "capa": "rust-handler",
+      "lenguaje": "rust",
+      "loc": 110,
+      "sha1": "a10",
+      "bytes": 3300
+    },
+    {
+      "fuente": "appflowy",
+      "ruta_rel": "appflowy/frontend/rust-lib/flowy-core/src/indexing_data_runner.rs",
+      "capa": "service",
+      "lenguaje": "rust",
+      "loc": 80,
+      "sha1": "a11",
+      "bytes": 2400
+    },
+    {
+      "fuente": "appflowy",
+      "ruta_rel": "appflowy/frontend/appflowy_flutter/lib/shared/easy_localiation_service.dart",
+      "capa": "service",
+      "lenguaje": "dart",
+      "loc": 60,
+      "sha1": "a12",
+      "bytes": 1800
+    },
+    {
+      "fuente": "appflowy",
+      "ruta_rel": "appflowy/frontend/appflowy_flutter/lib/startup/tasks/localization.dart",
+      "capa": "service",
+      "lenguaje": "dart",
+      "loc": 70,
+      "sha1": "a13",
+      "bytes": 2100
+    },
+    {
+      "fuente": "appflowy",
+      "ruta_rel": "appflowy/project.inlang/settings.json",
+      "capa": "config",
+      "lenguaje": "json",
+      "loc": 20,
+      "sha1": "a14",
+      "bytes": 600
+    },
+    {
+      "fuente": "appflowy",
+      "ruta_rel": "appflowy/frontend/rust-lib/flowy-notification/src/builder.rs",
+      "capa": "rust-handler",
+      "lenguaje": "rust",
+      "loc": 90,
+      "sha1": "a15",
+      "bytes": 2700
+    },
+    {
+      "fuente": "appflowy",
+      "ruta_rel": "appflowy/frontend/rust-lib/flowy-document/src/reminder.rs",
+      "capa": "rust-handler",
+      "lenguaje": "rust",
+      "loc": 60,
+      "sha1": "a16",
+      "bytes": 1800
+    },
+    {
+      "fuente": "appflowy",
+      "ruta_rel": "appflowy/frontend/appflowy_flutter/lib/startup/tasks/hot_key.dart",
+      "capa": "service",
+      "lenguaje": "dart",
+      "loc": 50,
+      "sha1": "a17",
+      "bytes": 1500
+    },
+    {
+      "fuente": "appflowy",
+      "ruta_rel": "appflowy/frontend/appflowy_flutter/lib/startup/tasks/deeplink/deeplink_handler.dart",
+      "capa": "service",
+      "lenguaje": "dart",
+      "loc": 40,
+      "sha1": "a18",
+      "bytes": 1200
+    },
+    {
+      "fuente": "appflowy",
+      "ruta_rel": "appflowy/frontend/appflowy_flutter/lib/shared/feature_flags.dart",
+      "capa": "service",
+      "lenguaje": "dart",
+      "loc": 30,
+      "sha1": "a19",
+      "bytes": 900
+    },
+    {
+      "fuente": "collab",
+      "ruta_rel": "collab/collab/src/collab.rs",
+      "capa": "collab",
+      "lenguaje": "rust",
+      "loc": 150,
+      "sha1": "c5",
+      "bytes": 4500
+    },
+    {
+      "fuente": "collab",
+      "ruta_rel": "collab/collab-plugins/src/local_storage/plugin.rs",
+      "capa": "collab",
+      "lenguaje": "rust",
+      "loc": 200,
+      "sha1": "c6",
+      "bytes": 6000
+    },
+    {
+      "fuente": "editor",
+      "ruta_rel": "editor/test/new/editor_test.dart",
+      "capa": "test",
+      "lenguaje": "dart",
+      "loc": 40,
+      "sha1": "e2",
+      "bytes": 1200
+    },
+    {
+      "fuente": "editor",
+      "ruta_rel": "editor/example/lib/main.dart",
+      "capa": "ui",
+      "lenguaje": "dart",
+      "loc": 20,
+      "sha1": "e3",
+      "bytes": 600
+    },
+    {
+      "fuente": "editor",
+      "ruta_rel": "editor/lib/l10n/en.arb",
+      "capa": "config",
+      "lenguaje": "json",
+      "loc": 10,
+      "sha1": "e4",
+      "bytes": 300
+    },
+    {
+      "fuente": "collab",
+      "ruta_rel": "collab/Cargo.toml",
+      "capa": "config",
+      "lenguaje": "toml",
+      "loc": 40,
+      "sha1": "c7",
+      "bytes": 1200
+    },
+    {
+      "fuente": "collab",
+      "ruta_rel": "collab/README.md",
+      "capa": "config",
+      "lenguaje": "markdown",
+      "loc": 30,
+      "sha1": "c8",
+      "bytes": 900
+    },
+    {
+      "fuente": "appflowy",
+      "ruta_rel": "appflowy/sin_match/archivo_aislado.dart",
+      "capa": "ui",
+      "lenguaje": "dart",
+      "loc": 5,
+      "sha1": "a20",
+      "bytes": 150
+    }
+  ]
+}

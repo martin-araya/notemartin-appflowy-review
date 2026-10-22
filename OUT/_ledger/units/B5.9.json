@@ -1,0 +1,32 @@
+{
+  "id": "B5.9",
+  "titulo": "Chat con streaming",
+  "feature_id": "B5.9",
+  "documento": "OUT/15-secuencias-globales/09-chat-con-streaming.md",
+  "plantilla": "feature",
+  "archivos": [
+    "appflowy/frontend/appflowy_flutter/lib/plugins/ai_chat/application/chat_bloc.dart",
+    "appflowy/frontend/appflowy_flutter/lib/plugins/ai_chat/application/chat_edit_document_bloc.dart",
+    "appflowy/frontend/appflowy_flutter/lib/plugins/ai_chat/application/chat_message.dart",
+    "appflowy/frontend/appflowy_flutter/lib/plugins/ai_chat/application/chat_input_bloc.dart",
+    "appflowy/frontend/rust-lib/flowy-ai/src/ai_manager.rs",
+    "appflowy/frontend/rust-lib/flowy-ai/src/chat.rs",
+    "appflowy/frontend/rust-lib/flowy-ai/src/completion.rs",
+    "appflowy/frontend/rust-lib/flowy-ai/src/event_handler.rs",
+    "appflowy/frontend/rust-lib/flowy-ai/src/event_map.rs",
+    "appflowy/frontend/rust-lib/dart-ffi/src/lib.rs",
+    "appflowy/frontend/appflowy_flutter/lib/packages/appflowy_backend/lib/rust_stream.dart",
+    "appflowy/frontend/rust-lib/lib-dispatch/src/dispatcher.rs",
+    "appflowy/frontend/rust-lib/lib-dispatch/src/module.rs",
+    "appflowy/frontend/rust-lib/flowy-core/src/lib.rs"
+  ],
+  "archivos_total": 14,
+  "fuentes": [
+    "appflowy"
+  ],
+  "evidence_min_pct": 95,
+  "gate_100": false,
+  "transversal": true,
+  "secuencia": true,
+  "nota": "Secuencia global extremo a extremo: transversal, no ancla archivos a cobertura.csv. Sus archivos ya pertenecen a features F* y están verificados al 100 % desde el cierre de B3; B5 los re-presenta como recorrido con sequenceDiagram."
+}

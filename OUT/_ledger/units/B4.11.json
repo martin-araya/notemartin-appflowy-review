@@ -1,0 +1,39 @@
+{
+  "id": "B4.11",
+  "titulo": "Import ZIP y Notion",
+  "feature_id": "B4.11",
+  "documento": "OUT/10-motor-export-import/11-import-zip-notion.md",
+  "plantilla": "export",
+  "archivos": [
+    "collab/collab-importer/src/lib.rs",
+    "collab/collab-importer/src/error.rs",
+    "collab/collab-importer/src/imported_collab.rs",
+    "collab/collab-importer/src/space_view.rs",
+    "collab/collab-importer/src/util.rs",
+    "collab/collab-importer/src/notion/mod.rs",
+    "collab/collab-importer/src/notion/importer.rs",
+    "collab/collab-importer/src/notion/file.rs",
+    "collab/collab-importer/src/notion/page.rs",
+    "collab/collab-importer/src/notion/walk_dir.rs",
+    "collab/collab-importer/src/zip_tool/mod.rs",
+    "collab/collab-importer/src/zip_tool/async_zip.rs",
+    "collab/collab-importer/src/zip_tool/sync_zip.rs",
+    "collab/collab-importer/src/zip_tool/util.rs",
+    "appflowy/frontend/appflowy_flutter/lib/workspace/presentation/home/menu/sidebar/workspace/_sidebar_import_notion.dart",
+    "appflowy/frontend/appflowy_flutter/lib/workspace/application/settings/share/import_service.dart",
+    "appflowy/frontend/rust-lib/flowy-folder/src/event_handler.rs",
+    "appflowy/frontend/rust-lib/flowy-folder/src/event_map.rs",
+    "appflowy/frontend/rust-lib/flowy-folder/src/entities/import.rs",
+    "appflowy/frontend/rust-lib/flowy-folder/src/manager.rs",
+    "appflowy/frontend/rust-lib/flowy-server/src/af_cloud/impls/folder.rs",
+    "appflowy/frontend/rust-lib/flowy-server/src/local_server/impls/folder.rs"
+  ],
+  "archivos_total": 22,
+  "fuentes": [
+    "appflowy",
+    "collab"
+  ],
+  "evidence_min_pct": 30,
+  "gate_100": true,
+  "nota": "Unidad transversal: sus archivos ya pertenecen a features F* y están verificados en cobertura.csv. El bloque B4 no modifica el ledger; documenta el motor re-trazando esos mismos ficheros."
+}

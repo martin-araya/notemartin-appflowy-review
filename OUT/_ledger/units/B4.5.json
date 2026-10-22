@@ -1,0 +1,22 @@
+{
+  "id": "B4.5",
+  "titulo": "Export CSV de base de datos",
+  "feature_id": "B4.5",
+  "documento": "OUT/10-motor-export-import/05-csv-database-export.md",
+  "plantilla": "export",
+  "archivos": [
+    "appflowy/frontend/appflowy_flutter/lib/plugins/database/application/share_bloc.dart",
+    "appflowy/frontend/rust-lib/flowy-database2/src/services/share/csv/mod.rs",
+    "appflowy/frontend/rust-lib/flowy-database2/src/services/share/csv/export.rs",
+    "appflowy/frontend/rust-lib/flowy-database2/src/services/share/csv/import.rs",
+    "appflowy/frontend/rust-lib/flowy-database2/src/event_handler.rs",
+    "appflowy/frontend/rust-lib/flowy-database2/src/event_map.rs"
+  ],
+  "archivos_total": 6,
+  "fuentes": [
+    "appflowy"
+  ],
+  "evidence_min_pct": 30,
+  "gate_100": true,
+  "nota": "Unidad transversal: sus archivos ya pertenecen a features F* y están verificados en cobertura.csv. El bloque B4 no modifica el ledger; documenta el motor re-trazando esos mismos ficheros."
+}

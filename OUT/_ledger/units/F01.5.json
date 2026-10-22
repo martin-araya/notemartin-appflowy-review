@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "id": "F01.5",
+  "feature_id": "F01",
+  "sub_index": 5,
+  "titulo": "Bases de datos embebidas en documentos",
+  "fuentes": [
+    "appflowy"
+  ],
+  "archivos": [
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/plugins/document/presentation/editor_plugins/database/database_view_block_component.dart",
+      "capa": "ui",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/plugins/document/presentation/editor_plugins/database/inline_database_menu_item.dart",
+      "capa": "ui",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/appflowy_flutter/lib/plugins/document/presentation/editor_plugins/database/referenced_database_menu_item.dart",
+      "capa": "ui",
+      "estado": "verificado"
+    }
+  ],
+  "archivos_total": 3,
+  "catalogos": [
+    "blocs.json",
+    "deps.json",
+    "events.json",
+    "misc.json",
+    "notifications.json",
+    "protobuf.json"
+  ],
+  "catalogos_razon": {
+    "events.json": "Eventos FFI / dispatch de esta feature",
+    "blocs.json": "BLoCs / Cubits presentes en los archivos de esta unidad",
+    "protobuf.json": "Entidades protobuf input/output de los eventos",
+    "notifications.json": "Notificaciones Rust→Dart emitidas o escuchadas",
+    "deps.json": "Dependencias del workspace rust y pubspec",
+    "misc.json": "Rutas, atajos, flags, error codes, i18n"
+  },
+  "dependencias": [
+    {
+      "id": "F01.0",
+      "tipo": "indice",
+      "nota": "Documento indice F01.0 debe existir antes de esta sub-unidad."
+    }
+  ],
+  "plantilla": "feature",
+  "documento": "OUT/09-features/F01-documentos-y-editor/5-bases-de-datos-embebidas-en-documentos.md",
+  "metricas": {
+    "archivos": 3,
+    "por_capa": {
+      "ui": 3
+    },
+    "por_fuente": {
+      "appflowy": 3
+    }
+  },
+  "prioridad": 2,
+  "concurrencia": "paralela",
+  "generado_en": "2026-10-19T19:38:53Z"
+}

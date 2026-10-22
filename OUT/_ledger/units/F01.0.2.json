@@ -1,0 +1,267 @@
+{
+  "schema_version": 1,
+  "id": "F01.0.2",
+  "feature_id": "F01",
+  "sub_index": 0,
+  "titulo": "Indice de documentos y editor (modelo, DocumentBloc, servicios) — collab",
+  "fuentes": [
+    "collab"
+  ],
+  "archivos": [
+    {
+      "fuente": "collab",
+      "ruta": "collab/collab-document/Cargo.toml",
+      "capa": "config",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "collab",
+      "ruta": "collab/collab-document/src/blocks/block.rs",
+      "capa": "collab",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "collab",
+      "ruta": "collab/collab-document/src/blocks/children.rs",
+      "capa": "collab",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "collab",
+      "ruta": "collab/collab-document/src/blocks/entities.rs",
+      "capa": "collab",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "collab",
+      "ruta": "collab/collab-document/src/blocks/mod.rs",
+      "capa": "collab",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "collab",
+      "ruta": "collab/collab-document/src/blocks/text.rs",
+      "capa": "collab",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "collab",
+      "ruta": "collab/collab-document/src/blocks/text_entities.rs",
+      "capa": "collab",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "collab",
+      "ruta": "collab/collab-document/src/blocks/utils.rs",
+      "capa": "collab",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "collab",
+      "ruta": "collab/collab-document/src/document.rs",
+      "capa": "collab",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "collab",
+      "ruta": "collab/collab-document/src/document_awareness.rs",
+      "capa": "collab",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "collab",
+      "ruta": "collab/collab-document/src/document_data.rs",
+      "capa": "collab",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "collab",
+      "ruta": "collab/collab-document/src/error.rs",
+      "capa": "collab",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "collab",
+      "ruta": "collab/collab-document/src/importer/define.rs",
+      "capa": "collab",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "collab",
+      "ruta": "collab/collab-document/src/importer/delta.rs",
+      "capa": "collab",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "collab",
+      "ruta": "collab/collab-document/src/importer/md_importer.rs",
+      "capa": "collab",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "collab",
+      "ruta": "collab/collab-document/src/importer/mod.rs",
+      "capa": "collab",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "collab",
+      "ruta": "collab/collab-document/src/importer/util.rs",
+      "capa": "collab",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "collab",
+      "ruta": "collab/collab-document/src/lib.rs",
+      "capa": "collab",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "collab",
+      "ruta": "collab/collab-document/src/utils.rs",
+      "capa": "collab",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "collab",
+      "ruta": "collab/collab-document/tests/blocks/block_test.rs",
+      "capa": "collab",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "collab",
+      "ruta": "collab/collab-document/tests/blocks/block_test_core.rs",
+      "capa": "collab",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "collab",
+      "ruta": "collab/collab-document/tests/blocks/mod.rs",
+      "capa": "collab",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "collab",
+      "ruta": "collab/collab-document/tests/blocks/text_test.rs",
+      "capa": "collab",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "collab",
+      "ruta": "collab/collab-document/tests/conversions/mod.rs",
+      "capa": "collab",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "collab",
+      "ruta": "collab/collab-document/tests/conversions/plain_text_test.rs",
+      "capa": "collab",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "collab",
+      "ruta": "collab/collab-document/tests/document/awareness_test.rs",
+      "capa": "collab",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "collab",
+      "ruta": "collab/collab-document/tests/document/document_data_test.rs",
+      "capa": "collab",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "collab",
+      "ruta": "collab/collab-document/tests/document/document_test.rs",
+      "capa": "collab",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "collab",
+      "ruta": "collab/collab-document/tests/document/mod.rs",
+      "capa": "collab",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "collab",
+      "ruta": "collab/collab-document/tests/document/redo_undo_test.rs",
+      "capa": "collab",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "collab",
+      "ruta": "collab/collab-document/tests/document/restore_test.rs",
+      "capa": "collab",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "collab",
+      "ruta": "collab/collab-document/tests/importer/md_importer_customer_test.rs",
+      "capa": "collab",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "collab",
+      "ruta": "collab/collab-document/tests/importer/md_importer_test.rs",
+      "capa": "collab",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "collab",
+      "ruta": "collab/collab-document/tests/importer/mod.rs",
+      "capa": "collab",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "collab",
+      "ruta": "collab/collab-document/tests/importer/util.rs",
+      "capa": "collab",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "collab",
+      "ruta": "collab/collab-document/tests/main.rs",
+      "capa": "collab",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "collab",
+      "ruta": "collab/collab-document/tests/util.rs",
+      "capa": "collab",
+      "estado": "verificado"
+    }
+  ],
+  "archivos_total": 37,
+  "catalogos": [
+    "blocs.json",
+    "deps.json",
+    "events.json",
+    "misc.json",
+    "notifications.json",
+    "protobuf.json"
+  ],
+  "catalogos_razon": {
+    "events.json": "Eventos FFI / dispatch de esta feature",
+    "blocs.json": "BLoCs / Cubits presentes en los archivos de esta unidad",
+    "protobuf.json": "Entidades protobuf input/output de los eventos",
+    "notifications.json": "Notificaciones Rust→Dart emitidas o escuchadas",
+    "deps.json": "Dependencias del workspace rust y pubspec",
+    "misc.json": "Rutas, atajos, flags, error codes, i18n"
+  },
+  "dependencias": [],
+  "plantilla": "feature",
+  "documento": "OUT/09-features/F01-documentos-y-editor/0.2-indice-de-documentos-y-editor-modelo-documentbloc-servicios-collab.md",
+  "metricas": {
+    "archivos": 37,
+    "por_capa": {
+      "config": 1,
+      "collab": 36
+    },
+    "por_fuente": {
+      "collab": 37
+    }
+  },
+  "prioridad": 2,
+  "concurrencia": "paralela",
+  "generado_en": "2026-10-19T17:13:35Z"
+}

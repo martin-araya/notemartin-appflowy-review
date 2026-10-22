@@ -1,0 +1,11 @@
+OK: A2.1 (JSON valido, flowy-document OK, CreateDocument input=CreateDocumentPayloadPB output=null, OpenDocument input=OpenDocumentPayloadPB output=DocumentDataPB, sin_handler consistentes, handlers resueltos, conteos coherentes)
+  crates_with_event_map: 8
+  total_variants:        229
+  total_registered:      224
+  total_sin_handler:     5
+  sin_handler variants:
+  - flowy-database2::GetAllRows (index=177)
+  - flowy-folder::CreateFolderWorkspace (index=0)
+  - flowy-folder::DeleteWorkspace (index=3)
+  - flowy-folder::CopyLink (index=20)
+  - flowy-user::AddWorkspaceMember (index=37)

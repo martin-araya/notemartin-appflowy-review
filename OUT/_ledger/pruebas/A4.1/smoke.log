@@ -1,0 +1,87 @@
+# smoke.log — assign_ledger.py (Fase A4.1)
+# Fecha: 2026-10-18T22:54:16Z
+
+## $ python3 SKILL/scripts/assign_ledger.py --help
+
+```
+usage: assign_ledger.py [-h] [--inventario INVENTARIO] [--ledger LEDGER]
+                        [--sin-asignar SIN_ASIGNAR_MD]
+                        [--sin-asignar-json SIN_ASIGNAR_JSON] [--dry-run]
+                        [--min-coverage MIN_COVERAGE] [--strict] [--quiet]
+                        [--no-color] [--json]
+
+Asigna archivos del inventario a features F01..F17 aplicando PROMPT.md seccion
+4 y reescribe OUT/_ledger/cobertura.csv.
+
+optional arguments:
+  -h, --help            show this help message and exit
+  --inventario INVENTARIO
+  --ledger LEDGER
+  --sin-asignar SIN_ASIGNAR_MD
+  --sin-asignar-json SIN_ASIGNAR_JSON
+  --dry-run             No escribe cobertura.csv (solo calcula y reporta).
+  --min-coverage MIN_COVERAGE
+                        Exit 1 si la cobertura (%) esta por debajo del umbral.
+  --strict              Avisa de filas 'pendiente' previas que pierden su
+                        matcher.
+  --quiet
+  --no-color
+  --json                Resumen final en JSON a stdout.
+```
+
+## $ python3 SKILL/scripts/assign_ledger.py --dry-run --no-color (modo real)
+
+```
+[assign_ledger] patrones compilados: 188 (21 features)
+[assign_ledger] total=4603 assigned=4279 unassigned=324 verified_preserved=0
+[assign_ledger] coverage=92.96%
+[assign_ledger] by_feature:
+  F00 1529
+  F01 710
+  F02 651
+  F03 85
+  F04 30
+  F05 126
+  F06 35
+  F07 55
+  F08 21
+  F09 166
+  F11 2
+  F12 59
+  F13 84
+  F14 6
+  F15 37
+  F16 184
+  F17 19
+  F18 113
+  F19 354
+  F20 13
+[assign_ledger] by_capa:
+  bloc           total=  325  unassigned=    8
+  build          total=   43  unassigned=    0
+  codegen        total=   35  unassigned=    0
+  collab         total=  280  unassigned=    0
+  config         total=  306  unassigned=   24
+  dispatch       total=   27  unassigned=    0
+  ffi            total=   10  unassigned=    0
+  i18n           total=   23  unassigned=    0
+  persistence    total=   16  unassigned=    0
+  rust-handler   total=  508  unassigned=   58
+  rust-manager   total=   12  unassigned=    2
+  server         total=   32  unassigned=    0
+  service        total=  162  unassigned=   40
+  test           total=  537  unassigned=    0
+  ui             total= 2287  unassigned=  192
+[assign_ledger] by_fuente:
+  appflowy   total= 3557  unassigned=  324
+  collab     total=  313  unassigned=    0
+  editor     total=  733  unassigned=    0
+[assign_ledger] ledger=/Users/martin/Desktop/projects/Skills/notemartin-appflowy-review/OUT/_ledger/cobertura.csv
+```
+
+## $ bash OUT/_ledger/validate-A4.1.sh
+
+```
+  sin_asignar.json OK: 1 fila -> appflowy/sin_match/archivo_aislado.dart
+OK: A4.1 (assign_ledger.py funciona: toy 100%, real 92.96% >= 90%, --help, --dry-run no escribe, idempotente, --min-coverage falla con <umbral, inventario inexistente -> exit 2, verificado preservado, sin_asignar.md/json generados)
+```

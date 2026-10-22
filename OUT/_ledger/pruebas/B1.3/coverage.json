@@ -1,0 +1,23 @@
+{
+  "code": "OK",
+  "containers": {
+    "expected": 5,
+    "present": 5,
+    "missing": []
+  },
+  "rust_crates": {
+    "expected": 31,
+    "present": 31,
+    "missing": []
+  },
+  "dart_features": {
+    "expected": 18,
+    "present": 18,
+    "missing": []
+  },
+  "layers": {
+    "expected": 9,
+    "present": 9,
+    "missing": []
+  }
+}

@@ -1,0 +1,13 @@
+  rust_notifications:    6
+  total_emitters:        16
+  dart_parsers:          5
+  dart_listeners:        29
+  rust_source_mismatches:0
+  variants sin listener: 49
+    ChatNotification                    0/10 variants con listener Dart, 1 emitters
+    DatabaseNotification                1/24 variants con listener Dart, 3 emitters
+    DocumentNotification                3/5 variants con listener Dart, 1 emitters
+    FolderNotification                  8/19 variants con listener Dart, 1 emitters
+    StorageNotification                 0/2 variants con listener Dart, 1 emitters
+    UserNotification                    9/10 variants con listener Dart, 9 emitters
+  escrito:               /Users/martin/Desktop/projects/Skills/notemartin-appflowy-review/OUT/_ledger/extract/notifications.json

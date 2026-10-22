@@ -1,0 +1,28 @@
+{
+  "unit_id": "F02.9.2",
+  "archivos_total": 22,
+  "archivos_cubiertos": [
+    "appflowy/frontend/appflowy_flutter/lib/plugins/database/grid/application/row/mobile_row_detail_bloc.dart",
+    "appflowy/frontend/appflowy_flutter/lib/plugins/database/grid/application/row/row_detail_bloc.dart",
+    "appflowy/frontend/appflowy_flutter/lib/plugins/database/grid/application/row/row_document_bloc.dart",
+    "appflowy/frontend/appflowy_flutter/lib/plugins/database/grid/application/sort/sort_editor_bloc.dart",
+    "appflowy/frontend/appflowy_flutter/lib/plugins/database/grid/presentation/widgets/footer/grid_footer.dart",
+    "appflowy/frontend/appflowy_flutter/lib/plugins/database/grid/presentation/widgets/header/desktop_field_cell.dart",
+    "appflowy/frontend/appflowy_flutter/lib/plugins/database/grid/presentation/widgets/header/field_type_extension.dart",
+    "appflowy/frontend/appflowy_flutter/lib/plugins/database/grid/presentation/widgets/header/grid_header.dart",
+    "appflowy/frontend/appflowy_flutter/lib/plugins/database/grid/presentation/widgets/header/mobile_field_button.dart",
+    "appflowy/frontend/appflowy_flutter/lib/plugins/database/grid/presentation/widgets/header/mobile_grid_header.dart",
+    "appflowy/frontend/appflowy_flutter/lib/plugins/database/grid/presentation/widgets/row/action.dart",
+    "appflowy/frontend/appflowy_flutter/lib/plugins/database/grid/presentation/widgets/row/mobile_row.dart",
+    "appflowy/frontend/appflowy_flutter/lib/plugins/database/grid/presentation/widgets/row/row.dart",
+    "appflowy/frontend/appflowy_flutter/lib/plugins/database/grid/presentation/widgets/sort/create_sort_list.dart",
+    "appflowy/frontend/appflowy_flutter/lib/plugins/database/grid/presentation/widgets/sort/order_panel.dart",
+    "appflowy/frontend/appflowy_flutter/lib/plugins/database/grid/presentation/widgets/sort/sort_choice_button.dart",
+    "appflowy/frontend/appflowy_flutter/lib/plugins/database/grid/presentation/widgets/sort/sort_editor.dart",
+    "appflowy/frontend/appflowy_flutter/lib/plugins/database/grid/presentation/widgets/sort/sort_menu.dart",
+    "appflowy/frontend/appflowy_flutter/lib/plugins/database/grid/presentation/widgets/toolbar/filter_button.dart",
+    "appflowy/frontend/appflowy_flutter/lib/plugins/database/grid/presentation/widgets/toolbar/grid_setting_bar.dart",
+    "appflowy/frontend/appflowy_flutter/lib/plugins/database/grid/presentation/widgets/toolbar/sort_button.dart",
+    "appflowy/frontend/appflowy_flutter/lib/plugins/database/grid/presentation/widgets/toolbar/view_database_button.dart"
+  ]
+}

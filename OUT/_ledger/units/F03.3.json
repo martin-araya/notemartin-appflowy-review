@@ -1,0 +1,219 @@
+{
+  "schema_version": 1,
+  "id": "F03.3",
+  "feature_id": "F03",
+  "sub_index": 3,
+  "titulo": "collab-folder: Folder, View, Workspace, jerarquia, secciones, relaciones",
+  "fuentes": [
+    "collab"
+  ],
+  "archivos": [
+    {
+      "fuente": "collab",
+      "ruta": "collab/collab-folder/Cargo.toml",
+      "capa": "config",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "collab",
+      "ruta": "collab/collab-folder/src/entities.rs",
+      "capa": "collab",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "collab",
+      "ruta": "collab/collab-folder/src/error.rs",
+      "capa": "collab",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "collab",
+      "ruta": "collab/collab-folder/src/folder.rs",
+      "capa": "collab",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "collab",
+      "ruta": "collab/collab-folder/src/folder_diff.rs",
+      "capa": "collab",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "collab",
+      "ruta": "collab/collab-folder/src/folder_migration.rs",
+      "capa": "collab",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "collab",
+      "ruta": "collab/collab-folder/src/folder_observe.rs",
+      "capa": "collab",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "collab",
+      "ruta": "collab/collab-folder/src/hierarchy_builder.rs",
+      "capa": "collab",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "collab",
+      "ruta": "collab/collab-folder/src/lib.rs",
+      "capa": "collab",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "collab",
+      "ruta": "collab/collab-folder/src/macros.rs",
+      "capa": "collab",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "collab",
+      "ruta": "collab/collab-folder/src/relation.rs",
+      "capa": "collab",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "collab",
+      "ruta": "collab/collab-folder/src/section.rs",
+      "capa": "collab",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "collab",
+      "ruta": "collab/collab-folder/src/space_info.rs",
+      "capa": "collab",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "collab",
+      "ruta": "collab/collab-folder/src/view.rs",
+      "capa": "collab",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "collab",
+      "ruta": "collab/collab-folder/src/workspace.rs",
+      "capa": "collab",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "collab",
+      "ruta": "collab/collab-folder/tests/folder_test/child_views_test.rs",
+      "capa": "collab",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "collab",
+      "ruta": "collab/collab-folder/tests/folder_test/custom_section.rs",
+      "capa": "collab",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "collab",
+      "ruta": "collab/collab-folder/tests/folder_test/favorite_test.rs",
+      "capa": "collab",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "collab",
+      "ruta": "collab/collab-folder/tests/folder_test/history_folder/folder_data.json",
+      "capa": "config",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "collab",
+      "ruta": "collab/collab-folder/tests/folder_test/load_disk.rs",
+      "capa": "collab",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "collab",
+      "ruta": "collab/collab-folder/tests/folder_test/main.rs",
+      "capa": "collab",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "collab",
+      "ruta": "collab/collab-folder/tests/folder_test/recent_views_test.rs",
+      "capa": "collab",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "collab",
+      "ruta": "collab/collab-folder/tests/folder_test/serde_test.rs",
+      "capa": "collab",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "collab",
+      "ruta": "collab/collab-folder/tests/folder_test/space_info_test.rs",
+      "capa": "collab",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "collab",
+      "ruta": "collab/collab-folder/tests/folder_test/trash_test.rs",
+      "capa": "collab",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "collab",
+      "ruta": "collab/collab-folder/tests/folder_test/util.rs",
+      "capa": "collab",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "collab",
+      "ruta": "collab/collab-folder/tests/folder_test/view_test.rs",
+      "capa": "collab",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "collab",
+      "ruta": "collab/collab-folder/tests/folder_test/workspace_test.rs",
+      "capa": "collab",
+      "estado": "verificado"
+    }
+  ],
+  "archivos_total": 28,
+  "catalogos": [
+    "blocs.json",
+    "deps.json",
+    "events.json",
+    "misc.json",
+    "notifications.json",
+    "protobuf.json"
+  ],
+  "catalogos_razon": {
+    "events.json": "Eventos FFI / dispatch de esta feature",
+    "blocs.json": "BLoCs / Cubits presentes en los archivos de esta unidad",
+    "protobuf.json": "Entidades protobuf input/output de los eventos",
+    "notifications.json": "Notificaciones Rust→Dart emitidas o escuchadas",
+    "deps.json": "Dependencias del workspace rust y pubspec",
+    "misc.json": "Rutas, atajos, flags, error codes, i18n"
+  },
+  "dependencias": [
+    {
+      "id": "F03.0",
+      "tipo": "indice",
+      "nota": "Documento indice F03.0 debe existir antes de esta sub-unidad."
+    }
+  ],
+  "plantilla": "feature",
+  "documento": "OUT/09-features/F03-folder-workspaces-vistas/0.3-collab-folder.md",
+  "metricas": {
+    "archivos": 28,
+    "por_capa": {
+      "config": 2,
+      "collab": 26
+    },
+    "por_fuente": {
+      "collab": 28
+    }
+  },
+  "prioridad": 1,
+  "concurrencia": "paralela",
+  "generado_en": "2026-10-20T14:07:42Z"
+}

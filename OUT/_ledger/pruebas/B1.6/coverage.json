@@ -1,0 +1,81 @@
+{
+  "code": "OK",
+  "results": {
+    "02-folder": {
+      "doc": "/Users/martin/Desktop/projects/Skills/notemartin-appflowy-review/OUT/07-motor-colaborativo-crdt/02-folder.md",
+      "required": [
+        "View",
+        "Workspace",
+        "FolderData",
+        "ViewLayout",
+        "ViewIdentifier"
+      ],
+      "found": [
+        "View",
+        "Workspace",
+        "FolderData",
+        "ViewLayout",
+        "ViewIdentifier"
+      ],
+      "missing": [],
+      "ok": true
+    },
+    "03-documento": {
+      "doc": "/Users/martin/Desktop/projects/Skills/notemartin-appflowy-review/OUT/07-motor-colaborativo-crdt/03-documento.md",
+      "required": [
+        "DocumentData",
+        "Block",
+        "CollabDocument",
+        "DocumentAwareness"
+      ],
+      "found": [
+        "DocumentData",
+        "Block",
+        "CollabDocument",
+        "DocumentAwareness"
+      ],
+      "missing": [],
+      "ok": true
+    },
+    "04-database": {
+      "doc": "/Users/martin/Desktop/projects/Skills/notemartin-appflowy-review/OUT/07-motor-colaborativo-crdt/04-database.md",
+      "required": [
+        "Field",
+        "Row",
+        "Cell",
+        "View",
+        "DatabaseState",
+        "FieldType"
+      ],
+      "found": [
+        "Field",
+        "Row",
+        "Cell",
+        "View",
+        "DatabaseState",
+        "FieldType"
+      ],
+      "missing": [],
+      "ok": true
+    },
+    "05-user-awareness": {
+      "doc": "/Users/martin/Desktop/projects/Skills/notemartin-appflowy-review/OUT/07-motor-colaborativo-crdt/05-user-awareness.md",
+      "required": [
+        "UserAwareness",
+        "UserAwarenessState",
+        "UserMetadata",
+        "Selection",
+        "Cursor"
+      ],
+      "found": [
+        "UserAwareness",
+        "UserAwarenessState",
+        "UserMetadata",
+        "Selection",
+        "Cursor"
+      ],
+      "missing": [],
+      "ok": true
+    }
+  }
+}

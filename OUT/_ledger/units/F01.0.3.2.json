@@ -1,0 +1,471 @@
+{
+  "schema_version": 1,
+  "id": "F01.0.3.2",
+  "feature_id": "F01",
+  "sub_index": 0,
+  "titulo": "Editor toolbars (desktop floating + mobile v1/v2/v3), find/replace, selection menu",
+  "fuentes": [
+    "editor"
+  ],
+  "archivos": [
+    {
+      "fuente": "editor",
+      "ruta": "editor/lib/src/editor/find_replace_menu/find_and_replace.dart",
+      "capa": "ui",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/lib/src/editor/find_replace_menu/find_menu_service.dart",
+      "capa": "ui",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/lib/src/editor/find_replace_menu/find_replace_menu_icon_button.dart",
+      "capa": "ui",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/lib/src/editor/find_replace_menu/find_replace_widget.dart",
+      "capa": "ui",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/lib/src/editor/find_replace_menu/search_algorithm.dart",
+      "capa": "ui",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/lib/src/editor/find_replace_menu/search_service.dart",
+      "capa": "ui",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/lib/src/editor/find_replace_menu/search_service_v2.dart",
+      "capa": "ui",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/lib/src/editor/find_replace_menu/search_service_v3.dart",
+      "capa": "ui",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/lib/src/editor/selection_menu/selection_menu.dart",
+      "capa": "ui",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/lib/src/editor/selection_menu/selection_menu_icon.dart",
+      "capa": "ui",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/lib/src/editor/selection_menu/selection_menu_item_widget.dart",
+      "capa": "ui",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/lib/src/editor/selection_menu/selection_menu_service.dart",
+      "capa": "ui",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/lib/src/editor/selection_menu/selection_menu_widget.dart",
+      "capa": "ui",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/lib/src/editor/toolbar/desktop/desktop.dart",
+      "capa": "ui",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/lib/src/editor/toolbar/desktop/floating_toolbar.dart",
+      "capa": "ui",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/lib/src/editor/toolbar/desktop/floating_toolbar_widget.dart",
+      "capa": "ui",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/lib/src/editor/toolbar/desktop/items/alignment_toolbar_items.dart",
+      "capa": "ui",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/lib/src/editor/toolbar/desktop/items/bulleted_list_toolbar_item.dart",
+      "capa": "ui",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/lib/src/editor/toolbar/desktop/items/color/color.dart",
+      "capa": "ui",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/lib/src/editor/toolbar/desktop/items/color/color_menu.dart",
+      "capa": "ui",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/lib/src/editor/toolbar/desktop/items/color/color_picker.dart",
+      "capa": "ui",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/lib/src/editor/toolbar/desktop/items/color/highlight_color_toolbar_item.dart",
+      "capa": "ui",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/lib/src/editor/toolbar/desktop/items/color/text_color_toolbar_item.dart",
+      "capa": "ui",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/lib/src/editor/toolbar/desktop/items/format_toolbar_items.dart",
+      "capa": "ui",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/lib/src/editor/toolbar/desktop/items/heading_toolbar_items.dart",
+      "capa": "ui",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/lib/src/editor/toolbar/desktop/items/icon_item_widget.dart",
+      "capa": "ui",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/lib/src/editor/toolbar/desktop/items/link/link_menu.dart",
+      "capa": "ui",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/lib/src/editor/toolbar/desktop/items/link/link_toolbar_item.dart",
+      "capa": "ui",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/lib/src/editor/toolbar/desktop/items/numbered_list_toolbar_item.dart",
+      "capa": "ui",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/lib/src/editor/toolbar/desktop/items/paragraph_toolbar_item.dart",
+      "capa": "ui",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/lib/src/editor/toolbar/desktop/items/placeholder_toolbar_item.dart",
+      "capa": "ui",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/lib/src/editor/toolbar/desktop/items/quote_toolbar_item.dart",
+      "capa": "ui",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/lib/src/editor/toolbar/desktop/items/text_direction_toolbar_items.dart",
+      "capa": "ui",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/lib/src/editor/toolbar/desktop/items/utils/overlay_util.dart",
+      "capa": "ui",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/lib/src/editor/toolbar/desktop/items/utils/tooltip_util.dart",
+      "capa": "ui",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/lib/src/editor/toolbar/mobile/mobile.dart",
+      "capa": "ui",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/lib/src/editor/toolbar/mobile/mobile_floating_toolbar/mobile_floating_toolbar.dart",
+      "capa": "ui",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/lib/src/editor/toolbar/mobile/mobile_toolbar.dart",
+      "capa": "ui",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/lib/src/editor/toolbar/mobile/mobile_toolbar_item.dart",
+      "capa": "ui",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/lib/src/editor/toolbar/mobile/mobile_toolbar_style.dart",
+      "capa": "ui",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/lib/src/editor/toolbar/mobile/mobile_toolbar_v2.dart",
+      "capa": "ui",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/lib/src/editor/toolbar/mobile/toolbar_items/blocks_mobile_toolbar_item.dart",
+      "capa": "ui",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/lib/src/editor/toolbar/mobile/toolbar_items/code_mobile_toolbar_item.dart",
+      "capa": "ui",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/lib/src/editor/toolbar/mobile/toolbar_items/color/background_color_options_widgets.dart",
+      "capa": "ui",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/lib/src/editor/toolbar/mobile/toolbar_items/color/color.dart",
+      "capa": "ui",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/lib/src/editor/toolbar/mobile/toolbar_items/color/text_and_background_color_tool_bar_item.dart",
+      "capa": "ui",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/lib/src/editor/toolbar/mobile/toolbar_items/color/text_color_options_widgets.dart",
+      "capa": "ui",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/lib/src/editor/toolbar/mobile/toolbar_items/color/utils/clear_color_button.dart",
+      "capa": "ui",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/lib/src/editor/toolbar/mobile/toolbar_items/color/utils/color_button.dart",
+      "capa": "ui",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/lib/src/editor/toolbar/mobile/toolbar_items/color/utils/utils.dart",
+      "capa": "ui",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/lib/src/editor/toolbar/mobile/toolbar_items/divider_mobile_toolbar_item.dart",
+      "capa": "ui",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/lib/src/editor/toolbar/mobile/toolbar_items/heading_mobile_toolbar_item.dart",
+      "capa": "ui",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/lib/src/editor/toolbar/mobile/toolbar_items/link_mobile_toolbar_item.dart",
+      "capa": "ui",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/lib/src/editor/toolbar/mobile/toolbar_items/list_mobile_toolbar_item.dart",
+      "capa": "ui",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/lib/src/editor/toolbar/mobile/toolbar_items/quote_mobile_toolbar_item.dart",
+      "capa": "ui",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/lib/src/editor/toolbar/mobile/toolbar_items/text_decoration_mobile_toolbar_item.dart",
+      "capa": "ui",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/lib/src/editor/toolbar/mobile/toolbar_items/text_decoration_mobile_toolbar_item_v2.dart",
+      "capa": "ui",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/lib/src/editor/toolbar/mobile/toolbar_items/todo_list_mobile_toolbar_item.dart",
+      "capa": "ui",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/lib/src/editor/toolbar/mobile/toolbar_items/toolbar_items.dart",
+      "capa": "ui",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/lib/src/editor/toolbar/mobile/utils/keyboard_height_observer.dart",
+      "capa": "ui",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/lib/src/editor/toolbar/mobile/utils/mobile_toolbar_item_menu.dart",
+      "capa": "ui",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/lib/src/editor/toolbar/mobile/utils/mobile_toolbar_item_menu_btn.dart",
+      "capa": "ui",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/lib/src/editor/toolbar/mobile/utils/mobile_toolbar_menu_grid_delegate.dart",
+      "capa": "ui",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/lib/src/editor/toolbar/mobile/utils/utils.dart",
+      "capa": "ui",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/lib/src/editor/toolbar/toolbar.dart",
+      "capa": "ui",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/lib/src/editor/toolbar/utils/color_generators.dart",
+      "capa": "ui",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/lib/src/editor/toolbar/utils/color_option.dart",
+      "capa": "ui",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/lib/src/editor/toolbar/utils/format_color.dart",
+      "capa": "ui",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "editor",
+      "ruta": "editor/lib/src/editor/toolbar/utils/utils.dart",
+      "capa": "ui",
+      "estado": "verificado"
+    }
+  ],
+  "archivos_total": 69,
+  "catalogos": [
+    "blocs.json",
+    "deps.json",
+    "events.json",
+    "misc.json",
+    "notifications.json",
+    "protobuf.json"
+  ],
+  "catalogos_razon": {
+    "events.json": "Eventos FFI / dispatch de esta feature",
+    "blocs.json": "BLoCs / Cubits presentes en los archivos de esta unidad",
+    "protobuf.json": "Entidades protobuf input/output de los eventos",
+    "notifications.json": "Notificaciones Rust→Dart emitidas o escuchadas",
+    "deps.json": "Dependencias del workspace rust y pubspec",
+    "misc.json": "Rutas, atajos, flags, error codes, i18n"
+  },
+  "dependencias": [
+    {
+      "id": "F01.0",
+      "relacion": "indice"
+    },
+    {
+      "id": "F01.0.2",
+      "relacion": "precedente (modelo de datos collab)"
+    },
+    {
+      "id": "F01.0.1",
+      "relacion": "precedente (DocumentBloc + servicios Dart)"
+    }
+  ],
+  "plantilla": "feature",
+  "documento": "OUT/09-features/F01-documentos-y-editor/0.3.2-editor-toolbars-find-replace-selection-menu.md",
+  "metricas": {
+    "archivos": 69,
+    "por_capa": {
+      "ui": 69
+    },
+    "por_fuente": {
+      "editor": 69
+    }
+  },
+  "prioridad": 3,
+  "concurrencia": "paralela",
+  "generado_en": "2026-10-19T17:40:03Z"
+}

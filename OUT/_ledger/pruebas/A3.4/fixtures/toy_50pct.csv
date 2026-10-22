@@ -1,0 +1,11 @@
+fuente,ruta,capa,feature_ids,documento,estado,verificado_por
+appflowy,appflowy/foo/a.rs,bloc,,,verificado,rev1
+appflowy,appflowy/foo/b.rs,bloc,,,verificado,rev1
+appflowy,appflowy/foo/c.rs,bloc,,,verificado,rev1
+appflowy,appflowy/foo/d.rs,bloc,,,verificado,rev1
+appflowy,appflowy/foo/e.rs,bloc,,,verificado,rev1
+appflowy,appflowy/bar/a.rs,bloc,,,pendiente,
+appflowy,appflowy/bar/b.rs,bloc,,,pendiente,
+appflowy,appflowy/bar/c.rs,bloc,,,pendiente,
+appflowy,appflowy/baz/a.rs,bloc,,,sin_asignar,
+appflowy,appflowy/baz/b.rs,bloc,,,sin_asignar,

@@ -1,0 +1,57 @@
+{
+  "code": "OK",
+  "traza_open_document": {
+    "expected": 17,
+    "found_count": 17,
+    "found": [
+      "DocumentBloc",
+      "DocumentService",
+      "XEventDocument::OpenDocument",
+      "ffi.async_event",
+      "FFIRequest::from_u8_pointer",
+      "DART_APPFLOWY_CORE.dispatch",
+      "Runner consume",
+      "AFPluginDispatcher",
+      "open_document_handler",
+      "DocumentManager.open_document",
+      "create_document_instance",
+      "collab-plugins::LocalStorage",
+      "DocumentDataPB",
+      "AFPluginEventResponse",
+      "DocumentService.fromBuffer",
+      "DocumentBloc.emit",
+      "DocumentNotification::DidReceiveUpdate"
+    ],
+    "missing": []
+  },
+  "ffi_extern_c": {
+    "expected": 8,
+    "found_count": 8,
+    "found": [
+      "init_sdk",
+      "async_event",
+      "sync_event",
+      "set_stream_port",
+      "set_log_stream_port",
+      "link_me_please",
+      "rust_log",
+      "set_env"
+    ],
+    "missing": []
+  },
+  "dispatch_topics": {
+    "expected": 8,
+    "found_count": 8,
+    "found": [
+      "AFPlugin",
+      "AFPluginDispatcher",
+      "AFPluginRuntime",
+      "AFPluginEventRequest",
+      "AFPluginEventResponse",
+      "StatusCode",
+      "FlowyError",
+      "DispatchError"
+    ],
+    "missing": []
+  }
+}

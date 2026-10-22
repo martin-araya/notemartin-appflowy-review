@@ -1,0 +1,404 @@
+{
+  "schema_version": 1,
+  "id": "F05.2",
+  "feature_id": "F05",
+  "sub_index": 2,
+  "titulo": "Usuario: flowy-user + collab-user (Rust + Collab)",
+  "fuentes": [
+    "appflowy",
+    "collab"
+  ],
+  "archivos": [
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/flowy-user/Cargo.toml",
+      "capa": "config",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/flowy-user/Flowy.toml",
+      "capa": "config",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/flowy-user/build.rs",
+      "capa": "rust-handler",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/flowy-user/src/entities/auth.rs",
+      "capa": "rust-handler",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/flowy-user/src/entities/date_time.rs",
+      "capa": "rust-handler",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/flowy-user/src/entities/import_data.rs",
+      "capa": "rust-handler",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/flowy-user/src/entities/mod.rs",
+      "capa": "rust-handler",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/flowy-user/src/entities/parser/mod.rs",
+      "capa": "rust-handler",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/flowy-user/src/entities/parser/user_email.rs",
+      "capa": "rust-handler",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/flowy-user/src/entities/parser/user_icon.rs",
+      "capa": "rust-handler",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/flowy-user/src/entities/parser/user_id.rs",
+      "capa": "rust-handler",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/flowy-user/src/entities/parser/user_name.rs",
+      "capa": "rust-handler",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/flowy-user/src/entities/parser/user_openai_key.rs",
+      "capa": "rust-handler",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/flowy-user/src/entities/parser/user_password.rs",
+      "capa": "rust-handler",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/flowy-user/src/entities/parser/user_stability_ai_key.rs",
+      "capa": "rust-handler",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/flowy-user/src/entities/realtime.rs",
+      "capa": "rust-handler",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/flowy-user/src/entities/reminder.rs",
+      "capa": "rust-handler",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/flowy-user/src/entities/user_profile.rs",
+      "capa": "rust-handler",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/flowy-user/src/entities/user_setting.rs",
+      "capa": "rust-handler",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/flowy-user/src/entities/workspace.rs",
+      "capa": "rust-handler",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/flowy-user/src/event_handler.rs",
+      "capa": "rust-handler",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/flowy-user/src/event_map.rs",
+      "capa": "rust-handler",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/flowy-user/src/lib.rs",
+      "capa": "rust-handler",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/flowy-user/src/migrations/anon_user_workspace.rs",
+      "capa": "rust-handler",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/flowy-user/src/migrations/doc_key_with_workspace.rs",
+      "capa": "rust-handler",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/flowy-user/src/migrations/document_empty_content.rs",
+      "capa": "rust-handler",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/flowy-user/src/migrations/migration.rs",
+      "capa": "rust-handler",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/flowy-user/src/migrations/mod.rs",
+      "capa": "rust-handler",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/flowy-user/src/migrations/session_migration.rs",
+      "capa": "rust-handler",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/flowy-user/src/migrations/util.rs",
+      "capa": "rust-handler",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/flowy-user/src/migrations/workspace_and_favorite_v1.rs",
+      "capa": "rust-handler",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/flowy-user/src/migrations/workspace_trash_v1.rs",
+      "capa": "rust-handler",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/flowy-user/src/notification.rs",
+      "capa": "service",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/flowy-user/src/services/authenticate_user.rs",
+      "capa": "rust-handler",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/flowy-user/src/services/billing_check.rs",
+      "capa": "rust-handler",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/flowy-user/src/services/cloud_config.rs",
+      "capa": "rust-handler",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/flowy-user/src/services/collab_interact.rs",
+      "capa": "rust-handler",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/flowy-user/src/services/data_import/appflowy_data_import.rs",
+      "capa": "rust-handler",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/flowy-user/src/services/data_import/importer.rs",
+      "capa": "rust-handler",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/flowy-user/src/services/data_import/mod.rs",
+      "capa": "rust-handler",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/flowy-user/src/services/db.rs",
+      "capa": "rust-handler",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/flowy-user/src/services/entities.rs",
+      "capa": "rust-handler",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/flowy-user/src/services/mod.rs",
+      "capa": "rust-handler",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/flowy-user/src/user_manager/manager.rs",
+      "capa": "rust-manager",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/flowy-user/src/user_manager/manager_history_user.rs",
+      "capa": "rust-handler",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/flowy-user/src/user_manager/manager_user_awareness.rs",
+      "capa": "rust-handler",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/flowy-user/src/user_manager/manager_user_encryption.rs",
+      "capa": "rust-handler",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/flowy-user/src/user_manager/manager_user_workspace.rs",
+      "capa": "rust-handler",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "appflowy",
+      "ruta": "appflowy/frontend/rust-lib/flowy-user/src/user_manager/mod.rs",
+      "capa": "rust-handler",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "collab",
+      "ruta": "collab/collab-user/Cargo.toml",
+      "capa": "config",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "collab",
+      "ruta": "collab/collab-user/src/lib.rs",
+      "capa": "collab",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "collab",
+      "ruta": "collab/collab-user/src/reminder.rs",
+      "capa": "collab",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "collab",
+      "ruta": "collab/collab-user/src/user_awareness.rs",
+      "capa": "collab",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "collab",
+      "ruta": "collab/collab-user/tests/main.rs",
+      "capa": "collab",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "collab",
+      "ruta": "collab/collab-user/tests/reminder_test/mod.rs",
+      "capa": "collab",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "collab",
+      "ruta": "collab/collab-user/tests/reminder_test/subscribe_test.rs",
+      "capa": "collab",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "collab",
+      "ruta": "collab/collab-user/tests/reminder_test/test.rs",
+      "capa": "collab",
+      "estado": "verificado"
+    },
+    {
+      "fuente": "collab",
+      "ruta": "collab/collab-user/tests/util.rs",
+      "capa": "collab",
+      "estado": "verificado"
+    }
+  ],
+  "archivos_total": 58,
+  "catalogos": [
+    "blocs.json",
+    "deps.json",
+    "events.json",
+    "misc.json",
+    "notifications.json",
+    "protobuf.json"
+  ],
+  "catalogos_razon": {
+    "events.json": "Eventos FFI / dispatch de esta feature",
+    "blocs.json": "BLoCs / Cubits presentes en los archivos de esta unidad",
+    "protobuf.json": "Entidades protobuf input/output de los eventos",
+    "notifications.json": "Notificaciones Rust→Dart emitidas o escuchadas",
+    "deps.json": "Dependencias del workspace rust y pubspec",
+    "misc.json": "Rutas, atajos, flags, error codes, i18n"
+  },
+  "dependencias": [
+    {
+      "id": "F05.0",
+      "tipo": "indice",
+      "nota": "Documento indice F05.0 debe existir antes de esta sub-unidad."
+    }
+  ],
+  "plantilla": "feature",
+  "documento": "OUT/09-features/F05-usuario-auth-sesion/2-usuario-flowy-user-collab-user-rust-collab.md",
+  "metricas": {
+    "archivos": 58,
+    "por_capa": {
+      "config": 3,
+      "rust-handler": 45,
+      "service": 1,
+      "rust-manager": 1,
+      "collab": 8
+    },
+    "por_fuente": {
+      "appflowy": 49,
+      "collab": 9
+    }
+  },
+  "prioridad": 2,
+  "concurrencia": "paralela",
+  "generado_en": "2026-10-20T14:07:42Z"
+}

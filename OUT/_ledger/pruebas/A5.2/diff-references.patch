@@ -1,0 +1,213 @@
+--- /tmp/refs-before-a52/diagram-conventions.md	2026-10-18 21:43:31
++++ /Users/martin/Desktop/projects/Skills/notemartin-appflowy-review/SKILL/references/diagram-conventions.md	2026-10-18 21:45:09
+@@ -82,6 +82,14 @@
+   Listo --> [*]: close
+ ```
+ 
++**Importante (A5.2, H2)**: los labels de las transiciones (lo que va después de `:`) son **texto plano**. Restricciones descubiertas en el piloto F08:
++
++- ❌ `<br/>` no se renderiza (Mermaid lo trata como literal).
++- ❌ Varios `:` en el mismo label rompen el parseo (p. ej. `manager.rs:42-46`).
++- ❌ Paréntesis que encierran otro `:` también rompen (p. ej. `full_index_unindexed_documents Ok (full_indexed_data_provider.rs:213)`).
++- ✅ Para referencias `ruta:línea` o rutas largas, escríbelas **sin** `:` extra: `manager.rs line 42`, o muévelas a la prosa posterior.
++- ✅ Para separar datos largos, usa guiones o comas: `emite SearchStatePB por IsolateSink`, no `emite SearchStatePB<br/>(manager.rs:182)`.
++
+ ### `classDiagram` (modelo de datos)
+ 
+ ```mermaid
+@@ -97,6 +105,16 @@
+   Collab <|-- Documento
+ ```
+ 
++**Importante (A5.2, H1)**: los nombres de campo en `classDiagram` **no admiten genéricos con `<>`**. Mermaid los confunde con HTML y rompe el parseo. Reglas:
++
++- ❌ `+Option~SearchResponsePB~ response` — rompe.
++- ✅ `+Option response` — válido, con la nota del tipo en la prosa.
++- ❌ `+Vec~SearchResponseItemPB~ items` — rompe.
++- ✅ `+Vec items` — válido.
++- Para tipos complejos, usa un nombre compuesto sin `<>` (p. ej. `+SearchResponseItemPBList items`) o céntrate en la cardinalidad y mueve el tipo exacto a la prosa posterior.
++
++Lo mismo aplica a los nombres de clase con genéricos: prefiera `class ResultItemList` a `class ResultItem<T>`.
++
+ ### `erDiagram` (SQLite)
+ 
+ ```mermaid
+@@ -149,6 +167,8 @@
+ | `subgraph X["foo bar"]` con espacios en el ID | ID sin comillas si no tiene símbolos; con comillas solo la etiqueta: `subgraph X["foo bar"]`. |
+ | Nodos con `.` (rompe el parser) | Usar guion bajo: `L_42` en vez de `L.42`. |
+ | `participant Foo.Bar` | Renombrar a `participant FooBar` o usar alias `participant FB as Foo.Bar`. |
++| `classDiagram` con genéricos en campos: `+Option~T~ x` o `+Vec~T~ x` | Quitar el `<T>` y dejar `Option`/`Vec` (o un nombre compuesto). Ver §"classDiagram" arriba. |
++| `stateDiagram-v2` con `<br/>` o con `:` extra en el label | Texto plano sin HTML, sin `:` anidados, mover la cita `ruta:línea` a la prosa. Ver §"stateDiagram-v2" arriba. |
+ | Diagrama > 60 nodos | Dividir. Mejor dos diagramas claros que uno ilegible. |
+ | Sin prosa alrededor | El validador no atrapa esto, pero el revisor sí. |
+ 
+--- /tmp/refs-before-a52/evidence-rules.md	2026-10-18 21:43:31
++++ /Users/martin/Desktop/projects/Skills/notemartin-appflowy-review/SKILL/references/evidence-rules.md	2026-10-18 21:45:24
+@@ -12,11 +12,12 @@
+ 
+ ## Las 5 reglas bloqueantes
+ 
+-1. **Cita `ruta:línea` o `ruta:inicio–fin`.** La ruta es relativa a la raíz de su repo, con prefijo de fuente si no es el principal. Ejemplos válidos:
+-   - `frontend/appflowy_flutter/lib/plugins/document/application/document_bloc.dart:120`
+-   - `frontend/rust-lib/flowy-document/src/manager.rs:42–58`
+-   - `collab:collab-document/src/document.rs:120` (prefijo `collab:` indica repo `AppFlowy-Collab`)
+-   - `editor:lib/src/plugins/html/html_document_encoder.dart:40` (prefijo `editor:` indica repo `appflowy-editor`)
++1. **Cita `ruta:línea` o `ruta:inicio–fin`.** La ruta es **siempre relativa a la raíz del repo**, con prefijo de fuente si no es la principal. `validate_evidence.py` busca la ruta en `OUT/_ledger/inventario.json`; si la ruta está incompleta, falla con `E_PATH_NOT_IN_INVENTORY`. Formas canónicas (refinadas en el piloto F08, A5.2):
++   - ✅ `appflowy/frontend/rust-lib/flowy-search/src/services/manager.rs:42–46` — ruta completa, fuente implícita `appflowy` (la principal).
++   - ✅ `appflowy:appflowy/frontend/rust-lib/flowy-search/src/services/manager.rs:42–46` — prefijo de fuente explícito (recomendado para uniformidad con archivos de `collab` o `editor`).
++   - ✅ `collab:collab-document/src/document.rs:120` — repo `AppFlowy-Collab`.
++   - ✅ `editor:lib/src/plugins/html/html_document_encoder.dart:40` — repo `appflowy-editor`.
++   - ❌ `manager.rs:42` — **ruta corta**: el validador la busca como `appflowy/manager.rs`, no existe en el inventario, y falla aunque el archivo real sea `appflowy/frontend/rust-lib/flowy-search/src/services/manager.rs`. **Esta fue la causa del 73 % de los errores iniciales del piloto F08.** Regla: nunca cites una ruta que no tenga el prefijo `appflowy/`, `collab/.../`, o `editor/.../` (o sus variantes con `appflowy:`, `collab:`, `editor:`).
+ 
+ 2. **Etiqueta toda afirmación factual.** Por defecto `[VERIFICADO]` cuando hay evidencia. `[INFERIDO]` cuando se razona a partir del código pero no se lee directamente. `[NO DETERMINADO]` cuando la fuente no alcanza; **toda** etiqueta `[NO DETERMINADO]` debe re-listarse en `OUT/22-preguntas-abiertas.md`.
+ 
+@@ -47,6 +48,7 @@
+ | `[VERIFICADO]` | `verificado` | no | `validate_evidence.py` ✓ |
+ | `[INFERIDO]` | `pendiente` | no | `validate_evidence.py` ✓ + nota explicativa |
+ | `[NO DETERMINADO]` | `pendiente` | **sí** (en `22-…`) | `validate_evidence.py` ⚠ + recordatorio |
++| Ruta corta (sin prefijo `appflowy/`, `collab/`, `editor/`) | no se mueve | no | `validate_evidence.py` **falla** con `E_PATH_NOT_IN_INVENTORY` aunque el archivo exista. |
+ 
+ ## Relacionado con
+ 
+--- /tmp/refs-before-a52/subagent-contract.md	2026-10-18 21:43:31
++++ /Users/martin/Desktop/projects/Skills/notemartin-appflowy-review/SKILL/references/subagent-contract.md	2026-10-18 21:45:38
+@@ -56,7 +56,7 @@
+ | `catalogos_dir` | string (ruta) | Directorio con `extract/*.json`. |
+ | `plantilla` | `"feature"` \| `"export"` | Plantilla a aplicar. |
+ | `plantilla_path` | string (ruta) | Ruta al `.md` de la plantilla. |
+-| `out_root` | string (ruta) | Raíz de salida (típicamente `OUT`). |
++| `out_root` | string (ruta) | **Raíz del proyecto** (no `OUT/`). El script concatena `out_root / unit.documento` y `unit.documento` ya empieza por `OUT/...`. Pasar `--out-root OUT/` hace que el script busque el documento en `OUT/OUT/...` y devuelva `error: fatal`. Lección del piloto F08 (A5.1). |
+ | `max_secciones` | int | 19 para feature, 11 para export. |
+ | `allowed_refs` | array de string | Rutas que el autor puede leer. |
+ 
+@@ -105,6 +105,13 @@
+ - `archivos_extra_detectados` solo se usa para archivos que **bloquean**
+   la unidad; observaciones menores van a `preguntas_abiertas`.
+ 
++**Triage de `archivos_extra_detectados` (procedimiento del orquestador, A5.2 H8):** al recibir el `AutorOutput`, el orquestador tiene 3 opciones:
++1. **Reasignar el archivo** a la feature actual (`cobertura.csv::feature_ids` se actualiza y la unidad se regenera).
++2. **Crear una feature nueva `F2x`** y mover el archivo allí.
++3. **No tocar** y dejar la observación en `preguntas_abiertas` (aceptable si el archivo es solo mencionado en la prosa pero no se cita como evidencia principal).
++
++En el piloto F08 (A5.1) se detectaron 4 archivos así (`flowy-core/src/deps_resolve/search_deps.rs`, `module.rs`, `lib.rs`, `app_life_cycle.rs`); se eligió la opción 3 porque eran menciones en §7/§19/§10.2 sin reclamar propiedad.
++
+ ## 4. Esquema `RevisorInput`
+ 
+ ```json
+@@ -117,11 +124,17 @@
+ }
+ ```
+ 
+-`evidencia_minima_pct` es 30 por defecto; 100 si
+-`unit.feature_id ∈ {"F01", "F02", "F06"}` o si la unidad pertenece
+-al motor de export/import (`unit.dependencias[*].id` empieza por
+-`B4.`). Tabla de muestreo en `subagent-revisor-prompt.md` §3.
++`evidencia_minima_pct` es 30 por defecto; **se eleva automáticamente a 100** cuando se cumple cualquiera de estas condiciones (auto-elevación implementada en `run_subagent.py` desde A5.2):
+ 
++| Trigger | `evidencia_minima_pct` efectivo |
++|---|---|
++| `unit.feature_id ∈ {"F01", "F02", "F06"}` | 100 |
++| `unit.dependencias[*].id` empieza por `B4.` (motor de export/import) | 100 |
++| Flag CLI `--gate-100` (re-verificaciones forzadas, override explícito) | 100 |
++| Resto | 30 (default) |
++
++El JSON `RevisorOutput` incluye `muestreo_verificado.gate_100_explicit` y `muestreo_verificado.gate_100_auto` para que el orquestador exija el muestreo correcto sin ambigüedad. Tabla de muestreo detallada en `subagent-revisor-prompt.md` §3.
++
+ ## 5. Esquema `RevisorOutput`
+ 
+ ```json
+--- /tmp/refs-before-a52/subagent-autor-prompt.md	2026-10-18 21:43:31
++++ /Users/martin/Desktop/projects/Skills/notemartin-appflowy-review/SKILL/references/subagent-autor-prompt.md	2026-10-18 21:45:51
+@@ -41,6 +41,8 @@
+ }
+ ```
+ 
++> **A5.2 — `out_root` (H5)**: `out_root` es la **raíz del proyecto** (no `OUT/`). El script que valida tu salida concatena `out_root / unit.documento`; `unit.documento` ya empieza por `OUT/...`, así que pasar `out_root = "OUT"` rompería la búsqueda con `OUT/OUT/...` y `error: fatal`. Si dudas, omite el campo (default = raíz del proyecto detectada por el orquestador) o pásalo explícitamente como `.`.
++
+ Si `schema_version != 1` o falta cualquier campo obligatorio,
+ devuelve un error fatal (no escribas el documento).
+ 
+@@ -54,6 +56,7 @@
+ - Si `plantilla == "feature"`, lee `SKILL/references/feature-template.md`
+   (19 secciones). Si es `"export"`, lee
+   `SKILL/references/export-template.md` (11 secciones).
++- **No invoques `run_subagent_placeholder.py`** esperando contenido real: ese script es el **mock de contrato A4.3** que solo genera placeholders. Si trabajas en Parte B, escribe el documento directamente con la información de los archivos + catálogos, o usa `run_subagent_author.sh` que delega a un LLM externo.
+ 
+ ### 3.2 Lee cada archivo, no excerpts
+ - Por cada `(fuente, ruta)` en `archivos[]`, lee el archivo
+@@ -85,6 +88,7 @@
+   (3, 9, 10, 11), respeta `SKILL/references/diagram-conventions.md`.
+   Prefijo `flowchart TD`/`LR`, `sequenceDiagram`, `stateDiagram-v2`,
+   `classDiagram`, `erDiagram`. IDs sin espacios.
++- **Citas `ruta:línea` (A5.2 H3)**: la ruta debe ser **completa desde la raíz del repo**, con prefijo `appflowy/`, `collab/...` o `editor/...`. Ver `evidence-rules.md` §1 (causa del 73 % de los errores del piloto F08). Nunca cites rutas cortas tipo `manager.rs:42`.
+ 
+ ### 3.5 Guarda y devuelve
+ - Escribe el documento en `out_root/<unit.documento>` (típicamente
+--- /tmp/refs-before-a52/subagent-revisor-prompt.md	2026-10-18 21:43:31
++++ /Users/martin/Desktop/projects/Skills/notemartin-appflowy-review/SKILL/references/subagent-revisor-prompt.md	2026-10-18 21:45:59
+@@ -87,12 +87,13 @@
+ 
+ ### 3.4 Muestreo semántico (manual, tú lo haces)
+ 
+-Tabla de `evidencia_minima_pct` efectivo:
++Tabla de `evidencia_minima_pct` efectivo (auto-elevación implementada en `run_subagent.py --rol revisor` desde A5.2; H6):
+ 
+ | `unit.feature_id` | `evidencia_minima_pct` |
+ |---|---|
+ | `F01`, `F02`, `F06` | 100 |
+-| Motor export/import (`unit.dependencias[*].id` empieza por `B4.`) | 100 |
++| `B4.*` (motor export/import; `unit.dependencias[*].id` empieza por `B4.`) | 100 |
++| Flag CLI `--gate-100` (override explícito) | 100 |
+ | Resto | 30 |
+ 
+ Procedimiento:
+@@ -162,6 +163,7 @@
+ | `inventario` no existe | Warning; ejecuta evidencia sin `--inventario` (verá más errores). |
+ | Muestreo revela evidencia falsa | `rechazado` con `correcciones[tipo=evidencia_falsa]`. |
+ | Cobertura < `evidencia_minima_pct` (muestras) | `rechazado` con `correcciones[tipo=cobertura_muestreo]`. |
++| Orquestador invoca con `--gate-100` y el `pct_efectivo` en `muestreo_verificado` no es 100 | `rechazado` con `correcciones[tipo=cobertura_muestreo]`. (A5.2 H6) |
+ | Validador Mermaid no instalado (`exit 2`) | Warning; el `muestreo_verificado` lo cubre. |
+ 
+ ## 7. Lo que NO se hace
+--- /tmp/refs-before-a52/patterns.md	2026-10-18 21:43:31
++++ /Users/martin/Desktop/projects/Skills/notemartin-appflowy-review/SKILL/references/patterns.md	2026-10-18 21:46:11
+@@ -67,8 +67,39 @@
+ 
+ Carpetas legadas (`workspace/`, `plugins/`) y nuevas por feature (`features/<x>/{data,logic,presentation}`). Documentar **ambas** sin asumir cuál es la canónica. La fase B0.2 (triage) detecta los archivos que no encajan en la tabla de `PROMPT.md §4` y crea features `F2x`.
+ 
++## 8. Canales de retorno Rust→Dart (A5.2, refinado en piloto F08)
++
++No todos los resultados Rust→Dart viajan por `flowy-notification`. Hay tres canales diferenciados:
++
++| Canal | Mecanismo | Caso de uso típico | Identificación |
++|---|---|---|---|
++| Notificación | `XNotification` + `NotificationBuilder` + `flowy-notification` con debounce; listener Dart vía `rust_stream.dart` | Actualizaciones reactivas (`DocumentNotification::DidUpdate…`, `FolderNotification::DidUpdate…`) | Enum `XNotification` en `notification.rs` del crate; receptor en `*_listener.dart` con `parser = XNotificationParser`. |
++| Stream `Isolate` (F08) | `IsolateSink::new(Isolate::new(stream_port))`; payload `SearchQueryPB.stream_port` abierto por Dart; cada resultado se serializa con `try_into()` y se envía al puerto | Búsqueda, chats con streaming, descargas progresivas | `manager.rs::perform_search` o similar con `allo_isolate::Isolate`; el lado Dart usa `allo_isolate` para recibir los chunks. |
++| Respuesta síncrona FFI | `FlowyResult<T, FlowyError>` retornado directamente al evento dispatch | Handlers cortos y deterministas (abrir un doc, obtener metadatos) | El handler Rust retorna `Result<…, FlowyError>`; no hay stream ni `send_notification` en el crate. |
++
++**Lección F08 (A5.1)**: la búsqueda usa el **canal `Isolate`**, no notificaciones. El enum `SearchNotification` se compila y se exporta pero está sin uso efectivo (registrado en F08 §5 y `OUT/22-preguntas-abiertas.md`). Documentar siempre el canal real, no inferirlo del enum `XNotification` que exista.
++
++## 9. Mapeo feature ↔ unidad (A5.2, refinado en piloto F08)
++
++La **fuente de verdad** del alcance de cada feature es `OUT/_ledger/units/<id>.json` (producido por `build_units.py` en A4.2), **no** la descripción narrativa del ROADMAP.
++
++Cuando la descripción narrativa del ROADMAP (línea `B3.Fxx` y similares) y la unidad real discrepan, sigue este orden de precedencia:
++
++1. `OUT/_ledger/units/<id>.json::archivos[]` (qué hay que documentar).
++2. `OUT/_ledger/cobertura.csv::feature_ids` (a qué feature está asignado cada archivo).
++3. `PROMPT.md §4` / `ROADMAP.md` (descripción orientativa, puede estar desfasada).
++
++Si encuentras una discrepancia:
++
++- Si la unidad tiene archivos que la descripción no menciona, **documenta los archivos** y deja una nota en el documento (§2 Alcance) explicando la divergencia.
++- Si la descripción menciona áreas (p. ej. `flowy-search-pub`, `command_palette`) que la unidad **no** incluye, **referéncialas en §19 (Relacionado con)** sin reclamar sus archivos.
++- El ROADMAP se actualiza después del cierre de la fase (en STATE.md se anota la decisión; en `ROADMAP.md` se ajusta la línea de la fase).
++
++Esto evita que el autor "robe" archivos de features adyacentes o que el revisor rechace el documento por cobertura > 100 %.
++
+ ## Relacionado con
+ 
+ - `R-003 evidence-rules.md` — reglas de evidencia al documentar estos patrones.
+ - `R-004 diagram-conventions.md` — cómo diagramar cada patrón.
++- `R-008 subagent-contract.md` — contrato de los subagentes; `archivos_extra_detectados` cubre el caso de "necesito citar archivos no asignados a mi unidad" (§9 de este archivo).
+ - `PROMPT.md §5` — plantilla de feature donde los patrones se documentan por sección.

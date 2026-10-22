@@ -1,0 +1,4150 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-10-18T14:31:03Z",
+  "tool": {
+    "name": "extract_events.py",
+    "version": "1.0"
+  },
+  "fuentes": [
+    "appflowy"
+  ],
+  "crates": [
+    {
+      "fuente": "appflowy",
+      "crate": "flowy-ai",
+      "crate_root": "SRC/appflowy/frontend/rust-lib/flowy-ai",
+      "event_map_file": "SRC/appflowy/frontend/rust-lib/flowy-ai/src/event_map.rs",
+      "init_function": {
+        "name": "init",
+        "line": 12,
+        "end_line": 61
+      },
+      "enum": {
+        "name": "AIEvent",
+        "decl_line": 65,
+        "derives": [
+          "Clone",
+          "Copy",
+          "PartialEq",
+          "Eq",
+          "Debug",
+          "Display",
+          "Hash",
+          "ProtoBuf_Enum",
+          "Flowy_Event"
+        ],
+        "event_err": "FlowyError"
+      },
+      "variants": [
+        {
+          "name": "LoadPrevMessage",
+          "index": 0,
+          "input": "LoadPrevChatMessagePB",
+          "output": "ChatMessageListPB",
+          "source_line": 68,
+          "registrations": [
+            {
+              "handler": "load_prev_message_handler",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-ai/src/event_map.rs",
+              "registered_line": 22,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-ai/src/event_handler.rs",
+              "handler_line": 117
+            }
+          ],
+          "sin_handler": false
+        },
+        {
+          "name": "LoadNextMessage",
+          "index": 1,
+          "input": "LoadNextChatMessagePB",
+          "output": "ChatMessageListPB",
+          "source_line": 71,
+          "registrations": [
+            {
+              "handler": "load_next_message_handler",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-ai/src/event_map.rs",
+              "registered_line": 23,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-ai/src/event_handler.rs",
+              "handler_line": 133
+            }
+          ],
+          "sin_handler": false
+        },
+        {
+          "name": "StreamMessage",
+          "index": 2,
+          "input": "StreamChatPayloadPB",
+          "output": "ChatMessagePB",
+          "source_line": 74,
+          "registrations": [
+            {
+              "handler": "stream_chat_message_handler",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-ai/src/event_map.rs",
+              "registered_line": 21,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-ai/src/event_handler.rs",
+              "handler_line": 22
+            }
+          ],
+          "sin_handler": false
+        },
+        {
+          "name": "StopStream",
+          "index": 3,
+          "input": "StopStreamPB",
+          "output": null,
+          "source_line": 77,
+          "registrations": [
+            {
+              "handler": "stop_stream_handler",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-ai/src/event_map.rs",
+              "registered_line": 26,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-ai/src/event_handler.rs",
+              "handler_line": 177
+            }
+          ],
+          "sin_handler": false
+        },
+        {
+          "name": "GetRelatedQuestion",
+          "index": 4,
+          "input": "ChatMessageIdPB",
+          "output": "RepeatedRelatedQuestionPB",
+          "source_line": 80,
+          "registrations": [
+            {
+              "handler": "get_related_question_handler",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-ai/src/event_map.rs",
+              "registered_line": 24,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-ai/src/event_handler.rs",
+              "handler_line": 149
+            }
+          ],
+          "sin_handler": false
+        },
+        {
+          "name": "GetAnswerForQuestion",
+          "index": 5,
+          "input": "ChatMessageIdPB",
+          "output": "ChatMessagePB",
+          "source_line": 83,
+          "registrations": [
+            {
+              "handler": "get_answer_handler",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-ai/src/event_map.rs",
+              "registered_line": 25,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-ai/src/event_handler.rs",
+              "handler_line": 163
+            }
+          ],
+          "sin_handler": false
+        },
+        {
+          "name": "CompleteText",
+          "index": 9,
+          "input": "CompleteTextPB",
+          "output": "CompleteTextTaskPB",
+          "source_line": 86,
+          "registrations": [
+            {
+              "handler": "start_complete_text_handler",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-ai/src/event_map.rs",
+              "registered_line": 27,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-ai/src/event_handler.rs",
+              "handler_line": 189
+            }
+          ],
+          "sin_handler": false
+        },
+        {
+          "name": "StopCompleteText",
+          "index": 10,
+          "input": "CompleteTextTaskPB",
+          "output": null,
+          "source_line": 89,
+          "registrations": [
+            {
+              "handler": "stop_complete_text_handler",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-ai/src/event_map.rs",
+              "registered_line": 28,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-ai/src/event_handler.rs",
+              "handler_line": 203
+            }
+          ],
+          "sin_handler": false
+        },
+        {
+          "name": "ChatWithFile",
+          "index": 11,
+          "input": "ChatFilePB",
+          "output": null,
+          "source_line": 92,
+          "registrations": [
+            {
+              "handler": "chat_file_handler",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-ai/src/event_map.rs",
+              "registered_line": 29,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-ai/src/event_handler.rs",
+              "handler_line": 213
+            }
+          ],
+          "sin_handler": false
+        },
+        {
+          "name": "RestartLocalAI",
+          "index": 17,
+          "input": null,
+          "output": null,
+          "source_line": 97,
+          "registrations": [
+            {
+              "handler": "restart_local_ai_handler",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-ai/src/event_map.rs",
+              "registered_line": 30,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-ai/src/event_handler.rs",
+              "handler_line": 262
+            }
+          ],
+          "sin_handler": false
+        },
+        {
+          "name": "ToggleLocalAI",
+          "index": 18,
+          "input": null,
+          "output": "LocalAIPB",
+          "source_line": 101,
+          "registrations": [
+            {
+              "handler": "toggle_local_ai_handler",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-ai/src/event_map.rs",
+              "registered_line": 31,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-ai/src/event_handler.rs",
+              "handler_line": 271
+            }
+          ],
+          "sin_handler": false
+        },
+        {
+          "name": "GetLocalAIState",
+          "index": 19,
+          "input": null,
+          "output": "LocalAIPB",
+          "source_line": 105,
+          "registrations": [
+            {
+              "handler": "get_local_ai_state_handler",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-ai/src/event_map.rs",
+              "registered_line": 32,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-ai/src/event_handler.rs",
+              "handler_line": 281
+            }
+          ],
+          "sin_handler": false
+        },
+        {
+          "name": "CreateChatContext",
+          "index": 23,
+          "input": "CreateChatContextPB",
+          "output": null,
+          "source_line": 108,
+          "registrations": [
+            {
+              "handler": "create_chat_context_handler",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-ai/src/event_map.rs",
+              "registered_line": 43,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-ai/src/event_handler.rs",
+              "handler_line": 290
+            }
+          ],
+          "sin_handler": false
+        },
+        {
+          "name": "GetChatInfo",
+          "index": 24,
+          "input": "ChatId",
+          "output": "ChatInfoPB",
+          "source_line": 111,
+          "registrations": [
+            {
+              "handler": "create_chat_context_handler",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-ai/src/event_map.rs",
+              "registered_line": 44,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-ai/src/event_handler.rs",
+              "handler_line": 290
+            }
+          ],
+          "sin_handler": false
+        },
+        {
+          "name": "GetChatSettings",
+          "index": 25,
+          "input": "ChatId",
+          "output": "ChatSettingsPB",
+          "source_line": 114,
+          "registrations": [
+            {
+              "handler": "get_chat_settings_handler",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-ai/src/event_map.rs",
+              "registered_line": 45,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-ai/src/event_handler.rs",
+              "handler_line": 311
+            }
+          ],
+          "sin_handler": false
+        },
+        {
+          "name": "UpdateChatSettings",
+          "index": 26,
+          "input": "UpdateChatSettingsPB",
+          "output": null,
+          "source_line": 117,
+          "registrations": [
+            {
+              "handler": "update_chat_settings_handler",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-ai/src/event_map.rs",
+              "registered_line": 46,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-ai/src/event_handler.rs",
+              "handler_line": 326
+            }
+          ],
+          "sin_handler": false
+        },
+        {
+          "name": "RegenerateResponse",
+          "index": 27,
+          "input": "RegenerateResponsePB",
+          "output": null,
+          "source_line": 120,
+          "registrations": [
+            {
+              "handler": "regenerate_response_handler",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-ai/src/event_map.rs",
+              "registered_line": 47,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-ai/src/event_handler.rs",
+              "handler_line": 61
+            }
+          ],
+          "sin_handler": false
+        },
+        {
+          "name": "GetLocalAISetting",
+          "index": 29,
+          "input": null,
+          "output": "LocalAISettingPB",
+          "source_line": 123,
+          "registrations": [
+            {
+              "handler": "get_local_ai_setting_handler",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-ai/src/event_map.rs",
+              "registered_line": 33,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-ai/src/event_handler.rs",
+              "handler_line": 339
+            }
+          ],
+          "sin_handler": false
+        },
+        {
+          "name": "UpdateLocalAISetting",
+          "index": 30,
+          "input": "LocalAISettingPB",
+          "output": null,
+          "source_line": 126,
+          "registrations": [
+            {
+              "handler": "update_local_ai_setting_handler",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-ai/src/event_map.rs",
+              "registered_line": 39,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-ai/src/event_handler.rs",
+              "handler_line": 358
+            }
+          ],
+          "sin_handler": false
+        },
+        {
+          "name": "GetSettingModelSelection",
+          "index": 31,
+          "input": "ModelSourcePB",
+          "output": "ModelSelectionPB",
+          "source_line": 129,
+          "registrations": [
+            {
+              "handler": "get_setting_model_selection_handler",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-ai/src/event_map.rs",
+              "registered_line": 48,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-ai/src/event_handler.rs",
+              "handler_line": 82
+            }
+          ],
+          "sin_handler": false
+        },
+        {
+          "name": "UpdateSelectedModel",
+          "index": 32,
+          "input": "UpdateSelectedModelPB",
+          "output": null,
+          "source_line": 132,
+          "registrations": [
+            {
+              "handler": "update_selected_model_handler",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-ai/src/event_map.rs",
+              "registered_line": 52,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-ai/src/event_handler.rs",
+              "handler_line": 104
+            }
+          ],
+          "sin_handler": false
+        },
+        {
+          "name": "GetLocalModelSelection",
+          "index": 33,
+          "input": null,
+          "output": "ModelSelectionPB",
+          "source_line": 135,
+          "registrations": [
+            {
+              "handler": "get_local_ai_models_handler",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-ai/src/event_map.rs",
+              "registered_line": 34,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-ai/src/event_handler.rs",
+              "handler_line": 349
+            }
+          ],
+          "sin_handler": false
+        },
+        {
+          "name": "GetSourceModelSelection",
+          "index": 34,
+          "input": "ModelSourcePB",
+          "output": "ModelSelectionPB",
+          "source_line": 138,
+          "registrations": [
+            {
+              "handler": "get_source_model_selection_handler",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-ai/src/event_map.rs",
+              "registered_line": 35,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-ai/src/event_handler.rs",
+              "handler_line": 93
+            }
+          ],
+          "sin_handler": false
+        },
+        {
+          "name": "GetCustomPromptDatabaseConfiguration",
+          "index": 35,
+          "input": null,
+          "output": "CustomPromptDatabaseConfigurationPB",
+          "source_line": 141,
+          "registrations": [
+            {
+              "handler": "get_custom_prompt_database_configuration_handler",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-ai/src/event_map.rs",
+              "registered_line": 53,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-ai/src/event_handler.rs",
+              "handler_line": 369
+            }
+          ],
+          "sin_handler": false
+        },
+        {
+          "name": "SetCustomPromptDatabaseConfiguration",
+          "index": 36,
+          "input": "CustomPromptDatabaseConfigurationPB",
+          "output": null,
+          "source_line": 144,
+          "registrations": [
+            {
+              "handler": "set_custom_prompt_database_configuration_handler",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-ai/src/event_map.rs",
+              "registered_line": 57,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-ai/src/event_handler.rs",
+              "handler_line": 387
+            }
+          ],
+          "sin_handler": false
+        }
+      ],
+      "summary": {
+        "total_variants": 25,
+        "registered": 25,
+        "sin_handler": 0
+      },
+      "warnings": []
+    },
+    {
+      "fuente": "appflowy",
+      "crate": "flowy-database2",
+      "crate_root": "SRC/appflowy/frontend/rust-lib/flowy-database2",
+      "event_map_file": "SRC/appflowy/frontend/rust-lib/flowy-database2/src/event_map.rs",
+      "init_function": {
+        "name": "init",
+        "line": 11,
+        "end_line": 103
+      },
+      "enum": {
+        "name": "DatabaseEvent",
+        "decl_line": 109,
+        "derives": [
+          "Clone",
+          "Copy",
+          "PartialEq",
+          "Eq",
+          "Debug",
+          "Display",
+          "Hash",
+          "ProtoBuf_Enum",
+          "Flowy_Event"
+        ],
+        "event_err": "FlowyError"
+      },
+      "variants": [
+        {
+          "name": "GetDatabase",
+          "index": 0,
+          "input": "DatabaseViewIdPB",
+          "output": "DatabasePB",
+          "source_line": 114,
+          "registrations": [
+            {
+              "handler": "get_database_data_handler",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-database2/src/event_map.rs",
+              "registered_line": 16,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-database2/src/event_handler.rs",
+              "handler_line": 31
+            }
+          ],
+          "sin_handler": false
+        },
+        {
+          "name": "GetDatabaseId",
+          "index": 1,
+          "input": "DatabaseViewIdPB",
+          "output": "DatabaseIdPB",
+          "source_line": 117,
+          "registrations": [
+            {
+              "handler": "get_database_id_handler",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-database2/src/event_map.rs",
+              "registered_line": 18,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-database2/src/event_handler.rs",
+              "handler_line": 89
+            }
+          ],
+          "sin_handler": false
+        },
+        {
+          "name": "GetDatabaseSetting",
+          "index": 2,
+          "input": "DatabaseViewIdPB",
+          "output": "DatabaseViewSettingPB",
+          "source_line": 124,
+          "registrations": [
+            {
+              "handler": "get_database_setting_handler",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-database2/src/event_map.rs",
+              "registered_line": 19,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-database2/src/event_handler.rs",
+              "handler_line": 102
+            }
+          ],
+          "sin_handler": false
+        },
+        {
+          "name": "UpdateDatabaseSetting",
+          "index": 3,
+          "input": "DatabaseSettingChangesetPB",
+          "output": null,
+          "source_line": 130,
+          "registrations": [
+            {
+              "handler": "update_database_setting_handler",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-database2/src/event_map.rs",
+              "registered_line": 20,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-database2/src/event_handler.rs",
+              "handler_line": 118
+            }
+          ],
+          "sin_handler": false
+        },
+        {
+          "name": "GetAllFilters",
+          "index": 4,
+          "input": "DatabaseViewIdPB",
+          "output": "RepeatedFilterPB",
+          "source_line": 133,
+          "registrations": [
+            {
+              "handler": "get_all_filters_handler",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-database2/src/event_map.rs",
+              "registered_line": 21,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-database2/src/event_handler.rs",
+              "handler_line": 173
+            }
+          ],
+          "sin_handler": false
+        },
+        {
+          "name": "GetAllSorts",
+          "index": 5,
+          "input": "DatabaseViewIdPB",
+          "output": "RepeatedSortPB",
+          "source_line": 136,
+          "registrations": [
+            {
+              "handler": "get_all_sorts_handler",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-database2/src/event_map.rs",
+              "registered_line": 22,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-database2/src/event_handler.rs",
+              "handler_line": 187
+            }
+          ],
+          "sin_handler": false
+        },
+        {
+          "name": "DeleteAllSorts",
+          "index": 6,
+          "input": "DatabaseViewIdPB",
+          "output": null,
+          "source_line": 139,
+          "registrations": [
+            {
+              "handler": "delete_all_sorts_handler",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-database2/src/event_map.rs",
+              "registered_line": 23,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-database2/src/event_handler.rs",
+              "handler_line": 201
+            }
+          ],
+          "sin_handler": false
+        },
+        {
+          "name": "GetDatabaseData",
+          "index": 7,
+          "input": "DatabaseViewIdPB",
+          "output": null,
+          "source_line": 142,
+          "registrations": [
+            {
+              "handler": "get_database_data_handler",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-database2/src/event_map.rs",
+              "registered_line": 17,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-database2/src/event_handler.rs",
+              "handler_line": 31
+            }
+          ],
+          "sin_handler": false
+        },
+        {
+          "name": "GetFields",
+          "index": 10,
+          "input": "GetFieldPayloadPB",
+          "output": "RepeatedFieldPB",
+          "source_line": 149,
+          "registrations": [
+            {
+              "handler": "get_fields_handler",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-database2/src/event_map.rs",
+              "registered_line": 25,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-database2/src/event_handler.rs",
+              "handler_line": 215
+            }
+          ],
+          "sin_handler": false
+        },
+        {
+          "name": "UpdateField",
+          "index": 11,
+          "input": "FieldChangesetPB",
+          "output": null,
+          "source_line": 156,
+          "registrations": [
+            {
+              "handler": "update_field_handler",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-database2/src/event_map.rs",
+              "registered_line": 27,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-database2/src/event_handler.rs",
+              "handler_line": 265
+            }
+          ],
+          "sin_handler": false
+        },
+        {
+          "name": "UpdateFieldTypeOption",
+          "index": 12,
+          "input": "TypeOptionChangesetPB",
+          "output": null,
+          "source_line": 169,
+          "registrations": [
+            {
+              "handler": "update_field_type_option_handler",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-database2/src/event_map.rs",
+              "registered_line": 28,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-database2/src/event_handler.rs",
+              "handler_line": 279
+            }
+          ],
+          "sin_handler": false
+        },
+        {
+          "name": "DeleteField",
+          "index": 14,
+          "input": "DeleteFieldPayloadPB",
+          "output": null,
+          "source_line": 174,
+          "registrations": [
+            {
+              "handler": "delete_field_handler",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-database2/src/event_map.rs",
+              "registered_line": 29,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-database2/src/event_handler.rs",
+              "handler_line": 299
+            }
+          ],
+          "sin_handler": false
+        },
+        {
+          "name": "ClearField",
+          "index": 15,
+          "input": "ClearFieldPayloadPB",
+          "output": null,
+          "source_line": 179,
+          "registrations": [
+            {
+              "handler": "clear_field_handler",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-database2/src/event_map.rs",
+              "registered_line": 30,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-database2/src/event_handler.rs",
+              "handler_line": 313
+            }
+          ],
+          "sin_handler": false
+        },
+        {
+          "name": "UpdateFieldType",
+          "index": 20,
+          "input": "UpdateFieldTypePayloadPB",
+          "output": null,
+          "source_line": 185,
+          "registrations": [
+            {
+              "handler": "switch_to_field_handler",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-database2/src/event_map.rs",
+              "registered_line": 31,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-database2/src/event_handler.rs",
+              "handler_line": 329
+            }
+          ],
+          "sin_handler": false
+        },
+        {
+          "name": "DuplicateField",
+          "index": 21,
+          "input": "DuplicateFieldPayloadPB",
+          "output": null,
+          "source_line": 194,
+          "registrations": [
+            {
+              "handler": "duplicate_field_handler",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-database2/src/event_map.rs",
+              "registered_line": 32,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-database2/src/event_handler.rs",
+              "handler_line": 351
+            }
+          ],
+          "sin_handler": false
+        },
+        {
+          "name": "MoveField",
+          "index": 22,
+          "input": "MoveFieldPayloadPB",
+          "output": null,
+          "source_line": 200,
+          "registrations": [
+            {
+              "handler": "move_field_handler",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-database2/src/event_map.rs",
+              "registered_line": 33,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-database2/src/event_handler.rs",
+              "handler_line": 385
+            }
+          ],
+          "sin_handler": false
+        },
+        {
+          "name": "CreateField",
+          "index": 24,
+          "input": "CreateFieldPayloadPB",
+          "output": "FieldPB",
+          "source_line": 205,
+          "registrations": [
+            {
+              "handler": "create_field_handler",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-database2/src/event_map.rs",
+              "registered_line": 34,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-database2/src/event_handler.rs",
+              "handler_line": 368
+            }
+          ],
+          "sin_handler": false
+        },
+        {
+          "name": "GetPrimaryField",
+          "index": 25,
+          "input": "DatabaseViewIdPB",
+          "output": "FieldPB",
+          "source_line": 208,
+          "registrations": [
+            {
+              "handler": "get_primary_field_handler",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-database2/src/event_map.rs",
+              "registered_line": 26,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-database2/src/event_handler.rs",
+              "handler_line": 235
+            }
+          ],
+          "sin_handler": false
+        },
+        {
+          "name": "CreateSelectOption",
+          "index": 30,
+          "input": "CreateSelectOptionPayloadPB",
+          "output": "SelectOptionPB",
+          "source_line": 213,
+          "registrations": [
+            {
+              "handler": "new_select_option_handler",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-database2/src/event_map.rs",
+              "registered_line": 49,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-database2/src/event_handler.rs",
+              "handler_line": 594
+            }
+          ],
+          "sin_handler": false
+        },
+        {
+          "name": "InsertOrUpdateSelectOption",
+          "index": 31,
+          "input": "RepeatedSelectOptionPayload",
+          "output": null,
+          "source_line": 222,
+          "registrations": [
+            {
+              "handler": "insert_or_update_select_option_handler",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-database2/src/event_map.rs",
+              "registered_line": 50,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-database2/src/event_handler.rs",
+              "handler_line": 616
+            }
+          ],
+          "sin_handler": false
+        },
+        {
+          "name": "DeleteSelectOption",
+          "index": 32,
+          "input": "RepeatedSelectOptionPayload",
+          "output": null,
+          "source_line": 225,
+          "registrations": [
+            {
+              "handler": "delete_select_option_handler",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-database2/src/event_map.rs",
+              "registered_line": 51,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-database2/src/event_handler.rs",
+              "handler_line": 637
+            }
+          ],
+          "sin_handler": false
+        },
+        {
+          "name": "CreateRow",
+          "index": 50,
+          "input": "CreateRowPayloadPB",
+          "output": "RowMetaPB",
+          "source_line": 228,
+          "registrations": [
+            {
+              "handler": "create_row_handler",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-database2/src/event_map.rs",
+              "registered_line": 36,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-database2/src/event_handler.rs",
+              "handler_line": 539
+            }
+          ],
+          "sin_handler": false
+        },
+        {
+          "name": "GetRow",
+          "index": 51,
+          "input": "DatabaseViewRowIdPB",
+          "output": "OptionalRowPB",
+          "source_line": 233,
+          "registrations": [
+            {
+              "handler": "get_row_handler",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-database2/src/event_map.rs",
+              "registered_line": 37,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-database2/src/event_handler.rs",
+              "handler_line": 399
+            }
+          ],
+          "sin_handler": false
+        },
+        {
+          "name": "DeleteRows",
+          "index": 52,
+          "input": "RepeatedRowIdPB",
+          "output": null,
+          "source_line": 236,
+          "registrations": [
+            {
+              "handler": "delete_rows_handler",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-database2/src/event_map.rs",
+              "registered_line": 41,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-database2/src/event_handler.rs",
+              "handler_line": 463
+            }
+          ],
+          "sin_handler": false
+        },
+        {
+          "name": "DuplicateRow",
+          "index": 53,
+          "input": "DatabaseViewRowIdPB",
+          "output": null,
+          "source_line": 239,
+          "registrations": [
+            {
+              "handler": "duplicate_row_handler",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-database2/src/event_map.rs",
+              "registered_line": 42,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-database2/src/event_handler.rs",
+              "handler_line": 482
+            }
+          ],
+          "sin_handler": false
+        },
+        {
+          "name": "MoveRow",
+          "index": 54,
+          "input": "MoveRowPayloadPB",
+          "output": null,
+          "source_line": 242,
+          "registrations": [
+            {
+              "handler": "move_row_handler",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-database2/src/event_map.rs",
+              "registered_line": 43,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-database2/src/event_handler.rs",
+              "handler_line": 498
+            }
+          ],
+          "sin_handler": false
+        },
+        {
+          "name": "GetRowMeta",
+          "index": 55,
+          "input": "DatabaseViewRowIdPB",
+          "output": "RowMetaPB",
+          "source_line": 245,
+          "registrations": [
+            {
+              "handler": "get_row_meta_handler",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-database2/src/event_map.rs",
+              "registered_line": 39,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-database2/src/event_handler.rs",
+              "handler_line": 427
+            }
+          ],
+          "sin_handler": false
+        },
+        {
+          "name": "UpdateRowMeta",
+          "index": 56,
+          "input": "UpdateRowMetaChangesetPB",
+          "output": null,
+          "source_line": 248,
+          "registrations": [
+            {
+              "handler": "update_row_meta_handler",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-database2/src/event_map.rs",
+              "registered_line": 40,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-database2/src/event_handler.rs",
+              "handler_line": 445
+            }
+          ],
+          "sin_handler": false
+        },
+        {
+          "name": "RemoveCover",
+          "index": 57,
+          "input": "RemoveCoverPayloadPB",
+          "output": null,
+          "source_line": 251,
+          "registrations": [
+            {
+              "handler": "remove_cover_handler",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-database2/src/event_map.rs",
+              "registered_line": 44,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-database2/src/event_handler.rs",
+              "handler_line": 514
+            }
+          ],
+          "sin_handler": false
+        },
+        {
+          "name": "GetCell",
+          "index": 70,
+          "input": "CellIdPB",
+          "output": "CellPB",
+          "source_line": 254,
+          "registrations": [
+            {
+              "handler": "get_cell_handler",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-database2/src/event_map.rs",
+              "registered_line": 46,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-database2/src/event_handler.rs",
+              "handler_line": 556
+            }
+          ],
+          "sin_handler": false
+        },
+        {
+          "name": "UpdateCell",
+          "index": 71,
+          "input": "CellChangesetPB",
+          "output": null,
+          "source_line": 267,
+          "registrations": [
+            {
+              "handler": "update_cell_handler",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-database2/src/event_map.rs",
+              "registered_line": 47,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-database2/src/event_handler.rs",
+              "handler_line": 573
+            }
+          ],
+          "sin_handler": false
+        },
+        {
+          "name": "UpdateSelectOptionCell",
+          "index": 72,
+          "input": "SelectOptionCellChangesetPB",
+          "output": null,
+          "source_line": 273,
+          "registrations": [
+            {
+              "handler": "update_select_option_cell_handler",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-database2/src/event_map.rs",
+              "registered_line": 52,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-database2/src/event_handler.rs",
+              "handler_line": 658
+            }
+          ],
+          "sin_handler": false
+        },
+        {
+          "name": "UpdateChecklistCell",
+          "index": 73,
+          "input": "ChecklistCellDataChangesetPB",
+          "output": null,
+          "source_line": 276,
+          "registrations": [
+            {
+              "handler": "update_checklist_cell_handler",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-database2/src/event_map.rs",
+              "registered_line": 54,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-database2/src/event_handler.rs",
+              "handler_line": 683
+            }
+          ],
+          "sin_handler": false
+        },
+        {
+          "name": "UpdateDateCell",
+          "index": 80,
+          "input": "DateCellChangesetPB",
+          "output": null,
+          "source_line": 282,
+          "registrations": [
+            {
+              "handler": "update_date_cell_handler",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-database2/src/event_map.rs",
+              "registered_line": 56,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-database2/src/event_handler.rs",
+              "handler_line": 707
+            }
+          ],
+          "sin_handler": false
+        },
+        {
+          "name": "SetGroupByField",
+          "index": 90,
+          "input": "GroupByFieldPayloadPB",
+          "output": null,
+          "source_line": 287,
+          "registrations": [
+            {
+              "handler": "set_group_by_field_handler",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-database2/src/event_map.rs",
+              "registered_line": 58,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-database2/src/event_handler.rs",
+              "handler_line": 768
+            }
+          ],
+          "sin_handler": false
+        },
+        {
+          "name": "GetGroups",
+          "index": 100,
+          "input": "DatabaseViewIdPB",
+          "output": "RepeatedGroupPB",
+          "source_line": 290,
+          "registrations": [
+            {
+              "handler": "get_groups_handler",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-database2/src/event_map.rs",
+              "registered_line": 61,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-database2/src/event_handler.rs",
+              "handler_line": 738
+            }
+          ],
+          "sin_handler": false
+        },
+        {
+          "name": "GetGroup",
+          "index": 101,
+          "input": "DatabaseGroupIdPB",
+          "output": "GroupPB",
+          "source_line": 293,
+          "registrations": [
+            {
+              "handler": "get_group_handler",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-database2/src/event_map.rs",
+              "registered_line": 62,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-database2/src/event_handler.rs",
+              "handler_line": 752
+            }
+          ],
+          "sin_handler": false
+        },
+        {
+          "name": "MoveGroup",
+          "index": 111,
+          "input": "MoveGroupPayloadPB",
+          "output": null,
+          "source_line": 296,
+          "registrations": [
+            {
+              "handler": "move_group_handler",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-database2/src/event_map.rs",
+              "registered_line": 59,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-database2/src/event_handler.rs",
+              "handler_line": 800
+            }
+          ],
+          "sin_handler": false
+        },
+        {
+          "name": "MoveGroupRow",
+          "index": 112,
+          "input": "MoveGroupRowPayloadPB",
+          "output": null,
+          "source_line": 299,
+          "registrations": [
+            {
+              "handler": "move_group_row_handler",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-database2/src/event_map.rs",
+              "registered_line": 60,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-database2/src/event_handler.rs",
+              "handler_line": 816
+            }
+          ],
+          "sin_handler": false
+        },
+        {
+          "name": "UpdateGroup",
+          "index": 113,
+          "input": "UpdateGroupPB",
+          "output": null,
+          "source_line": 302,
+          "registrations": [
+            {
+              "handler": "update_group_handler",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-database2/src/event_map.rs",
+              "registered_line": 63,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-database2/src/event_handler.rs",
+              "handler_line": 784
+            }
+          ],
+          "sin_handler": false
+        },
+        {
+          "name": "CreateGroup",
+          "index": 114,
+          "input": "CreateGroupPayloadPB",
+          "output": null,
+          "source_line": 305,
+          "registrations": [
+            {
+              "handler": "create_group_handler",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-database2/src/event_map.rs",
+              "registered_line": 64,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-database2/src/event_handler.rs",
+              "handler_line": 838
+            }
+          ],
+          "sin_handler": false
+        },
+        {
+          "name": "DeleteGroup",
+          "index": 115,
+          "input": "DeleteGroupPayloadPB",
+          "output": null,
+          "source_line": 308,
+          "registrations": [
+            {
+              "handler": "delete_group_handler",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-database2/src/event_map.rs",
+              "registered_line": 65,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-database2/src/event_handler.rs",
+              "handler_line": 854
+            }
+          ],
+          "sin_handler": false
+        },
+        {
+          "name": "GetDefaultDatabaseViewId",
+          "index": 119,
+          "input": "DatabaseIdPB",
+          "output": "DatabaseViewIdPB",
+          "source_line": 311,
+          "registrations": [
+            {
+              "handler": "get_default_database_view_id_handler",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-database2/src/event_map.rs",
+              "registered_line": 67,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-database2/src/event_handler.rs",
+              "handler_line": 868
+            }
+          ],
+          "sin_handler": false
+        },
+        {
+          "name": "GetDatabases",
+          "index": 120,
+          "input": null,
+          "output": "RepeatedDatabaseDescriptionPB",
+          "source_line": 315,
+          "registrations": [
+            {
+              "handler": "get_databases_handler",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-database2/src/event_map.rs",
+              "registered_line": 68,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-database2/src/event_handler.rs",
+              "handler_line": 892
+            }
+          ],
+          "sin_handler": false
+        },
+        {
+          "name": "SetLayoutSetting",
+          "index": 121,
+          "input": "LayoutSettingChangesetPB",
+          "output": null,
+          "source_line": 318,
+          "registrations": [
+            {
+              "handler": "set_layout_setting_handler",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-database2/src/event_map.rs",
+              "registered_line": 75,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-database2/src/event_handler.rs",
+              "handler_line": 913
+            }
+          ],
+          "sin_handler": false
+        },
+        {
+          "name": "GetLayoutSetting",
+          "index": 122,
+          "input": "DatabaseLayoutMetaPB",
+          "output": "DatabaseLayoutSettingPB",
+          "source_line": 321,
+          "registrations": [
+            {
+              "handler": "get_layout_setting_handler",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-database2/src/event_map.rs",
+              "registered_line": 76,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-database2/src/event_handler.rs",
+              "handler_line": 925
+            }
+          ],
+          "sin_handler": false
+        },
+        {
+          "name": "GetAllCalendarEvents",
+          "index": 123,
+          "input": "CalendarEventRequestPB",
+          "output": "RepeatedCalendarEventPB",
+          "source_line": 324,
+          "registrations": [
+            {
+              "handler": "get_calendar_events_handler",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-database2/src/event_map.rs",
+              "registered_line": 70,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-database2/src/event_handler.rs",
+              "handler_line": 943
+            }
+          ],
+          "sin_handler": false
+        },
+        {
+          "name": "GetNoDateCalendarEvents",
+          "index": 124,
+          "input": "CalendarEventRequestPB",
+          "output": "RepeatedNoDateCalendarEventPB",
+          "source_line": 330,
+          "registrations": [
+            {
+              "handler": "get_no_date_calendar_events_handler",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-database2/src/event_map.rs",
+              "registered_line": 71,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-database2/src/event_handler.rs",
+              "handler_line": 959
+            }
+          ],
+          "sin_handler": false
+        },
+        {
+          "name": "GetCalendarEvent",
+          "index": 125,
+          "input": "DatabaseViewRowIdPB",
+          "output": "CalendarEventPB",
+          "source_line": 333,
+          "registrations": [
+            {
+              "handler": "get_calendar_event_handler",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-database2/src/event_map.rs",
+              "registered_line": 72,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-database2/src/event_handler.rs",
+              "handler_line": 975
+            }
+          ],
+          "sin_handler": false
+        },
+        {
+          "name": "MoveCalendarEvent",
+          "index": 126,
+          "input": "MoveCalendarEventPB",
+          "output": null,
+          "source_line": 336,
+          "registrations": [
+            {
+              "handler": "move_calendar_event_handler",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-database2/src/event_map.rs",
+              "registered_line": 73,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-database2/src/event_handler.rs",
+              "handler_line": 994
+            }
+          ],
+          "sin_handler": false
+        },
+        {
+          "name": "CreateDatabaseView",
+          "index": 130,
+          "input": "CreateDatabaseViewPayloadPB",
+          "output": null,
+          "source_line": 339,
+          "registrations": [
+            {
+              "handler": "create_database_view",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-database2/src/event_map.rs",
+              "registered_line": 77,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-database2/src/event_handler.rs",
+              "handler_line": 1020
+            }
+          ],
+          "sin_handler": false
+        },
+        {
+          "name": "ExportCSV",
+          "index": 141,
+          "input": "DatabaseViewIdPB",
+          "output": "DatabaseExportDataPB",
+          "source_line": 342,
+          "registrations": [
+            {
+              "handler": "export_csv_handler",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-database2/src/event_map.rs",
+              "registered_line": 79,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-database2/src/event_handler.rs",
+              "handler_line": 1029
+            }
+          ],
+          "sin_handler": false
+        },
+        {
+          "name": "GetDatabaseSnapshots",
+          "index": 150,
+          "input": "DatabaseViewIdPB",
+          "output": "RepeatedDatabaseSnapshotPB",
+          "source_line": 346,
+          "registrations": [
+            {
+              "handler": "get_snapshots_handler",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-database2/src/event_map.rs",
+              "registered_line": 81,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-database2/src/event_handler.rs",
+              "handler_line": 1058
+            }
+          ],
+          "sin_handler": false
+        },
+        {
+          "name": "GetFieldSettings",
+          "index": 160,
+          "input": "FieldIdsPB",
+          "output": "RepeatedFieldSettingsPB",
+          "source_line": 350,
+          "registrations": [
+            {
+              "handler": "get_field_settings_handler",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-database2/src/event_map.rs",
+              "registered_line": 83,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-database2/src/event_handler.rs",
+              "handler_line": 1069
+            }
+          ],
+          "sin_handler": false
+        },
+        {
+          "name": "GetAllFieldSettings",
+          "index": 161,
+          "input": "DatabaseViewIdPB",
+          "output": "RepeatedFieldSettingsPB",
+          "source_line": 353,
+          "registrations": [
+            {
+              "handler": "get_all_field_settings_handler",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-database2/src/event_map.rs",
+              "registered_line": 84,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-database2/src/event_handler.rs",
+              "handler_line": 1090
+            }
+          ],
+          "sin_handler": false
+        },
+        {
+          "name": "UpdateFieldSettings",
+          "index": 162,
+          "input": "FieldSettingsChangesetPB",
+          "output": null,
+          "source_line": 357,
+          "registrations": [
+            {
+              "handler": "update_field_settings_handler",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-database2/src/event_map.rs",
+              "registered_line": 85,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-database2/src/event_handler.rs",
+              "handler_line": 1113
+            }
+          ],
+          "sin_handler": false
+        },
+        {
+          "name": "GetAllCalculations",
+          "index": 163,
+          "input": "DatabaseViewIdPB",
+          "output": "RepeatedCalculationsPB",
+          "source_line": 360,
+          "registrations": [
+            {
+              "handler": "get_all_calculations_handler",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-database2/src/event_map.rs",
+              "registered_line": 87,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-database2/src/event_handler.rs",
+              "handler_line": 1129
+            }
+          ],
+          "sin_handler": false
+        },
+        {
+          "name": "UpdateCalculation",
+          "index": 164,
+          "input": "UpdateCalculationChangesetPB",
+          "output": null,
+          "source_line": 363,
+          "registrations": [
+            {
+              "handler": "update_calculation_handler",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-database2/src/event_map.rs",
+              "registered_line": 88,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-database2/src/event_handler.rs",
+              "handler_line": 1144
+            }
+          ],
+          "sin_handler": false
+        },
+        {
+          "name": "RemoveCalculation",
+          "index": 165,
+          "input": "RemoveCalculationChangesetPB",
+          "output": null,
+          "source_line": 366,
+          "registrations": [
+            {
+              "handler": "remove_calculation_handler",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-database2/src/event_map.rs",
+              "registered_line": 89,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-database2/src/event_handler.rs",
+              "handler_line": 1160
+            }
+          ],
+          "sin_handler": false
+        },
+        {
+          "name": "GetRelatedDatabaseIds",
+          "index": 170,
+          "input": "DatabaseViewIdPB",
+          "output": "RepeatedDatabaseIdPB",
+          "source_line": 371,
+          "registrations": [
+            {
+              "handler": "get_related_database_ids_handler",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-database2/src/event_map.rs",
+              "registered_line": 91,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-database2/src/event_handler.rs",
+              "handler_line": 1174
+            }
+          ],
+          "sin_handler": false
+        },
+        {
+          "name": "UpdateRelationCell",
+          "index": 171,
+          "input": "RelationCellChangesetPB",
+          "output": null,
+          "source_line": 376,
+          "registrations": [
+            {
+              "handler": "update_relation_cell_handler",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-database2/src/event_map.rs",
+              "registered_line": 92,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-database2/src/event_handler.rs",
+              "handler_line": 1183
+            }
+          ],
+          "sin_handler": false
+        },
+        {
+          "name": "GetRelatedRowDatas",
+          "index": 172,
+          "input": "GetRelatedRowDataPB",
+          "output": "RepeatedRelatedRowDataPB",
+          "source_line": 380,
+          "registrations": [
+            {
+              "handler": "get_related_row_datas_handler",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-database2/src/event_map.rs",
+              "registered_line": 93,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-database2/src/event_handler.rs",
+              "handler_line": 1228
+            }
+          ],
+          "sin_handler": false
+        },
+        {
+          "name": "GetRelatedDatabaseRows",
+          "index": 173,
+          "input": "DatabaseIdPB",
+          "output": "RepeatedRelatedRowDataPB",
+          "source_line": 384,
+          "registrations": [
+            {
+              "handler": "get_related_database_rows_handler",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-database2/src/event_map.rs",
+              "registered_line": 94,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-database2/src/event_handler.rs",
+              "handler_line": 1246
+            }
+          ],
+          "sin_handler": false
+        },
+        {
+          "name": "SummarizeRow",
+          "index": 174,
+          "input": "SummaryRowPB",
+          "output": null,
+          "source_line": 387,
+          "registrations": [
+            {
+              "handler": "summarize_row_handler",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-database2/src/event_map.rs",
+              "registered_line": 96,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-database2/src/event_handler.rs",
+              "handler_line": 1261
+            }
+          ],
+          "sin_handler": false
+        },
+        {
+          "name": "TranslateRow",
+          "index": 175,
+          "input": "TranslateRowPB",
+          "output": null,
+          "source_line": 390,
+          "registrations": [
+            {
+              "handler": "translate_row_handler",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-database2/src/event_map.rs",
+              "registered_line": 97,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-database2/src/event_handler.rs",
+              "handler_line": 1280
+            }
+          ],
+          "sin_handler": false
+        },
+        {
+          "name": "InitRow",
+          "index": 176,
+          "input": "DatabaseViewRowIdPB",
+          "output": null,
+          "source_line": 393,
+          "registrations": [
+            {
+              "handler": "init_row_handler",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-database2/src/event_map.rs",
+              "registered_line": 38,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-database2/src/event_handler.rs",
+              "handler_line": 414
+            }
+          ],
+          "sin_handler": false
+        },
+        {
+          "name": "GetAllRows",
+          "index": 177,
+          "input": "DatabaseViewIdPB",
+          "output": "RepeatedRowMetaPB",
+          "source_line": 396,
+          "registrations": [],
+          "sin_handler": true
+        },
+        {
+          "name": "ExportRawDatabaseData",
+          "index": 178,
+          "input": "DatabaseViewIdPB",
+          "output": "DatabaseExportDataPB",
+          "source_line": 399,
+          "registrations": [
+            {
+              "handler": "export_raw_database_data_handler",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-database2/src/event_map.rs",
+              "registered_line": 80,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-database2/src/event_handler.rs",
+              "handler_line": 1044
+            }
+          ],
+          "sin_handler": false
+        },
+        {
+          "name": "UpdateMediaCell",
+          "index": 200,
+          "input": "MediaCellChangesetPB",
+          "output": null,
+          "source_line": 402,
+          "registrations": [
+            {
+              "handler": "update_media_cell_handler",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-database2/src/event_map.rs",
+              "registered_line": 99,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-database2/src/event_handler.rs",
+              "handler_line": 1301
+            }
+          ],
+          "sin_handler": false
+        },
+        {
+          "name": "RenameMediaFile",
+          "index": 201,
+          "input": "RenameMediaChangesetPB",
+          "output": null,
+          "source_line": 405,
+          "registrations": [
+            {
+              "handler": "rename_media_cell_file_handler",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-database2/src/event_map.rs",
+              "registered_line": 100,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-database2/src/event_handler.rs",
+              "handler_line": 1341
+            }
+          ],
+          "sin_handler": false
+        },
+        {
+          "name": "GetDatabaseCustomPrompts",
+          "index": 500,
+          "input": "CustomPromptDatabaseConfigPB",
+          "output": "RepeatedCustomPromptPB",
+          "source_line": 411,
+          "registrations": [
+            {
+              "handler": "get_database_custom_prompts_handler",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-database2/src/event_map.rs",
+              "registered_line": 101,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-database2/src/event_handler.rs",
+              "handler_line": 1418
+            }
+          ],
+          "sin_handler": false
+        },
+        {
+          "name": "TestCustomPromptDatabaseConfiguration",
+          "index": 501,
+          "input": "DatabaseViewIdPB",
+          "output": "CustomPromptDatabaseConfigPB",
+          "source_line": 414,
+          "registrations": [
+            {
+              "handler": "test_custom_prompt_database_configuration_handler",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-database2/src/event_map.rs",
+              "registered_line": 102,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-database2/src/event_handler.rs",
+              "handler_line": 1435
+            }
+          ],
+          "sin_handler": false
+        }
+      ],
+      "summary": {
+        "total_variants": 72,
+        "registered": 71,
+        "sin_handler": 1
+      },
+      "warnings": []
+    },
+    {
+      "fuente": "appflowy",
+      "crate": "flowy-date",
+      "crate_root": "SRC/appflowy/frontend/rust-lib/flowy-date",
+      "event_map_file": "SRC/appflowy/frontend/rust-lib/flowy-date/src/event_map.rs",
+      "init_function": {
+        "name": "init",
+        "line": 8,
+        "end_line": 12
+      },
+      "enum": {
+        "name": "DateEvent",
+        "decl_line": 16,
+        "derives": [
+          "Debug",
+          "Clone",
+          "PartialEq",
+          "Eq",
+          "Hash",
+          "Display",
+          "ProtoBuf_Enum",
+          "Flowy_Event"
+        ],
+        "event_err": "FlowyError"
+      },
+      "variants": [
+        {
+          "name": "QueryDate",
+          "index": 0,
+          "input": "DateQueryPB",
+          "output": "DateResultPB",
+          "source_line": 18,
+          "registrations": [
+            {
+              "handler": "query_date_handler",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-date/src/event_map.rs",
+              "registered_line": 11,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-date/src/event_handler.rs",
+              "handler_line": 17
+            }
+          ],
+          "sin_handler": false
+        }
+      ],
+      "summary": {
+        "total_variants": 1,
+        "registered": 1,
+        "sin_handler": 0
+      },
+      "warnings": []
+    },
+    {
+      "fuente": "appflowy",
+      "crate": "flowy-document",
+      "crate_root": "SRC/appflowy/frontend/rust-lib/flowy-document",
+      "event_map_file": "SRC/appflowy/frontend/rust-lib/flowy-document/src/event_map.rs",
+      "init_function": {
+        "name": "init",
+        "line": 12,
+        "end_line": 55
+      },
+      "enum": {
+        "name": "DocumentEvent",
+        "decl_line": 59,
+        "derives": [
+          "Debug",
+          "Clone",
+          "PartialEq",
+          "Eq",
+          "Hash",
+          "Display",
+          "ProtoBuf_Enum",
+          "Flowy_Event"
+        ],
+        "event_err": "FlowyError"
+      },
+      "variants": [
+        {
+          "name": "CreateDocument",
+          "index": 0,
+          "input": "CreateDocumentPayloadPB",
+          "output": null,
+          "source_line": 61,
+          "registrations": [
+            {
+              "handler": "create_document_handler",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-document/src/event_map.rs",
+              "registered_line": 16,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-document/src/event_handler.rs",
+              "handler_line": 54
+            }
+          ],
+          "sin_handler": false
+        },
+        {
+          "name": "OpenDocument",
+          "index": 1,
+          "input": "OpenDocumentPayloadPB",
+          "output": "DocumentDataPB",
+          "source_line": 64,
+          "registrations": [
+            {
+              "handler": "open_document_handler",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-document/src/event_map.rs",
+              "registered_line": 17,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-document/src/event_handler.rs",
+              "handler_line": 69
+            }
+          ],
+          "sin_handler": false
+        },
+        {
+          "name": "CloseDocument",
+          "index": 2,
+          "input": "CloseDocumentPayloadPB",
+          "output": null,
+          "source_line": 67,
+          "registrations": [
+            {
+              "handler": "close_document_handler",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-document/src/event_map.rs",
+              "registered_line": 18,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-document/src/event_handler.rs",
+              "handler_line": 82
+            }
+          ],
+          "sin_handler": false
+        },
+        {
+          "name": "ApplyAction",
+          "index": 3,
+          "input": "ApplyActionPayloadPB",
+          "output": null,
+          "source_line": 70,
+          "registrations": [
+            {
+              "handler": "apply_action_handler",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-document/src/event_map.rs",
+              "registered_line": 19,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-document/src/event_handler.rs",
+              "handler_line": 119
+            }
+          ],
+          "sin_handler": false
+        },
+        {
+          "name": "GetDocumentData",
+          "index": 4,
+          "input": "OpenDocumentPayloadPB",
+          "output": "DocumentDataPB",
+          "source_line": 73,
+          "registrations": [
+            {
+              "handler": "get_document_data_handler",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-document/src/event_map.rs",
+              "registered_line": 20,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-document/src/event_handler.rs",
+              "handler_line": 96
+            }
+          ],
+          "sin_handler": false
+        },
+        {
+          "name": "ConvertDataToDocument",
+          "index": 5,
+          "input": "ConvertDataPayloadPB",
+          "output": "DocumentDataPB",
+          "source_line": 76,
+          "registrations": [
+            {
+              "handler": "convert_data_to_document",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-document/src/event_map.rs",
+              "registered_line": 26,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-document/src/event_handler.rs",
+              "handler_line": 164
+            }
+          ],
+          "sin_handler": false
+        },
+        {
+          "name": "Redo",
+          "index": 6,
+          "input": "DocumentRedoUndoPayloadPB",
+          "output": "DocumentRedoUndoResponsePB",
+          "source_line": 82,
+          "registrations": [
+            {
+              "handler": "redo_handler",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-document/src/event_map.rs",
+              "registered_line": 30,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-document/src/event_handler.rs",
+              "handler_line": 187
+            }
+          ],
+          "sin_handler": false
+        },
+        {
+          "name": "Undo",
+          "index": 7,
+          "input": "DocumentRedoUndoPayloadPB",
+          "output": "DocumentRedoUndoResponsePB",
+          "source_line": 88,
+          "registrations": [
+            {
+              "handler": "undo_handler",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-document/src/event_map.rs",
+              "registered_line": 31,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-document/src/event_handler.rs",
+              "handler_line": 206
+            }
+          ],
+          "sin_handler": false
+        },
+        {
+          "name": "CanUndoRedo",
+          "index": 8,
+          "input": "DocumentRedoUndoPayloadPB",
+          "output": "DocumentRedoUndoResponsePB",
+          "source_line": 94,
+          "registrations": [
+            {
+              "handler": "can_undo_redo_handler",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-document/src/event_map.rs",
+              "registered_line": 32,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-document/src/event_handler.rs",
+              "handler_line": 225
+            }
+          ],
+          "sin_handler": false
+        },
+        {
+          "name": "GetDocumentSnapshotMeta",
+          "index": 9,
+          "input": "OpenDocumentPayloadPB",
+          "output": "RepeatedDocumentSnapshotMetaPB",
+          "source_line": 100,
+          "registrations": [
+            {
+              "handler": "get_snapshot_meta_handler",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-document/src/event_map.rs",
+              "registered_line": 33,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-document/src/event_handler.rs",
+              "handler_line": 243
+            }
+          ],
+          "sin_handler": false
+        },
+        {
+          "name": "CreateText",
+          "index": 10,
+          "input": "TextDeltaPayloadPB",
+          "output": null,
+          "source_line": 103,
+          "registrations": [
+            {
+              "handler": "create_text_handler",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-document/src/event_map.rs",
+              "registered_line": 41,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-document/src/event_handler.rs",
+              "handler_line": 134
+            }
+          ],
+          "sin_handler": false
+        },
+        {
+          "name": "ApplyTextDeltaEvent",
+          "index": 11,
+          "input": "TextDeltaPayloadPB",
+          "output": null,
+          "source_line": 106,
+          "registrations": [
+            {
+              "handler": "apply_text_delta_handler",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-document/src/event_map.rs",
+              "registered_line": 42,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-document/src/event_handler.rs",
+              "handler_line": 149
+            }
+          ],
+          "sin_handler": false
+        },
+        {
+          "name": "ConvertDocument",
+          "index": 12,
+          "input": "ConvertDocumentPayloadPB",
+          "output": "ConvertDocumentResponsePB",
+          "source_line": 113,
+          "registrations": [
+            {
+              "handler": "convert_document_handler",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-document/src/event_map.rs",
+              "registered_line": 43,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-document/src/event_handler.rs",
+              "handler_line": 381
+            }
+          ],
+          "sin_handler": false
+        },
+        {
+          "name": "ConvertDataToJSON",
+          "index": 13,
+          "input": "ConvertDataToJsonPayloadPB",
+          "output": "ConvertDataToJsonResponsePB",
+          "source_line": 120,
+          "registrations": [
+            {
+              "handler": "convert_data_to_json_handler",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-document/src/event_map.rs",
+              "registered_line": 44,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-document/src/event_handler.rs",
+              "handler_line": 426
+            }
+          ],
+          "sin_handler": false
+        },
+        {
+          "name": "GetDocumentSnapshot",
+          "index": 14,
+          "input": "DocumentSnapshotMetaPB",
+          "output": "DocumentSnapshotPB",
+          "source_line": 123,
+          "registrations": [
+            {
+              "handler": "get_snapshot_data_handler",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-document/src/event_map.rs",
+              "registered_line": 37,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-document/src/event_handler.rs",
+              "handler_line": 254
+            }
+          ],
+          "sin_handler": false
+        },
+        {
+          "name": "UploadFile",
+          "index": 15,
+          "input": "UploadFileParamsPB",
+          "output": "UploadedFilePB",
+          "source_line": 126,
+          "registrations": [
+            {
+              "handler": "upload_file_handler",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-document/src/event_map.rs",
+              "registered_line": 48,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-document/src/event_handler.rs",
+              "handler_line": 442
+            }
+          ],
+          "sin_handler": false
+        },
+        {
+          "name": "DownloadFile",
+          "index": 16,
+          "input": "DownloadFilePB",
+          "output": null,
+          "source_line": 128,
+          "registrations": [
+            {
+              "handler": "download_file_handler",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-document/src/event_map.rs",
+              "registered_line": 49,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-document/src/event_handler.rs",
+              "handler_line": 471
+            }
+          ],
+          "sin_handler": false
+        },
+        {
+          "name": "DeleteFile",
+          "index": 17,
+          "input": "DeleteFilePB",
+          "output": null,
+          "source_line": 130,
+          "registrations": [
+            {
+              "handler": "delete_file_handler",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-document/src/event_map.rs",
+              "registered_line": 50,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-document/src/event_handler.rs",
+              "handler_line": 485
+            }
+          ],
+          "sin_handler": false
+        },
+        {
+          "name": "SetAwarenessState",
+          "index": 18,
+          "input": "UpdateDocumentAwarenessStatePB",
+          "output": null,
+          "source_line": 133,
+          "registrations": [
+            {
+              "handler": "set_awareness_local_state_handler",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-document/src/event_map.rs",
+              "registered_line": 51,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-document/src/event_handler.rs",
+              "handler_line": 493
+            }
+          ],
+          "sin_handler": false
+        },
+        {
+          "name": "GetDocEncodedCollab",
+          "index": 19,
+          "input": "OpenDocumentPayloadPB",
+          "output": "EncodedCollabPB",
+          "source_line": 136,
+          "registrations": [
+            {
+              "handler": "get_encode_collab_handler",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-document/src/event_map.rs",
+              "registered_line": 22,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-document/src/event_handler.rs",
+              "handler_line": 39
+            }
+          ],
+          "sin_handler": false
+        },
+        {
+          "name": "GetDocumentText",
+          "index": 20,
+          "input": "OpenDocumentPayloadPB",
+          "output": "DocumentTextPB",
+          "source_line": 139,
+          "registrations": [
+            {
+              "handler": "get_document_text_handler",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-document/src/event_map.rs",
+              "registered_line": 21,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-document/src/event_handler.rs",
+              "handler_line": 106
+            }
+          ],
+          "sin_handler": false
+        }
+      ],
+      "summary": {
+        "total_variants": 21,
+        "registered": 21,
+        "sin_handler": 0
+      },
+      "warnings": []
+    },
+    {
+      "fuente": "appflowy",
+      "crate": "flowy-folder",
+      "crate_root": "SRC/appflowy/frontend/rust-lib/flowy-folder",
+      "event_map_file": "SRC/appflowy/frontend/rust-lib/flowy-folder/src/event_map.rs",
+      "init_function": {
+        "name": "init",
+        "line": 11,
+        "end_line": 62
+      },
+      "enum": {
+        "name": "FolderEvent",
+        "decl_line": 66,
+        "derives": [
+          "Clone",
+          "Copy",
+          "PartialEq",
+          "Eq",
+          "Debug",
+          "Display",
+          "Hash",
+          "ProtoBuf_Enum",
+          "Flowy_Event"
+        ],
+        "event_err": "FlowyError"
+      },
+      "variants": [
+        {
+          "name": "CreateFolderWorkspace",
+          "index": 0,
+          "input": null,
+          "output": null,
+          "source_line": 68,
+          "registrations": [],
+          "sin_handler": true
+        },
+        {
+          "name": "GetCurrentWorkspaceSetting",
+          "index": 1,
+          "input": null,
+          "output": "WorkspaceLatestPB",
+          "source_line": 72,
+          "registrations": [
+            {
+              "handler": "read_current_workspace_setting_handler",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-folder/src/event_map.rs",
+              "registered_line": 14,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-folder/src/event_handler.rs",
+              "handler_line": 64
+            }
+          ],
+          "sin_handler": false
+        },
+        {
+          "name": "ReadCurrentWorkspace",
+          "index": 2,
+          "input": null,
+          "output": "WorkspacePB",
+          "source_line": 76,
+          "registrations": [
+            {
+              "handler": "read_current_workspace_handler",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-folder/src/event_map.rs",
+              "registered_line": 15,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-folder/src/event_handler.rs",
+              "handler_line": 73
+            }
+          ],
+          "sin_handler": false
+        },
+        {
+          "name": "DeleteWorkspace",
+          "index": 3,
+          "input": "WorkspaceIdPB",
+          "output": null,
+          "source_line": 80,
+          "registrations": [],
+          "sin_handler": true
+        },
+        {
+          "name": "ReadWorkspaceViews",
+          "index": 5,
+          "input": "GetWorkspaceViewPB",
+          "output": "RepeatedViewPB",
+          "source_line": 85,
+          "registrations": [
+            {
+              "handler": "get_workspace_views_handler",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-folder/src/event_map.rs",
+              "registered_line": 16,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-folder/src/event_handler.rs",
+              "handler_line": 31
+            }
+          ],
+          "sin_handler": false
+        },
+        {
+          "name": "CreateView",
+          "index": 10,
+          "input": "CreateViewPayloadPB",
+          "output": "ViewPB",
+          "source_line": 89,
+          "registrations": [
+            {
+              "handler": "create_view_handler",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-folder/src/event_map.rs",
+              "registered_line": 17,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-folder/src/event_handler.rs",
+              "handler_line": 80
+            }
+          ],
+          "sin_handler": false
+        },
+        {
+          "name": "GetView",
+          "index": 11,
+          "input": "ViewIdPB",
+          "output": "ViewPB",
+          "source_line": 93,
+          "registrations": [
+            {
+              "handler": "get_view_handler",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-folder/src/event_map.rs",
+              "registered_line": 19,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-folder/src/event_handler.rs",
+              "handler_line": 110
+            }
+          ],
+          "sin_handler": false
+        },
+        {
+          "name": "UpdateView",
+          "index": 12,
+          "input": "UpdateViewPayloadPB",
+          "output": "ViewPB",
+          "source_line": 97,
+          "registrations": [
+            {
+              "handler": "update_view_handler",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-folder/src/event_map.rs",
+              "registered_line": 21,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-folder/src/event_handler.rs",
+              "handler_line": 144
+            }
+          ],
+          "sin_handler": false
+        },
+        {
+          "name": "DeleteView",
+          "index": 13,
+          "input": "RepeatedViewIdPB",
+          "output": null,
+          "source_line": 101,
+          "registrations": [
+            {
+              "handler": "delete_view_handler",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-folder/src/event_map.rs",
+              "registered_line": 22,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-folder/src/event_handler.rs",
+              "handler_line": 164
+            }
+          ],
+          "sin_handler": false
+        },
+        {
+          "name": "DuplicateView",
+          "index": 14,
+          "input": "DuplicateViewPayloadPB",
+          "output": "ViewPB",
+          "source_line": 105,
+          "registrations": [
+            {
+              "handler": "duplicate_view_handler",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-folder/src/event_map.rs",
+              "registered_line": 23,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-folder/src/event_handler.rs",
+              "handler_line": 248
+            }
+          ],
+          "sin_handler": false
+        },
+        {
+          "name": "CloseView",
+          "index": 15,
+          "input": "ViewIdPB",
+          "output": null,
+          "source_line": 110,
+          "registrations": [
+            {
+              "handler": "close_view_handler",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-folder/src/event_map.rs",
+              "registered_line": 25,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-folder/src/event_handler.rs",
+              "handler_line": 214
+            }
+          ],
+          "sin_handler": false
+        },
+        {
+          "name": "CreateOrphanView",
+          "index": 16,
+          "input": "CreateOrphanViewPayloadPB",
+          "output": "ViewPB",
+          "source_line": 114,
+          "registrations": [
+            {
+              "handler": "create_orphan_view_handler",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-folder/src/event_map.rs",
+              "registered_line": 18,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-folder/src/event_handler.rs",
+              "handler_line": 94
+            }
+          ],
+          "sin_handler": false
+        },
+        {
+          "name": "GetAllViews",
+          "index": 17,
+          "input": null,
+          "output": "RepeatedViewPB",
+          "source_line": 118,
+          "registrations": [
+            {
+              "handler": "get_all_views_handler",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-folder/src/event_map.rs",
+              "registered_line": 20,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-folder/src/event_handler.rs",
+              "handler_line": 121
+            }
+          ],
+          "sin_handler": false
+        },
+        {
+          "name": "CopyLink",
+          "index": 20,
+          "input": null,
+          "output": null,
+          "source_line": 121,
+          "registrations": [],
+          "sin_handler": true
+        },
+        {
+          "name": "SetLatestView",
+          "index": 21,
+          "input": "ViewIdPB",
+          "output": null,
+          "source_line": 125,
+          "registrations": [
+            {
+              "handler": "set_latest_view_handler",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-folder/src/event_map.rs",
+              "registered_line": 24,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-folder/src/event_handler.rs",
+              "handler_line": 202
+            }
+          ],
+          "sin_handler": false
+        },
+        {
+          "name": "MoveView",
+          "index": 22,
+          "input": "MoveViewPayloadPB",
+          "output": null,
+          "source_line": 129,
+          "registrations": [
+            {
+              "handler": "move_view_handler",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-folder/src/event_map.rs",
+              "registered_line": 26,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-folder/src/event_handler.rs",
+              "handler_line": 225
+            }
+          ],
+          "sin_handler": false
+        },
+        {
+          "name": "ListTrashItems",
+          "index": 23,
+          "input": null,
+          "output": "RepeatedTrashPB",
+          "source_line": 133,
+          "registrations": [
+            {
+              "handler": "read_trash_handler",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-folder/src/event_map.rs",
+              "registered_line": 28,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-folder/src/event_handler.rs",
+              "handler_line": 306
+            }
+          ],
+          "sin_handler": false
+        },
+        {
+          "name": "RestoreTrashItem",
+          "index": 24,
+          "input": "TrashIdPB",
+          "output": null,
+          "source_line": 137,
+          "registrations": [
+            {
+              "handler": "putback_trash_handler",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-folder/src/event_map.rs",
+              "registered_line": 29,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-folder/src/event_handler.rs",
+              "handler_line": 315
+            }
+          ],
+          "sin_handler": false
+        },
+        {
+          "name": "PermanentlyDeleteTrashItem",
+          "index": 25,
+          "input": "RepeatedTrashIdPB",
+          "output": null,
+          "source_line": 141,
+          "registrations": [
+            {
+              "handler": "delete_trash_handler",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-folder/src/event_map.rs",
+              "registered_line": 30,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-folder/src/event_handler.rs",
+              "handler_line": 325
+            }
+          ],
+          "sin_handler": false
+        },
+        {
+          "name": "RecoverAllTrashItems",
+          "index": 26,
+          "input": null,
+          "output": null,
+          "source_line": 145,
+          "registrations": [
+            {
+              "handler": "restore_all_trash_handler",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-folder/src/event_map.rs",
+              "registered_line": 31,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-folder/src/event_handler.rs",
+              "handler_line": 338
+            }
+          ],
+          "sin_handler": false
+        },
+        {
+          "name": "PermanentlyDeleteAllTrashItem",
+          "index": 27,
+          "input": null,
+          "output": null,
+          "source_line": 149,
+          "registrations": [
+            {
+              "handler": "delete_my_trash_handler",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-folder/src/event_map.rs",
+              "registered_line": 32,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-folder/src/event_handler.rs",
+              "handler_line": 347
+            }
+          ],
+          "sin_handler": false
+        },
+        {
+          "name": "ImportData",
+          "index": 30,
+          "input": "ImportPayloadPB",
+          "output": "RepeatedViewPB",
+          "source_line": 152,
+          "registrations": [
+            {
+              "handler": "import_data_handler",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-folder/src/event_map.rs",
+              "registered_line": 33,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-folder/src/event_handler.rs",
+              "handler_line": 356
+            }
+          ],
+          "sin_handler": false
+        },
+        {
+          "name": "GetFolderSnapshots",
+          "index": 31,
+          "input": "WorkspaceIdPB",
+          "output": "RepeatedFolderSnapshotPB",
+          "source_line": 155,
+          "registrations": [
+            {
+              "handler": "get_folder_snapshots_handler",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-folder/src/event_map.rs",
+              "registered_line": 35,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-folder/src/event_handler.rs",
+              "handler_line": 378
+            }
+          ],
+          "sin_handler": false
+        },
+        {
+          "name": "MoveNestedView",
+          "index": 32,
+          "input": "MoveNestedViewPayloadPB",
+          "output": null,
+          "source_line": 163,
+          "registrations": [
+            {
+              "handler": "move_nested_view_handler",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-folder/src/event_map.rs",
+              "registered_line": 27,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-folder/src/event_handler.rs",
+              "handler_line": 236
+            }
+          ],
+          "sin_handler": false
+        },
+        {
+          "name": "ReadFavorites",
+          "index": 33,
+          "input": null,
+          "output": "RepeatedFavoriteViewPB",
+          "source_line": 166,
+          "registrations": [
+            {
+              "handler": "read_favorites_handler",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-folder/src/event_map.rs",
+              "registered_line": 37,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-folder/src/event_handler.rs",
+              "handler_line": 260
+            }
+          ],
+          "sin_handler": false
+        },
+        {
+          "name": "ToggleFavorite",
+          "index": 34,
+          "input": "RepeatedViewIdPB",
+          "output": null,
+          "source_line": 169,
+          "registrations": [
+            {
+              "handler": "toggle_favorites_handler",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-folder/src/event_map.rs",
+              "registered_line": 39,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-folder/src/event_handler.rs",
+              "handler_line": 176
+            }
+          ],
+          "sin_handler": false
+        },
+        {
+          "name": "UpdateViewIcon",
+          "index": 35,
+          "input": "UpdateViewIconPayloadPB",
+          "output": null,
+          "source_line": 172,
+          "registrations": [
+            {
+              "handler": "update_view_icon_handler",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-folder/src/event_map.rs",
+              "registered_line": 36,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-folder/src/event_handler.rs",
+              "handler_line": 155
+            }
+          ],
+          "sin_handler": false
+        },
+        {
+          "name": "ReadRecentViews",
+          "index": 36,
+          "input": "ReadRecentViewsPB",
+          "output": "RepeatedRecentViewPB",
+          "source_line": 175,
+          "registrations": [
+            {
+              "handler": "read_recent_views_handler",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-folder/src/event_map.rs",
+              "registered_line": 38,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-folder/src/event_handler.rs",
+              "handler_line": 278
+            }
+          ],
+          "sin_handler": false
+        },
+        {
+          "name": "UpdateRecentViews",
+          "index": 37,
+          "input": "UpdateRecentViewPayloadPB",
+          "output": null,
+          "source_line": 179,
+          "registrations": [
+            {
+              "handler": "update_recent_views_handler",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-folder/src/event_map.rs",
+              "registered_line": 40,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-folder/src/event_handler.rs",
+              "handler_line": 188
+            }
+          ],
+          "sin_handler": false
+        },
+        {
+          "name": "ReadPrivateViews",
+          "index": 39,
+          "input": "GetWorkspaceViewPB",
+          "output": "RepeatedViewPB",
+          "source_line": 182,
+          "registrations": [
+            {
+              "handler": "read_private_views_handler",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-folder/src/event_map.rs",
+              "registered_line": 41,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-folder/src/event_handler.rs",
+              "handler_line": 52
+            }
+          ],
+          "sin_handler": false
+        },
+        {
+          "name": "ReadCurrentWorkspaceViews",
+          "index": 40,
+          "input": null,
+          "output": "RepeatedViewPB",
+          "source_line": 187,
+          "registrations": [
+            {
+              "handler": "get_current_workspace_views_handler",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-folder/src/event_map.rs",
+              "registered_line": 42,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-folder/src/event_handler.rs",
+              "handler_line": 42
+            }
+          ],
+          "sin_handler": false
+        },
+        {
+          "name": "UpdateViewVisibilityStatus",
+          "index": 41,
+          "input": "UpdateViewVisibilityStatusPayloadPB",
+          "output": null,
+          "source_line": 190,
+          "registrations": [
+            {
+              "handler": "update_view_visibility_status_handler",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-folder/src/event_map.rs",
+              "registered_line": 43,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-folder/src/event_handler.rs",
+              "handler_line": 389
+            }
+          ],
+          "sin_handler": false
+        },
+        {
+          "name": "GetViewAncestors",
+          "index": 42,
+          "input": "ViewIdPB",
+          "output": "RepeatedViewPB",
+          "source_line": 194,
+          "registrations": [
+            {
+              "handler": "get_view_ancestors_handler",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-folder/src/event_map.rs",
+              "registered_line": 44,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-folder/src/event_handler.rs",
+              "handler_line": 131
+            }
+          ],
+          "sin_handler": false
+        },
+        {
+          "name": "PublishView",
+          "index": 43,
+          "input": "PublishViewParamsPB",
+          "output": null,
+          "source_line": 197,
+          "registrations": [
+            {
+              "handler": "publish_view_handler",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-folder/src/event_map.rs",
+              "registered_line": 45,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-folder/src/event_handler.rs",
+              "handler_line": 402
+            }
+          ],
+          "sin_handler": false
+        },
+        {
+          "name": "GetPublishInfo",
+          "index": 44,
+          "input": "ViewIdPB",
+          "output": "PublishInfoResponsePB",
+          "source_line": 200,
+          "registrations": [
+            {
+              "handler": "get_publish_info_handler",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-folder/src/event_map.rs",
+              "registered_line": 46,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-folder/src/event_handler.rs",
+              "handler_line": 436
+            }
+          ],
+          "sin_handler": false
+        },
+        {
+          "name": "GetPublishNamespace",
+          "index": 45,
+          "input": null,
+          "output": "PublishNamespacePB",
+          "source_line": 203,
+          "registrations": [
+            {
+              "handler": "get_publish_namespace_handler",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-folder/src/event_map.rs",
+              "registered_line": 50,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-folder/src/event_handler.rs",
+              "handler_line": 471
+            }
+          ],
+          "sin_handler": false
+        },
+        {
+          "name": "SetPublishNamespace",
+          "index": 46,
+          "input": "SetPublishNamespacePayloadPB",
+          "output": null,
+          "source_line": 206,
+          "registrations": [
+            {
+              "handler": "set_publish_namespace_handler",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-folder/src/event_map.rs",
+              "registered_line": 49,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-folder/src/event_handler.rs",
+              "handler_line": 460
+            }
+          ],
+          "sin_handler": false
+        },
+        {
+          "name": "UnpublishViews",
+          "index": 47,
+          "input": "UnpublishViewsPayloadPB",
+          "output": null,
+          "source_line": 209,
+          "registrations": [
+            {
+              "handler": "unpublish_views_handler",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-folder/src/event_map.rs",
+              "registered_line": 48,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-folder/src/event_handler.rs",
+              "handler_line": 420
+            }
+          ],
+          "sin_handler": false
+        },
+        {
+          "name": "ImportZipFile",
+          "index": 48,
+          "input": "ImportZipPB",
+          "output": null,
+          "source_line": 212,
+          "registrations": [
+            {
+              "handler": "import_zip_file_handler",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-folder/src/event_map.rs",
+              "registered_line": 34,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-folder/src/event_handler.rs",
+              "handler_line": 367
+            }
+          ],
+          "sin_handler": false
+        },
+        {
+          "name": "ListPublishedViews",
+          "index": 49,
+          "input": null,
+          "output": "RepeatedPublishInfoViewPB",
+          "source_line": 215,
+          "registrations": [
+            {
+              "handler": "list_published_views_handler",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-folder/src/event_map.rs",
+              "registered_line": 51,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-folder/src/event_handler.rs",
+              "handler_line": 480
+            }
+          ],
+          "sin_handler": false
+        },
+        {
+          "name": "GetDefaultPublishInfo",
+          "index": 50,
+          "input": null,
+          "output": "PublishInfoResponsePB",
+          "source_line": 218,
+          "registrations": [
+            {
+              "handler": "get_default_publish_info_handler",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-folder/src/event_map.rs",
+              "registered_line": 52,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-folder/src/event_handler.rs",
+              "handler_line": 493
+            }
+          ],
+          "sin_handler": false
+        },
+        {
+          "name": "SetDefaultPublishView",
+          "index": 51,
+          "input": "ViewIdPB",
+          "output": null,
+          "source_line": 221,
+          "registrations": [
+            {
+              "handler": "set_default_publish_view_handler",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-folder/src/event_map.rs",
+              "registered_line": 53,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-folder/src/event_handler.rs",
+              "handler_line": 502
+            }
+          ],
+          "sin_handler": false
+        },
+        {
+          "name": "SetPublishName",
+          "index": 52,
+          "input": "SetPublishNamePB",
+          "output": null,
+          "source_line": 224,
+          "registrations": [
+            {
+              "handler": "set_publish_name_handler",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-folder/src/event_map.rs",
+              "registered_line": 47,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-folder/src/event_handler.rs",
+              "handler_line": 448
+            }
+          ],
+          "sin_handler": false
+        },
+        {
+          "name": "RemoveDefaultPublishView",
+          "index": 53,
+          "input": null,
+          "output": null,
+          "source_line": 227,
+          "registrations": [
+            {
+              "handler": "remove_default_publish_view_handler",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-folder/src/event_map.rs",
+              "registered_line": 54,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-folder/src/event_handler.rs",
+              "handler_line": 516
+            }
+          ],
+          "sin_handler": false
+        },
+        {
+          "name": "LockView",
+          "index": 54,
+          "input": "ViewIdPB",
+          "output": null,
+          "source_line": 230,
+          "registrations": [
+            {
+              "handler": "lock_view_handler",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-folder/src/event_map.rs",
+              "registered_line": 55,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-folder/src/event_handler.rs",
+              "handler_line": 525
+            }
+          ],
+          "sin_handler": false
+        },
+        {
+          "name": "UnlockView",
+          "index": 55,
+          "input": "ViewIdPB",
+          "output": null,
+          "source_line": 233,
+          "registrations": [
+            {
+              "handler": "unlock_view_handler",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-folder/src/event_map.rs",
+              "registered_line": 56,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-folder/src/event_handler.rs",
+              "handler_line": 536
+            }
+          ],
+          "sin_handler": false
+        },
+        {
+          "name": "SharePageWithUser",
+          "index": 56,
+          "input": "SharePageWithUserPayloadPB",
+          "output": null,
+          "source_line": 236,
+          "registrations": [
+            {
+              "handler": "share_page_with_user_handler",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-folder/src/event_map.rs",
+              "registered_line": 57,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-folder/src/event_handler.rs",
+              "handler_line": 559
+            }
+          ],
+          "sin_handler": false
+        },
+        {
+          "name": "RemoveUserFromSharedPage",
+          "index": 57,
+          "input": "RemoveUserFromSharedPagePayloadPB",
+          "output": null,
+          "source_line": 239,
+          "registrations": [
+            {
+              "handler": "remove_user_from_shared_page_handler",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-folder/src/event_map.rs",
+              "registered_line": 58,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-folder/src/event_handler.rs",
+              "handler_line": 570
+            }
+          ],
+          "sin_handler": false
+        },
+        {
+          "name": "GetSharedUsers",
+          "index": 58,
+          "input": "GetSharedUsersPayloadPB",
+          "output": "RepeatedSharedUserPB",
+          "source_line": 242,
+          "registrations": [
+            {
+              "handler": "get_shared_users_handler",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-folder/src/event_map.rs",
+              "registered_line": 59,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-folder/src/event_handler.rs",
+              "handler_line": 547
+            }
+          ],
+          "sin_handler": false
+        },
+        {
+          "name": "GetSharedViews",
+          "index": 59,
+          "input": null,
+          "output": "RepeatedSharedViewResponsePB",
+          "source_line": 245,
+          "registrations": [
+            {
+              "handler": "get_shared_views_handler",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-folder/src/event_map.rs",
+              "registered_line": 60,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-folder/src/event_handler.rs",
+              "handler_line": 585
+            }
+          ],
+          "sin_handler": false
+        },
+        {
+          "name": "GetSharedViewSection",
+          "index": 60,
+          "input": "ViewIdPB",
+          "output": "GetSharedViewSectionResponsePB",
+          "source_line": 248,
+          "registrations": [
+            {
+              "handler": "get_shared_view_section_handler",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-folder/src/event_map.rs",
+              "registered_line": 61,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-folder/src/event_handler.rs",
+              "handler_line": 594
+            }
+          ],
+          "sin_handler": false
+        }
+      ],
+      "summary": {
+        "total_variants": 51,
+        "registered": 48,
+        "sin_handler": 3
+      },
+      "warnings": []
+    },
+    {
+      "fuente": "appflowy",
+      "crate": "flowy-search",
+      "crate_root": "SRC/appflowy/frontend/rust-lib/flowy-search",
+      "event_map_file": "SRC/appflowy/frontend/rust-lib/flowy-search/src/event_map.rs",
+      "init_function": {
+        "name": "init",
+        "line": 9,
+        "end_line": 14
+      },
+      "enum": {
+        "name": "SearchEvent",
+        "decl_line": 18,
+        "derives": [
+          "Clone",
+          "Copy",
+          "PartialEq",
+          "Eq",
+          "Debug",
+          "Display",
+          "Hash",
+          "ProtoBuf_Enum",
+          "Flowy_Event"
+        ],
+        "event_err": "FlowyError"
+      },
+      "variants": [
+        {
+          "name": "StreamSearch",
+          "index": 0,
+          "input": "SearchQueryPB",
+          "output": null,
+          "source_line": 20,
+          "registrations": [
+            {
+              "handler": "stream_search_handler",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-search/src/event_map.rs",
+              "registered_line": 13,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-search/src/event_handler.rs",
+              "handler_line": 18
+            }
+          ],
+          "sin_handler": false
+        }
+      ],
+      "summary": {
+        "total_variants": 1,
+        "registered": 1,
+        "sin_handler": 0
+      },
+      "warnings": []
+    },
+    {
+      "fuente": "appflowy",
+      "crate": "flowy-storage",
+      "crate_root": "SRC/appflowy/frontend/rust-lib/flowy-storage",
+      "event_map_file": "SRC/appflowy/frontend/rust-lib/flowy-storage/src/event_map.rs",
+      "init_function": {
+        "name": "init",
+        "line": 8,
+        "end_line": 14
+      },
+      "enum": {
+        "name": "FileStorageEvent",
+        "decl_line": 18,
+        "derives": [
+          "Clone",
+          "Copy",
+          "PartialEq",
+          "Eq",
+          "Debug",
+          "Display",
+          "Hash",
+          "ProtoBuf_Enum",
+          "Flowy_Event"
+        ],
+        "event_err": "FlowyError"
+      },
+      "variants": [
+        {
+          "name": "RegisterStream",
+          "index": 0,
+          "input": "RegisterStreamPB",
+          "output": null,
+          "source_line": 21,
+          "registrations": [
+            {
+              "handler": "register_stream_handler",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-storage/src/event_map.rs",
+              "registered_line": 12,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-storage/src/event_handler.rs",
+              "handler_line": 17
+            }
+          ],
+          "sin_handler": false
+        },
+        {
+          "name": "QueryFile",
+          "index": 1,
+          "input": "QueryFilePB",
+          "output": "FileStatePB",
+          "source_line": 24,
+          "registrations": [
+            {
+              "handler": "query_file_handler",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-storage/src/event_map.rs",
+              "registered_line": 13,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-storage/src/event_handler.rs",
+              "handler_line": 28
+            }
+          ],
+          "sin_handler": false
+        }
+      ],
+      "summary": {
+        "total_variants": 2,
+        "registered": 2,
+        "sin_handler": 0
+      },
+      "warnings": []
+    },
+    {
+      "fuente": "appflowy",
+      "crate": "flowy-user",
+      "crate_root": "SRC/appflowy/frontend/rust-lib/flowy-user",
+      "event_map_file": "SRC/appflowy/frontend/rust-lib/flowy-user/src/event_map.rs",
+      "init_function": {
+        "name": "init",
+        "line": 17,
+        "end_line": 84
+      },
+      "enum": {
+        "name": "UserEvent",
+        "decl_line": 88,
+        "derives": [
+          "Clone",
+          "Copy",
+          "PartialEq",
+          "Eq",
+          "Debug",
+          "Display",
+          "Hash",
+          "ProtoBuf_Enum",
+          "Flowy_Event"
+        ],
+        "event_err": "FlowyError"
+      },
+      "variants": [
+        {
+          "name": "SignInWithEmailPassword",
+          "index": 0,
+          "input": "SignInPayloadPB",
+          "output": "GotrueTokenResponsePB",
+          "source_line": 92,
+          "registrations": [
+            {
+              "handler": "sign_in_with_email_password_handler",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-user/src/event_map.rs",
+              "registered_line": 26,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-user/src/event_handler.rs",
+              "handler_line": 40
+            }
+          ],
+          "sin_handler": false
+        },
+        {
+          "name": "SignUp",
+          "index": 1,
+          "input": "SignUpPayloadPB",
+          "output": "UserProfilePB",
+          "source_line": 97,
+          "registrations": [
+            {
+              "handler": "sign_up",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-user/src/event_map.rs",
+              "registered_line": 28,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-user/src/event_handler.rs",
+              "handler_line": 66
+            }
+          ],
+          "sin_handler": false
+        },
+        {
+          "name": "SignOut",
+          "index": 2,
+          "input": null,
+          "output": null,
+          "source_line": 101,
+          "registrations": [
+            {
+              "handler": "sign_out_handler",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-user/src/event_map.rs",
+              "registered_line": 31,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-user/src/event_handler.rs",
+              "handler_line": 123
+            }
+          ],
+          "sin_handler": false
+        },
+        {
+          "name": "UpdateUserProfile",
+          "index": 3,
+          "input": "UpdateUserProfilePayloadPB",
+          "output": null,
+          "source_line": 105,
+          "registrations": [
+            {
+              "handler": "update_user_profile_handler",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-user/src/event_map.rs",
+              "registered_line": 33,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-user/src/event_handler.rs",
+              "handler_line": 148
+            }
+          ],
+          "sin_handler": false
+        },
+        {
+          "name": "GetUserProfile",
+          "index": 4,
+          "input": null,
+          "output": "UserProfilePB",
+          "source_line": 109,
+          "registrations": [
+            {
+              "handler": "get_user_profile_handler",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-user/src/event_map.rs",
+              "registered_line": 30,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-user/src/event_handler.rs",
+              "handler_line": 90
+            }
+          ],
+          "sin_handler": false
+        },
+        {
+          "name": "InitUser",
+          "index": 6,
+          "input": null,
+          "output": null,
+          "source_line": 114,
+          "registrations": [
+            {
+              "handler": "init_user_handler",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-user/src/event_map.rs",
+              "registered_line": 29,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-user/src/event_handler.rs",
+              "handler_line": 81
+            }
+          ],
+          "sin_handler": false
+        },
+        {
+          "name": "SetAppearanceSetting",
+          "index": 7,
+          "input": "AppearanceSettingsPB",
+          "output": null,
+          "source_line": 118,
+          "registrations": [
+            {
+              "handler": "set_appearance_setting",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-user/src/event_map.rs",
+              "registered_line": 34,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-user/src/event_handler.rs",
+              "handler_line": 161
+            }
+          ],
+          "sin_handler": false
+        },
+        {
+          "name": "GetAppearanceSetting",
+          "index": 8,
+          "input": null,
+          "output": "AppearanceSettingsPB",
+          "source_line": 122,
+          "registrations": [
+            {
+              "handler": "get_appearance_setting",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-user/src/event_map.rs",
+              "registered_line": 35,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-user/src/event_handler.rs",
+              "handler_line": 175
+            }
+          ],
+          "sin_handler": false
+        },
+        {
+          "name": "GetUserSetting",
+          "index": 9,
+          "input": null,
+          "output": "UserSettingPB",
+          "source_line": 126,
+          "registrations": [
+            {
+              "handler": "get_user_setting",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-user/src/event_map.rs",
+              "registered_line": 36,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-user/src/event_handler.rs",
+              "handler_line": 296
+            }
+          ],
+          "sin_handler": false
+        },
+        {
+          "name": "OauthSignIn",
+          "index": 10,
+          "input": "OauthSignInPB",
+          "output": "UserProfilePB",
+          "source_line": 129,
+          "registrations": [
+            {
+              "handler": "oauth_sign_in_handler",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-user/src/event_map.rs",
+              "registered_line": 39,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-user/src/event_handler.rs",
+              "handler_line": 331
+            }
+          ],
+          "sin_handler": false
+        },
+        {
+          "name": "GenerateSignInURL",
+          "index": 11,
+          "input": "SignInUrlPayloadPB",
+          "output": "SignInUrlPB",
+          "source_line": 134,
+          "registrations": [
+            {
+              "handler": "gen_sign_in_url_handler",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-user/src/event_map.rs",
+              "registered_line": 40,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-user/src/event_handler.rs",
+              "handler_line": 345
+            }
+          ],
+          "sin_handler": false
+        },
+        {
+          "name": "GetOauthURLWithProvider",
+          "index": 12,
+          "input": "OauthProviderPB",
+          "output": "OauthProviderDataPB",
+          "source_line": 137,
+          "registrations": [
+            {
+              "handler": "sign_in_with_provider_handler",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-user/src/event_map.rs",
+              "registered_line": 41,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-user/src/event_handler.rs",
+              "handler_line": 359
+            }
+          ],
+          "sin_handler": false
+        },
+        {
+          "name": "SetCloudConfig",
+          "index": 13,
+          "input": "UpdateCloudConfigPB",
+          "output": null,
+          "source_line": 140,
+          "registrations": [
+            {
+              "handler": "set_cloud_config_handler",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-user/src/event_map.rs",
+              "registered_line": 37,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-user/src/event_handler.rs",
+              "handler_line": 373
+            }
+          ],
+          "sin_handler": false
+        },
+        {
+          "name": "GetCloudConfig",
+          "index": 14,
+          "input": null,
+          "output": "CloudSettingPB",
+          "source_line": 143,
+          "registrations": [
+            {
+              "handler": "get_cloud_config_handler",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-user/src/event_map.rs",
+              "registered_line": 38,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-user/src/event_handler.rs",
+              "handler_line": 411
+            }
+          ],
+          "sin_handler": false
+        },
+        {
+          "name": "GetAllWorkspace",
+          "index": 17,
+          "input": null,
+          "output": "RepeatedUserWorkspacePB",
+          "source_line": 147,
+          "registrations": [
+            {
+              "handler": "get_all_workspace_handler",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-user/src/event_map.rs",
+              "registered_line": 62,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-user/src/event_handler.rs",
+              "handler_line": 430
+            }
+          ],
+          "sin_handler": false
+        },
+        {
+          "name": "OpenWorkspace",
+          "index": 21,
+          "input": "OpenUserWorkspacePB",
+          "output": null,
+          "source_line": 150,
+          "registrations": [
+            {
+              "handler": "open_workspace_handler",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-user/src/event_map.rs",
+              "registered_line": 42,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-user/src/event_handler.rs",
+              "handler_line": 446
+            }
+          ],
+          "sin_handler": false
+        },
+        {
+          "name": "GetUserWorkspace",
+          "index": 22,
+          "input": "UserWorkspaceIdPB",
+          "output": "UserWorkspacePB",
+          "source_line": 153,
+          "registrations": [
+            {
+              "handler": "get_user_workspace_handler",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-user/src/event_map.rs",
+              "registered_line": 43,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-user/src/event_handler.rs",
+              "handler_line": 460
+            }
+          ],
+          "sin_handler": false
+        },
+        {
+          "name": "UpdateNetworkState",
+          "index": 24,
+          "input": "NetworkStatePB",
+          "output": null,
+          "source_line": 156,
+          "registrations": [
+            {
+              "handler": "update_network_state_handler",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-user/src/event_map.rs",
+              "registered_line": 44,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-user/src/event_handler.rs",
+              "handler_line": 473
+            }
+          ],
+          "sin_handler": false
+        },
+        {
+          "name": "GetAnonUser",
+          "index": 25,
+          "input": null,
+          "output": "UserProfilePB",
+          "source_line": 159,
+          "registrations": [
+            {
+              "handler": "get_anon_user_handler",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-user/src/event_map.rs",
+              "registered_line": 46,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-user/src/event_handler.rs",
+              "handler_line": 489
+            }
+          ],
+          "sin_handler": false
+        },
+        {
+          "name": "OpenAnonUser",
+          "index": 26,
+          "input": null,
+          "output": null,
+          "source_line": 162,
+          "registrations": [
+            {
+              "handler": "open_anon_user_handler",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-user/src/event_map.rs",
+              "registered_line": 45,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-user/src/event_handler.rs",
+              "handler_line": 498
+            }
+          ],
+          "sin_handler": false
+        },
+        {
+          "name": "PushRealtimeEvent",
+          "index": 27,
+          "input": "RealtimePayloadPB",
+          "output": null,
+          "source_line": 168,
+          "registrations": [
+            {
+              "handler": "push_realtime_event_handler",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-user/src/event_map.rs",
+              "registered_line": 47,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-user/src/event_handler.rs",
+              "handler_line": 505
+            }
+          ],
+          "sin_handler": false
+        },
+        {
+          "name": "CreateReminder",
+          "index": 28,
+          "input": "ReminderPB",
+          "output": null,
+          "source_line": 171,
+          "registrations": [
+            {
+              "handler": "create_reminder_event_handler",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-user/src/event_map.rs",
+              "registered_line": 48,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-user/src/event_handler.rs",
+              "handler_line": 523
+            }
+          ],
+          "sin_handler": false
+        },
+        {
+          "name": "GetAllReminders",
+          "index": 29,
+          "input": null,
+          "output": "RepeatedReminderPB",
+          "source_line": 174,
+          "registrations": [
+            {
+              "handler": "get_all_reminder_event_handler",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-user/src/event_map.rs",
+              "registered_line": 49,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-user/src/event_handler.rs",
+              "handler_line": 534
+            }
+          ],
+          "sin_handler": false
+        },
+        {
+          "name": "RemoveReminder",
+          "index": 30,
+          "input": "ReminderIdentifierPB",
+          "output": null,
+          "source_line": 177,
+          "registrations": [
+            {
+              "handler": "remove_reminder_event_handler",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-user/src/event_map.rs",
+              "registered_line": 50,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-user/src/event_handler.rs",
+              "handler_line": 550
+            }
+          ],
+          "sin_handler": false
+        },
+        {
+          "name": "UpdateReminder",
+          "index": 31,
+          "input": "ReminderPB",
+          "output": null,
+          "source_line": 180,
+          "registrations": [
+            {
+              "handler": "update_reminder_event_handler",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-user/src/event_map.rs",
+              "registered_line": 51,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-user/src/event_handler.rs",
+              "handler_line": 563
+            }
+          ],
+          "sin_handler": false
+        },
+        {
+          "name": "SetDateTimeSettings",
+          "index": 33,
+          "input": "DateTimeSettingsPB",
+          "output": null,
+          "source_line": 184,
+          "registrations": [
+            {
+              "handler": "set_date_time_settings",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-user/src/event_map.rs",
+              "registered_line": 52,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-user/src/event_handler.rs",
+              "handler_line": 197
+            }
+          ],
+          "sin_handler": false
+        },
+        {
+          "name": "GetDateTimeSettings",
+          "index": 34,
+          "input": null,
+          "output": "DateTimeSettingsPB",
+          "source_line": 188,
+          "registrations": [
+            {
+              "handler": "get_date_time_settings",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-user/src/event_map.rs",
+              "registered_line": 53,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-user/src/event_handler.rs",
+              "handler_line": 212
+            }
+          ],
+          "sin_handler": false
+        },
+        {
+          "name": "SetNotificationSettings",
+          "index": 35,
+          "input": "NotificationSettingsPB",
+          "output": null,
+          "source_line": 191,
+          "registrations": [
+            {
+              "handler": "set_notification_settings",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-user/src/event_map.rs",
+              "registered_line": 54,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-user/src/event_handler.rs",
+              "handler_line": 237
+            }
+          ],
+          "sin_handler": false
+        },
+        {
+          "name": "GetNotificationSettings",
+          "index": 36,
+          "input": null,
+          "output": "NotificationSettingsPB",
+          "source_line": 194,
+          "registrations": [
+            {
+              "handler": "get_notification_settings",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-user/src/event_map.rs",
+              "registered_line": 55,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-user/src/event_handler.rs",
+              "handler_line": 248
+            }
+          ],
+          "sin_handler": false
+        },
+        {
+          "name": "AddWorkspaceMember",
+          "index": 37,
+          "input": "AddWorkspaceMemberPB",
+          "output": null,
+          "source_line": 198,
+          "registrations": [],
+          "sin_handler": true
+        },
+        {
+          "name": "RemoveWorkspaceMember",
+          "index": 38,
+          "input": "RemoveWorkspaceMemberPB",
+          "output": null,
+          "source_line": 201,
+          "registrations": [
+            {
+              "handler": "delete_workspace_member_handler",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-user/src/event_map.rs",
+              "registered_line": 58,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-user/src/event_handler.rs",
+              "handler_line": 574
+            }
+          ],
+          "sin_handler": false
+        },
+        {
+          "name": "UpdateWorkspaceMember",
+          "index": 39,
+          "input": "UpdateWorkspaceMemberPB",
+          "output": null,
+          "source_line": 204,
+          "registrations": [
+            {
+              "handler": "update_workspace_member_handler",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-user/src/event_map.rs",
+              "registered_line": 60,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-user/src/event_handler.rs",
+              "handler_line": 605
+            }
+          ],
+          "sin_handler": false
+        },
+        {
+          "name": "GetWorkspaceMembers",
+          "index": 40,
+          "input": "QueryWorkspacePB",
+          "output": "RepeatedWorkspaceMemberPB",
+          "source_line": 207,
+          "registrations": [
+            {
+              "handler": "get_workspace_members_handler",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-user/src/event_map.rs",
+              "registered_line": 59,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-user/src/event_handler.rs",
+              "handler_line": 588
+            }
+          ],
+          "sin_handler": false
+        },
+        {
+          "name": "ImportAppFlowyDataFolder",
+          "index": 41,
+          "input": "ImportAppFlowyDataPB",
+          "output": null,
+          "source_line": 210,
+          "registrations": [
+            {
+              "handler": "import_appflowy_data_folder_handler",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-user/src/event_map.rs",
+              "registered_line": 56,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-user/src/event_handler.rs",
+              "handler_line": 268
+            }
+          ],
+          "sin_handler": false
+        },
+        {
+          "name": "CreateWorkspace",
+          "index": 42,
+          "input": "CreateWorkspacePB",
+          "output": "UserWorkspacePB",
+          "source_line": 213,
+          "registrations": [
+            {
+              "handler": "create_workspace_handler",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-user/src/event_map.rs",
+              "registered_line": 63,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-user/src/event_handler.rs",
+              "handler_line": 619
+            }
+          ],
+          "sin_handler": false
+        },
+        {
+          "name": "DeleteWorkspace",
+          "index": 43,
+          "input": "UserWorkspaceIdPB",
+          "output": null,
+          "source_line": 216,
+          "registrations": [
+            {
+              "handler": "delete_workspace_handler",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-user/src/event_map.rs",
+              "registered_line": 64,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-user/src/event_handler.rs",
+              "handler_line": 631
+            }
+          ],
+          "sin_handler": false
+        },
+        {
+          "name": "RenameWorkspace",
+          "index": 44,
+          "input": "RenameWorkspacePB",
+          "output": null,
+          "source_line": 219,
+          "registrations": [
+            {
+              "handler": "rename_workspace_handler",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-user/src/event_map.rs",
+              "registered_line": 65,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-user/src/event_handler.rs",
+              "handler_line": 643
+            }
+          ],
+          "sin_handler": false
+        },
+        {
+          "name": "ChangeWorkspaceIcon",
+          "index": 45,
+          "input": "ChangeWorkspaceIconPB",
+          "output": null,
+          "source_line": 222,
+          "registrations": [
+            {
+              "handler": "change_workspace_icon_handler",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-user/src/event_map.rs",
+              "registered_line": 66,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-user/src/event_handler.rs",
+              "handler_line": 662
+            }
+          ],
+          "sin_handler": false
+        },
+        {
+          "name": "LeaveWorkspace",
+          "index": 46,
+          "input": "UserWorkspaceIdPB",
+          "output": null,
+          "source_line": 225,
+          "registrations": [
+            {
+              "handler": "leave_workspace_handler",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-user/src/event_map.rs",
+              "registered_line": 67,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-user/src/event_handler.rs",
+              "handler_line": 719
+            }
+          ],
+          "sin_handler": false
+        },
+        {
+          "name": "InviteWorkspaceMember",
+          "index": 47,
+          "input": "WorkspaceMemberInvitationPB",
+          "output": null,
+          "source_line": 228,
+          "registrations": [
+            {
+              "handler": "invite_workspace_member_handler",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-user/src/event_map.rs",
+              "registered_line": 68,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-user/src/event_handler.rs",
+              "handler_line": 681
+            }
+          ],
+          "sin_handler": false
+        },
+        {
+          "name": "ListWorkspaceInvitations",
+          "index": 48,
+          "input": null,
+          "output": "RepeatedWorkspaceInvitationPB",
+          "source_line": 231,
+          "registrations": [
+            {
+              "handler": "list_workspace_invitations_handler",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-user/src/event_map.rs",
+              "registered_line": 69,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-user/src/event_handler.rs",
+              "handler_line": 695
+            }
+          ],
+          "sin_handler": false
+        },
+        {
+          "name": "AcceptWorkspaceInvitation",
+          "index": 49,
+          "input": "AcceptWorkspaceInvitationPB",
+          "output": null,
+          "source_line": 234,
+          "registrations": [
+            {
+              "handler": "accept_workspace_invitations_handler",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-user/src/event_map.rs",
+              "registered_line": 70,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-user/src/event_handler.rs",
+              "handler_line": 710
+            }
+          ],
+          "sin_handler": false
+        },
+        {
+          "name": "MagicLinkSignIn",
+          "index": 50,
+          "input": "MagicLinkSignInPB",
+          "output": "UserProfilePB",
+          "source_line": 237,
+          "registrations": [
+            {
+              "handler": "sign_in_with_magic_link_handler",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-user/src/event_map.rs",
+              "registered_line": 27,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-user/src/event_handler.rs",
+              "handler_line": 305
+            }
+          ],
+          "sin_handler": false
+        },
+        {
+          "name": "SubscribeWorkspace",
+          "index": 51,
+          "input": "SubscribeWorkspacePB",
+          "output": "PaymentLinkPB",
+          "source_line": 240,
+          "registrations": [
+            {
+              "handler": "subscribe_workspace_handler",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-user/src/event_map.rs",
+              "registered_line": 72,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-user/src/event_handler.rs",
+              "handler_line": 732
+            }
+          ],
+          "sin_handler": false
+        },
+        {
+          "name": "CancelWorkspaceSubscription",
+          "index": 53,
+          "input": "CancelWorkspaceSubscriptionPB",
+          "output": null,
+          "source_line": 243,
+          "registrations": [
+            {
+              "handler": "cancel_workspace_subscription_handler",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-user/src/event_map.rs",
+              "registered_line": 74,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-user/src/event_handler.rs",
+              "handler_line": 756
+            }
+          ],
+          "sin_handler": false
+        },
+        {
+          "name": "GetWorkspaceUsage",
+          "index": 54,
+          "input": "UserWorkspaceIdPB",
+          "output": "WorkspaceUsagePB",
+          "source_line": 246,
+          "registrations": [
+            {
+              "handler": "get_workspace_usage_handler",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-user/src/event_map.rs",
+              "registered_line": 75,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-user/src/event_handler.rs",
+              "handler_line": 769
+            }
+          ],
+          "sin_handler": false
+        },
+        {
+          "name": "GetBillingPortal",
+          "index": 55,
+          "input": null,
+          "output": "BillingPortalPB",
+          "source_line": 249,
+          "registrations": [
+            {
+              "handler": "get_billing_portal_handler",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-user/src/event_map.rs",
+              "registered_line": 76,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-user/src/event_handler.rs",
+              "handler_line": 780
+            }
+          ],
+          "sin_handler": false
+        },
+        {
+          "name": "GetMemberInfo",
+          "index": 56,
+          "input": "WorkspaceMemberIdPB",
+          "output": "WorkspaceMemberPB",
+          "source_line": 252,
+          "registrations": [
+            {
+              "handler": "get_workspace_member_info",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-user/src/event_map.rs",
+              "registered_line": 57,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-user/src/event_handler.rs",
+              "handler_line": 820
+            }
+          ],
+          "sin_handler": false
+        },
+        {
+          "name": "UpdateWorkspaceSetting",
+          "index": 57,
+          "input": "UpdateUserWorkspaceSettingPB",
+          "output": null,
+          "source_line": 255,
+          "registrations": [
+            {
+              "handler": "update_workspace_setting_handler",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-user/src/event_map.rs",
+              "registered_line": 80,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-user/src/event_handler.rs",
+              "handler_line": 833
+            }
+          ],
+          "sin_handler": false
+        },
+        {
+          "name": "GetWorkspaceSetting",
+          "index": 58,
+          "input": "UserWorkspaceIdPB",
+          "output": "WorkspaceSettingsPB",
+          "source_line": 258,
+          "registrations": [
+            {
+              "handler": "get_workspace_setting_handler",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-user/src/event_map.rs",
+              "registered_line": 81,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-user/src/event_handler.rs",
+              "handler_line": 844
+            }
+          ],
+          "sin_handler": false
+        },
+        {
+          "name": "GetWorkspaceSubscriptionInfo",
+          "index": 59,
+          "input": "UserWorkspaceIdPB",
+          "output": "WorkspaceSubscriptionInfoPB",
+          "source_line": 261,
+          "registrations": [
+            {
+              "handler": "get_workspace_subscription_info_handler",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-user/src/event_map.rs",
+              "registered_line": 73,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-user/src/event_handler.rs",
+              "handler_line": 743
+            }
+          ],
+          "sin_handler": false
+        },
+        {
+          "name": "UpdateWorkspaceSubscriptionPaymentPeriod",
+          "index": 61,
+          "input": "UpdateWorkspaceSubscriptionPaymentPeriodPB",
+          "output": null,
+          "source_line": 264,
+          "registrations": [
+            {
+              "handler": "update_workspace_subscription_payment_period_handler",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-user/src/event_map.rs",
+              "registered_line": 77,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-user/src/event_handler.rs",
+              "handler_line": 789
+            }
+          ],
+          "sin_handler": false
+        },
+        {
+          "name": "GetSubscriptionPlanDetails",
+          "index": 62,
+          "input": null,
+          "output": "RepeatedSubscriptionPlanDetailPB",
+          "source_line": 267,
+          "registrations": [
+            {
+              "handler": "get_subscription_plan_details_handler",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-user/src/event_map.rs",
+              "registered_line": 78,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-user/src/event_handler.rs",
+              "handler_line": 806
+            }
+          ],
+          "sin_handler": false
+        },
+        {
+          "name": "NotifyDidSwitchPlan",
+          "index": 63,
+          "input": "SuccessWorkspaceSubscriptionPB",
+          "output": null,
+          "source_line": 270,
+          "registrations": [
+            {
+              "handler": "notify_did_switch_plan_handler",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-user/src/event_map.rs",
+              "registered_line": 82,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-user/src/event_handler.rs",
+              "handler_line": 856
+            }
+          ],
+          "sin_handler": false
+        },
+        {
+          "name": "DeleteAccount",
+          "index": 64,
+          "input": null,
+          "output": null,
+          "source_line": 273,
+          "registrations": [
+            {
+              "handler": "delete_account_handler",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-user/src/event_map.rs",
+              "registered_line": 32,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-user/src/event_handler.rs",
+              "handler_line": 139
+            }
+          ],
+          "sin_handler": false
+        },
+        {
+          "name": "PasscodeSignIn",
+          "index": 65,
+          "input": "PasscodeSignInPB",
+          "output": "GotrueTokenResponsePB",
+          "source_line": 276,
+          "registrations": [
+            {
+              "handler": "sign_in_with_passcode_handler",
+              "registered_in": "SRC/appflowy/frontend/rust-lib/flowy-user/src/event_map.rs",
+              "registered_line": 83,
+              "handler_file": "SRC/appflowy/frontend/rust-lib/flowy-user/src/event_handler.rs",
+              "handler_line": 318
+            }
+          ],
+          "sin_handler": false
+        }
+      ],
+      "summary": {
+        "total_variants": 56,
+        "registered": 55,
+        "sin_handler": 1
+      },
+      "warnings": []
+    }
+  ],
+  "summary": {
+    "crates_with_event_map": 8,
+    "total_variants": 229,
+    "total_registered": 224,
+    "total_sin_handler": 5
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "unit_id": "F02.12",
+  "archivos_total": 9,
+  "archivos_cubiertos": [
+    "appflowy/frontend/appflowy_flutter/lib/plugins/database/application/sync/database_sync_bloc.dart",
+    "appflowy/frontend/appflowy_flutter/lib/plugins/database/application/sync/database_sync_state_listener.dart",
+    "appflowy/frontend/appflowy_flutter/lib/plugins/database/tab_bar/desktop/setting_menu.dart",
+    "appflowy/frontend/appflowy_flutter/lib/plugins/database/tab_bar/desktop/tab_bar_add_button.dart",
+    "appflowy/frontend/appflowy_flutter/lib/plugins/database/tab_bar/desktop/tab_bar_header.dart",
+    "appflowy/frontend/appflowy_flutter/lib/plugins/database/tab_bar/mobile/mobile_tab_bar_header.dart",
+    "appflowy/frontend/appflowy_flutter/lib/plugins/database/tab_bar/tab_bar_view.dart",
+    "appflowy/frontend/rust-lib/flowy-database2/src/services/snapshot/entities.rs",
+    "appflowy/frontend/rust-lib/flowy-database2/src/services/snapshot/mod.rs"
+  ]
+}

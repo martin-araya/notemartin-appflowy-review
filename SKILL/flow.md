@@ -132,7 +132,7 @@ los catálogos son la fuente de verdad contra la que se revisan las features**.
 | **B2** Catálogos 🔀 | eventos FFI, entidades protobuf, BLoCs, notificaciones, códigos de error, flags/rutas/atajos | 🔀 paralelizable; son la verdad contra la que se juzga B3 |
 | **B3** Features 🔀 | F00–F21, una unidad por feature o sub-feature | 🔀 por unidad, con puerta propia |
 | **B4** Export/import | 13 documentos: Markdown, HTML, CSV, JSON, texto plano, Notion, publicación web, round-trip | hereda el patrón autor/revisor de B3 |
-| **B5** Secuencias globales | 14 documentos de `sequenceDiagram` a través de capas | ⚠︎ fue donde aparecieron los símbolos inventados: se revisa contra B2 con `contrast_B5_B2.py` |
+| **B5** Secuencias globales | 14 documentos de `sequenceDiagram` a través de capas | ⚠︎ fue donde aparecieron los símbolos inventados: se revisa contra los catálogos del bloque B2 |
 | **B6** Transversales | build/CI, testing, seguridad, resumen, glosario | cierra el entregable |
 
 El detalle de la subdivisión interna (las 165 unidades, cómo se dividen las
@@ -150,7 +150,7 @@ una prueba distinta y ninguna se puede declarar cerrada por consenso.
 |---|---|---|
 | **C1** Pasada global 🔒 | los tres validadores de documento sobre todo `OUT/` | 5/5 en verde · 17 990/17 990 citas válidas · 791/791 diagramas |
 | **C2** Cobertura 🔒 | `validate_coverage.py --threshold 100` | 4 603/4 603 archivos en `verificado` · las 15 capas al 100 % |
-| **C3** Consistencia 🔀 | contraste cruzado entre documentos que comparten símbolos | 36 símbolos inexistentes llevados a 0 · `contrast_B5_B2.py --check` sale 0 en 257 referencias |
+| **C3** Consistencia 🔀 | contraste cruzado entre documentos que comparten símbolos | 36 símbolos inexistentes llevados a 0 · el contraste contra los catálogos sale en 0 sobre 257 referencias |
 | **C4** Utilidad | 30 preguntas técnicas respondidas con solo `OUT/` | **90,0 % — no cerrada** (umbral: 95 %) |
 | **C5** Índice | `build_index.py` y resolución de enlaces | 272 documentos · 3 483 enlaces · 0 sin resolver en entregables |
 | **C6** Empaquetado | `dist/`, `dist-obsidian/`, tar.gz importable | 6/6 verificaciones · 2,3 MiB |
@@ -234,12 +234,12 @@ tiene un procedimiento. Esta tabla es el parte de incidentes:
 | Punto de fallo | Síntoma | Procedimiento |
 |---|---|---|
 | Commit equivocado en `SRC/` | el código documentado no existe en esa versión | gate A1.1; volver a `fetch_sources.sh` y regenerar el ledger |
-| Cita que no cuadra tras un cambio de líneas | `E_LINE_OUT_OF_RANGE` | `fix_line_offsets.py` con `path_migrations.json`; 10 citas de C1 se retiraron con `para: null` en vez de reapuntarlas |
+| Cita que no cuadra tras un cambio de líneas | `E_LINE_OUT_OF_RANGE` | `fix_line_offsets.py`, que reapunta en cuatro capas; cuando la cita no tiene a dónde ir, se retira con marcador `[NO DETERMINADO]` en vez de inventarse un destino |
 | Cita rota de markdown | comillas desbalanceadas, prefijos duplicados | `repair_markdown_damage.py`; `fix_evidence_prefix.py` es idempotente y salta bloques fenced |
-| Símbolo que el validador no puede ver | la ruta y la línea existen, pero el símbolo no está en ellas | `contrast_B5_B2.py` contra los catálogos; 53 casos en B5 |
-| Documento que excede el presupuesto | más de ~120 archivos en una unidad | `split_F*.py` y `make_b4_units.py` / `build_b5_units.py` / `make_b6_units.py` |
+| Símbolo que el validador no puede ver | la ruta y la línea existen, pero el símbolo no está en ellas | contraste manual o automático contra `_ledger/extract/*.json`; en B5 fueron 53 casos |
+| Documento que excede el presupuesto | más de ~120 archivos en una unidad | dividir la unidad en sub-unidades y reconstruir con `build_units.py` / `sync_units_from_docs.py` |
 | Subagente autor que se adelanta | inventa clases o escribe sin el catálogo delante | el revisor lo rechaza; si persiste, `make_unit_brief.py` incluye el catálogo como entrada obligatoria |
-| Uniones o diques rotos en `00-INDEX.md` | enlaces a documentos inexistentes | `build_index.py --check-links`, que separa enlaces reales de marcadores de plantilla |
+| Enlaces o fences rotos en `00-INDEX.md` | enlaces a documentos inexistentes | `build_index.py --check-links`, que separa enlaces reales de marcadores de plantilla |
 | Sesión interrumpida | no se sabe dónde se quedó | `OUT/STATE.md` + `resume.py` + `coverage_report.py` |
 
 ---

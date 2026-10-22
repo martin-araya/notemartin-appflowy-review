@@ -37,7 +37,7 @@ documenta AppFlowy-Cloud por dentro —solo su contrato cliente desde
 
 | Requisito | Para qué | Notas |
 |---|---|---|
-| Python 3 (solo stdlib) | los 48 scripts `.py` | no hay `pip install`: cero dependencias Python |
+| Python 3 (solo stdlib) | los 39 scripts `.py` | no hay `pip install`: cero dependencias Python |
 | `ripgrep` (`rg`) | los extractores y varios validadores | búsqueda sobre `SRC/` |
 | `git` | `fetch_sources.sh` y `sources.json` | clonar los tres repos en su rev |
 | Node + `mermaid-cli` (`mmdc`) | `validate_mermaid.sh` | `npm i -g @mermaid-js/mermaid-cli`; sin él, solo se salta ese validador |
@@ -100,17 +100,17 @@ SKILL/
 ├── SKILL.md                      # router (≤ 500 líneas, solo enruta)
 ├── AGENTS.md                     # reglas, patrones y protocolo de subagentes
 ├── CHANGELOG.md                  # historial semver de la skill
-├── references/                   # 10 documentos de referencia
+├── references/                   # 9 documentos de referencia
 │   ├── repo-map.md               # árbol de AppFlowy con propósito por carpeta
 │   ├── patterns.md               # los 7 patrones de arquitectura, con ejemplos
 │   ├── evidence-rules.md         # reglas de evidencia y etiquetas
 │   ├── diagram-conventions.md    # Mermaid: tipos, IDs, etiquetas, fragmentación
 │   ├── feature-template.md       # plantilla de 19 secciones para 09-features/
 │   ├── export-template.md        # plantilla de 11 secciones para 10-motor-export-import/
-│   ├── subagent-autor-prompt.md  # prompt y contrato del subagente autor
-│   ├── subagent-revisor-prompt.md# prompt y contrato del subagente revisor
-│   └── debt.md                   # ⚠︎ reglas de deuda técnica (NO cableado, ver §12)
-├── scripts/                      # 54 scripts (48 .py + 6 .sh) + path_migrations.json
+│   ├── subagent-contract.md      # contrato común de autor y revisor
+│   ├── subagent-autor-prompt.md  # prompt literal del subagente autor
+│   └── subagent-revisor-prompt.md# prompt literal del subagente revisor
+├── scripts/                      # 45 scripts (39 .py + 6 .sh)
 └── templates/output-skeleton/    # árbol vacío de la salida, 25 entradas
 ```
 
@@ -135,7 +135,7 @@ son los únicos que escriben fuera de `OUT/`: crean `SRC/`.
 
 ---
 
-## 7 · Los 54 scripts
+## 7 · Los 45 scripts
 
 Agrupados por lo que hacen, que es como se piensa en ellos durante una fase.
 
@@ -192,8 +192,6 @@ nadie tenga que llevar la cuenta a mano.
 | `align_units.py` | elimina la doble propiedad después de regenerar unidades |
 | `sync_units_from_docs.py` | reconstruye el campo `archivos` de cada unidad a partir de los documentos ya escritos (reconcilia lo que se dijo con lo que se escribió) |
 | `rebuild_units.sh` | pipeline canónico de reconstrucción de unidades |
-| `make_b4_units.py`, `build_b5_units.py`, `make_b6_units.py` | crean las unidades de los bloques B4 (14), B5 (14) y B6 (6) |
-| `split_F0103.py`, `split_F0106.py`, `split_F0201.py`, `split_F0202.py`, `split_F0209.py` | dividen unidades grandes que superan el umbral de ~120 archivos |
 | `restore_unit_files.py` | reinyecta en una unidad las filas que se le habían asignado |
 | `set_unit_docs.py` | fija a mano la ruta de documento de unidades concretas |
 | `record_unit_state.py` | marca el estado de las unidades (abierta / en curso / cerrada) |
@@ -224,9 +222,7 @@ nadie tenga que llevar la cuenta a mano.
 | `fix_line_offsets.py` | reapunta referencias que ya no cuadran con el fichero real, en cuatro capas (inventario → `basename` + ancla → mapa de migraciones → ámbito de crate) |
 | `fix_evidence_prefix.py` | normaliza referencias `ruta:línea` al prefijo de fuente; idempotente, salta bloques fenced |
 | `expand_short_refs.py` | expande referencias cortas `archivo.ext:N` a la ruta completa |
-| `contrast_B5_B2.py` | contrasta los símbolos citados en los documentos de secuencias contra los catálogos (los validadores comprueban que la línea exista, no que el símbolo esté en ella) |
 | `mermaid_debug.py` | renderiza bloque a bloque para depurar un diagrama que no parsea |
-| `path_migrations.json` | 21 reapuntamientos manuales: `para: null` significa "retirar la cita" |
 
 Los cinco scripts de reparación no son opcionales: el estado real del proyecto
 demostró que el daño documentado se acumula justo ahí. La bitácora de C1 recounts
@@ -241,7 +237,7 @@ demostró que el daño documentado se acumula justo ahí. La bitácora de C1 rec
 
 ---
 
-## 8 · Los 10 documentos de `references/`
+## 8 · Los 9 documentos de `references/`
 
 | Referencia | Para qué se lee |
 |---|---|
@@ -251,9 +247,9 @@ demostró que el daño documentado se acumula justo ahí. La bitácora de C1 rec
 | `diagram-conventions.md` | qué tipo de diagrama para qué propósito, y cómo partir uno que crece |
 | `feature-template.md` | las 19 secciones obligatorias de un documento de feature |
 | `export-template.md` | las 11 secciones obligatorias de un formato de exportación |
-| `subagent-autor-prompt.md` | el prompt literal y el contrato de entrada/salida del autor |
-| `subagent-revisor-prompt.md` | el prompt literal y el contrato del revisor |
-| `debt.md` | reglas de la deuda técnica ⚠︎ **no está cableado**: ni `SKILL.md` lo referencia ni ningún script lo escribe. Ver §12 |
+| `subagent-contract.md` | el contrato común que comparten autor y revisor: qué reciben, qué devuelven, qué no pueden hacer |
+| `subagent-autor-prompt.md` | el prompt literal del subagente autor |
+| `subagent-revisor-prompt.md` | el prompt literal del subagente revisor |
 
 ---
 
@@ -283,7 +279,7 @@ El orquestador (el agente principal) **no escribe documentos de feature**.
 Ejecuta scripts, mantiene el ledger, divide el trabajo, asigna, integra y
 dispara la verificación. El trabajo de escritura y el de juicio van separados:
 
-- **Unidad de trabajo**: `{id, título, archivos[], catálogos relevantes, plantilla, documentos dependientes}`. Si supera ~120 archivos se divide: F01, por ejemplo, se partió con `split_F0103.py` y `split_F0106.py` antes de poder repartirse.
+- **Unidad de trabajo**: `{id, título, archivos[], catálogos relevantes, plantilla, documentos dependientes}`. Si supera ~120 archivos se divide en sub-unidades, como se hizo con F01 durante esta ejecución.
 - **Subagente autor**: lee **todos** sus archivos (no extractos), escribe el documento con la plantilla y devuelve `{documento, filas_ledger_cubiertas, archivos_extra_detectados, preguntas_abiertas}`. Si necesita un archivo que no le dieron, lo declara en vez de improvisar.
 - **Subagente revisor**: distinto del autor, con contexto limpio. Corre los tres validadores de documento y además verifica semánticamente ≥ 30 % de las afirmaciones (100 % en F01, F02, F06 y en el motor de exportación/importación). Devuelve `aprobado` o `rechazado` con la lista de correcciones.
 - **Concurrencia**: `MAX_PARALLEL` configurable. Los catálogos y la arquitectura global van primero porque alimentan a las features.
@@ -316,7 +312,7 @@ auditar quién escribió qué.
 | B0–B6 | cerrado | 272 documentos en `OUT/`, de los cuales 193 entran en el paquete de C6; ledger al 100 % |
 | C1 pasada global | cerrado | 5/5 en verde; 17 990/17 990 citas válidas; 791/791 diagramas |
 | C2 cobertura | cerrado | 4 603/4 603 archivos verificados |
-| C3 contraste cruzado | cerrado | 36 símbolos inventados llevados a 0; `contrast_B5_B2.py --check` sale 0 |
+| C3 contraste cruzado | cerrado | 36 símbolos inventados llevados a 0; el contraste contra los catálogos sale en 0 |
 | C4 utilidad | **no cerrada** | 90,0 % en 3 rondas, por debajo del umbral de 95 % |
 | C5 índice | cerrado | 272 documentos, 3 483 enlaces, 0 sin resolver en entregables |
 | C6 empaquetado | cerrado | `dist/`, `dist-obsidian/` y tar.gz de 2,3 MiB, 6/6 verificaciones |
@@ -324,7 +320,7 @@ auditar quién escribió qué.
 
 Tres cosas que conviene saber antes de tocar nada:
 
-1. **`references/debt.md` está ahí pero no hace nada.** Es una copia del registro de deuda de la skill `notemartin-code-review` (que vive en `~/.agents/skills/`), y esta skill no lo referencia ni lo escribe. O se cablea o se borra: dejarlo es una referencia que promete un comportamiento inexistente.
+1. **La skill se podó para publicarse.** Se retiraron 12 ficheros: `references/debt.md` (pertenecía a otra skill y esta no lo cableaba) y 10 scripts atados a esta ejecución concreta —divisiones de unidades con ID fijo, generadores de los planes B4/B5/B6, el contraste de una ola concreta y su mapa de 21 reapuntamientos—. Quedan los 45 scripts genéricos. Copia de seguridad: `../SKILL-prune-backup-2026-10-22.tar.gz`.
 2. **`CHANGELOG.md` va por detrás de `STATE.md`.** La última versión registrada es `0.12.0` (2026-10-21), mientras que C5–C7 se cerraron el 2026-10-22. `STATE.md` es la autoridad.
 3. **C4 sigue abierta por métrica, no por desconocimiento.** 90 % de aciertos en 30 preguntas es un número alto, pero el umbral del ROADMAP es 95 % y no se rebajó. Cerrarla exige acertar el 5 % restante.
 

@@ -6,8 +6,8 @@ español, con evidencia `ruta:línea` y cobertura verificable por ledger. Este
 fichero explica qué es la skill, cómo se instala, cómo se dispara, qué contiene
 cada pieza y en qué estado está. El flujo paso a paso vive en
 [`flow.md`](./flow.md); las reglas de trabajo, en [`AGENTS.md`](./AGENTS.md); el
-encargo original, en `../PROMPT.md`; y las fases con su prueba, en
-`../ROADMAP.md`.
+encargo original y las 8 etapas, en [`PROMPT.md`](./PROMPT.md); y el detalle de
+cada fase con su prueba y sus gates, en [`CHANGELOG.md`](./CHANGELOG.md).
 
 ---
 
@@ -61,10 +61,10 @@ un directorio de skills del agente:
 ln -s /ruta/al/proyecto/SKILL ~/.agents/skills/notemartin-appflowy-review
 ```
 
-En este repositorio, `SKILL/` **es** la carpeta de la skill: todo lo que hay en
-ella es portable. `PROMPT.md`, `ROADMAP.md`, `OUT/` y `SRC/` viven en la raíz y
-**no** son portables (son el encargo, el plan y el resultado de una ejecución
-concreta). `SKILL.md` §7–§11 explica esa frontera.
+La raíz del repositorio **es** la carpeta de la skill: todo lo que hay en ella es
+portable, y `SKILL.md` está en la raíz porque es donde el descubrimiento de
+skills.sh lo busca. `OUT/`, `SRC/` y `dist/` no viajan: los crea la skill al
+ejecutarse. `SKILL.md` §7–§11 explica esa frontera.
 
 ---
 
@@ -94,12 +94,13 @@ como objeto. `SKILL.md §1` tiene la tabla completa de disparo y no-disparo.
 ## 5 · Arquitectura de la skill
 
 ```
-SKILL/
+notemartin-appflowy-review/          # esta carpeta ES la skill
+├── SKILL.md                      # router (≤ 500 líneas, solo enruta) ·REQUIRED
+├── PROMPT.md                     # encargo, 8 etapas, plantillas y mapa de features
+├── AGENTS.md                     # reglas, patrones y protocolo de subagentes
 ├── README.md                     # este documento
 ├── flow.md                       # el flujo paso a paso, con diagramas
-├── SKILL.md                      # router (≤ 500 líneas, solo enruta)
-├── AGENTS.md                     # reglas, patrones y protocolo de subagentes
-├── CHANGELOG.md                  # historial semver de la skill
+├── CHANGELOG.md                  # historial semver: una entrada por fase cerrada
 ├── references/                   # 9 documentos de referencia
 │   ├── repo-map.md               # árbol de AppFlowy con propósito por carpeta
 │   ├── patterns.md               # los 7 patrones de arquitectura, con ejemplos
@@ -114,9 +115,15 @@ SKILL/
 └── templates/output-skeleton/    # árbol vacío de la salida, 25 entradas
 ```
 
-En la raíz del proyecto, fuera de la skill: `PROMPT.md` (encargo),
-`ROADMAP.md` (746 líneas de fases con su prueba), `SRC/` (los tres repos
-clonados) y `OUT/` (el resultado).
+`SKILL.md` está en la raíz a propósito: es la única posición que el
+descubrimiento de skills.sh reconoce por defecto (raíz del repo con `SKILL.md`,
+o `skills/<nombre>/SKILL.md`). Frontmatter con `name` y `description`, y ambos
+valores deben parsear como YAML: un `": "` suelto dentro de un valor sin comillas
+hace que el frontmatter entero sea inválido y la skill no aparezca en el índice.
+
+Fuera de la skill, en el proyecto donde se ejecute: `OUT/` (la salida del análisis),
+`SRC/` (los tres repos clonados) y `dist/` (el paquete de entrega). Los crea la
+skill; ninguno se publica.
 
 ---
 
@@ -124,14 +131,12 @@ clonados) y `OUT/` (el resultado).
 
 | Fichero | Contenido | ¿Portable? |
 |---|---|---|
-| `../PROMPT.md` | encargo, 8 etapas, estructura de salida, plantillas, mapa de features, glosario, lo que no se hace | no |
-| `../ROADMAP.md` | fases A0–C7 con su prueba de salida, gates 🔒 y marcas 🔀, y bitácora de resultados | no |
-| `../OUT/STATE.md` | fase cerrada por fase; es lo que se lee para reanudar | no |
-| `../OUT/_ledger/` | inventario, cobertura, extractos, unidades, briefs y las 46 suites de validación | no |
-| `../SRC/` | `appflowy/`, `collab/`, `editor/` clonados en sus rev | no |
+| `PROMPT.md` | encargo, 8 etapas, estructura de salida, plantillas, mapa de features, glosario, lo que no se hace | sí |
+| `CHANGELOG.md` | una entrada por fase cerrada, con sus gates, sus resultados y las adaptaciones de la skill | sí |
 
-`SKILL.md` los lee en cada invocación (`§11`). Los tres scripts de la fase A1
-son los únicos que escriben fuera de `OUT/`: crean `SRC/`.
+`SKILL.md` los lee en cada invocación (`§11`). Las rutas que aparecen en el resto
+de este documento (`OUT/`, `SRC/`, `dist/`) son las que la skill crea en el
+proyecto donde se ejecuta, no ficheros del repo publicado.
 
 ---
 
@@ -320,7 +325,7 @@ auditar quién escribió qué.
 
 Tres cosas que conviene saber antes de tocar nada:
 
-1. **La skill se podó para publicarse.** Se retiraron 12 ficheros: `references/debt.md` (pertenecía a otra skill y esta no lo cableaba) y 10 scripts atados a esta ejecución concreta —divisiones de unidades con ID fijo, generadores de los planes B4/B5/B6, el contraste de una ola concreta y su mapa de 21 reapuntamientos—. Quedan los 45 scripts genéricos. Copia de seguridad: `../SKILL-prune-backup-2026-10-22.tar.gz`.
+1. **La skill se podó para publicarse.** Se retiraron 12 ficheros: `references/debt.md` (pertenecía a otra skill y esta no lo cableaba) y 10 scripts atados a una ejecución concreta —divisiones de unidades con ID fijo, generadores de planes de fase, el contraste de una ola y su mapa de reapuntamientos—. Quedan los 45 scripts genéricos, más `PROMPT.md` y este README.
 2. **`CHANGELOG.md` va por detrás de `STATE.md`.** La última versión registrada es `0.12.0` (2026-10-21), mientras que C5–C7 se cerraron el 2026-10-22. `STATE.md` es la autoridad.
 3. **C4 sigue abierta por métrica, no por desconocimiento.** 90 % de aciertos en 30 preguntas es un número alto, pero el umbral del ROADMAP es 95 % y no se rebajó. Cerrarla exige acertar el 5 % restante.
 
@@ -372,7 +377,7 @@ no como superada.
 
 ## 17 · Mantenimiento de la skill
 
-1. Cambiar algo en `SKILL/` obliga a bump en `SKILL/CHANGELOG.md` (semver) y a una entrada en `../ROADMAP.md` si afecta a una fase.
+1. Cambiar algo obliga a bump en `CHANGELOG.md` (semver) y a una entrada en la fase correspondiente si afecta a una puerta.
 2. Un validador nuevo se añade junto a los otros tres y genera su suite con `make_phase_suite.py`.
 3. Un script que muta `cobertura.csv` o `units/` necesita su script inverso o una nota explícita de irreversibilidad: el ledger es la memoria y perderla cuesta rehacer la fase.
 4. `SKILL.md` no crece: si una regla nueva no cabe, va a `references/` y `SKILL.md` la apunta.
@@ -385,7 +390,6 @@ no como superada.
 - [`flow.md`](./flow.md) — el flujo paso a paso con sus diagramas y sus puntos de fallo.
 - [`SKILL.md`](./SKILL.md) — el router que el agente lee al dispararse.
 - [`AGENTS.md`](./AGENTS.md) — reglas de trabajo, patrones de AppFlowy y protocolo de subagentes.
-- `../ROADMAP.md` — las fases con su prueba de salida.
-- `../PROMPT.md` — el encargo original.
-- `../OUT/STATE.md` — el estado real de la ejecución.
+- `PROMPT.md` — el encargo original y las 8 etapas.
+- `CHANGELOG.md` — el detalle de cada fase, sus gates y sus resultados.
 - `~/.agents/skills/notemartin-code-review/` — skill hermana: revisión de código en dos ejes con registro de deuda propia.

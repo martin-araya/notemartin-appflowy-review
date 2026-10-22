@@ -4,7 +4,7 @@ El flujo de la skill, fase por fase, con los puntos donde se decide, los gates
 que bloquean y los sitios donde el trabajo se puede reanudar. Para qué sirve
 cada pieza y qué contiene, ver [`README.md`](./README.md); para las reglas que
 lo gobiernan, [`SKILL.md`](./SKILL.md) y [`AGENTS.md`](./AGENTS.md); para las
-fases con su prueba de salida, [`../ROADMAP.md`](../ROADMAP.md).
+fases con su prueba de salida, [`CHANGELOG.md`](./CHANGELOG.md).
 
 La idea que resume todo el flujo: **nada avanza porque alguien lo decidió, todo
 avanza porque un script devolvió 0**. Cada fase termina en una prueba ejecutable,
@@ -254,7 +254,7 @@ sesión **y en otra herramienta** (Hermes ↔ Cline ↔ Kilo Code). En orden:
 2. Cargar `OUT/_ledger/cobertura.csv` para ver qué está en `verificado`, `pendiente` o `sin_asignar`.
 3. Cargar los extractos de la fase actual (`_ledger/extract/*.json`).
 4. `resume.py` reconstruye el plan de reanudación; `coverage_report.py` dice dónde están los holes.
-5. Saltar a la siguiente fase del `ROADMAP.md` cuya puerta esté en verde.
+5. Saltar a la siguiente fase cuya puerta esté en verde.
 6. Actualizar `STATE.md` antes de devolver el control.
 
 Sin el paso 6, la reanudación es inválida: el siguiente agente no tiene forma de
@@ -289,6 +289,5 @@ respectivamente.
 - [`README.md`](./README.md) — qué es la skill, requisitos, instalación y estado.
 - [`SKILL.md`](./SKILL.md) — el router que el agente lee al dispararse.
 - [`AGENTS.md`](./AGENTS.md) — reglas, patrones y protocolo de subagentes.
-- `../ROADMAP.md` — cada fase con su prueba y su bitácora.
-- `../PROMPT.md` — el encargo original.
-- `../OUT/STATE.md` — el estado real de la ejecución.
+- `PROMPT.md` — el encargo original y las 8 etapas.
+- `CHANGELOG.md` — cada fase con su prueba y su bitácora.

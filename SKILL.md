@@ -1,11 +1,11 @@
 ---
 name: notemartin-appflowy-review
-description: Ingeniería inversa completa y exhaustiva del código fuente de AppFlowy (Flutter + Rust + CRDT sobre yrs). Úsala cuando el usuario pida "revisa AppFlowy completo", "documenta AppFlowy", "auditoría técnica de AppFlowy", "análisis técnico de AppFlowy", "mapea AppFlowy", "ingeniería inversa de AppFlowy", "informe técnico de AppFlowy", o entregue el repo de AppFlowy (o su monorepo) y pida un informe exhaustivo en español sobre arquitectura, features, motor colaborativo, persistencia, búsqueda, IA, exportación e importación. Produce OUT/appflowy-review/ con diagramas Mermaid, evidencia ruta:línea y cobertura por ledger. No dispara para: resúmenes cortos, preguntas puntuales sueltas,改修 de código, explicar una API concreta sin intención de análisis exhaustivo, o tareas que no sean AppFlowy.
+description: 'Ingeniería inversa completa del código fuente de AppFlowy (Flutter + Rust + CRDT sobre yrs). Úsala cuando el usuario pida revisar AppFlowy entero, documentar AppFlowy, auditar AppFlowy, mapear AppFlowy, hacer ingeniería inversa de AppFlowy o pedir un informe técnico exhaustivo de su arquitectura, sus features, el motor colaborativo, la persistencia, la búsqueda, la IA y el motor de exportación/importación. Produce una salida en español con diagramas Mermaid, evidencia ruta:línea y cobertura verificable por ledger. No dispara para resúmenes cortos, preguntas puntuales, reescritura de código ni tareas que no tengan AppFlowy como objeto.'
 ---
 
 # `notemartin-appflowy-review` — SKILL.md
 
-> Router de la skill. Lo único que el agente lee cuando la skill se dispara. Solo enruta; cero plantillas embebidas, cero detalle de fases, cero gramática Mermaid. Toda regla de detalle vive en `SKILL/AGENTS.md`, `PROMPT.md` y `SKILL/references/`. Límite duro: **≤ 500 líneas**.
+> Router de la skill. Lo único que el agente lee cuando la skill se dispara. Solo enruta; cero plantillas embebidas, cero detalle de fases, cero gramática Mermaid. Toda regla de detalle vive en `AGENTS.md`, `PROMPT.md` y `references/`. Límite duro: **≤ 500 líneas**.
 
 ## §1 · Cuándo se dispara
 
@@ -21,7 +21,7 @@ Dispara cuando el usuario entrega el código de AppFlowy (o su monorepo `AppFlow
 
 ## §2 · Invariantes y reglas bloqueantes
 
-Subconjunto de `AGENTS.md §2, §6, §10, §11` que aplica a toda invocación. El detalle completo vive en `SKILL/AGENTS.md`.
+Subconjunto de `AGENTS.md §2, §6, §10, §11` que aplica a toda invocación. El detalle completo vive en `AGENTS.md`.
 
 | # | Regla | Si se omite |
 |---|---|---|
@@ -37,16 +37,16 @@ Subconjunto de `AGENTS.md §2, §6, §10, §11` que aplica a toda invocación. E
 
 ## §3 · Las 8 etapas (resumen)
 
-El detalle de cada fase vive en `ROADMAP.md`. Este router solo nombra cada etapa y su puerta.
+El detalle de cada fase no viaja con la skill: se construyó en el `ROADMAP.md` del proyecto de análisis y quedó resumido en `CHANGELOG.md`. Este router nombra cada etapa y su puerta, y quien necesite el detalle lo reconstruye desde ahí y desde la salida real en `OUT/`.
 
 | # | Etapa | Bloque ROADMAP | Qué entrega | Puerta |
 |---|---|---|---|---|
-| 0 | Esqueleto de la skill | A0 | `SKILL/` con `SKILL.md`, `AGENTS.md`, `references/`, `scripts/`, `templates/output-skeleton/` | árbol coincide con `AGENTS.md §2` |
+| 0 | Esqueleto de la skill | A0 | la raíz del repo con `SKILL.md`, `AGENTS.md`, `references/`, `scripts/`, `templates/output-skeleton/` | árbol coincide con `AGENTS.md §2` |
 | 1 | Adquisición e inventario | A1 | clones en `SRC/{appflowy,collab,editor}` + `_ledger/{inventario,sources,assets,cobertura}` | `sources.json` con 3 entradas (hash 7+); `inventario.json` con conteos `find` coincidentes y `capa` siempre presente; `cobertura.csv` con 4.603 filas y todas en `sin_asignar` |
 | 2 | Extractores deterministas | A2 | `_ledger/extract/{events,protobuf,notifications,blocs,deps,misc}.json` | cada `input`/`output` existe como PB |
 | 3 | Validadores | A3 | `validate_{mermaid,evidence,template,coverage}.{sh,py}` + `build_index.py` | 🔒 toda ruta:línea y todo bloque Mermaid verificado |
 | 4 | Orquestación de subagentes | A4 | `assign_ledger.py`, prompts autor/revisor, `STATE.md` | ≥ 90% asignado automáticamente; reanuda cross-herramienta |
-| 5 | Piloto end-to-end | A5 | F08 (búsqueda) aprobada + `SKILL/CHANGELOG.md` | 🔒 revisor aprueba con 100% de archivos cubiertos |
+| 5 | Piloto end-to-end | A5 | F08 (búsqueda) aprobada + `CHANGELOG.md` | 🔒 revisor aprueba con 100% de archivos cubiertos |
 | 6 | Ejecución del análisis | B | `OUT/01..22-*.md`, `09-features/Fxx/`, `10-motor-export-import/`, `06..08-*/` | cada feature pasa plantilla + validadores + revisor |
 | 7 | Verificación y cierre | C | cobertura 100%, `00-INDEX.md`, paquete portable | 🔒 C1, C2 verdes; prueba de utilidad ≥ 95% |
 
@@ -67,7 +67,7 @@ Pasos numerados para retomar la skill en cualquier sesión o herramienta (Hermes
 1. Leer `OUT/STATE.md` y localizar la última fase con `estado: completada`.
 2. Cargar `OUT/_ledger/cobertura.csv` para ver qué archivos están en `verificado`, `pendiente` o `sin_asignar`.
 3. Cargar las salidas del extractor correspondiente a la fase actual (`_ledger/extract/*.json`).
-4. Saltar a la siguiente fase del `ROADMAP.md` cuya puerta esté en verde.
+4. Saltar a la siguiente fase cuya puerta esté en verde, según la tabla de §3.
 5. Al cerrar la fase, actualizar `OUT/STATE.md` con `{fase, estado, fecha, notas}` antes de devolver el control.
 6. Si la fase tiene gate 🔒, no avanzar hasta que el validador correspondiente devuelva 0 errores.
 
@@ -75,7 +75,7 @@ Pasos numerados para retomar la skill en cualquier sesión o herramienta (Hermes
 
 ## §6 · Gates (puertas bloqueantes)
 
-Lista de gates 🔒 del `ROADMAP.md`. Cada uno se valida con un script de `SKILL/scripts/`.
+Lista de gates 🔒. Cada uno se valida con un script de `scripts/` y se comprueba contra el umbral que fija el ROADMAP original, resumido aquí.
 
 | Gate | Fase | Script | Estado |
 |---|---|---|---|
@@ -124,7 +124,7 @@ notemartin-appflowy-review/
 └── CHANGELOG.md                    # diffs de la skill entre versiones
 ```
 
-En la raíz del proyecto (fuera de `SKILL/`) viven los documentos no portables: `PROMPT.md` (encargo + 8 etapas + plantillas + mapa inicial), `ROADMAP.md` (fases granulares con prueba) y `OUT/` (salida de la ejecución).
+La carpeta de la skill **es la raíz del repo**: `SKILL.md` va en la raíz, como exigen el descubrimiento de skills.sh y la instalación en `~/.agents/skills/`. `PROMPT.md` (encargo + 8 etapas + plantillas + mapa inicial) acompaña a la skill porque el agente lo lee en cada invocación. `OUT/`, `SRC/` y `dist/` no viajan: los crea la propia skill al ejecutarse.
 
 ## §8 · Punteros a `references/`
 
@@ -175,6 +175,6 @@ Variantes que también deben disparar la skill (cubiertas en el `description` de
 Estos viven en la raíz del proyecto y la skill los lee en cada invocación:
 
 - `PROMPT.md` — encargo, 8 etapas, estructura de salida, plantillas, mapa de features, glosario, lo que no se hace.
-- `ROADMAP.md` — fases granulares con su prueba, gates 🔒 y símbolos 🔀.
+- `CHANGELOG.md` — el detalle de cada fase, sus gates y sus resultados, que es donde vive el ROADMAP tras la publicación.
 - `OUT/STATE.md` — estado actual de cada fase para reanudar.
 - `OUT/_ledger/` — inventario, cobertura, extractos y unidades.

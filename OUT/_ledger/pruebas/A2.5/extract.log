@@ -1,5 +1,0 @@
-  escrito: /Users/martin/Desktop/projects/Skills/notemartin-appflowy-review/OUT/_ledger/extract/deps.json
-  rust: 31 crates, 150 internal edges, 368 external deps
-  flowy-core.internal_dependencies: 23 (19 flowy-*)
-  dart-ffi.internal_dependencies: ['collab-integrate', 'flowy-core', 'flowy-date', 'flowy-derive', 'flowy-document', 'flowy-error', 'flowy-notification', 'flowy-server', 'flowy-server-pub', 'flowy-user', 'lib-dispatch', 'lib-log']
-  dart: 8 packages (7 internal), 12 internal edges, 136 external deps, 326 resolved in lock

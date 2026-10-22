@@ -1,3 +1,0 @@
-OK: A2.7 (codegen no ejecutado en este entorno: Toolchain missing o incompleto. Intentos y causas:
-  - cargo_build_manual: compila pero no ejecuta codegen (flowy-codegen es lib, no bin); requiere wrapper
-Documentado en /Users/martin/Desktop/projects/Skills/notemartin-appflowy-review/OUT/_ledger/pruebas/A2.7/codegen-fallido.md., 1 intento(s) documentado(s) en /Users/martin/Desktop/projects/Skills/notemartin-appflowy-review/OUT/_ledger/pruebas/A2.7/codegen-fallido.md)

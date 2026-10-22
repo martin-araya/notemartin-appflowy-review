@@ -1,3 +1,0 @@
-fuente,ruta,capa,feature_ids,documento,estado,verificado_por
-appflowy,appflowy/frontend/appflowy_flutter/lib/plugins/document/x.dart,bloc,F00,x.md,verificado,tester
-appflowy,appflowy/frontend/rust-lib/flowy-document/src/reminder.rs,rust-handler,F02,y.md,verificado,tester

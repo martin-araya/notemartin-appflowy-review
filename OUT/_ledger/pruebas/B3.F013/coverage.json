@@ -1,8 +1,0 @@
-{
-  "docs": {"3-media-y-archivos-…md": {"lines": 231}},
-  "archivos_F01.3": 0,
-  "cobertura_F01_total": 651,
-  "revisor_veredicto": "aprobado",
-  "revisor_correcciones": 0,
-  "scope_correction": "0 archivos en F01.3; los 47 widgets de media viven en F07 (42) + F01.1 (5 cover clásico) + video (1). B0.2 triage clasificó los widgets de image/video/file/cover(link_preview/link_embed como F07 (almacenamiento de archivos) y no como F01.3 (presentación media en editor)."
-}
